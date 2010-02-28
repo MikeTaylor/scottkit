@@ -13,10 +13,6 @@ begin
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
     # No version, date or files -- I guess jeweler takes care of those
 
-    # I need to explicitly specify the executables because jeweler for
-    # some reason wants to run in the top level directory of my git
-    # module, so that it makes a filelist from the contents of ../../bin.
-    gem.executables = ["scottkit"]
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
