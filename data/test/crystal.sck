@@ -1,0 +1,598 @@
+# Modified from crystal.sac v1.7 (2006-11-11) from Games::ScottAdams
+
+# crystal.sck -- Scott Adams source file for _Crystal of Chaos_
+
+# ----------------------------------------------------------------------------
+# Global configuration
+
+ident 18400
+version 1
+wordlen 3
+maxload 5
+lighttime 100
+start hut
+treasury hut
+
+# Standard synonyms
+verbgroup go enter follow run walk
+verbgroup take get
+verbgroup leave drop
+#verbgroup cut chop ### currently causes a collision
+verbgroup batter ram
+
+# ----------------------------------------------------------------------------
+# Infrastructure actions (I don't think any game would ever omit these)
+
+action inventory: inventory
+action take inventory: inventory
+action score: score
+action save game: save_game
+action look: look
+
+# The path is dark; nowhere else is
+occur when "at" path
+	set_dark
+	###look # Hard to make this work right in a non-curses driver
+
+occur when !at path
+	clear_dark
+	###look # Hard to make this work right in a non-curses driver
+
+occur when !flag 1
+	set_flag 1
+	print "Welcome to `CRYSTAL OF CHAOS`"
+	print "Written by Mike Taylor, starting Monday 10th April 2001"
+	print "This is a demo for the `ScottKit` adventure system"
+	print ""
+	print "Your task is to find the six crown jewels of the"
+	print "kingdom and store them in this hut.  They are:"
+	print "a platinum chain, a gold crown, a silver medallion"
+	print "a bronze sceptre, a zinc goblet and a tin stoat."
+
+
+# ----------------------------------------------------------------------------
+# Use of flags
+#	flag 1: Set forever once welcome message has been printed.
+#	flag 2: True immediately after balsa wood is lit.
+#	flag 3: True immediately after plywood is lit.
+#	flag 4: True immediately after oak is lit.
+#	flag 5: True while under water.
+#	flag 6: Set true forever when first in the treasure clearing.
+#	flag 7: True if all treasures but the stoat have been stored.
+#	flag 8: True once the missing stoat message has been printed.
+#
+# Use of saved locations
+#	location 1: when in vase, contains room player was in before.
+#
+# Use of counters:
+#	counter 1: number of turns remaining to hold breath
+
+# ----------------------------------------------------------------------------
+# Preamble actions (must fire after body actions)
+
+occur when "at" clearing and !flag 6
+	set_flag 6
+	print "Oh, there they are.  That wasn't as hard as I expected."
+
+# Check whether we have stored all treasures except the stoat
+occur when "at" hut
+	set_flag 7
+	#print "setting flag 7 (in hut)"
+
+occur when !here chain
+	clear_flag 7
+	#print "clearing flag 7 (no chain)"
+
+occur when !here crown
+	clear_flag 7
+	#print "clearing flag 7 (no crown)"
+
+occur when !here medallion
+	clear_flag 7
+	#print "clearing flag 7 (no medallion)"
+
+occur when !here sceptre
+	clear_flag 7
+	#print "clearing flag 7 (no sceptre)"
+
+occur when !here goblet
+	clear_flag 7
+	#print "clearing flag 7 (no goblet)"
+
+occur when flag 7 and !flag 8
+	set_flag 8
+	print "Ah, looks like I'm still missing the stoat."
+	### This message appears even if the stoat is already stored.
+
+# Check whether we're under water ...
+occur when "at" pool set_flag 5
+occur when "at" river1 set_flag 5
+occur when "at" river2 set_flag 5
+occur when "at" river3 set_flag 5
+occur when "at" river4 set_flag 5
+
+# ... or whether we've just emerged from under water
+occur when "at" forest2 clear_flag 5
+occur when "at" chamber clear_flag 5
+occur when "at" vase clear_flag 5
+occur when "at" dead clear_flag 5
+
+occur when counter_eq 1
+	print "I have to breathe NOW!"
+
+occur when counter_gt 0
+	dec_counter
+
+occur when counter_gt 0
+	print "I can only hold my breath for"
+	print_counter
+	print "more turns."
+
+occur when counter_eq 0 and flag 5
+	print "I can't breathe ..."
+	pause
+	clear_flag 5
+	die
+comment "Death due to lack of breath"
+
+# We'd like the next three occurs to go after the action for LIGHT
+# BALSA below.  But that doesn't work, because although any number of
+# occurs may fire on a given turn, action-and-occur processing stops
+# immediately after the first successful action.  (I determined this
+# by experiment: I couldn't determine the intent of the scottfree
+# source to save my life.)  Instead, we do these occur's at the very
+# start of the _next_ turn -- which from the player's perspective is
+# indistinguishable from the end of the previous one.
+
+occur when flag 2 and here plywood
+	print "The plywood also catches fire and burns quickly."
+	destroy plywood
+	set_flag 3
+
+occur when flag 3 and here oak
+	print "The oak catches, and becomes a roaring fire."
+	print "Smoke pours upwards."
+	destroy oak
+	drop fire
+	set_flag 4
+
+occur when flag 4 and "at" glade
+	destroy bees
+	put drowsy_bees beech
+
+occur
+	clear_flag 2
+	clear_flag 3
+	clear_flag 4
+	comment "Fire-building must happen all in one go"
+
+action chop when !present axe
+	print "I can't chop anything without an axe."
+
+action ram when !present trunk
+	print "I don't have a battering ram."
+
+action light when !present match
+	print "I don't have anything to light it with."
+
+
+# ----------------------------------------------------------------------------
+# Rooms, Items and associated Actions
+
+room hut "small wooden hut."
+	exit east clearing
+
+item sign "Sign"
+
+action read sign when present sign
+	print "It says - `Leave *TREASURES* here, then say: SCORE`"
+
+item axe "Axe"
+	called axe
+noungroup axe ax
+
+item match "Single match"
+	called match
+
+room clearing "clearing.  There's a small hut to the west."
+	exit north swamp
+	exit east glade
+	exit south forest
+	exit west hut
+
+item chain "*Platinum chain*"
+	called chain
+
+item crown "*Gold crown*"
+	called crown
+
+item medallion "*Silver medallion*"
+	called medallion
+
+item sceptre "*Bronze sceptre*"
+	called sceptre
+
+item goblet "*Zinc goblet*"
+	called goblet
+
+room glade "glade"
+	exit west clearing
+	exit north outcrop
+	exit south forest2
+
+item beech "Beech tree"
+
+action climb tree when here beech
+	goto beech
+	look2
+
+room beech "the top of a beech tree"
+	exit down glade
+
+item nest "Bees' nest"
+
+item honey "Wild honey"
+	called honey
+
+action get honey when here bees
+	print "No!  Bees would sting me!"
+
+item bees "Killer bees"
+
+item drowsy_bees "Drowsy bees"
+	nowhere
+
+action help when here bees
+	print "Smoke 'em out!"
+
+room swamp "dismal swamp"
+	exit east outcrop
+	exit south clearing
+
+item cypress "Cypress tree"
+
+action chop tree when here cypress
+	print "TIMBER!"
+	swap cypress trunk
+	drop stump
+	look2
+
+item stump "-SOLID- stump"
+	nowhere
+
+action examine stump when here stump
+	print "There's nothing there all right! Maybe I should forget it?"
+
+item trunk "Trunk of cypress tree"
+	called trunk
+	nowhere
+
+item mud "Evil smelling mud"
+	called mud
+
+item gas "Swamp gas"
+
+item slime "Patches of `OILY` slime"
+	called oil
+
+item chiggers "Chiggers"
+	called chiggers
+
+room outcrop "rocky area by an outcrop"
+	exit west swamp
+	exit south glade
+
+item bdoor "Balsa-wood door set into the rock"
+
+item lamp "Old-fashioned brass lamp"
+	called lamp
+lightsource lamp
+
+action open door when here bdoor
+	print "It's locked."
+
+verbgroup kick smash break
+
+action kick door when here bdoor
+	swap bdoor tunnel
+	drop balsa
+	print "It splinters easily."
+	print "There's a tunnel beyond."
+	look2
+
+action chop door when here bdoor
+	swap bdoor tunnel
+	print "CRUNCH!  It's smashed to smithereens!"
+	print "There's a tunnel beyond."
+	look2
+	comment "no balsa wood"
+
+action ram door when here bdoor
+	destroy bdoor
+	drop tunnel
+	print "DOOSH!  It's absolutely annihilated!"
+	print "There's a tunnel beyond."
+	look2
+	comment "no balsa wood"
+
+item balsa "Balsa wood"
+	called balsa
+	nowhere
+
+item tunnel "Tunnel disappears into the rock"
+	nowhere
+
+action go tunnel when here tunnel
+	goto tunnel
+	look2
+
+room tunnel "dingy north-south tunnel"
+	exit south outcrop
+
+item pdoor "Plywood door blocks the way north"
+
+action open door when here pdoor
+	print "It's also locked."
+
+action kick door when here pdoor
+	print "Ouch!"
+
+action chop door when here pdoor
+	swap pdoor passage
+	drop plywood
+	print "CRUNCH!"
+	print "There's a passage beyond."
+	look2
+
+action ram door when here pdoor
+	swap pdoor passage
+	print "DOOSH!  It's absolutely annihilated!"
+	print "There's a passage beyond."
+	look2
+	comment "no plywood"
+
+item plywood "Plywood"
+	called plywood
+	nowhere
+
+item passage "Passage disappears into the rock"
+	nowhere
+
+action go passage when here passage
+	goto passage
+	look2
+
+room passage "gloomy north-south passage"
+	exit south tunnel
+
+item odoor "Oak door blocks the way north"
+
+action open door when here odoor
+	print "OF COURSE it's locked!"
+
+action kick door when here odoor
+	print "Ouch!"
+
+action chop door when here odoor
+	print "It's too solid for the axe to make much impression."
+
+action ram door when here odoor
+	swap odoor entrance
+	drop oak
+	print "DOOSH!"
+	print "There's an entrance beyond."
+	look2
+
+item oak "Oak"
+	called oak
+	nowhere
+
+item entrance "Entrance to the north"
+	nowhere
+
+action go entrance when here entrance
+	goto empty
+	look2
+
+room empty "empty room"
+	exit south passage
+
+item fire "Blazing hot fire"
+	nowhere
+
+action light plywood when "carried" plywood
+	print "Not while I'm carrying it!"
+
+action light plywood when here plywood
+	print "I can't get it to catch fire."
+	print "My match goes out."
+	destroy match
+
+action light oak when here oak
+	print "There's no way it will catch fire."
+	print "My match goes out."
+	destroy match
+
+action light oak when "carried" oak
+	print "Not while I'm carrying it!"
+
+action light balsa when "carried" balsa
+	print "Not while I'm carrying it!"
+
+action light balsa when here balsa
+	print "OK.  It burns up very quickly."
+	print "My match goes out."
+	destroy match
+	destroy balsa
+	set_flag 2
+
+room forest "forest"
+	exit north clearing
+	exit east forest2
+
+item path "Path leads south into the forest"
+
+action go path when here bear
+	print "Bear won't let me"
+
+action go path when "at" forest
+	goto path
+	look2
+
+item bear "Very thin black bear"
+
+action give honey when here bear and present honey
+	destroy bear
+	destroy honey
+	drop sleeping
+	print "Bear eats the honey and falls asleep."
+
+item sleeping "Sleeping bear"
+	nowhere
+
+room path "overgrown path in a dark forest"
+	exit north forest
+
+item vase "Huge vase"
+	called vase
+
+action examine vase when present vase
+	print "It's bigger than I am."
+
+action go vase when here vase
+	swap_specific_room 1
+	goto vase
+	look2
+
+action leave vase when "at" vase
+	swap_specific_room 1
+	look2
+
+action get out when "at" vase
+	swap_specific_room 1
+	look2
+
+room vase "*I'm INSIDE a huge vase!"
+
+item key "Iron key"
+	called key
+
+room forest2 "forest"
+	exit north glade
+	exit west forest
+
+item pool "Bubbling pool"
+
+action go pool when here pool
+	goto pool
+	look2
+
+action hold breath when counter_gt 0
+	print "I'm already holding my breath!"
+
+action hold breath
+	set_counter 6
+	print "OK"
+
+room pool "bubbling pool, just below the water level"
+	exit up forest2
+
+item inflow "inflow from the south"
+
+action go inflow when here inflow
+	goto river1
+	look2
+
+room river1 "*I'm swimming in an underground river.
+Light pours from the north."
+	exit north pool
+	exit south river2
+
+room river2 "*I'm swimming in an underground river.
+There's a faint glimmer of light to the north."
+	exit north river1
+	exit south river3
+
+room river3 "*I'm swimming in an underground river.
+There's a faint glimmer of light to the south."
+	exit north river2
+	exit south river4
+
+room river4 "*I'm swimming in an underground river.
+Light pours from the south."
+	exit north river3
+	exit south chamber
+
+room chamber "brightly lit underground chamber.
+An underground river disappears into the north wall."
+	exit north river4
+#	exit south central
+
+item stoat "*Tin stoat*"
+	called stoat
+
+room central "central underground chamber.  Passages leave in all directions."
+	exit north chamber
+	exit west prison
+	exit east junction
+
+room prison "prison in an undergound complex.  Doors lead to prison cells"
+	exit east central
+
+item idoor "Iron door leads south"
+
+item brdoor "Bronze door leads west"
+
+action knock door when "at" prison
+	print "Which door?  Use `knock iron` or `knock bronze`."
+
+action knock iron when here idoor
+	print "Nothing happens."
+
+action knock bronze when here brdoor
+	print "Nothing seems to happen."
+
+room cell1 "dirty prison cell with muddy straw on the ground"
+	exit east prison
+	exit north hut
+
+item goblin "small goblin"
+
+room junction "junction between an east-west passage and one that leads south"
+	exit west central
+	exit east control
+	exit south steel
+
+room control "control room filled with humming, crackling machinery"
+	exit west junction
+
+item red "Red button"
+
+item blue "Blue button"
+
+item level "Lever"
+
+room steel "square room with a steel floor"
+	exit north junction
+	exit south chasm
+
+room chasm "vast hall which is split by a deep chasm running from east to west"
+	exit north steel
+
+room dead "*I'm dead.  Great.  Try again."
+	exit east hut
+
+
+# ----------------------------------------------------------------------------
+# Postamble actions (must fire after body actions)
+
+action help:
+	print "You'll have to figure it out for yourself."
+
+action examine:
+	print "It looks like a pretty average"
+	println_noun
+
+action wait:
+	print "OK"
+

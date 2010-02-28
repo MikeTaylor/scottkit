@@ -1,0 +1,9 @@
+ScottFree saved-game format, determined from source and a sample:
+
+counter0 roomsaved0
+...
+counter15 roomsaved15
+bitflags(as bigendian number) dark(redundant) loc counter savedroom lightleft
+item0.location
+...
+itemNitems.location

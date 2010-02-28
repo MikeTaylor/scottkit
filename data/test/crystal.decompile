@@ -1,0 +1,628 @@
+# 28 rooms, 45 items, 88 actions
+# 54 messages, 6 treasures, 43 verbs/nouns
+ident 18400
+version 1
+wordlen 3
+maxload 5
+lighttime 100
+unknown1 0
+unknown2 0
+start hut
+treasury hut
+
+verbgroup GO ENT FOL RUN WAL
+verbgroup TAK GET
+verbgroup BAT RAM
+verbgroup LEA DRO
+verbgroup KIC SMA BRE
+
+noungroup AXE AX
+
+room hut "small wooden hut."
+	exit east "west"
+
+room "west" "clearing.  There's a small hut to the west."
+	exit north swamp
+	exit south forest
+	exit east glade
+	exit west hut
+
+room glade "glade"
+	exit north outcrop
+	exit south forest1
+	exit west "west"
+
+room tree "the top of a beech tree"
+	exit down glade
+
+room swamp "dismal swamp"
+	exit south "west"
+	exit east outcrop
+
+room outcrop "rocky area by an outcrop"
+	exit south glade
+	exit west swamp
+
+room tunnel "dingy north-south tunnel"
+	exit south outcrop
+
+room passage "gloomy north-south passage"
+	exit south tunnel
+
+room "room" "empty room"
+	exit south passage
+
+room forest "forest"
+	exit north "west"
+	exit east forest1
+
+room forest2 "overgrown path in a dark forest"
+	exit north forest
+
+room vase "*I'm INSIDE a huge vase!"
+
+room forest1 "forest"
+	exit north glade
+	exit west forest
+
+room level "bubbling pool, just below the water level"
+	exit up forest1
+
+room "north" "*I'm swimming in an underground river.
+Light pours from the north."
+	exit north level
+	exit south north1
+
+room north1 "*I'm swimming in an underground river.
+There's a faint glimmer of light to the north."
+	exit north "north"
+	exit south "south"
+
+room "south" "*I'm swimming in an underground river.
+There's a faint glimmer of light to the south."
+	exit north north1
+	exit south south1
+
+room south1 "*I'm swimming in an underground river.
+Light pours from the south."
+	exit north "south"
+	exit south wall
+
+room wall "brightly lit underground chamber.
+An underground river disappears into the north wall."
+	exit north south1
+
+room directions "central underground chamber.  Passages leave in all directions."
+	exit north wall
+	exit east south2
+	exit west cells
+
+room cells "prison in an undergound complex.  Doors lead to prison cells"
+	exit east directions
+
+room ground "dirty prison cell with muddy straw on the ground"
+	exit north hut
+	exit east cells
+
+room south2 "junction between an east-west passage and one that leads south"
+	exit south floor
+	exit east machinery
+	exit west directions
+
+room machinery "control room filled with humming, crackling machinery"
+	exit west south2
+
+room floor "square room with a steel floor"
+	exit north south2
+	exit south west1
+
+room west1 "vast hall which is split by a deep chasm running from east to west"
+	exit north floor
+
+room again "*I'm dead.  Great.  Try again."
+	exit east hut
+
+item Sign "Sign"
+	at hut
+
+item Axe "Axe"
+	called AXE
+	at hut
+
+item match "Single match"
+	called MAT
+	at hut
+
+item chain "*Platinum chain*"
+	called CHA
+	at "west"
+
+item crown "*Gold crown*"
+	called CRO
+	at "west"
+
+item medallion "*Silver medallion*"
+	called MED
+	at "west"
+
+item sceptre "*Bronze sceptre*"
+	called SCE
+	at "west"
+
+item goblet "*Zinc goblet*"
+	called GOB
+	at "west"
+
+item tree "Beech tree"
+	at glade
+
+item lamp "Old-fashioned brass lamp"
+	called LAM
+	at outcrop
+
+item honey "Wild honey"
+	called HON
+	at tree
+
+item bees "Killer bees"
+	at tree
+
+item bees1 "Drowsy bees"
+	nowhere
+
+item tree1 "Cypress tree"
+	at swamp
+
+item stump "-SOLID- stump"
+	nowhere
+
+item tree2 "Trunk of cypress tree"
+	called TRU
+	nowhere
+
+item mud "Evil smelling mud"
+	called MUD
+	at swamp
+
+item gas "Swamp gas"
+	at swamp
+
+item slime "Patches of `OILY` slime"
+	called OIL
+	at swamp
+
+item Chiggers "Chiggers"
+	called CHI
+	at swamp
+
+item rock "Balsa-wood door set into the rock"
+	at outcrop
+
+item nest "Bees' nest"
+	at tree
+
+item wood "Balsa wood"
+	called BAL
+	nowhere
+
+item rock1 "Tunnel disappears into the rock"
+	nowhere
+
+item "north" "Plywood door blocks the way north"
+	at tunnel
+
+item Plywood "Plywood"
+	called PLY
+	nowhere
+
+item rock2 "Passage disappears into the rock"
+	nowhere
+
+item north1 "Oak door blocks the way north"
+	at passage
+
+item Oak "Oak"
+	called OAK
+	nowhere
+
+item north2 "Entrance to the north"
+	nowhere
+
+item fire "Blazing hot fire"
+	nowhere
+
+item forest "Path leads south into the forest"
+	at forest
+
+item bear "Very thin black bear"
+	at forest
+
+item bear1 "Sleeping bear"
+	nowhere
+
+item vase "Huge vase"
+	called VAS
+	at forest2
+
+item key "Iron key"
+	called KEY
+	at vase
+
+item pool "Bubbling pool"
+	at forest1
+
+item "south" "inflow from the south"
+	at level
+
+item stoat "*Tin stoat*"
+	called STO
+	at wall
+
+item south1 "Iron door leads south"
+	at cells
+
+item "west" "Bronze door leads west"
+	at cells
+
+item goblin "small goblin"
+	at ground
+
+item button "Red button"
+	at machinery
+
+item button1 "Blue button"
+	at machinery
+
+item Lever "Lever"
+	at machinery
+
+action INV:
+	inventory
+
+action TAK INV
+	inventory
+
+action SCO:
+	score
+
+action SAV GAM
+	save_game
+
+action LOO:
+	look
+
+occur when "at" forest2
+	set_dark
+
+occur when !at forest2
+	clear_dark
+
+occur when !flag 1
+	set_flag 1
+	print "Welcome to `CRYSTAL OF CHAOS`"
+	print "Written by Mike Taylor, starting Monday 10th April 2001"
+	continue
+
+occur 0%
+	print "This is a demo for the `ScottKit` adventure system"
+	print ""
+	print "Your task is to find the six crown jewels of the"
+	continue
+	comment "cont"
+
+occur 0%
+	print "kingdom and store them in this hut.  They are:"
+	print "a platinum chain, a gold crown, a silver medallion"
+	print "a bronze sceptre, a zinc goblet and a tin stoat."
+	comment "cont"
+
+occur when "at" "west" and !flag 6
+	set_flag 6
+	print "Oh, there they are.  That wasn't as hard as I expected."
+
+occur when "at" hut
+	set_flag 7
+
+occur when !here chain
+	clear_flag 7
+
+occur when !here crown
+	clear_flag 7
+
+occur when !here medallion
+	clear_flag 7
+
+occur when !here sceptre
+	clear_flag 7
+
+occur when !here goblet
+	clear_flag 7
+
+occur when flag 7 and !flag 8
+	set_flag 8
+	print "Ah, looks like I'm still missing the stoat."
+
+occur when "at" level
+	set_flag 5
+
+occur when "at" "north"
+	set_flag 5
+
+occur when "at" north1
+	set_flag 5
+
+occur when "at" "south"
+	set_flag 5
+
+occur when "at" south1
+	set_flag 5
+
+occur when "at" forest1
+	clear_flag 5
+
+occur when "at" wall
+	clear_flag 5
+
+occur when "at" vase
+	clear_flag 5
+
+occur when "at" again
+	clear_flag 5
+
+occur when counter_eq 1
+	print "I have to breathe NOW!"
+
+occur when counter_gt 0
+	dec_counter
+
+occur when counter_gt 0
+	print "I can only hold my breath for"
+	print_counter
+	print "more turns."
+
+occur when counter_eq 0 and flag 5
+	print "I can't breathe ..."
+	pause
+	clear_flag 5
+	die
+	comment "Death due to lack of breath"
+
+occur when flag 2 and here Plywood
+	print "The plywood also catches fire and burns quickly."
+	destroy Plywood
+	set_flag 3
+
+occur when flag 3 and here Oak
+	print "The oak catches, and becomes a roaring fire."
+	print "Smoke pours upwards."
+	destroy Oak
+	continue
+
+occur 0%
+	drop fire
+	set_flag 4
+	comment "cont"
+
+occur when flag 4 and "at" glade
+	destroy bees
+	put bees1 tree
+
+occur
+	clear_flag 2
+	clear_flag 3
+	clear_flag 4
+	comment "Fire-building must happen all in one go"
+
+action CHO when !present Axe
+	print "I can't chop anything without an axe."
+
+action BAT when !present tree2
+	print "I don't have a battering ram."
+
+action LIG when !present match
+	print "I don't have anything to light it with."
+
+action REA SIG when present Sign
+	print "It says - `Leave *TREASURES* here, then say: SCORE`"
+
+action CLI TRE when here tree
+	goto tree
+	look2
+
+action TAK HON when here bees
+	print "No!  Bees would sting me!"
+
+action HEL when here bees
+	print "Smoke 'em out!"
+
+action CHO TRE when here tree1
+	print TIMBER!
+	swap tree1 tree2
+	drop stump
+	look2
+
+action EXA STU when here stump
+	print "There's nothing there all right! Maybe I should forget it?"
+
+action OPE DOO when here rock
+	print "It's locked."
+
+action KIC DOO when here rock
+	swap rock rock1
+	drop wood
+	print "It splinters easily."
+	continue
+
+occur 0%
+	print "There's a tunnel beyond."
+	look2
+	comment "cont"
+
+action CHO DOO when here rock
+	swap rock rock1
+	print "CRUNCH!  It's smashed to smithereens!"
+	print "There's a tunnel beyond."
+	look2
+	comment "no balsa wood"
+
+action BAT DOO when here rock
+	destroy rock
+	drop rock1
+	print "DOOSH!  It's absolutely annihilated!"
+	continue
+	comment "no balsa wood"
+
+occur 0%
+	print "There's a tunnel beyond."
+	look2
+	comment "cont"
+
+action GO TUN when here rock1
+	goto tunnel
+	look2
+
+action OPE DOO when here "north"
+	print "It's also locked."
+
+action KIC DOO when here "north"
+	print Ouch!
+
+action CHO DOO when here "north"
+	swap "north" rock2
+	drop Plywood
+	print CRUNCH!
+	continue
+
+occur 0%
+	print "There's a passage beyond."
+	look2
+	comment "cont"
+
+action BAT DOO when here "north"
+	swap "north" rock2
+	print "DOOSH!  It's absolutely annihilated!"
+	print "There's a passage beyond."
+	look2
+	comment "no plywood"
+
+action GO PAS when here rock2
+	goto passage
+	look2
+
+action OPE DOO when here north1
+	print "OF COURSE it's locked!"
+
+action KIC DOO when here north1
+	print Ouch!
+
+action CHO DOO when here north1
+	print "It's too solid for the axe to make much impression."
+
+action BAT DOO when here north1
+	swap north1 north2
+	drop Oak
+	print DOOSH!
+	continue
+
+occur 0%
+	print "There's an entrance beyond."
+	look2
+	comment "cont"
+
+action GO ENT when here north2
+	goto "room"
+	look2
+
+action LIG PLY when "carried" Plywood
+	print "Not while I'm carrying it!"
+
+action LIG PLY when here Plywood
+	print "I can't get it to catch fire."
+	print "My match goes out."
+	destroy match
+
+action LIG OAK when here Oak
+	print "There's no way it will catch fire."
+	print "My match goes out."
+	destroy match
+
+action LIG OAK when "carried" Oak
+	print "Not while I'm carrying it!"
+
+action LIG BAL when "carried" wood
+	print "Not while I'm carrying it!"
+
+action LIG BAL when here wood
+	print "OK.  It burns up very quickly."
+	print "My match goes out."
+	destroy match
+	continue
+
+occur 0%
+	destroy wood
+	set_flag 2
+	comment "cont"
+
+action GO PAT when here bear
+	print "Bear won't let me"
+
+action GO PAT when "at" forest
+	goto forest2
+	look2
+
+action GIV HON when here bear and present honey
+	destroy bear
+	destroy honey
+	drop bear1
+	print "Bear eats the honey and falls asleep."
+
+action EXA VAS when present vase
+	print "It's bigger than I am."
+
+action GO VAS when here vase
+	swap_specific_room 1
+	goto vase
+	look2
+
+action LEA VAS when "at" vase
+	swap_specific_room 1
+	look2
+
+action TAK OUT when "at" vase
+	swap_specific_room 1
+	look2
+
+action GO POO when here pool
+	goto level
+	look2
+
+action HOL BRE when counter_gt 0
+	print "I'm already holding my breath!"
+
+action HOL BRE
+	set_counter 6
+	print OK
+
+action GO INF when here "south"
+	goto "north"
+	look2
+
+action KNO DOO when "at" cells
+	print "Which door?  Use `knock iron` or `knock bronze`."
+
+action KNO IRO when here south1
+	print "Nothing happens."
+
+action KNO BRO when here "west"
+	print "Nothing seems to happen."
+
+action HEL:
+	print "You'll have to figure it out for yourself."
+
+action EXA:
+	print "It looks like a pretty average"
+	println_noun
+
+action WAI:
+	print OK
+

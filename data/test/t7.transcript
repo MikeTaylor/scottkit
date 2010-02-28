@@ -1,0 +1,147 @@
+ScottKit, a Scott Adams game toolkit in Ruby.
+Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>
+Distributed under the GNU software license
+Setting random seed 12368
+
+I'm in a cave mouth
+I can also see: doorbell
+
+Welcome to the Tutorial adventure.
+You must find a gold coin and store it.
+Tell me what to do ? ring bell
+Ding dong!
+Tell me what to do ? wait
+Time passes ...
+I hear an ominous rumble.
+Tell me what to do ? wait
+Time passes ...
+The rocks collapse leaving a way in.
+
+I'm in a cave mouth
+I can also see: doorbell, entrance to cave
+
+Tell me what to do ? go entrance
+
+I'm in a square chamber
+Obvious exits: North, East, West.
+I can also see: Wooden cross
+
+Tell me what to do ? get cross
+O.K.
+Tell me what to do ? north
+
+I'm in a gorgeously decorated throne room
+Obvious exits: South.
+I can also see: Sign says: leave treasure here, then say SCORE, old-fashioned brass lamp
+
+Tell me what to do ? get lamp
+O.K.
+Tell me what to do ? south
+
+I'm in a square chamber
+Obvious exits: North, East, West.
+
+Tell me what to do ? east
+
+I'm in a gloomy dungeon
+Obvious exits: North, West.
+I can also see: Locked door
+
+
+I'm in a gloomy dungeon
+Obvious exits: North, West.
+I can also see: Locked door
+
+Tell me what to do ? north
+
+I'm in a damp, dismal crypt
+Obvious exits: South.
+I can also see: Brass key, Vampire
+
+Vampire cowers away from the cross!
+Tell me what to do ? drop lamp
+O.K.
+Vampire cowers away from the cross!
+Tell me what to do ? get key
+O.K.
+Vampire cowers away from the cross!
+Tell me what to do ? south
+
+I can't see. It is too dark!
+
+I smell something rotting to the north.
+Tell me what to do ? drop key
+O.K.
+I smell something rotting to the north.
+Tell me what to do ? north
+Dangerous to move in the dark!
+
+I'm in a damp, dismal crypt
+Obvious exits: South.
+I can also see: old-fashioned brass lamp, Vampire
+
+Vampire cowers away from the cross!
+Tell me what to do ? get lamp
+O.K.
+Vampire cowers away from the cross!
+Tell me what to do ? south
+
+I'm in a gloomy dungeon
+Obvious exits: North, West.
+I can also see: Locked door, Brass key
+
+Tell me what to do ? drop cross
+O.K.
+Tell me what to do ? get key
+O.K.
+Tell me what to do ? open door
+OK
+
+I'm in a gloomy dungeon
+Obvious exits: North, West.
+I can also see: Wooden cross, Open door leads south
+
+I smell something rotting to the north.
+Tell me what to do ? go door
+
+I'm in a dungeon cell
+Obvious exits: North.
+I can also see: *Gold coin*
+
+Tell me what to do ? drop key
+O.K.
+Tell me what to do ? get coin
+O.K.
+Tell me what to do ? north
+
+I'm in a gloomy dungeon
+Obvious exits: North, West.
+I can also see: Wooden cross, Open door leads south
+
+Tell me what to do ? west
+
+I'm in a square chamber
+Obvious exits: North, East, West.
+
+
+I'm in a square chamber
+Obvious exits: North, East, West.
+
+Tell me what to do ? north
+
+I'm in a gorgeously decorated throne room
+Obvious exits: South.
+I can also see: Sign says: leave treasure here, then say SCORE
+
+Your light has run out
+
+I'm in a gorgeously decorated throne room
+Obvious exits: South.
+I can also see: Sign says: leave treasure here, then say SCORE
+
+Tell me what to do ? drop coin
+O.K.
+Tell me what to do ? score
+I've stored 1 treasures.  On a scale of 0 to 100, that rates 100.
+Well done.
+The game is now over.

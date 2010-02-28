@@ -1,0 +1,110 @@
+29168
+10
+18
+19
+6
+2
+1
+1
+3
+26
+11
+2
+
+300 0 0 0 0 0 9750 0
+450 0 0 0 0 0 9900 0
+600 0 0 0 0 0 9600 0
+100 29 20 0 0 0 152 8700
+157 22 60 0 0 0 8164 0
+758 2 25 80 0 0 11853 0
+100 0 0 0 0 0 11550 0
+100 59 0 0 0 0 600 0
+100 39 20 20 0 0 9305 9600
+900 0 0 0 0 0 900 0
+100 328 320 180 80 0 9072 9600
+100 64 308 0 0 0 8614 0
+100 84 309 0 0 0 8464 0
+25 84 0 0 0 0 1050 0
+1058 122 146 0 0 0 1200 0
+1058 122 120 160 0 0 10809 9600
+158 162 100 0 0 0 8164 0
+100 202 106 0 0 0 1563 0
+100 202 101 0 0 0 1650 0
+
+"AUT" "ANY"
+"GO" "NOR"
+"SCO" "SOU"
+"INV" "EAS"
+"LOO" "WES"
+"RIN" "UP"
+"WAI" "DOW"
+"OPE" "ENT"
+"" "DOO"
+"" "*BEL"
+"TAK" "COI"
+"*GET" "LAM"
+"" "*LAN"
+"" "CRO"
+"" "KEY"
+"" ""
+"" ""
+"" ""
+"LEA" ""
+"*DRO" ""
+
+0 0 0 0 0 0 ""
+0 0 0 0 0 0 "cave mouth"
+0 3 0 0 0 0 "gorgeously decorated throne room"
+2 0 4 1 0 0 "square chamber"
+6 0 0 3 0 0 "gloomy dungeon"
+4 0 0 0 0 0 "dungeon cell"
+0 4 0 0 0 0 "damp, dismal crypt"
+
+""
+"Welcome to the Tutorial adventure."
+"You must find a gold coin and store it."
+"Ding dong!"
+"I hear an ominous rumble."
+"The rocks collapse leaving a way in."
+"Time passes ..."
+"I smell something rotting to the north."
+"It's locked."
+"OK"
+"Vampire bites me!  I'm dead!"
+"Vampire cowers away from the cross!"
+
+"doorbell" 1
+"entrance to cave" 0
+"Sign says: leave treasure here, then say SCORE" 2
+"*Gold coin*/COI/" 5
+"empty lamp/LAM/" 0
+"Wooden cross/CRO/" 3
+"Locked door" 4
+"Brass key/KEY/" 6
+"Open door leads south" 0
+"old-fashioned brass lamp/LAM/" 2
+"Vampire" 6
+
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"The engine set flag 16 when the lamp runs out"
+""
+""
+""
+""
+""
+""
+"vampire attacks unless cross is carried"
+""
+
+100
+31802
+28893

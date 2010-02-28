@@ -1,0 +1,32 @@
+examine box
+get gun
+examine box
+east
+examine sign
+get bullets
+examine bullets
+open door
+eat cheeseburger
+open door
+shoot bloke
+drink potion
+eat fire
+get lollipop
+west
+drop lollipop
+score
+east
+go door
+get bloke
+west
+drop gun
+south
+go passage
+give bloke
+go passage
+get brick
+north
+north
+west
+drop brick
+score

@@ -1,0 +1,187 @@
+open coffin
+examine coffin
+get ring
+north
+south
+west
+west
+go fireplace
+listen
+get idol
+examine idol
+open flue
+listen
+go chimney
+rub idol
+clean idol
+listen
+down
+south
+east
+east
+get knife
+wave ring
+look
+drop ring
+west
+south
+get glass
+south
+north
+west
+get shovel
+south
+go door
+east
+get shield
+get sword
+get armor
+west
+north
+east
+east
+examine kettle
+get soup
+move kettle
+go hole
+get foot
+up
+north
+get heads
+drop heads
+drop sword
+look
+open safe
+east
+east
+get bag
+examine chemicals
+mix chemicals
+examine chemicals
+drink chemicals
+west
+west
+south
+west
+climb stairs
+examine statue
+down
+west
+south
+go door
+examine grave
+get clover
+dig grave
+drop shovel
+get saw
+east
+north
+go cell
+examine leaflet
+read leaflet
+summon medium
+open door
+saw
+east
+north
+drop foot
+on man
+north
+go window
+examine doll
+get pins
+get doll
+south
+south
+drop doll
+drop clover
+drop idol
+east
+go chute
+go crack
+examine plaque
+read plaque
+get plaque
+go chute
+go hole
+get ball
+summon medium
+examine ball
+west
+west
+go fireplace
+go chimney
+read plaque
+drop glass
+down
+south
+east
+south
+east
+north
+dial 38
+dial 33
+look
+examine safe
+get hammer
+south
+west
+north
+get idol
+west
+go fireplace
+go chimney
+get boards
+get nails
+get boards
+drop nails
+drop boards
+drop hammer
+look
+get gratin
+saw grating
+drop saw
+drop grating
+push button
+listen
+help sweep
+pull sweep
+push sweep
+read paper
+drop paper
+down
+down
+south
+east
+south
+climb stairs
+say zap
+listen
+down
+east
+north
+east
+east
+get bag
+west
+west
+south
+west
+north
+east
+go chute
+wave bag
+look
+go crack
+examine bag
+get book
+read book
+read page
+south
+go hol
+look ball
+west
+get stick
+circle coffin
+wave stick
+yell chant

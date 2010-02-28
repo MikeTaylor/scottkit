@@ -1,0 +1,41 @@
+read sign
+east
+get chain
+get crown
+get medallion
+get sceptre
+get goblet
+west
+drop chain
+drop crown
+drop medallion
+drop sceptre
+drop goblet
+get axe
+get match
+east
+north
+chop tree
+get trunk
+east
+kick door
+go tunnel
+chop door
+go passage
+ram door
+go entrance
+drop trunk
+drop axe
+south
+get oak
+south
+get plywood
+south
+get balsa
+south
+drop oak
+drop plywood
+drop balsa
+light balsa
+save game
+TMP

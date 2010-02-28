@@ -1,0 +1,38 @@
+action score: score
+action inventory: inventory
+action look: look
+
+room chamber "square chamber"
+	exit east dungeon
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+
+item door "Locked door"
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+
+item key "Brass key"
+	called "key"
+	at chamber
+
+item door2 "Open door leads south"
+	nowhere
+
+action open door when here door and !present key
+	print "It's locked."
+
+action open door when here door
+	swap door door2
+	print OK
+	look
+
+action go door when here door2
+	goto cell
+	look

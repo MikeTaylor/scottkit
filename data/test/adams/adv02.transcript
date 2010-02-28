@@ -1,0 +1,970 @@
+ScottKit, a Scott Adams game toolkit in Ruby.
+Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>
+Distributed under the GNU software license
+Setting random seed 12368
+
+I'm in a Flat in london
+I can also see: Flight of stairs, Sign says: "Bring *TREASURES* here, say: SCORE", Bottle of rum, Rug, Safety sneakers, Sack of crackers
+
+* Welcome to Adventure number 2: "pirate adventure"
+  by Alexis & Scott Adams, dedicated: Ted Heeren & Paul Sharland
+Remember you can always ask for "help".
+Tell me what to do ? get bottle
+O.K.
+Tell me what to do ? get sneakers
+O.K.
+Tell me what to do ? get crackers
+O.K.
+Tell me what to do ? climb stairs
+
+I'm in a alcove
+Obvious exits: Down.
+I can also see: Open window, Books in a bookcase
+
+Tell me what to do ? get book
+O.K.
+There's a strange sound
+Tell me what to do ? examine book
+There's something there all right. Maybe I should
+read it?
+open it?
+Tell me what to do ? open book
+OK
+Something falls out
+Tell me what to do ? look
+
+I'm in a alcove
+Obvious exits: Down.
+I can also see: Open window, Bookcase with secret passage beyond, Small advertising flyer
+
+OK
+I see nothing special
+Tell me what to do ? examine flyer
+There's something there all right. Maybe I should
+read it?
+Tell me what to do ? read flyer
+Ask for Adventure number 3: "MISSION IMPOSSIBLE" at your
+ favorite computer dealer. If they DON'T carry "ADVENTURE"
+ have them call: 1-305-862-6917  TODAY! "ADVENTURE" also
+ supports lower case!
+Tell me what to do ? read book
+The book is in bad condtion but I can make out the title:
+"Treasure Island". There's a word written in blood in the
+flyleaf: "YOHO" and a message:
+
+"Long John Silver left 2 treasures on Treasure Island"
+Tell me what to do ? go passage
+
+I'm in a secret passageway
+Obvious exits: East, West.
+
+Tell me what to do ? east
+
+I'm in a musty attic
+Obvious exits: West.
+I can also see: Pirate's duffel bag, Unlit torch, Rum bottle smashed into pieces.
+Sign "Opposite of LIGHT is Unlight"
+
+Tell me what to do ? get torch
+O.K.
+Tell me what to do ? examine bag
+There's something there all right. Maybe I should
+open it?
+Tell me what to do ? open bag
+Something falls out
+Tell me what to do ? look
+
+I'm in a musty attic
+Obvious exits: West.
+I can also see: Pirate's duffel bag, Matches, Rum bottle smashed into pieces.
+Sign "Opposite of LIGHT is Unlight"
+
+OK
+I see nothing special
+Tell me what to do ? get matches
+O.K.
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'M outside an open window
+on the ledge of a very tall building
+
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Small ship's keel and mast, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!"
+
+Tell me what to do ? drop book
+O.K.
+Tell me what to do ? drop crackers
+O.K.
+Tell me what to do ? east
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? go shack
+
+I'm in a grass shack
+Obvious exits: West.
+I can also see: Wicked looking pirate, Treasure chest, Parrot
+
+The Parrot crys:
+"Check the chest matey"
+Tell me what to do ? give rum
+O.K.
+Pirate grabs rum and scuttles off chortling
+Bird flys off looking very unhappy
+Tell me what to do ? west
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? east
+
+I'm at the foot of a cave ridden hill, a pathway
+leads on up to the top
+Obvious exits: West.
+
+Tell me what to do ? follow path
+
+I'm on top of a hill. Below is Pirates Island. Across the sea
+way off in the distance I see Treasure Island
+Obvious exits: Down.
+I can also see: Rock wall with narrow crack in it
+
+Tell me what to do ? go crack
+It was a tight squeeze!
+
+I can't see. It is too dark!
+
+Tell me what to do ? go shed
+
+I can't see. It is too dark!
+
+Tell me what to do ? get hammer
+O.K.
+Tell me what to do ? get wings
+O.K.
+Tell me what to do ? north
+Dangerous to move in the dark!
+
+I can't see. It is too dark!
+
+Tell me what to do ? get sails
+O.K.
+Tell me what to do ? go crack
+
+I'm on top of a hill. Below is Pirates Island. Across the sea
+way off in the distance I see Treasure Island
+Obvious exits: Down.
+I can also see: Rock wall with narrow crack in it
+
+Tell me what to do ? unlight torch
+I can't do that yet.
+Tell me what to do ? down
+
+I'm at the foot of a cave ridden hill, a pathway
+leads on up to the top
+Obvious exits: West.
+
+Tell me what to do ? west
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? west
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Large blood soaked book, Small ship's keel and mast, Parrot, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers
+
+Tell me what to do ? drop sails
+O.K.
+The Parrot crys:
+"Check the book, matey!"
+Tell me what to do ? drop wings
+O.K.
+Tell me what to do ? drop torch
+O.K.
+The Parrot crys:
+"Check the book, matey!"
+Tell me what to do ? drop matches
+O.K.
+The Parrot crys:
+"Check the book, matey!"
+Tell me what to do ? get book
+O.K.
+OK
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'M outside an open window
+on the ledge of a very tall building
+
+Tell me what to do ? go window
+
+I'm in a alcove
+Obvious exits: Down.
+I can also see: Open window, Bookcase with secret passage beyond, Small advertising flyer
+
+Tell me what to do ? down
+
+I'm in a Flat in london
+I can also see: Flight of stairs, Sign says: "Bring *TREASURES* here, say: SCORE", Rug
+
+Tell me what to do ? get rug
+Sorry I can't
+Its nailed to the floor!
+Tell me what to do ? get nails
+O.K.
+OK
+Tell me what to do ? get rug
+O.K.
+OK
+There's a strange sound
+Tell me what to do ? drop rug
+O.K.
+Tell me what to do ? get keys
+O.K.
+Tell me what to do ? climb stairs
+
+I'm in a alcove
+Obvious exits: Down.
+I can also see: Open window, Bookcase with secret passage beyond, Small advertising flyer
+
+Tell me what to do ? go passage
+
+I'm in a secret passageway
+Obvious exits: East, West.
+
+Tell me what to do ? east
+
+I'm in a musty attic
+Obvious exits: West.
+I can also see: Pirate's duffel bag, Empty bottle, Sleeping pirate, Rum bottle smashed into pieces.
+Sign "Opposite of LIGHT is Unlight"
+
+Tell me what to do ? get bottle
+O.K.
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'M outside an open window
+on the ledge of a very tall building
+
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Unlit torch, Matches, Small ship's keel and mast, Pile of sails, Parrot, Sand, Lagoon, Water wings, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers
+
+The Parrot crys:
+"Tides be a changing matey"
+The Parrot crys:
+"Check the book, matey!"
+Tell me what to do ? drop book
+O.K.
+The Parrot crys:
+"Check the book, matey!"
+Tell me what to do ? drop sneakers
+O.K.
+Tell me what to do ? drop hammer
+O.K.
+Tell me what to do ? drop nails
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? open book
+OK
+Something falls out
+Tell me what to do ? read note
+Note here says: "I be liking parrots, they be smart matey!"
+Parrot ate a cracker.
+Tell me what to do ? east
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? go shack
+
+I'm in a grass shack
+Obvious exits: West.
+I can also see: Treasure chest
+
+Tell me what to do ? unlock chest
+Its open
+Tell me what to do ? examine chest
+There are a set of plans in it
+Tell me what to do ? get plans
+O.K.
+Tell me what to do ? read plans
+They're plans to build the Jolly Roger (a Pirate ship!)
+You'll need: hammer, nails, lumber, anchor, sails, and a keel.
+Tell me what to do ? get chest
+O.K.
+OK
+Tell me what to do ? west
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? west
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Large blood soaked book, Unlit torch, Matches, Small ship's keel and mast, Pile of sails, Parrot, Claw hammer, Nails, Safety sneakers, Sand, Lagoon, Water wings, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+Parrot ate a cracker.
+Tell me what to do ? drop chest
+O.K.
+Tell me what to do ? drop plans
+O.K.
+Tell me what to do ? get wings
+O.K.
+Tell me what to do ? go lagoon
+
+I'm in a shallow lagoon.
+to the north is the ocean
+Obvious exits: North, South, East, West.
+I can also see: The tide is coming in, Flotsam and jetsam
+
+Tell me what to do ? north
+
+I'm in the ocean
+Obvious exits: North, South, East, West.
+I can also see: Fish, Salt water
+
+Tell me what to do ? get water
+O.K.
+OK
+Tell me what to do ? get fish
+O.K.
+Tell me what to do ? south
+
+I'm in a shallow lagoon.
+to the north is the ocean
+Obvious exits: North, South, East, West.
+I can also see: The tide is coming in, Flotsam and jetsam
+
+Tell me what to do ? south
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Large blood soaked book, Unlit torch, Matches, Small ship's keel and mast, Pile of sails, Parrot, Open treasure chest, Set of plans, Claw hammer, Nails, Safety sneakers, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+The Parrot crys:
+"Pieces of eight"
+Tell me what to do ? drop wings
+O.K.
+Tell me what to do ? get torch
+O.K.
+Tell me what to do ? get matches
+O.K.
+Tell me what to do ? east
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? east
+
+I'm at the foot of a cave ridden hill, a pathway
+leads on up to the top
+Obvious exits: West.
+
+Tell me what to do ? go cave
+
+I can't see. It is too dark!
+
+Tell me what to do ? light torch
+Torch is lit
+
+I'm in a maze of caves
+Obvious exits: South, East, West, Down.
+
+Tell me what to do ? down
+
+I'm in a pit
+Obvious exits: Up.
+I can also see: Mean and hungry looking crocodiles, Locked door
+
+Tell me what to do ? drop fish
+O.K.
+Crocs eat fish and leave
+Tell me what to do ? unlock door
+OK
+Tell me what to do ? go hall
+
+I'm in a long hallway
+Obvious exits: East.
+I can also see: Open door with pit beyond
+
+Tell me what to do ? east
+
+I'm in a large cavern
+Obvious exits: West.
+I can also see: Pile of precut lumber, Tool shed, Narrow crack in the rock
+
+Tell me what to do ? go shed
+
+I'm in a tool shed
+Obvious exits: North.
+I can also see: Shovel
+
+Tell me what to do ? get shovel
+O.K.
+Tell me what to do ? north
+
+I'm in a large cavern
+Obvious exits: West.
+I can also see: Pile of precut lumber, Tool shed, Narrow crack in the rock
+
+Tell me what to do ? get lumber
+O.K.
+Tell me what to do ? west
+
+I'm in a long hallway
+Obvious exits: East.
+I can also see: Open door with pit beyond
+
+Tell me what to do ? go pit
+
+I'm in a pit
+Obvious exits: Up.
+I can also see: Open door with hall beyond
+
+Tell me what to do ? up
+
+I'm in a maze of caves
+Obvious exits: South, East, West, Down.
+
+Tell me what to do ? west
+
+I'm at the foot of a cave ridden hill, a pathway
+leads on up to the top
+Obvious exits: West.
+
+
+I'm at the foot of a cave ridden hill, a pathway
+leads on up to the top
+Obvious exits: West.
+
+Tell me what to do ? unlight torch
+OK
+
+I'm at the foot of a cave ridden hill, a pathway
+leads on up to the top
+Obvious exits: West.
+
+Tell me what to do ? west
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? west
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Large blood soaked book, Small ship's keel and mast, Pile of sails, Parrot, Open treasure chest, Set of plans, Claw hammer, Nails, Safety sneakers, Sand, Lagoon, Water wings, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+Tell me what to do ? drop lumber
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? drop bottle
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? drop keys
+O.K.
+Tell me what to do ? get wings
+O.K.
+Tell me what to do ? go lagoon
+
+I'm in a shallow lagoon.
+to the north is the ocean
+Obvious exits: North, South, East, West.
+I can also see: The tide is coming in, Flotsam and jetsam
+
+Tell me what to do ? look
+
+I'm in a shallow lagoon.
+to the north is the ocean
+Obvious exits: North, South, East, West.
+I can also see: Rusty anchor, The tide is out
+
+OK
+I see nothing special
+Tell me what to do ? dig
+OK
+Tell me what to do ? get anchor
+O.K.
+OK
+Tell me what to do ? south
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Large blood soaked book, Small ship's keel and mast, Pile of sails, Parrot, Ring of keys, Open treasure chest, Set of plans, Claw hammer, Nails, Pile of precut lumber, Bottle of salt water, Safety sneakers, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+Tell me what to do ? drop anchor
+O.K.
+Tell me what to do ? build ship
+CONGRATULATIONS !!!
+ But your Adventure is not over yet...
+The Parrot crys:
+"Tides be a changing matey"
+Tell me what to do ? get book
+O.K.
+OK
+Tell me what to do ? get keys
+O.K.
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+
+Tell me what to do ? drop book
+O.K.
+Tell me what to do ? drop torch
+O.K.
+Tell me what to do ? drop matches
+O.K.
+Tell me what to do ? drop keys
+O.K.
+Tell me what to do ? drop shovel
+O.K.
+Tell me what to do ? drop wings
+O.K.
+Tell me what to do ? go shore
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Parrot, Open treasure chest, Set of plans, Claw hammer, Pirate ship, Bottle of salt water, Safety sneakers, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+The Parrot crys:
+"Check the chest matey"
+Tell me what to do ? east
+
+I'm in a meadow
+Obvious exits: East, West.
+I can also see: Mongoose, Grass shack
+
+Tell me what to do ? get mongoose
+O.K.
+Tell me what to do ? west
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Parrot, Open treasure chest, Set of plans, Claw hammer, Pirate ship, Bottle of salt water, Safety sneakers, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+Tell me what to do ? get chest
+O.K.
+OK
+Parrot ate a cracker.
+Tell me what to do ? get plans
+O.K.
+Tell me what to do ? get hammer
+O.K.
+Tell me what to do ? get bottle
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? get sneakers
+O.K.
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+I can also see: Large blood soaked book, Unlit torch, Matches, Ring of keys, Shovel, Water wings
+
+Tell me what to do ? drop mongoose
+O.K.
+Tell me what to do ? drop chest
+O.K.
+Tell me what to do ? drop plans
+O.K.
+Tell me what to do ? drop hammer
+O.K.
+Tell me what to do ? drop bottle
+O.K.
+Tell me what to do ? drop sneakers
+O.K.
+Tell me what to do ? go shore
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Parrot, Pirate ship, Sand, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
+
+Tell me what to do ? get sack
+O.K.
+Tell me what to do ? get parrot
+O.K.
+The Parrot crys:
+"Pieces of eight"
+Parrot ate a cracker.
+Tell me what to do ? get sand
+O.K.
+Tell me what to do ? get note
+O.K.
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+I can also see: Large blood soaked book, Unlit torch, Matches, Mongoose, Ring of keys, Open treasure chest, Set of plans, Claw hammer, Bottle of salt water, Safety sneakers, Shovel, Water wings
+
+Tell me what to do ? sail ship
+Try: "WEIGH ANCHOR"
+Tell me what to do ? weight anchor
+About 20 pounds. Try: "SET SAIL"
+The Parrot crys:
+"Tides be a changing matey"
+Tell me what to do ? set sail
+Sorry I can't
+I've no crew
+Tell me what to do ? get book
+O.K.
+OK
+The Parrot crys:
+"Tides be a changing matey"
+Parrot ate a cracker.
+Tell me what to do ? get sneakers
+O.K.
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'M outside an open window
+on the ledge of a very tall building
+
+Tell me what to do ? go window
+
+I'm in a alcove
+Obvious exits: Down.
+I can also see: Open window, Bookcase with secret passage beyond, Small advertising flyer
+
+Tell me what to do ? go passage
+
+I'm in a secret passageway
+Obvious exits: East, West.
+
+The Parrot crys:
+"Check the chest matey"
+Tell me what to do ? east
+
+I'm in a musty attic
+Obvious exits: West.
+I can also see: Pirate's duffel bag, Sleeping pirate, Rum bottle smashed into pieces.
+Sign "Opposite of LIGHT is Unlight"
+
+Tell me what to do ? wake pirate
+Pirate awakens and says "Aye matey we be casting off soon"
+He then VANISHES!
+The Parrot crys:
+"Tides be a changing matey"
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'M outside an open window
+on the ledge of a very tall building
+
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Pirate ship, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!"
+
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+I can also see: Unlit torch, Matches, Wicked looking pirate, Mongoose, Ring of keys, Open treasure chest, Set of plans, Claw hammer, Bottle of salt water, Shovel, Water wings
+
+The Parrot crys:
+"Tides be a changing matey"
+Tell me what to do ? examine chest
+There's a map in it
+Parrot ate a cracker.
+Tell me what to do ? examine map
+There's something there all right. Maybe I should
+read it?
+Tell me what to do ? read map
+Its a map to Treasure Island. At the bottom it says:
+   "30 paces then dig!"
+Tell me what to do ? set sail
+Sorry I can't
+Pirate says:
+"First Yee be getting that ACCURSED thing off me ship!"
+Tell me what to do ? go shore
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Pirate ship, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!"
+
+The Parrot crys:
+"Tides be a changing matey"
+Tell me what to do ? drop book
+O.K.
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+I can also see: Unlit torch, Matches, Wicked looking pirate, Mongoose, Ring of keys, Open treasure chest, Set of plans, Claw hammer, Bottle of salt water, Map, Shovel, Water wings
+
+Tell me what to do ? set sail
+Pirate says: "Aye me Buckeroo, we be waiting for the tide to
+ come in!"
+Tell me what to do ? wait
+"Tides be a changing matey"
+Parrot ate a cracker.
+Tell me what to do ? set sail
+After a day at sea we set anchor off of a sandy beach.
+ All Ashore who's going Ashore...
+Tell me what to do ? get shovel
+O.K.
+Tell me what to do ? get map
+I've too much to carry!
+Tell me what to do ? drop note
+O.K.
+Tell me what to do ? drop sneakers
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? get mongoose
+O.K.
+Tell me what to do ? go shore
+Pirate follows me ashore as if expecting something
+Parrot ate a cracker.
+Tell me what to do ? south
+
+I'm in a spooky old graveyard filled with piles
+of empty and broken rum bottles
+Obvious exits: North, East.
+
+Tell me what to do ? east
+
+I'm in a large barren field
+Obvious exits: West.
+I can also see: Monastary
+
+Tell me what to do ? pace 30
+OK I walked off 30 paces.
+Tell me what to do ? dig
+I found something!
+
+I'm in a large barren field
+Obvious exits: West.
+I can also see: Monastary, Wooden box
+
+Tell me what to do ? examine box
+There's something there all right. Maybe I should
+open it?
+Parrot ate a cracker.
+Tell me what to do ? open box
+I can't do that yet.
+Tell me what to do ? go monastery
+
+I'm in a sacked and deserted monastary
+Obvious exits: West.
+I can also see: *DUBLEONS*, Deadly mamba snakes
+
+Tell me what to do ? drop mongoose
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? wait
+"Tides be a changing matey"
+I was wrong, I guess its not a mongoose cause the snakes bit it!
+Tell me what to do ? drop parrot
+O.K.
+The Parrot crys:
+"Pieces of eight"
+Parrot attacks snakes and drives them off
+Tell me what to do ? get dubloons
+O.K.
+OK
+Parrot ate a cracker.
+Tell me what to do ? get parrot
+O.K.
+The Parrot crys:
+"Pieces of eight"
+Tell me what to do ? west
+
+I'm in a large barren field
+Obvious exits: West.
+I can also see: Monastary, Wooden box
+
+Tell me what to do ? west
+
+I'm in a spooky old graveyard filled with piles
+of empty and broken rum bottles
+Obvious exits: North, East.
+
+Tell me what to do ? north
+
+I'm on the beach at *Treasure* Island
+Obvious exits: South.
+I can also see: Wicked looking pirate, Pirate ship
+
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+I can also see: Unlit torch, Matches, Ring of keys, Open treasure chest, Set of plans, Claw hammer, Bottle of salt water, Safety sneakers, Map, Water wings, Note
+
+Tell me what to do ? drop dubloons
+O.K.
+Tell me what to do ? get hammer
+O.K.
+Tell me what to do ? go shore
+
+I'm on the beach at *Treasure* Island
+Obvious exits: South.
+I can also see: Wicked looking pirate, Pirate ship
+
+Parrot ate a cracker.
+Tell me what to do ? south
+
+I'm in a spooky old graveyard filled with piles
+of empty and broken rum bottles
+Obvious exits: North, East.
+
+Tell me what to do ? east
+
+I'm in a large barren field
+Obvious exits: West.
+I can also see: Monastary, Wooden box
+
+Tell me what to do ? open box
+Something falls out
+Parrot ate a cracker.
+Tell me what to do ? look
+
+I'm in a large barren field
+Obvious exits: West.
+I can also see: *RARE STAMPS*, Monastary, Wooden box
+
+OK
+I see nothing special
+Tell me what to do ? get stamps
+O.K.
+Tell me what to do ? west
+
+I'm in a spooky old graveyard filled with piles
+of empty and broken rum bottles
+Obvious exits: North, East.
+
+Tell me what to do ? north
+
+I'm on the beach at *Treasure* Island
+Obvious exits: South.
+I can also see: Wicked looking pirate, Pirate ship
+
+Tell me what to do ? drop hammer
+O.K.
+Tell me what to do ? dig
+I found something!
+
+I'm on the beach at *Treasure* Island
+Obvious exits: South.
+I can also see: Wicked looking pirate, Claw hammer, Pirate ship, Bottles of rum
+
+Tell me what to do ? get rum
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? give rum
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? dig
+I didn't find anything
+Pirate grabs rum and scuttles off chortling
+Tell me what to do ? south
+
+I'm in a spooky old graveyard filled with piles
+of empty and broken rum bottles
+Obvious exits: North, East.
+I can also see: Sleeping pirate
+
+Tell me what to do ? wake pirate
+Pirate awakens and says "Aye matey we be casting off soon"
+He then VANISHES!
+Tell me what to do ? north
+
+I'm on the beach at *Treasure* Island
+Obvious exits: South.
+I can also see: Claw hammer, Pirate ship, Bottles of rum
+
+Tell me what to do ? go ship
+
+I'm aboard Pirate ship anchored off shore
+I can also see: Unlit torch, Matches, Wicked looking pirate, *DUBLEONS*, Ring of keys, Open treasure chest, Set of plans, Bottle of salt water, Safety sneakers, Map, Water wings, Note
+
+Tell me what to do ? set sail
+After a day at sea we set anchor off of a sandy beach.
+ All Ashore who's going Ashore...
+Tell me what to do ? get dubloons
+O.K.
+OK
+Tell me what to do ? drop sand
+O.K.
+Tell me what to do ? get sneakers
+O.K.
+Tell me what to do ? go shore
+
+I'm in a sandy beach on a tropical isle
+Obvious exits: East.
+I can also see: Large blood soaked book, Pirate ship, Lagoon, Sign in the sand says:
+"Welcome to Pirates Island, watch out for the tide!"
+
+Parrot ate a cracker.
+Tell me what to do ? drop shovel
+O.K.
+The Parrot crys:
+"Tides be a changing matey"
+Parrot ate a cracker.
+Tell me what to do ? get book
+O.K.
+OK
+Tell me what to do ? say yoho
+Everything spins around and suddenly I'm elsewhere...
+
+I'M outside an open window
+on the ledge of a very tall building
+
+Parrot ate a cracker.
+Tell me what to do ? go window
+
+I'm in a alcove
+Obvious exits: Down.
+I can also see: Open window, Bookcase with secret passage beyond, Small advertising flyer
+
+Parrot ate a cracker.
+Tell me what to do ? down
+
+I'm in a Flat in london
+I can also see: Flight of stairs, Sign says: "Bring *TREASURES* here, say: SCORE", Rug
+
+Parrot ate a cracker.
+Tell me what to do ? drop stamps
+O.K.
+Tell me what to do ? score
+I've stored 1 treasures.  On a scale of 0 to 100, that rates 50.
+Tell me what to do ? drop dubloons
+O.K.
+Parrot ate a cracker.
+Tell me what to do ? score
+I've stored 2 treasures.  On a scale of 0 to 100, that rates 100.
+Well done.
+The game is now over.
+The Parrot crys:
+"Pieces of eight"
+Parrot ate a cracker.

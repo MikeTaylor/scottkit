@@ -1,0 +1,413 @@
+ScottKit, a Scott Adams game toolkit in Ruby.
+Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>
+Distributed under the GNU software license
+Setting random seed 12368
+
+I'm in a small wooden hut.
+Obvious exits: East.
+I can also see: Sign, Axe, Single match
+
+Welcome to "CRYSTAL OF CHAOS"
+Written by Mike Taylor, starting Monday 10th April 2001
+This is a demo for the "ScottKit" adventure system
+
+Your task is to find the six crown jewels of the
+kingdom and store them in this hut.  They are:
+a platinum chain, a gold crown, a silver medallion
+a bronze sceptre, a zinc goblet and a tin stoat.
+Tell me what to do ? read sign
+It says - "Leave *TREASURES* here, then say: SCORE"
+Tell me what to do ? east
+
+I'm in a clearing.  There's a small hut to the west.
+Obvious exits: North, South, East, West.
+I can also see: *Platinum chain*, *Gold crown*, *Silver medallion*, *Bronze sceptre*, *Zinc goblet*
+
+Oh, there they are.  That wasn't as hard as I expected.
+Tell me what to do ? get chain
+O.K.
+Tell me what to do ? get crown
+O.K.
+Tell me what to do ? get medallion
+O.K.
+Tell me what to do ? get sceptre
+O.K.
+Tell me what to do ? get goblet
+O.K.
+Tell me what to do ? west
+
+I'm in a small wooden hut.
+Obvious exits: East.
+I can also see: Sign, Axe, Single match
+
+Tell me what to do ? drop chain
+O.K.
+Tell me what to do ? drop crown
+O.K.
+Tell me what to do ? drop medallion
+O.K.
+Tell me what to do ? drop sceptre
+O.K.
+Tell me what to do ? drop goblet
+O.K.
+Ah, looks like I'm still missing the stoat.
+Tell me what to do ? get axe
+O.K.
+Tell me what to do ? get match
+O.K.
+Tell me what to do ? east
+
+I'm in a clearing.  There's a small hut to the west.
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? north
+
+I'm in a dismal swamp
+Obvious exits: South, East.
+I can also see: Cypress tree, Evil smelling mud, Swamp gas, Patches of "OILY" slime, Chiggers
+
+Tell me what to do ? chop tree
+TIMBER!
+
+I'm in a dismal swamp
+Obvious exits: South, East.
+I can also see: -SOLID- stump, Trunk of cypress tree, Evil smelling mud, Swamp gas, Patches of "OILY" slime, Chiggers
+
+Tell me what to do ? get trunk
+O.K.
+Tell me what to do ? east
+
+I'm in a rocky area by an outcrop
+Obvious exits: South, West.
+I can also see: Old-fashioned brass lamp, Balsa-wood door set into the rock
+
+Tell me what to do ? kick door
+It splinters easily.
+There's a tunnel beyond.
+
+I'm in a rocky area by an outcrop
+Obvious exits: South, West.
+I can also see: Old-fashioned brass lamp, Balsa wood, Tunnel disappears into the rock
+
+Tell me what to do ? go tunnel
+
+I'm in a dingy north-south tunnel
+Obvious exits: South.
+I can also see: Plywood door blocks the way north
+
+Tell me what to do ? chop door
+CRUNCH!
+There's a passage beyond.
+
+I'm in a dingy north-south tunnel
+Obvious exits: South.
+I can also see: Plywood, Passage disappears into the rock
+
+Tell me what to do ? go passage
+
+I'm in a gloomy north-south passage
+Obvious exits: South.
+I can also see: Oak door blocks the way north
+
+Tell me what to do ? ram door
+DOOSH!
+There's an entrance beyond.
+
+I'm in a gloomy north-south passage
+Obvious exits: South.
+I can also see: Oak, Entrance to the north
+
+Tell me what to do ? go entrance
+
+I'm in a empty room
+Obvious exits: South.
+
+Tell me what to do ? drop trunk
+O.K.
+Tell me what to do ? drop axe
+O.K.
+Tell me what to do ? south
+
+I'm in a gloomy north-south passage
+Obvious exits: South.
+I can also see: Oak, Entrance to the north
+
+Tell me what to do ? get oak
+O.K.
+Tell me what to do ? south
+
+I'm in a dingy north-south tunnel
+Obvious exits: South.
+I can also see: Plywood, Passage disappears into the rock
+
+Tell me what to do ? get plywood
+O.K.
+Tell me what to do ? south
+
+I'm in a rocky area by an outcrop
+Obvious exits: South, West.
+I can also see: Old-fashioned brass lamp, Balsa wood, Tunnel disappears into the rock
+
+Tell me what to do ? get balsa
+O.K.
+Tell me what to do ? south
+
+I'm in a glade
+Obvious exits: North, South, West.
+I can also see: Beech tree
+
+Tell me what to do ? drop oak
+O.K.
+Tell me what to do ? drop plywood
+O.K.
+Tell me what to do ? drop balsa
+O.K.
+Tell me what to do ? light balsa
+OK.  It burns up very quickly.
+My match goes out.
+The plywood also catches fire and burns quickly.
+The oak catches, and becomes a roaring fire.
+Smoke pours upwards.
+Tell me what to do ? climb tree
+
+I'm in a the top of a beech tree
+Obvious exits: Down.
+I can also see: Wild honey, Drowsy bees, Bees' nest
+
+Tell me what to do ? get honey
+O.K.
+Tell me what to do ? down
+
+I'm in a glade
+Obvious exits: North, South, West.
+I can also see: Beech tree, Blazing hot fire
+
+Tell me what to do ? north
+
+I'm in a rocky area by an outcrop
+Obvious exits: South, West.
+I can also see: Old-fashioned brass lamp, Tunnel disappears into the rock
+
+Tell me what to do ? get lamp
+O.K.
+Tell me what to do ? west
+
+I'm in a dismal swamp
+Obvious exits: South, East.
+I can also see: -SOLID- stump, Evil smelling mud, Swamp gas, Patches of "OILY" slime, Chiggers
+
+Tell me what to do ? south
+
+I'm in a clearing.  There's a small hut to the west.
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? south
+
+I'm in a forest
+Obvious exits: North, East.
+I can also see: Path leads south into the forest, Very thin black bear
+
+Tell me what to do ? give honey
+Bear eats the honey and falls asleep.
+Tell me what to do ? follow path
+
+I'm in a overgrown path in a dark forest
+Obvious exits: North.
+I can also see: Huge vase
+
+Tell me what to do ? get vase
+O.K.
+Tell me what to do ? north
+
+I'm in a forest
+Obvious exits: North, East.
+I can also see: Path leads south into the forest, Sleeping bear
+
+Tell me what to do ? east
+
+I'm in a forest
+Obvious exits: North, West.
+I can also see: Bubbling pool
+
+Tell me what to do ? examine vase
+It's bigger than I am.
+Tell me what to do ? hold breath
+OK
+I can only hold my breath for
+5 more turns.
+Tell me what to do ? go pool
+
+I'm in a bubbling pool, just below the water level
+Obvious exits: Up.
+I can also see: inflow from the south
+
+I can only hold my breath for
+4 more turns.
+Tell me what to do ? go inflow
+
+I'm swimming in an underground river.
+Light pours from the north.
+Obvious exits: North, South.
+
+I can only hold my breath for
+3 more turns.
+Tell me what to do ? south
+
+I'm swimming in an underground river.
+There's a faint glimmer of light to the north.
+Obvious exits: North, South.
+
+I can only hold my breath for
+2 more turns.
+Tell me what to do ? drop vase
+O.K.
+I can only hold my breath for
+1 more turns.
+Tell me what to do ? go vase
+
+I'm INSIDE a huge vase!
+I can also see: Iron key
+
+I have to breathe NOW!
+Tell me what to do ? get key
+O.K.
+Tell me what to do ? hold breath
+OK
+I can only hold my breath for
+5 more turns.
+Tell me what to do ? get out
+
+I'm swimming in an underground river.
+There's a faint glimmer of light to the north.
+Obvious exits: North, South.
+I can also see: Huge vase
+
+I can only hold my breath for
+4 more turns.
+Tell me what to do ? south
+
+I'm swimming in an underground river.
+There's a faint glimmer of light to the south.
+Obvious exits: North, South.
+
+I can only hold my breath for
+3 more turns.
+Tell me what to do ? south
+
+I'm swimming in an underground river.
+Light pours from the south.
+Obvious exits: North, South.
+
+I can only hold my breath for
+2 more turns.
+Tell me what to do ? south
+
+I'm in a brightly lit underground chamber.
+An underground river disappears into the north wall.
+Obvious exits: North.
+I can also see: *Tin stoat*
+
+I can only hold my breath for
+1 more turns.
+Tell me what to do ? get stoat
+O.K.
+I have to breathe NOW!
+Tell me what to do ? hold breath
+OK
+I can only hold my breath for
+5 more turns.
+Tell me what to do ? north
+
+I'm swimming in an underground river.
+Light pours from the south.
+Obvious exits: North, South.
+
+I can only hold my breath for
+4 more turns.
+Tell me what to do ? north
+
+I'm swimming in an underground river.
+There's a faint glimmer of light to the south.
+Obvious exits: North, South.
+
+I can only hold my breath for
+3 more turns.
+Tell me what to do ? north
+
+I'm swimming in an underground river.
+There's a faint glimmer of light to the north.
+Obvious exits: North, South.
+I can also see: Huge vase
+
+I can only hold my breath for
+2 more turns.
+Tell me what to do ? go vase
+
+I'm INSIDE a huge vase!
+
+I can only hold my breath for
+1 more turns.
+Tell me what to do ? wait
+OK
+I have to breathe NOW!
+Tell me what to do ? hold breath
+OK
+I can only hold my breath for
+5 more turns.
+Tell me what to do ? get out
+
+I'm swimming in an underground river.
+There's a faint glimmer of light to the north.
+Obvious exits: North, South.
+I can also see: Huge vase
+
+I can only hold my breath for
+4 more turns.
+Tell me what to do ? north
+
+I'm swimming in an underground river.
+Light pours from the north.
+Obvious exits: North, South.
+
+I can only hold my breath for
+3 more turns.
+Tell me what to do ? north
+
+I'm in a bubbling pool, just below the water level
+Obvious exits: Up.
+I can also see: inflow from the south
+
+I can only hold my breath for
+2 more turns.
+Tell me what to do ? up
+
+I'm in a forest
+Obvious exits: North, West.
+I can also see: Bubbling pool
+
+I can only hold my breath for
+1 more turns.
+Tell me what to do ? north
+
+I'm in a glade
+Obvious exits: North, South, West.
+I can also see: Beech tree, Blazing hot fire
+
+I have to breathe NOW!
+Tell me what to do ? west
+
+I'm in a clearing.  There's a small hut to the west.
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? west
+
+I'm in a small wooden hut.
+Obvious exits: East.
+I can also see: Sign, *Platinum chain*, *Gold crown*, *Silver medallion*, *Bronze sceptre*, *Zinc goblet*
+
+Tell me what to do ? drop stoat
+O.K.
+Tell me what to do ? score
+I've stored 6 treasures.  On a scale of 0 to 100, that rates 100.
+Well done.
+The game is now over.

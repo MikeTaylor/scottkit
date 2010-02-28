@@ -1,0 +1,112 @@
+Crystal of Chaos
+================
+
+Mike Taylor
+Started Monday 9th April 2001
+
+
+				Empty Room
+				|
+				=
+				|
+				Passage
+				[oak door -> oak, entrance]
+				=
+				|
+				Tunnel
+				[plywood door -> plywood, passage]
+				=
+				|
+		Swamp-----------Outcrop
+		[cypress, mud, 	[balsa door -> balsa, tunnel]
+		|oil, gas,	|
+		|chiggers]	|
+		|		|
+Hut-------------Clearing--------Glade--->CLIMB, <Down---Top of Beech
+[sign, axe,	<treasure>	[beech]			[nest, honey, bees]
+ match]		|		|
+		|		|
+		Forest----------Forest2
+		[bear]		[pool]
+		|		vGO POOL, ^Up
+		|		|
+		Forest Path	In Pool
+		[vase]		[inflow]
+	 ______/(why here?!)	vGO INFLOW
+	/			|
+	Inside vase		River1
+	[key]			|
+				|
+				|
+				River2
+				|
+				|
+				|
+				River3
+				|
+				|
+				|
+				River4
+				|
+				|
+				|
+				River Chamber
+				[*stoat*]
+				|
+				|
+Cell-----||-----Prison----------Central Ch.-----Junction--------Control Room
+[goblin]	[iron door,			|		[red button,
+		=bronze door]			|		 blue button,
+		|				|		 lever]
+		Cell2				Steel Room
+		[steel rope]			|
+						|
+						|
+						Chasm Hall
+
+--
+
+Can hold breath for four moves:
+	GO POOL
+	GO INFLOW
+	DROP VASE
+	GO VASE (at river2)
+		(BREATHE; HOLD BREATH)
+	LEAVE VASE
+	S
+	S
+	S
+And if you don't do the vase-breathing trick, it gets you:
+	GO POOL
+	GO INFLOW
+	S
+	S
+as far as river3, which is where we need to see the first glow of light
+
+--
+
+Another underwater-movement puzzle:
+
+	Pool1		Pool2
+	 \		 \
+	  (^Up, vDown)	  (^Up, vDown)
+	 /		 /
+	Bottom1---------Bottom2
+
+You can only swim down from Pool<n> to Bottom<n> while carrying a
+brick as ballast, but then you can only swim back up if you're NOT
+carrying it.  That's fine for going through once in one direction, but
+you can't get back.  The trick is to tie a rope to the brick, swim
+down, go east or west as necessary, drop the brick and swim up while
+still carrying the rope.  Then when you're out of the pool, you can
+pull the rope to bring the brick back up.
+
+---
+
+single-location maze
+"win game" spell
+
+---
+
+giant frogs bars your way.  kiss => turns to prince
+

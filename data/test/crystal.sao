@@ -1,0 +1,373 @@
+0
+44
+87
+42
+27
+5
+1
+6
+3
+100
+53
+1
+
+900 0 0 0 0 0 9900 0
+1507 0 0 0 0 0 9900 0
+1050 0 0 0 0 0 9750 0
+1208 0 0 0 0 0 10650 0
+1350 0 0 0 0 0 9600 0
+100 224 0 0 0 0 8400 0
+100 227 0 0 0 0 8550 0
+100 29 20 0 0 0 8701 373
+0 0 0 0 0 0 454 823
+0 0 0 0 0 0 907 1200
+100 44 129 120 0 0 8709 0
+100 24 140 0 0 0 8700 0
+100 65 140 0 0 0 9000 0
+100 85 140 0 0 0 9000 0
+100 105 140 0 0 0 9000 0
+100 125 140 0 0 0 9000 0
+100 145 140 0 0 0 9000 0
+100 148 169 160 0 0 8710 0
+100 284 100 0 0 0 8700 0
+100 304 100 0 0 0 8700 0
+100 324 100 0 0 0 8700 0
+100 344 100 0 0 0 8700 0
+100 364 100 0 0 0 8700 0
+100 264 100 0 0 0 9000 0
+100 384 100 0 0 0 9000 0
+100 244 100 0 0 0 9000 0
+100 544 100 0 0 0 9000 0
+100 39 0 0 0 0 1650 0
+100 16 0 0 0 0 11550 0
+100 16 0 0 0 0 1878 1950
+100 19 108 100 0 0 2188 9061
+100 48 502 500 60 0 2305 8700
+100 68 562 560 0 0 2417 8323
+0 600 80 0 0 0 8008 0
+100 88 64 220 240 80 8312 0
+100 40 60 80 0 0 9060 9000
+1800 32 0 0 0 0 2700 0
+1950 312 0 0 0 0 2850 0
+2250 52 0 0 0 0 3000 0
+2409 3 0 0 0 0 3150 0
+2560 162 80 0 0 0 8176 0
+1511 222 0 0 0 0 3300 0
+3000 222 0 0 0 0 3450 0
+1810 262 260 300 280 0 3672 8026
+3162 282 0 0 0 0 3750 0
+3313 402 0 0 0 0 3900 0
+3463 402 400 460 440 0 10853 4123
+0 0 0 0 0 0 4276 0
+1813 402 400 460 0 0 10829 4276
+1963 402 400 460 0 0 8303 4573
+0 0 0 0 0 0 4276 0
+164 462 140 0 0 0 8176 0
+3313 482 0 0 0 0 4650 0
+3463 482 0 0 0 0 4800 0
+1813 482 480 520 500 0 10853 5023
+0 0 0 0 0 0 5176 0
+1963 482 480 520 0 0 10830 5176
+165 522 160 0 0 0 8176 0
+3313 542 0 0 0 0 5250 0
+3463 542 0 0 0 0 4800 0
+1813 542 0 0 0 0 5400 0
+1963 542 540 580 560 0 10853 5623
+0 0 0 0 0 0 5776 0
+166 582 180 0 0 0 8176 0
+2267 501 0 0 0 0 5850 0
+2267 502 40 0 0 0 6041 8250
+2268 562 40 0 0 0 6341 8250
+2268 561 0 0 0 0 5850 0
+2269 441 0 0 0 0 5850 0
+2269 442 40 0 0 0 6491 8323
+0 440 40 0 0 0 8308 0
+170 642 0 0 0 0 6600 0
+170 204 220 0 0 0 8176 0
+3911 642 203 640 200 660 8305 7995
+3171 683 0 0 0 0 6900 0
+171 682 20 240 0 0 13104 11400
+2721 244 20 0 0 0 13126 0
+1522 244 20 0 0 0 13126 0
+173 722 280 0 0 0 8176 0
+4074 16 0 0 0 0 7050 0
+4074 120 0 0 0 0 11898 0
+175 742 300 0 0 0 8176 0
+4213 424 0 0 0 0 7350 0
+4226 782 0 0 0 0 7500 0
+4227 802 0 0 0 0 7650 0
+3000 0 0 0 0 0 15300 0
+3150 0 0 0 0 0 15535 0
+4350 0 0 0 0 0 7200 0
+
+"AUT" "ANY"
+"GO" "NOR"
+"*ENT" "SOU"
+"*FOL" "EAS"
+"*RUN" "WES"
+"*WAL" "UP"
+"INV" "DOW"
+"SCO" "INV"
+"SAV" "GAM"
+"LOO" "SIG"
+"TAK" "TRE"
+"*GET" "HON"
+"CHO" "STU"
+"BAT" "DOO"
+"*RAM" "TUN"
+"LIG" "PAS"
+"REA" "ENT"
+"CLI" "PLY"
+"LEA" "OAK"
+"*DRO" "BAL"
+"HEL" "PAT"
+"EXA" "VAS"
+"OPE" "OUT"
+"KIC" "POO"
+"*SMA" "BRE"
+"*BRE" "INF"
+"GIV" "IRO"
+"HOL" "BRO"
+"KNO" "AXE"
+"WAI" "*AX"
+"" "MAT"
+"" "CHA"
+"" "CRO"
+"" "MED"
+"" "SCE"
+"" "GOB"
+"" "LAM"
+"" "TRU"
+"" "MUD"
+"" "OIL"
+"" "CHI"
+"" "KEY"
+"" "STO"
+
+0 0 0 0 0 0 ""
+0 0 2 0 0 0 "small wooden hut."
+5 10 3 1 0 0 "clearing.  There's a small hut to the west."
+6 13 0 2 0 0 "glade"
+0 0 0 0 0 3 "the top of a beech tree"
+0 2 6 0 0 0 "dismal swamp"
+0 3 0 5 0 0 "rocky area by an outcrop"
+0 6 0 0 0 0 "dingy north-south tunnel"
+0 7 0 0 0 0 "gloomy north-south passage"
+0 8 0 0 0 0 "empty room"
+2 0 13 0 0 0 "forest"
+10 0 0 0 0 0 "overgrown path in a dark forest"
+0 0 0 0 0 0 "*I'm INSIDE a huge vase!"
+3 0 0 10 0 0 "forest"
+0 0 0 0 13 0 "bubbling pool, just below the water level"
+14 16 0 0 0 0 "*I'm swimming in an underground river.
+Light pours from the north."
+15 17 0 0 0 0 "*I'm swimming in an underground river.
+There's a faint glimmer of light to the north."
+16 18 0 0 0 0 "*I'm swimming in an underground river.
+There's a faint glimmer of light to the south."
+17 19 0 0 0 0 "*I'm swimming in an underground river.
+Light pours from the south."
+18 0 0 0 0 0 "brightly lit underground chamber.
+An underground river disappears into the north wall."
+19 0 23 21 0 0 "central underground chamber.  Passages leave in all directions."
+0 0 20 0 0 0 "prison in an undergound complex.  Doors lead to prison cells"
+1 0 21 0 0 0 "dirty prison cell with muddy straw on the ground"
+0 25 24 20 0 0 "junction between an east-west passage and one that leads south"
+0 0 0 23 0 0 "control room filled with humming, crackling machinery"
+23 26 0 0 0 0 "square room with a steel floor"
+25 0 0 0 0 0 "vast hall which is split by a deep chasm running from east to west"
+0 0 1 0 0 0 "*I'm dead.  Great.  Try again."
+
+""
+"Welcome to `CRYSTAL OF CHAOS`"
+"Written by Mike Taylor, starting Monday 10th April 2001"
+"This is a demo for the `ScottKit` adventure system"
+""
+"Your task is to find the six crown jewels of the"
+"kingdom and store them in this hut.  They are:"
+"a platinum chain, a gold crown, a silver medallion"
+"a bronze sceptre, a zinc goblet and a tin stoat."
+"Oh, there they are.  That wasn't as hard as I expected."
+"Ah, looks like I'm still missing the stoat."
+"I have to breathe NOW!"
+"I can only hold my breath for"
+"more turns."
+"I can't breathe ..."
+"The plywood also catches fire and burns quickly."
+"The oak catches, and becomes a roaring fire."
+"Smoke pours upwards."
+"I can't chop anything without an axe."
+"I don't have a battering ram."
+"I don't have anything to light it with."
+"It says - `Leave *TREASURES* here, then say: SCORE`"
+"No!  Bees would sting me!"
+"Smoke 'em out!"
+"TIMBER!"
+"There's nothing there all right! Maybe I should forget it?"
+"It's locked."
+"It splinters easily."
+"There's a tunnel beyond."
+"CRUNCH!  It's smashed to smithereens!"
+"DOOSH!  It's absolutely annihilated!"
+"It's also locked."
+"Ouch!"
+"CRUNCH!"
+"There's a passage beyond."
+"OF COURSE it's locked!"
+"It's too solid for the axe to make much impression."
+"DOOSH!"
+"There's an entrance beyond."
+"Not while I'm carrying it!"
+"I can't get it to catch fire."
+"My match goes out."
+"There's no way it will catch fire."
+"OK.  It burns up very quickly."
+"Bear won't let me"
+"Bear eats the honey and falls asleep."
+"It's bigger than I am."
+"I'm already holding my breath!"
+"OK"
+"Which door?  Use `knock iron` or `knock bronze`."
+"Nothing happens."
+"Nothing seems to happen."
+"You'll have to figure it out for yourself."
+"It looks like a pretty average"
+
+"Sign" 1
+"Axe/AXE/" 1
+"Single match/MAT/" 1
+"*Platinum chain*/CHA/" 2
+"*Gold crown*/CRO/" 2
+"*Silver medallion*/MED/" 2
+"*Bronze sceptre*/SCE/" 2
+"*Zinc goblet*/GOB/" 2
+"Beech tree" 3
+"Old-fashioned brass lamp/LAM/" 6
+"Wild honey/HON/" 4
+"Killer bees" 4
+"Drowsy bees" 0
+"Cypress tree" 5
+"-SOLID- stump" 0
+"Trunk of cypress tree/TRU/" 0
+"Evil smelling mud/MUD/" 5
+"Swamp gas" 5
+"Patches of `OILY` slime/OIL/" 5
+"Chiggers/CHI/" 5
+"Balsa-wood door set into the rock" 6
+"Bees' nest" 4
+"Balsa wood/BAL/" 0
+"Tunnel disappears into the rock" 0
+"Plywood door blocks the way north" 7
+"Plywood/PLY/" 0
+"Passage disappears into the rock" 0
+"Oak door blocks the way north" 8
+"Oak/OAK/" 0
+"Entrance to the north" 0
+"Blazing hot fire" 0
+"Path leads south into the forest" 10
+"Very thin black bear" 10
+"Sleeping bear" 0
+"Huge vase/VAS/" 11
+"Iron key/KEY/" 12
+"Bubbling pool" 13
+"inflow from the south" 14
+"*Tin stoat*/STO/" 19
+"Iron door leads south" 21
+"Bronze door leads west" 21
+"small goblin" 22
+"Red button" 24
+"Blue button" 24
+"Lever" 24
+
+""
+""
+""
+""
+""
+""
+""
+""
+"cont"
+"cont"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Death due to lack of breath"
+""
+""
+"cont"
+""
+"Fire-building must happen all in one go"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"cont"
+"no balsa wood"
+"no balsa wood"
+"cont"
+""
+""
+""
+""
+"cont"
+"no plywood"
+""
+""
+""
+""
+""
+"cont"
+""
+""
+""
+""
+""
+""
+""
+"cont"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+1
+18400
+0

@@ -1,0 +1,20 @@
+Location	Marker		Exits
+				N	S	E	W	U	D
+-------------------------------------------------------------------------------
+Cavern				N/A	N/A	N/A	N/A	N/A	SIGN
+SIGN		sign		WU	NEWU	NEWU	--	--	WU
+NEWU				SIGN	--	WU	SIGN	WU	--
+WU				--	--	--	SCRATCH	SIGN	--
+SCRATCH		scratchings	ARROW	SIGN	WU	SUD	SUD	ARROW
+SUD				--	ARROW	--	--	SCRATCH	ARROW
+ARROW		arrow, *rug*	ARROW	SIGN	SIGN	NEWU	SCRATCH	LAVA
+LAVA		lava, *net*	--	--	--	--	ARROW	--
+
+From cavern to lava:
+d
+d
+w
+d
+get rug
+d
+get net

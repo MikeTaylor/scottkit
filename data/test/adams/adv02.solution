@@ -1,0 +1,225 @@
+get bottle
+get sneakers
+get crackers
+climb stairs
+get book
+examine book
+open book
+look
+examine flyer
+read flyer
+read book
+go passage
+east
+get torch
+examine bag
+open bag
+look
+get matches
+say yoho
+say yoho
+drop book
+drop crackers
+east
+go shack
+give rum
+west
+east
+follow path
+go crack
+go shed
+get hammer
+get wings
+north
+get sails
+go crack
+unlight torch
+down
+west
+west
+drop sails
+drop wings
+drop torch
+drop matches
+get book
+say yoho
+go window
+down
+get rug
+get nails
+get rug
+drop rug
+get keys
+climb stairs
+go passage
+east
+get bottle
+say yoho
+say yoho
+drop book
+drop sneakers
+drop hammer
+drop nails
+open book
+read note
+east
+go shack
+unlock chest
+examine chest
+get plans
+read plans
+get chest
+west
+west
+drop chest
+drop plans
+get wings
+go lagoon
+north
+get water
+get fish
+south
+south
+drop wings
+get torch
+get matches
+east
+east
+go cave
+light torch
+down
+drop fish
+unlock door
+go hall
+east
+go shed
+get shovel
+north
+get lumber
+west
+go pit
+up
+west
+unlight torch
+west
+west
+drop lumber
+drop bottle
+drop keys
+get wings
+go lagoon
+look
+dig
+get anchor
+south
+drop anchor
+build ship
+get book
+get keys
+go ship
+drop book
+drop torch
+drop matches
+drop keys
+drop shovel
+drop wings
+go shore
+east
+get mongoose
+west
+get chest
+get plans
+get hammer
+get bottle
+get sneakers
+go ship
+drop mongoose
+drop chest
+drop plans
+drop hammer
+drop bottle
+drop sneakers
+go shore
+get sack
+get parrot
+get sand
+get note
+go ship
+sail ship
+weight anchor
+set sail
+get book
+get sneakers
+say yoho
+go window
+go passage
+east
+wake pirate
+say yoho
+say yoho
+go ship
+examine chest
+examine map
+read map
+set sail
+go shore
+drop book
+go ship
+set sail
+wait
+set sail
+get shovel
+get map
+drop note
+drop sneakers
+get mongoose
+go shore
+south
+east
+pace 30
+dig
+examine box
+open box
+go monastery
+drop mongoose
+wait
+drop parrot
+get dubloons
+get parrot
+west
+west
+north
+go ship
+drop dubloons
+get hammer
+go shore
+south
+east
+open box
+look
+get stamps
+west
+north
+drop hammer
+dig
+get rum
+give rum
+dig
+south
+wake pirate
+north
+go ship
+set sail
+get dubloons
+drop sand
+get sneakers
+go shore
+drop shovel
+get book
+say yoho
+go window
+down
+drop stamps
+score
+drop dubloons
+score

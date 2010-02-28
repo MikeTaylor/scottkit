@@ -1,0 +1,62 @@
+start dungeon
+treasury throne
+
+action score: score
+action inventory: inventory
+action look: look
+
+room throne "gorgeously decorated throne room"
+	exit south chamber
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+room chamber "square chamber"
+	exit east dungeon
+	exit north throne
+
+item cross "Wooden cross"
+	called "cross"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit north crypt
+
+item door "Locked door"
+
+item key "Brass key"
+	called "key"
+	at crypt
+
+item door2 "Open door leads south"
+	nowhere
+
+action open door when here door and !present key
+	print "It's locked."
+
+action open door when here door
+	swap door door2
+	print OK
+	look
+
+action go door when here door2
+	goto cell
+	look
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+
+room crypt "damp, dismal crypt"
+	exit south dungeon
+
+item vampire "Vampire"
+
+occur when here vampire and !carried cross
+	print "Vampire bites me!  I'm dead!"
+	game_over
+	comment "vampire attacks unless cross is carried"
+
+occur when here vampire and "carried" cross
+	print "Vampire cowers away from the cross!"

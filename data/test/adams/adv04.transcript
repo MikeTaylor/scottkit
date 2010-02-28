@@ -1,0 +1,876 @@
+ScottKit, a Scott Adams game toolkit in Ruby.
+Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>
+Distributed under the GNU software license
+Setting random seed 12368
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Closed Coffin
+
+Welcome to ADVENTURE:4, "VOODOO CASTLE" by Alexis ADAMS.
+Dedicated to all MOMS!
+Tell me what to do ? open coffin
+OK
+Tell me what to do ? examine coffin
+A sign here says:
+Count Cristo's been CURSED! There's one way for him to flee!
+Find it, and he'll go FREE!
+There's a man here
+Wearing a sapphire ring
+Tell me what to do ? get ring
+O.K.
+OK
+Tell me what to do ? north
+
+I'm in a room in the castle
+Obvious exits: South.
+I can also see: Open Window
+
+Window just slAmmed shut
+Tell me what to do ? south
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Open Coffin
+
+Tell me what to do ? west
+
+I'm in a Ballroom
+Obvious exits: East.
+I can also see: Large fireplace
+
+Tell me what to do ? west
+I can't go in that direction.
+Tell me what to do ? go fireplace
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Closed Flue, Dusty Idol
+
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? listen
+I hear strange sounds, as if someone were moaning.
+Its very faint.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? get idol
+O.K.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? examine idol
+Boy it looks dusty.
+I see nothing very special.
+Tell me what to do ? open flue
+OK
+Tell me what to do ? listen
+I hear strange sounds, as if someone were moaning.
+Its very faint.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? go chimney
+
+I can't see. It is too dark!
+
+Tell me what to do ? rub idol
+My idol acted strange
+Some dust fell off it and it glowed briefly.
+My idol acted strange
+Some dust fell off it and it glowed briefly.
+Tell me what to do ? clean idol
+As I dust of the Idol it begins to glow!
+
+I'm in a Chimney
+Obvious exits: Down.
+I can also see: Soot, Wood boards nailed to chimney wall
+
+Tell me what to do ? listen
+I hear strange sounds, as if someone were moaning.
+Its much louder up here.
+Tell me what to do ? down
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+Tell me what to do ? south
+
+I'm in a Ballroom
+Obvious exits: East.
+I can also see: Large fireplace
+
+Tell me what to do ? east
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Open Coffin
+
+Tell me what to do ? east
+
+I'm in a Tunnel
+Obvious exits: West.
+I can also see: Bloody Knife, Massive stone door with a SAPPHIRE set into it
+
+Tell me what to do ? get knife
+O.K.
+Tell me what to do ? wave ring
+Ring glows briefly & door vanishes
+Tell me what to do ? look
+
+I'm in a Tunnel
+Obvious exits: West.
+I can also see: Slick chute leading downward
+
+I see nothing very special.
+Tell me what to do ? drop ring
+O.K.
+Tell me what to do ? west
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Open Coffin
+
+Tell me what to do ? south
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Broken glass, Stairs
+
+Tell me what to do ? get glass
+O.K.
+Tell me what to do ? south
+
+I'm in a room in the castle
+Obvious exits: North.
+
+Tell me what to do ? north
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? west
+
+I'm in a dungeon
+Obvious exits: South, East.
+I can also see: Pocket Shovel, Open jail cell
+
+Tell me what to do ? get shovel
+O.K.
+Tell me what to do ? south
+
+I'm in a torture chamber
+Obvious exits: North, East.
+I can also see: Tiny open door
+
+Tell me what to do ? go door
+I can't do that
+I'm too big
+It will take some strong magic to get me through that!
+Tell me what to do ? east
+
+I'm in the Armory
+Obvious exits: West.
+I can also see: Shield, Dull & broken sword, Knight's Suit of Armor
+
+Tell me what to do ? get shield
+O.K.
+Tell me what to do ? get sword
+O.K.
+Tell me what to do ? get armor
+I can't do that
+It's much to heavy to LIFT!
+Tell me what to do ? west
+
+I'm in a torture chamber
+Obvious exits: North, East.
+I can also see: Tiny open door
+
+Tell me what to do ? north
+
+I'm in a dungeon
+Obvious exits: South, East.
+I can also see: Open jail cell
+
+Tell me what to do ? east
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? east
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle
+
+Tell me what to do ? examine kettle
+OK
+I see a hole under it!
+There's some soup here.
+Tell me what to do ? get soup
+I've no container.
+Tell me what to do ? move kettle
+OK
+Tell me what to do ? go hole
+
+I'm in a room in the castle
+Obvious exits: Up.
+I can also see: Rabbit's foot
+
+Tell me what to do ? get foot
+O.K.
+OK
+Tell me what to do ? up
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+Tell me what to do ? north
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads
+
+Tell me what to do ? get heads
+O.K.
+OK
+Tell me what to do ? drop heads
+O.K.
+Tell me what to do ? drop sword
+O.K.
+Tell me what to do ? look
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads, Dull & broken sword, Closed SAfe
+
+I see nothing very special.
+Tell me what to do ? open safe
+Safe's combination lock is numbered from 33 to 38.
+Tell me what to do ? east
+
+I'm in a room in the castle
+Obvious exits: East, West.
+I can also see: Cast iron pot
+
+Tell me what to do ? east
+
+I'm in a Lab
+Obvious exits: West.
+I can also see: Ju-Ju bag, Chem tubes, Labeled chemicals
+
+Tell me what to do ? get bag
+It appears stuck to the floor!
+Tell me what to do ? examine chemicals
+They appear to be mixable.
+Tell me what to do ? mix chemicals
+OK
+One of the test tubes EXPLODED!
+Tell me what to do ? examine chemicals
+Looks almost like lemonade. Yummy!
+Tell me what to do ? drink chemicals
+There's a CLAP OF THUNDER!
+I'm now 4 feet tall!
+Tell me what to do ? west
+
+I'm in a room in the castle
+Obvious exits: East, West.
+I can also see: Cast iron pot
+
+Tell me what to do ? west
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads, Dull & broken sword, Closed SAfe
+
+Tell me what to do ? south
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+Tell me what to do ? west
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? climb stairs
+
+I'm in a parlor
+Obvious exits: Down.
+I can also see: Ju-Ju man statue
+
+Tell me what to do ? examine statue
+Statue is made of stone
+Tell me what to do ? down
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? west
+
+I'm in a dungeon
+Obvious exits: South, East.
+I can also see: Open jail cell
+
+Tell me what to do ? south
+
+I'm in a torture chamber
+Obvious exits: North, East.
+I can also see: Wide open door
+
+Tell me what to do ? go door
+
+I'm in a Graveyard
+Obvious exits: East.
+I can also see: GrAves, Rusting SAW
+
+A beam of light shines on grave
+Tell me what to do ? examine grave
+Amongst the GRAVES is a four leaf clover.
+A sign here says:
+This grAve reserved for you!
+Tell me what to do ? get clover
+O.K.
+OK
+Tell me what to do ? dig grave
+A sepulchral voice says:
+Strange hobby you have
+Tell me what to do ? drop shovel
+O.K.
+Tell me what to do ? get saw
+O.K.
+Tell me what to do ? east
+
+I'm in a torture chamber
+Obvious exits: North, East.
+I can also see: Wide open door
+
+Tell me what to do ? north
+
+I'm in a dungeon
+Obvious exits: South, East.
+I can also see: Open jail cell
+
+Tell me what to do ? go cell
+Cell door slams shut
+
+I'm in a Jail Cell
+I can also see: Closed cell door, Advertising leaflet
+
+Tell me what to do ? examine leaflet
+There's something written there
+Tell me what to do ? read leaflet
+OK
+For a reading just "SUMMON MEDIUM MAEGEN" today!!
+Tell me what to do ? summon medium
+OK
+medium
+Nothing happened
+Tell me what to do ? open door
+I can't do that yet.
+Tell me what to do ? saw
+You've been sprung
+
+I'm in a dungeon
+Obvious exits: South, East.
+I can also see: Open jail cell
+
+Tell me what to do ? east
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? north
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Open Coffin
+
+Tell me what to do ? drop foot
+On what?
+Tell me what to do ? on man
+OK
+There's a CLAP OF THUNDER!
+Tell me what to do ? north
+
+I'm in a room in the castle
+Obvious exits: South.
+I can also see: Open Window
+
+Tell me what to do ? go window
+OK
+
+I'm on a ledge
+Obvious exits: South.
+I can also see: Doll
+
+Tell me what to do ? examine doll
+Doll looks like Count Cristo. There're pins in it!
+Tell me what to do ? get pins
+I can't do that
+won't budge!
+Tell me what to do ? get doll
+O.K.
+Tell me what to do ? south
+
+I'm in a room in the castle
+Obvious exits: South.
+I can also see: Open Window
+
+Raven crys something outside
+Tell me what to do ? south
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Open Coffin
+
+Tell me what to do ? drop doll
+O.K.
+Tell me what to do ? drop clover
+O.K.
+Tell me what to do ? drop idol
+O.K.
+Tell me what to do ? east
+
+I'm in a Tunnel
+Obvious exits: West.
+I can also see: Sapphire ring, Slick chute leading downward
+
+Tell me what to do ? go chute
+OK
+
+I'm in a room in the castle
+I can also see: Plaque, Slippery chute leading up, Crack in the wall, Hole in the wall
+
+Tell me what to do ? go crack
+I can't do that
+I'm too big
+It will take some strong magic to get me through that!
+Tell me what to do ? examine plaque
+There's something written there
+Tell me what to do ? read plaque
+I can't do that
+Phosphorescent letters are very hard to read in bright light!
+Tell me what to do ? get plaque
+O.K.
+Tell me what to do ? go chute
+I slide back down
+Tell me what to do ? go hole
+
+I'm in Medium Maegen's Mad Room
+Obvious exits: West.
+I can also see: Crystal Ball
+
+You startled medium & she vanished
+Tell me what to do ? get ball
+A sepulchral voice says:
+It belongs to the medium
+Tell me what to do ? summon medium
+OK
+medium
+Medium appears, says: "Keep a good luck charm on you & your
+friend. I also see a -moving- bag helping you through a tight
+squeeze!"
+Tell me what to do ? examine ball
+I see nothing very special.
+
+I'm in a Tunnel
+Obvious exits: West.
+I can also see: Sapphire ring, Slick chute leading downward
+
+Spirit vibrations drive me from room.
+Tell me what to do ? west
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Brightly glowing idol, Four leaf clover, Open Coffin, Doll
+
+Tell me what to do ? west
+
+I'm in a Ballroom
+Obvious exits: East.
+I can also see: Large fireplace
+
+Tell me what to do ? go fireplace
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? go chimney
+
+I can't see. It is too dark!
+
+Tell me what to do ? read plaque
+Plaque says: "safe --> 38 33"
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? drop glass
+O.K.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? down
+Dangerous to move in the dark!
+
+I can't see. It is too dark!
+
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? south
+
+I'm in a Ballroom
+Obvious exits: East.
+I can also see: Large fireplace
+
+Tell me what to do ? east
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Brightly glowing idol, Four leaf clover, Open Coffin, Doll
+
+Tell me what to do ? south
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? east
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+Tell me what to do ? north
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads, Dull & broken sword, Closed SAfe
+
+Tell me what to do ? dial 38
+OK
+Tell me what to do ? dial 33
+OK
+Tell me what to do ? look
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads, Dull & broken sword, Open SAfe
+
+I see nothing very special.
+Tell me what to do ? examine safe
+There's an antique hammer here
+Tell me what to do ? get hammer
+O.K.
+OK
+Tell me what to do ? south
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+Tell me what to do ? west
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? north
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Brightly glowing idol, Four leaf clover, Open Coffin, Doll
+
+Tell me what to do ? get idol
+O.K.
+Tell me what to do ? west
+
+I'm in a Ballroom
+Obvious exits: East.
+I can also see: Large fireplace
+
+Tell me what to do ? go fireplace
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+Tell me what to do ? go chimney
+
+I'm in a Chimney
+Obvious exits: Down.
+I can also see: Broken glass, Soot, Wood boards nailed to chimney wall
+
+Tell me what to do ? get boards
+It's beyond my power to do that.
+Tell me what to do ? get nails
+Nails were rusted but I got them out.
+Tell me what to do ? get boards
+O.K.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? drop nails
+O.K.
+Tell me what to do ? drop boards
+O.K.
+Tell me what to do ? drop hammer
+O.K.
+Tell me what to do ? look
+
+I'm in a Chimney
+Obvious exits: Down.
+I can also see: Broken glass, Soot, Nails, Wooden boards, Antique hammer, GrAting
+
+I see nothing very special.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? get gratin
+It's beyond my power to do that.
+Tell me what to do ? saw grating
+It's hArd work but it seems to be coming loose
+OK
+I've got it!
+Tell me what to do ? drop saw
+O.K.
+Tell me what to do ? drop grating
+O.K.
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? push button
+Heavy duty exhaust fan comes on & sucks me up!
+
+I'm in a narrow part of the chimney
+Obvious exits: Down.
+I can also see: Stuck Chimney Sweep
+
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? listen
+HELP ME, I'm stuck!
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? help sweep
+how?
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? pull sweep
+won't budge!
+I hear strange sounds, as if someone were moaning.
+Tell me what to do ? push sweep
+Sweep pops out, thanks me, hands me a piece of paper then
+vanishes!
+Tell me what to do ? read paper
+says: "SAY ZAP   to restore someone changed to stone!"
+Tell me what to do ? drop paper
+O.K.
+Tell me what to do ? down
+
+I'm in a Chimney
+Obvious exits: Down.
+I can also see: Broken glass, Soot, Nails, Wooden boards, Antique hammer, Rusting SAW, Button in the wall, Broken grating
+
+Tell me what to do ? down
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+
+I'm in a large fireplace
+Obvious exits: South.
+I can also see: Dark Chimney, Open Flue
+
+Tell me what to do ? south
+
+I'm in a Ballroom
+Obvious exits: East.
+I can also see: Large fireplace
+
+Tell me what to do ? east
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Four leaf clover, Open Coffin, Doll
+
+Tell me what to do ? south
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? climb stairs
+
+I'm in a parlor
+Obvious exits: Down.
+I can also see: Ju-Ju man statue
+
+Tell me what to do ? say zap
+zap
+There's a Clap of Thunder & then suddenly the stone statue
+begins to crack. I may be in trouble now, there's someone in
+the room with me!
+I hear someone mumbling.
+Tell me what to do ? listen
+Ju-Ju man says:"My bag is now yours! Its magic will help you
+ -CRACK- the curse!".
+I hear someone mumbling.
+Tell me what to do ? down
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? east
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+Tell me what to do ? north
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads, Dull & broken sword, Open SAfe
+
+Tell me what to do ? east
+
+I'm in a room in the castle
+Obvious exits: East, West.
+I can also see: Cast iron pot
+
+Tell me what to do ? east
+
+I'm in a Lab
+Obvious exits: West.
+I can also see: Ju-Ju bag, Chem tubes
+
+Tell me what to do ? get bag
+O.K.
+OK
+Tell me what to do ? west
+
+I'm in a room in the castle
+Obvious exits: East, West.
+I can also see: Cast iron pot
+
+Tell me what to do ? west
+
+I'm in a room in the castle
+Obvious exits: South, East.
+I can also see: Animal heads, Dull & broken sword, Open SAfe
+
+Tell me what to do ? south
+
+I'm in a room in the castle
+Obvious exits: North, West.
+I can also see: Big kettle, Dark hole
+
+Tell me what to do ? west
+
+I'm in a Dingy Looking Stairwell
+Obvious exits: North, South, East, West.
+I can also see: Stairs
+
+Tell me what to do ? north
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Four leaf clover, Open Coffin, Doll
+
+Tell me what to do ? east
+
+I'm in a Tunnel
+Obvious exits: West.
+I can also see: Sapphire ring, Slick chute leading downward
+
+Tell me what to do ? go chute
+OK
+
+I'm in a room in the castle
+I can also see: Slippery chute leading up, Crack in the wall, Hole in the wall
+
+Tell me what to do ? wave bag
+There's a CLAP OF THUNDER!
+Tell me what to do ? look
+
+I'm in a room in the castle
+I can also see: Slippery chute leading up, Wide crack in the wall, Hole in the wall
+
+I see nothing very special.
+Tell me what to do ? go crack
+OK
+
+I'm in a hidden VOODOO room
+Obvious exits: South.
+I can also see: Page torn from a book
+
+Tell me what to do ? examine bag
+There's a book there.
+There's a stick there.
+Tell me what to do ? get book
+O.K.
+OK
+Tell me what to do ? read book
+It's a book on removing curses. Says: "With knife in hand you
+take a stand. Circle coffin and..." The rest of the page is
+missing!!!
+Tell me what to do ? read page
+...wave the stick and hold the lamp and don't forget to yell
+"CHANT"! Oh yes, to help it succeed, a doll you'll need...
+Tell me what to do ? south
+
+I'm in a room in the castle
+I can also see: Slippery chute leading up, Wide crack in the wall, Hole in the wall
+
+Tell me what to do ? go hol
+
+I'm in Medium Maegen's Mad Room
+Obvious exits: West.
+I can also see: Crystal Ball, Spirit Medium
+
+You startled medium & she vanished
+Tell me what to do ? look ball
+I see nothing very special.
+
+I'm in a Tunnel
+Obvious exits: West.
+I can also see: Sapphire ring, Slick chute leading downward
+
+Spirit vibrations drive me from room.
+Tell me what to do ? west
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Four leaf clover, Open Coffin, Doll
+
+Tell me what to do ? get stick
+O.K.
+OK
+Tell me what to do ? circle coffin
+OK
+Nothing happened
+There's a CLAP OF THUNDER!
+Its very dark, the only light is from the idol.
+Tell me what to do ? wave stick
+OK
+Nothing happened
+There's a CLAP OF THUNDER!
+Double bubble toil & trouble the encAntAtions Are About to peAk!
+Tell me what to do ? yell chant
+There's a CLAP OF THUNDER!
+Pins fall out of doll
+
+I'm in a chapel
+Obvious exits: North, South, East, West.
+I can also see: Four leaf clover, Open Coffin, Doll, Smiling Count Cristo
+
+HURRAH! Look who is in the room!
+The game is now over.

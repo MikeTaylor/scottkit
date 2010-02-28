@@ -1,0 +1,82 @@
+read sign
+east
+get chain
+get crown
+get medallion
+get sceptre
+get goblet
+west
+drop chain
+drop crown
+drop medallion
+drop sceptre
+drop goblet
+get axe
+get match
+east
+north
+chop tree
+get trunk
+east
+kick door
+go tunnel
+chop door
+go passage
+ram door
+go entrance
+drop trunk
+drop axe
+south
+get oak
+south
+get plywood
+south
+get balsa
+south
+drop oak
+drop plywood
+drop balsa
+light balsa
+climb tree
+get honey
+down
+north
+get lamp
+west
+south
+south
+give honey
+follow path
+get vase
+north
+east
+examine vase
+hold breath
+go pool
+go inflow
+south
+drop vase
+go vase
+get key
+hold breath
+get out
+south
+south
+south
+get stoat
+hold breath
+north
+north
+north
+go vase
+wait
+hold breath
+get out
+north
+north
+up
+north
+west
+west
+drop stoat
+score

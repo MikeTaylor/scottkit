@@ -1,0 +1,14 @@
+room chamber "square chamber"
+	exit east dungeon
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit south cell
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"

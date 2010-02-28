@@ -1,0 +1,181 @@
+# Map
+#
+#	Chamber---------Dungeon----||---Disneyland
+#			|
+#			|
+#			|
+#			Lair
+#			|
+#			=
+#			|
+#			Legoland
+
+# flag 1: cheeseburger has been eaten
+# flag 2: potion has been drunk
+# flag 3: initialisation done
+# flag 4: first entry to Disneyland
+
+occur when !flag 3
+	set_counter 3
+	set_flag 3
+	print "Welcome to Dan and Matt's game"
+
+room chamber "square chamber.  Leave treasure here to score points."
+	exit east dungeon
+
+item box box
+
+action examine box when here box and !exists pistol
+	print "You notice it contains a pistol, which you take out."
+	drop pistol
+
+action open box when here box and !exists pistol
+	print "It contains a pistol, which you take out."
+	drop pistol
+
+action examine box when here box
+	print "It's empty now."
+
+item pistol "pistol" called pistol
+	nowhere
+
+noungroup pistol gun
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit south lair
+
+item bullets "bullets" called bullets
+
+action examine bullets when present bullets
+	print "There are"
+	print_counter
+	print "bullets left"
+
+item xyz "pink cheeseburger" called cheeseburger
+
+action examine cheeseburger when here xyz
+	print "This pink cheeseburger looks as if it has been eaten before."
+
+action eat cheeseburger when present xyz
+	destroy xyz
+	print "Om nom nom."
+	set_flag 1
+
+item fireplace fireplace
+
+action eat fireplace when here fireplace and !flag 2
+	print "Your mouth is now on fire."
+	game_over
+
+action eat fireplace when here fireplace and flag 2
+	print "Your mouth is invulnerable and the fire is tasty!"
+	print "You find something"
+	swap lollipop fireplace
+	look
+
+item lollipop "*golden lollipop*" called lollipop
+	nowhere 
+
+action eat lollipop when present lollipop
+	print "I'd better not."
+
+item door "heavy stone door"
+
+action open door when here door and !flag 1
+	print "You're too weak to move it."
+
+action open door when here door and flag 1
+	print "Energised by the cheeseburger, you manage to shift it"
+	destroy door
+	drop opendoor
+
+item opendoor "wide open stone door"
+	nowhere
+
+room dis "*I'm in Disneyland"
+	exit west dungeon
+
+action go door when here opendoor
+	goto dis
+	look
+
+item bloke "funny-looking bloke with toothbrush moustache"
+
+item deadbloke "funny-looking dead bloke" nowhere called bloke
+
+# Because there are so many conditions on this action, most of the
+# condition slots that would hold instruction parameters are already
+# filled, and so the argument to the swap instruction won't fit, so we
+# need to move them in to the next action (which we of course code as
+# "occur 0%") and use a continue instruction.
+#
+action shoot bloke when "carried" pistol and "carried" bullets and counter_gt 0
+	print "He curls up and dies, dropping a potion."
+	drop potion
+	dec_counter
+	continue
+
+occur 0%
+	swap bloke deadbloke
+
+occur when "at" dis and !flag 4
+	print "Bloke says: 'Welcome to Disneyland!'"
+	set_flag 4
+
+item potion "potion of invulnerability" called potion
+	nowhere
+
+action drink potion when present potion
+	print "Yum, that tasted of boiled fish-heads."
+	swap potion bottle
+	set_flag 2
+
+item bottle "empty potion bottle" nowhere
+
+room lair "dragon's lair"
+	exit north dungeon
+
+item passage "passage leads south"
+
+item dragon "huge golden dragon"
+
+occur when "carried" pistol and "carried" bullets and counter_gt 0
+and here dragon
+	print "The dragon doesn't like the look of my weapon: he eats me!"
+	game_over
+
+action go passage when here dragon
+	print "I can't get past the dragon!"
+
+action shoot dragon when "carried" pistol and "carried" bullets and counter_gt 0
+	print "The dragon is very slightly irritated ... just enough to eat me."
+	game_over
+
+action give bloke when present deadbloke and present dragon
+	destroy deadbloke
+	print "The dragon eats the dead bloke and falls asleep."
+	swap dragon sleepingdragon
+
+item sleepingdragon "peacefully snoring dragon" nowhere
+
+item sign "sign stuck in the ground"
+	at dungeon
+
+action examine sign when here sign
+	print "'Do not take weapons south!'"
+
+action go passage when here passage and !here dragon
+	goto legoland
+	look
+
+room legoland "*I'm in Legoland!"
+	exit north lair
+
+item brick "*golden brick*" called brick
+
+action score: score
+action look: look
+action inventory: inventory
+action save game: save_game
+action quit: game_over

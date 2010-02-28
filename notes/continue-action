@@ -1,0 +1,51 @@
+How the "continue" action works.  By inspection of Adventureland,
+there is only one instance of it there:
+
+	action DRO WAT when carried bottle and at room1 {
+	  print "Sizzle..."
+	  continue
+	  swap bottle bottle1
+	}
+
+	occur when here FIRESTONE {
+	  swap now FIRESTONE
+	}
+
+This is illuminating.  First, continue doesn't have to be the last
+instruction in an action: so it doesn't mean "proceed with the next
+action", it means "note that when you're done with this action that
+you may continue to the next".  Second, note that the second action
+has a condition which must be met, so the continue also doesn't mean
+"actually do the next action", but "evaluate whether the next action
+should be done".  (That's why the continue is used here: the second
+set of instructions should be executed only if the second condition is
+true as well as the first.)  The probability associated with follow-on
+actions is ignored, though (and is probably always zero, to prevent
+those actions firing in other circumstances).
+
+Because conditions are still checked for actions reached by continue,
+we can not fold actions linked by continue into a single long action
+with multiple instructions, as tempting as that sounds.
+
+--
+
+More: it's apparent from Voodoo Castle that a continue action means
+not just to attempt the next action, but ALL subsequent actions that
+have verb and noun both equal to zero.  Here is the decompilation of
+the code for examining the Count:
+
+	action LOO COF when here Coffin1
+		print "A sign here says:"
+		print "Count Cristo's been CURSED! [...]"
+		continue
+		print "There's a man here"
+
+	occur 0% when !exists foot
+		print "He's wearing a rabbit's foot"
+
+	occur 0% when !exists ring
+		print "Wearing a sapphire ring"
+
+At the start of the game, the rabbit's foot exists (elsewhere) and the
+ring does not, so the first occur does not fire but the second does.
+

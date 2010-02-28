@@ -1,0 +1,130 @@
+#!/usr/local/bin/ruby1.9 -w
+
+# Command-line driver for the ScottKit toolkit, allowing Scott
+# Adams-format adventure games to be compiled, decompiled and played.
+# The three basic modes are invoked as follows:
+#       scottkit -c game.sck > game.sao  # compile
+#       scottkit game.sao  # play the game; or use scottfree game.sao
+#       scottkit -d game.sao  # decompile -- useful for cheating
+# And the --play-from-source shortcut does not need an object file:
+#       scottkit -p game.sck
+#
+# Other command-line arguments enable wizard commands, load saved
+# games, set random seeds and enable various kinds of debugging
+# output: run <tt>scottkit -h</tt> for details.
+
+require 'optparse'
+require 'stringio'
+require 'scottkit/game'
+require 'scottkit/withio'
+
+
+def play(game)
+  # Decompile (and discard result) to get entity names resolved in
+  # right order.  This ensures that debugging output that uses these
+  # names will use them in the same way as decompiler output.
+  dummy = StringIO.new
+  game.decompile(dummy)
+  game.play
+end
+
+
+mode = :play
+options = {}
+compile, decompile, play_from_source = false, false, false
+sleep_at_end = false
+
+opts = OptionParser.new do |x|
+  x.banner = "Usage: #$0 [options] [<data-file>]"
+  x.on("-c", "--compile", "Compile <data-file> instead of loading") {
+    mode = :compile
+  }
+  x.on("-d", "--decompile", "Decompile instead of playing") {
+    mode = :decompile
+  }
+  x.on("-p", "--play-from-source", "Compile and play from source") {
+    mode = :play_from_source
+  }
+  x.on("-w", "--wizard", "Wizard mode (enabled debugging commands)") {
+    options[:wizard_mode] = true
+  }
+  x.on("-l", "--load-game FILE", "Load a previously saved game") { |file|
+    options[:restore_file] = file
+  }
+  x.on("-f", "--read-file FILE", "Read initial commands from file") { |file|
+    options[:read_file] = file
+  }
+  x.on("-e", "--echo", "Echo input commands to output") {
+    options[:echo_input] = true
+  }
+  x.on("-s", "--random-seed VAL", "Set random seed for repeatability") { |val|
+    options[:random_seed] = Integer(val)
+  }
+  x.on("-b", "--bug-tolerant", "Copy with out-of-range locations, etc.") {
+    options[:bug_tolerant] = true
+  }
+  x.on("-z", "--sleep-at-end", "Sleep for a long time after program ends") {
+    sleep_at_end = true
+  }
+  x.on("-W", "--no-wait", "Do not wait on pause actions or death") {
+    options[:no_wait] = true
+  }
+  x.on("-T", "--show-tokens", "Show lexical tokens as they are read") {
+    options[:show_tokens] = true
+  }
+  x.on("-R", "--show-random", "Show rolls of the random dice") {
+    options[:show_random] = true
+  }
+  x.on("-P", "--show-parse", "Show results of parsing verb/noun") {
+    options[:show_parse] = true
+  }
+  x.on("-C", "--show-conditions", "Show conditions being evaluated") {
+    options[:show_conditions] = true
+  }
+  x.on("-I", "--show-instructions", "Show instructions being executed") {
+    options[:show_instructions] = true
+  }
+end
+
+begin
+  opts.parse!(ARGV)
+  raise "#$0: No data-file specified" if ARGV.size != 1
+rescue
+  $stderr.puts $!, opts
+  exit 1
+end
+
+exitval = 0
+game = ScottKit::Game.new(options)
+case mode
+when :play_from_source
+  f = StringIO.new
+  withIO(nil, f) do
+    if !game.compile_to_stdout(ARGV[0])
+      $stderr.puts "#$0: compilation failed: not playing"
+      exitval = 1
+    end
+  end
+  if exitval == 0
+    game.load(f.string)
+    play(game)
+  end
+when :compile
+  if !game.compile_to_stdout(ARGV[0])
+    $stderr.puts "#$0: compilation failed"
+    exitval = 1
+  end
+when :decompile
+  game.load(IO.read(ARGV[0]))
+  f = StringIO.new
+  game.decompile(f)
+  print f.string
+when :play
+  game.load(IO.read(ARGV[0]))
+  play(game)
+end
+
+if sleep_at_end
+  sleep 9999
+end
+exit exitval

@@ -1,0 +1,28 @@
+ring bell
+wait
+wait
+go entrance
+get cross
+north
+get lamp
+south
+east
+north
+drop lamp
+get key
+south
+drop key
+north
+get lamp
+south
+drop cross
+get key
+open door
+go door
+drop key
+get coin
+north
+west
+north
+drop coin
+score

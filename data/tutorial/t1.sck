@@ -1,0 +1,5 @@
+room chamber "square chamber"
+	exit east dungeon
+
+room dungeon "gloomy dungeon"
+	exit west chamber
