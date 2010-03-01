@@ -1,1 +1,1 @@
---no-private - bin/scottkit Changes GPL-2 notes/Definition notes/Definition.saved-game
+--no-private bin/scottkit lib/*/.rb - Changes GPL-2 notes/Definition notes/Definition.saved-game
