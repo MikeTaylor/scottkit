@@ -4,11 +4,11 @@ Revision history for Ruby gem ScottKit.
  - Move towards using YARD for documentation instead of Rdoc.
 
 0.3.0  [Date not recorded]
-	* Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
-	  module into its own git module.
-	* Move repository hosting to github.
-	* Arrange for formatted documentation to appear at
-		http://rdoc.info/projects/MikeTaylor/scottkit
+* Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
+  module into its own git module.
+* Move repository hosting to github.
+* Arrange for formatted documentation to appear at
+  http://rdoc.info/projects/MikeTaylor/scottkit
 
 0.2.0  [Date not recorded]
 	- Add -z option to sleep after finishing -- useful when
