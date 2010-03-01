@@ -12,7 +12,6 @@ begin
     gem.author = "Mike Taylor"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
     # No version, date or files -- I guess jeweler takes care of those
-
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
