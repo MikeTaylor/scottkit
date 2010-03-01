@@ -8,7 +8,7 @@ begin
     gem.summary = "ScottKit is a toolkit for compiling, decompiling and playing adventure games in the Scott Adams format."
     gem.description = gem.summary
     gem.email = "mike@miketaylor.org.uk"
-    gem.homepage = "http://www.miketaylor.org.uk/tech/advent/scottkit/"
+    gem.homepage = "http://github.com/MikeTaylor/scottkit"
     gem.author = "Mike Taylor"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
     # No version, date or files -- I guess jeweler takes care of those
