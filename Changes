@@ -1,7 +1,10 @@
 Revision history for Ruby gem ScottKit.
 
-0.4.0  [In progress]
-* Move towards using YARD for documentation instead of Rdoc.
+0.4.0  Mon Mar  1 22:20:09 GMT 2010
+* Move towards using YARD for documentation instead of Rdoc.  This
+  includes changes to things like the format of the Changes file.  Far
+  from perfect so far: for example, plain-text documentation like
+  doc/Definition gets mangled.
 
 0.3.0  February 28, 2010
 * Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
