@@ -516,11 +516,13 @@ module ScottKit
       CGame = Struct.new(:ident, :version, :unknown1, :unknown2,
                          :start, :treasury, :maxload, :wordlen,
                          :lighttime, :lightsource, :rooms, :items,
-                         :actions, :verbgroups, :noungroups) #:nodoc:
+                         :actions, :verbgroups, :noungroups) # @private
       CRoom = Struct.new(:name, :desc, :exits) #@private
-      CItem = Struct.new(:name, :desc, :called, :where) #:nodoc:
+      #@private
+      CItem = Struct.new(:name, :desc, :called, :where)
+      # @private
       CAction = Struct.new(:verb, :noun, :conds, :instructions,
-                           :comment, :gathered_args) #:nodoc:
+                           :comment, :gathered_args)
 
 
       class Lexer #:nodoc:
