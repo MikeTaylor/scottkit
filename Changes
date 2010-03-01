@@ -1,5 +1,8 @@
 Revision history for Ruby gem ScottKit.
 
+0.4.0  [In progress]
+ - Move towards using YARD for documentation instead of Rdoc.
+
 0.3.0  [Date not recorded]
 	- Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
 	  module into its own git module.
