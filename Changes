@@ -1,0 +1,21 @@
+Revision history for Ruby gem ScottKit.
+
+0.3.0  [Date not recorded]
+	- Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
+	  module into its own git module.
+	- Move repository hosting to github.
+	- Arrange for formatted documentation to appear at
+		http://rdoc.info/projects/MikeTaylor/scottkit
+
+0.2.0  [Date not recorded]
+	- Add -z option to sleep after finishing -- useful when
+	  running in a DOS Shell under Windows, so that error messages
+	  can be seen.
+	- Add facility to load a game while playing using "#load"
+
+0.1.0  [Date not recorded]
+	- Add -p option to compile and play a game from source.
+
+0.0.0  [Date not recorded]
+	- Initial release.
+
