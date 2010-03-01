@@ -516,7 +516,7 @@ module ScottKit
       CGame = Struct.new(:ident, :version, :unknown1, :unknown2,
                          :start, :treasury, :maxload, :wordlen,
                          :lighttime, :lightsource, :rooms, :items,
-                         :actions, :verbgroups, :noungroups) # @private
+                         :actions, :verbgroups, :noungroups) #@private
       CRoom = Struct.new(:name, :desc, :exits) #@private
       #@private
       CItem = Struct.new(:name, :desc, :called, :where)
