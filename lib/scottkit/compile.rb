@@ -517,7 +517,7 @@ module ScottKit
                          :start, :treasury, :maxload, :wordlen,
                          :lighttime, :lightsource, :rooms, :items,
                          :actions, :verbgroups, :noungroups) #:nodoc:
-      CRoom = Struct.new(:name, :desc, :exits) #:nodoc:
+      CRoom = Struct.new(:name, :desc, :exits) #@private
       CItem = Struct.new(:name, :desc, :called, :where) #:nodoc:
       CAction = Struct.new(:verb, :noun, :conds, :instructions,
                            :comment, :gathered_args) #:nodoc:
