@@ -79,6 +79,13 @@ STILL TO DO
 
 CHANGES
 
+Release 0.3.0
+	- Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
+	  module into its own git module.
+	- Move repository hosting to github.
+	- Arrange for formatted documentation to appear at
+		http://rdoc.info/projects/MikeTaylor/scottkit
+
 Release 0.2.0
 	- Add -z option to sleep after finishing -- useful when
 	  running in a DOS Shell under Windows, so that error messages
