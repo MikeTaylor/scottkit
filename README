@@ -68,10 +68,11 @@ intended.  None of Scott's own games is so sloppy.
 STILL TO DO
 
 * Tweak compiler to break actions when they need too many arguments as
-	well as when they need too many instructions.
+  well as when they need too many instructions.
 * Write tutorial scaffolding.
 * Write other documentation, e.g. reference guide.
 * Ensure that the right files are built by rdoc.
 * Write blog entry about learning language vs. packaging culture
 
-1
+2
+
