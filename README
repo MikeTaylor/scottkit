@@ -72,29 +72,6 @@ STILL TO DO
 * Write tutorial scaffolding.
 * Write other documentation, e.g. reference guide.
 * Ensure that the right files are built by rdoc.
-* Figure out where the changelog is supposed to be and what format is
-	standard.
 * Write blog entry about learning language vs. packaging culture
 
-
-CHANGES
-
-Release 0.3.0
-	- Move ScottKit out of its sub-siubdirectory in the 9Gb "mike"
-	  module into its own git module.
-	- Move repository hosting to github.
-	- Arrange for formatted documentation to appear at
-		http://rdoc.info/projects/MikeTaylor/scottkit
-
-Release 0.2.0
-	- Add -z option to sleep after finishing -- useful when
-	  running in a DOS Shell under Windows, so that error messages
-	  can be seen.
-	- Add facility to load a game while playing using "#load"
-
-Release 0.1.0
-	- Add -p option to compile and play a game from source.
-
-Release 0.0.0
-	- Initial release.
 
