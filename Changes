@@ -24,3 +24,12 @@ Revision history for Ruby gem ScottKit.
 0.0.0  February 28, 2010
 * Initial release.
 
+STILL TO DO
+* Tweak compiler to break actions when they need too many arguments as
+  well as when they need too many instructions.
+* Write tutorial scaffolding.
+* Write other documentation, e.g. reference guide.
+* Ensure that the right files are built by rdoc/YARD
+* Write blog entry about ScottKit
+* Maybe modify to run against GLK using the Glkx driver
+
