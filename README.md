@@ -25,9 +25,13 @@ The three modes of running are:
 	$ scottkit game.sao  # play the game; or use scottfree game.sao
 	$ scottkit -d game.sao  # decompile -- useful for cheating
 
+And the useful short-cut combining compilation and play:
+
+	$ scottkit -p game.sck # compile to memory, and play immediately
+
 Other command-line arguments enable wizard commands, load saved games,
 set random seeds and enable various kinds of debugging output: run
-scottkit -h for details.
+`scottkit -h` for details.
 
 
 Testing
