@@ -67,7 +67,7 @@ ScottFree package, which contains another interpreter for Scott Adams
 games.  I got this file from release 1.14-9 of ScottFree.
 `notes/Definition.txt` is my modified version of this file, since the
 original had several mistakes.  `notes/Definition-saved-game.txt` is
-my own analysis of the format of saved games from ScottFree.  (Saves
+my own analysis of the format of saved games from ScottFree.  (Saved
 games from ScottFree and ScottKit can be freely interchanged.)
 
 
