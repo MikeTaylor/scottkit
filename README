@@ -1,25 +1,37 @@
 ScottKit -- a Scott Adams adventure toolkit
-Copyright (C) Mike Taylor <mike@miketaylor.org.uk>
-Distributed under the GNU GPL, version 2 -- see file GPL-2
+===========================================
+
+**Homepage**: http://rdoc.info/projects/MikeTaylor/scottkit
+**Git**: [http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)
+**Author**: Mike Taylor <mike@miketaylor.org.uk>
+**Copyright**: 2009-2010
+**Licence**: GNU GPL, version 2 -- see file GPL-2
+
+
+Synopsis
+--------
 
 This is a Ruby program to compile, decompile and run adventure games
 in Scott Adams format, written as an exercise in Ruby rather than with
 any great expectation that it will be useful.
 
 
-RUNNING SCOTTKIT
+Running ScottKit
+----------------
 
 The three modes of running are:
-$ scottkit -c game.sck > game.sao  # compile
-$ scottkit game.sao  # play the game; or use scottfree game.sao
-$ scottkit -d game.sao  # decompile -- useful for cheating
+
+	$ scottkit -c game.sck > game.sao  # compile
+	$ scottkit game.sao  # play the game; or use scottfree game.sao
+	$ scottkit -d game.sao  # decompile -- useful for cheating
 
 Other command-line arguments enable wizard commands, load saved games,
 set random seeds and enable various kinds of debugging output: run
 scottkit -h for details.
 
 
-TESTING
+Testing
+-------
 
 Unit testing can be done as follows:
 
@@ -37,7 +49,8 @@ Castle.  I welcome reports of its being used to play and win other
 games, or failing that, reports of how it fails.
 
 
-GAME FORMAT
+Game format
+-----------
 
 The file notes/Definition.scottfree-1.14 is taken from the ScottFree
 package, which contains another interpreter for Scott Adams games.  I
@@ -46,7 +59,8 @@ modified version of this file.  notes/Definition.saved-game is my own
 analysis of the format of saved games from ScottFree.
 
 
-GAMES
+Games
+-----
 
 The directory "data" contains game files:
   adams -- Scott Adams's classic games (see Makefile for details)
@@ -57,7 +71,8 @@ The directory "data" contains game files:
   dan-and-matt.sck -- game written by my two eldest sons
 
 
-BUG TOLERANCE
+Bug tolerance
+-------------
 
 -b (--bug-tolerant) option is needed for Adventure 14b (Buckaroo
 Banzai), which places one item (the jug of jet fuel) in room 50 of 36.
