@@ -84,7 +84,7 @@ The directory `data` contains game files:
 * `dan-and-matt.sck` - game written by my two eldest sons
 
 I have verified that ScottKit can be used to play and win Scott
-Adams's games #1, 2, and 4: *Adventureland*, _Pirate Adventure_ and
+Adams's games #1, 2, and 4: *Adventureland*, *Pirate Adventure* and
 *Voodoo Castle*.  I welcome reports of its being used to play and win
 other games, or failing that, reports of how it fails.
 
