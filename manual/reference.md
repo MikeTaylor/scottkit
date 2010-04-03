@@ -1,12 +1,11 @@
 The ScottKit reference manual
 =============================
 
-=head1 NAME
+This is the Reference Manual for the Scott Adams Adventure toolkit,
+ScottKit, which is freely available as a Ruby gem or from
+[http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)
 
-Games::ScottAdams::Manual - The Scott Adams Adventure Compiler Reference Manual
-
-
-=head1 SYNOPSIS
+## SYNOPSIS
 
 	# foo.sa - definition file for Scott Adams adventure "foo"
 
@@ -29,7 +28,7 @@ Games::ScottAdams::Manual - The Scott Adams Adventure Compiler Reference Manual
 	msg BOY that really hit the spot!
 
 
-=head1 DESCRIPTION
+## DESCRIPTION
 
 The Scott Adams compiler, `sac`, allows you create adventure games in
 a straightforward syntax, and compiles them into the format that was
@@ -51,7 +50,7 @@ classic *Adventureland* - a game dripping with atmosphere and
 nostalgia which I can't recommend highly enough.
 
 
-=head1 OVERVIEW
+## OVERVIEW
 
 Comments may appear anywhere in a `sac` file, and have no effect on
 the compiled adventure.  They are introduced by a hash character
@@ -92,7 +91,7 @@ Actions may be moved ahead of and behind rooms, items and global
 parameters with impunity.
 
 
-=head1 ROOMS
+## ROOMS
 
 The first fundamental concept of Scott Adams adventures is the rooms:
 a connnected network of nodes between which the player can move using
@@ -110,7 +109,7 @@ Apart from its name, a room is defined by a description and a set of
 available exits, each exit specifying its destination room.
 
 
-=head2 %room
+### %room
 
 	%room chamber
 	root chamber under the stump
@@ -143,7 +142,7 @@ is described to the player simply as
 	I'm on a narrow ledge by a chasm. Across the chasm is
 	the Throne-room
 
-=head2 %exit
+### %exit
 
 	%exit u stump
 
@@ -180,7 +179,7 @@ example:
 	%exit w forest
 
 
-=head1 ITEMS
+## ITEMS
 
 The second fundamental concept of Scott Adams adventures is the items:
 things that reside in a room, and in some cases can be picked up,
@@ -200,7 +199,7 @@ both the tunnel item and the tunnel room to have the name `tunnel`.
 Apart from its name, an item is defined by its location and possibly
 by a "getdrop" name - see below.
 
-=head2 %item
+### %item
 
 	%item rubies
 	*Pot of RUBIES*
@@ -216,7 +215,7 @@ deposited in the treasury (see below) in order to win the game.  The
 asterisk is displayed to the user; traditionally, another asterisk
 appears at the end of treasure descriptions, but this is not enforced.
 
-=head2 %at
+### %at
 
 	%at chamber
 
@@ -252,7 +251,7 @@ see below.)  This can of course be changed with `%at` directives,
 since here as everywhere else, forward references to rooms that have
 not yet been defined are OK.
 
-=head2 %nowhere
+### %nowhere
 
 	%nowhere
 
@@ -277,7 +276,7 @@ include commands like "`%at`" alone to start an item out of play,
 and "`%nowhere stump`" to start it in the room called `stump`, but
 this would be a bit perverse, now, wouldn't it?)
 
-=head2 %getdrop
+### %getdrop
 
 	%getdrop lamp
 
@@ -296,7 +295,7 @@ If no `%getdrop` name is provided, then it will not be possible for
 the player to pick up or drop the item unless explicit actions are
 coded to make this possible.
 
-=head1 ACTIONS
+## ACTIONS
 
 The third fundamental concept of Scott Adams adventures is the
 actions: things which the player can do, or which can happen to him,
@@ -377,7 +376,7 @@ for which the light source will continue to function.  You don't need
 to worry about this stuff much: it's mostly taken care of behind the
 scenes.
 
-=head2 %action
+### %action
 
 	%action open door
 	here closed_door
@@ -475,7 +474,7 @@ opcodes may be negated by prefixed them with an exclamation mark
 (`!`).  There is no direct way to test for the negation of the three
 counter-related conditions.
 
-=head2 %result
+### %result
 
 	%result
 	destroy closed_door
@@ -716,7 +715,7 @@ mentioning it.
 
 =back
 
-=head2 %comment
+### %comment
 
 	%comment need key in order to open door
 
@@ -728,7 +727,7 @@ character (`#`) which is simply discarded by the compiler.
 
 Why would you ever want to use `%comment`?  Beats me.
 
-=head2 %occur
+### %occur
 
 	%occur 10
 
@@ -751,7 +750,7 @@ first action matching the players command and whose conditions are all
 satisfied.
 
 
-=head1 GLOBAL PARAMETERS
+## GLOBAL PARAMETERS
 
 Finally, we come to the global parameters, a rag-bag of bits and
 pieces which affect the game as a whole.  In general, each of the
@@ -759,7 +758,7 @@ following directives should appear exactly once: it's an error for any
 one of them not to appear at all, and a warning is generated if any is
 used more than once.
 
-=head2 %ident
+### %ident
 
 	%ident 1
 
@@ -795,7 +794,7 @@ To make matters worse, Brian Haworth's series of eleven *Mysterious
 Adventures* re-use the numbers 1-11.  So there are no fewer than four
 adventure number two's.  Ho hum.
 
-=head2 %version
+### %version
 
 	%version 416
 
@@ -803,7 +802,7 @@ Specifies the version of this adventure.  Looks like Adams went
 through 416 design iterations before he got *Adventureland* into a
 state he was happy to release.
 
-=head2 %wordlen
+### %wordlen
 
 	%wordlen 3
 
@@ -812,7 +811,7 @@ game.  Because this is three for *Adventureland*, all longer words
 can be abbreviated to three letters - so the player can type `CLI
 TRE` (or indeed `CLIMAX TREMENDOUSLY`) instead of `CLIMB TREE`.
 
-=head2 %maxload
+### %maxload
 
 	%maxload 6
 
@@ -820,7 +819,7 @@ Specifies the maximum number of items that the player can carry at
 once - if he tries to pick up something else, the interpreter issues a
 suitable message.
 
-=head2 %lighttime
+### %lighttime
 
 	%lighttime 125
 
@@ -830,13 +829,13 @@ there's an unlit lamp in the game and a lit lamp initially not in the
 game, the light time doesn't start to tick down until the lamp is lit
 (i.e. the lit lamp object is brought into the game.)
 
-=head2 %start
+### %start
 
 	%start forest
 
 Specifies which room the player starts in.
 
-=head2 %treasury
+### %treasury
 
 	%treasury stump
 
@@ -852,7 +851,7 @@ The special room-name `-` may be used to indicate that treasures must
 be carried in order to contribute to the score, rather than deposited
 in a particular place.
 
-=head2 %lightsource
+### %lightsource
 
 	%lightsource lamp
 
@@ -862,7 +861,7 @@ or in the presence of the lightsource object.  There can be only one
 lightsource in the game - if a second is nominated, it replaces the
 first.
 
-=head2 %nalias
+### %nalias
 
 	%nalias lamp lantern
 	%nalias lamp torch
@@ -871,14 +870,14 @@ Creates an alias for a noun.  Multiple uses that share one of the same
 words (as in the example above) create an equivalence class of words
 that are all mutually synonymous.
 
-=head2 %valias
+### %valias
 
 	%valias take get
 	%valias drop leave
 
 Creates an alias for a verb.
 
-=head2 %include
+### %include
 
 	%include foo/bar/baz.sac
 
@@ -891,13 +890,13 @@ frog.sac`, then the file of that name *in the `subdir` directory* is
 used.
 
 
-=head1 SEE ALSO
+## SEE ALSO
 
 The tutorial,
 `Games::ScottAdams::Tutorial`.
 
 
-=head1 AUTHOR
+## AUTHOR
 
 Mike Taylor E<lt>mike@miketaylor.org.ukE<gt>
 
