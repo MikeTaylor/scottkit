@@ -1,4 +1,4 @@
-ScottKit - a toolkit for Scott Adams-style adventure games
+ScottKit - an adequate toolkit for Scott Adams-style adventure games
 ==========================================================
 
 **Homepage**:  [http://rdoc.info/projects/MikeTaylor/scottkit](http://rdoc.info/projects/MikeTaylor/scottkit)   
