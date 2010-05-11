@@ -5,35 +5,34 @@ This is the Reference Manual for the Scott Adams Adventure toolkit,
 ScottKit, which is freely available as a Ruby gem or from
 [http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)
 
-## SYNOPSIS
-
-	# foo.sa - definition file for Scott Adams adventure "foo"
-
-	%room swamp
-	dismal swamp
-	%exit n meadow
-	%exit e edge
-	%exit w grove
-
-	%item mud
-	Evil smelling mud
-	%getdrop mud
-
-	%action take mud
-	here mud
-	carried bites
-	%result
-	get mud
-	destroy bites
-	msg BOY that really hit the spot!
+Like the software itself, this manual was written by
+Mike Taylor &lt;mike@miketaylor.org.uk&gt;
 
 
-## DESCRIPTION
+## Synopsis
 
-The Scott Adams compiler, `sac`, allows you create adventure games in
+	# foo.sck - definition file for Scott Adams adventure "foo"
+
+	room swamp "dismal swamp"
+	  exit north meadow
+	  exit east edge
+	  exit west grove
+
+	item mud "Evil smelling mud"
+	  called mud
+
+	action take mud when here mud and carried bites
+	  get mud
+	  destroy bites
+	  print "BOY that really hit the spot!"
+
+
+## Description
+
+The Scott Adams toolkit, `scottkit`, allows you create adventure games in
 a straightforward syntax, and compiles them into the format that was
 used in the classic Scott Adams adventures - and which is therefore
-now understood by `scottfree` and various other interpreters for
+now understood by ScottFree and various other interpreters for
 those old games.
 
 If you're running a Linux system, there's a fair chance that you
@@ -42,7 +41,7 @@ already have such an interpreter on your system - it's probably called
 Certainly Red Hat Linux distributions from 4.0 onwards (and maybe much
 earlier) have come with Scott Adams interpreters.
 
-This manual describes the syntax of the `sac` file which `sac`
+This manual describes the syntax of the `sck` file which `scottkit`
 compiles into Scott Adams format.
 
 All of the examples are taken from Scott Adams' first game, the
@@ -50,9 +49,9 @@ classic *Adventureland* - a game dripping with atmosphere and
 nostalgia which I can't recommend highly enough.
 
 
-## OVERVIEW
+## Overview
 
-Comments may appear anywhere in a `sac` file, and have no effect on
+Comments may appear anywhere in a ScottKit file, and have no effect on
 the compiled adventure.  They are introduced by a hash character
 (`#`) and extend to the end of the line.
 
@@ -91,7 +90,7 @@ Actions may be moved ahead of and behind rooms, items and global
 parameters with impunity.
 
 
-## ROOMS
+## Rooms
 
 The first fundamental concept of Scott Adams adventures is the rooms:
 a connnected network of nodes between which the player can move using
@@ -100,7 +99,7 @@ topography, after moving north from one room to another, it's possible
 to move south back to the first room - but the system does not enforce
 this, making it possible to create complex mazes.
 
-Each room in a `sac` file is identified by a unique name - typically
+Each room in a ScottKit file is identified by a unique name - typically
 short, and made up of alphanumerics, possibly with underscores,
 although the only restriction enforced is that it may not contain any
 whitespace characters (space, tab, *etc.*)
@@ -118,10 +117,10 @@ Creates a new room whose name is the word immediately after the
 `%room` directive, on the same line.  The following lines, up to but
 not including the next line that contains a directive, make up the
 description of this room, which is what the player sees.  (The name,
-by contrast, is used only by `sac` itself, as an identifying tag when
+by contrast, is used only by `scottkit` itself, as an identifying tag when
 the room must be referred to when defining an exit, item or action.)
 
-For historical reasons, Scott Adams interpreters such as `scottfree`
+For historical reasons, Scott Adams interpreters such as ScottFree
 emit the string "I'm in a " (or "You're in a ", if the appropriate
 option is specified) before room descriptions, so that the room
 defined above would be described as
@@ -164,7 +163,7 @@ letters
 north, south, east, west, up and down respectively.
 
 The second argument must be the name of a room defined somewhere in
-the `sac` file.  The destination room's definition may be either
+the ScottKit file.  The destination room's definition may be either
 previous or subsequent - forward references are just fine.
 
 It's OK for an exit to lead back to the room it came from, and for
@@ -179,7 +178,7 @@ example:
 	%exit w forest
 
 
-## ITEMS
+## Items
 
 The second fundamental concept of Scott Adams adventures is the items:
 things that reside in a room, and in some cases can be picked up,
@@ -187,7 +186,7 @@ carried around and left in other rooms.  Typically, some of the items
 are "objects" like axes and keys, while others are "scenery" like
 trees, signs, *etc.*
 
-As with rooms, each item in a `sac` file is identified by a unique
+As with rooms, each item in a ScottKit file is identified by a unique
 name - typically a short, alphanumeric-plus-underscores name.  Because
 the concepts of room and item are so distinct in the Scott Adams
 model, it's OK for a room and an item to share the same name.  In fact
@@ -231,7 +230,7 @@ do The Right Thing:
 	*GOLDEN FISH*
 
 However, in some cases, it may be convenient to define items at some
-other point in a `sac` file - for example, some authors may prefer to
+other point in a ScottKit file - for example, some authors may prefer to
 list all rooms together, then all items together.  In such cases,
 an item may be relocated to its correct starting room by providing a
 `%at` directive followed by the name of that room:
@@ -244,7 +243,7 @@ an item may be relocated to its correct starting room by providing a
 	water
 	%at lake
 
-Items defined earlier in the `sac` file than the first `%room`
+Items defined earlier in the ScottKit file than the first `%room`
 directive are by default not in the game when it starts (though they
 may subsequently be brought into the game by DROP actions or similar -
 see below.)  This can of course be changed with `%at` directives,
@@ -257,7 +256,7 @@ not yet been defined are OK.
 
 Conversely, when defining an item that should not initially be in
 play, it may be convenient to place the definition at a point in the
-`sac` file that places it in a room.  In this case, the `%nowhere`
+ScottKit file that places it in a room.  In this case, the `%nowhere`
 directive can be used to start it off out of play.  This is
 particularly useful if, for example, an item initially in play is
 later to be replaced by one that is initially absent:
@@ -295,7 +294,7 @@ If no `%getdrop` name is provided, then it will not be possible for
 the player to pick up or drop the item unless explicit actions are
 coded to make this possible.
 
-## ACTIONS
+## Actions
 
 The third fundamental concept of Scott Adams adventures is the
 actions: things which the player can do, or which can happen to him,
@@ -339,13 +338,13 @@ bear` command instead of refusing is and saying "What?":
 	Tell me what to do ? at bear
 	What?
 
-This is not really relevant to `sac`, but interesting trivia
+This is not really relevant to ScottKit, but interesting trivia
 nevertheless.  It's funny to find someone's bug twenty-two years after
 it was created!
 
 =back
 
-Anyway, `scottfree` implements 32 flags, and a comment in the source
+Anyway, ScottFree implements 32 flags, and a comment in the source
 code says that the author's never seen a game that uses a flag
 numbered higher than that.
 
@@ -407,12 +406,12 @@ opcodes are supported:
 =item `at` *ROOM*
 
 True if the player's current room is *ROOM*, which must be the name
-of a room defined somewhere in the `sac` file.
+of a room defined somewhere in the ScottKit file.
 
 =item `carried` *ITEM*
 
 True if the player is carrying *ITEM*, which must be the name
-of an item defined somewhere in the `sac` file.
+of an item defined somewhere in the ScottKit file.
 
 =item `here` *ITEM*
 
@@ -681,7 +680,7 @@ Chooses which of the sixteen counters is the current one.  Subsequent
 the nominated counter.
 
 (Actually, it's not quite that simple, but it's very hard to figure
-out, either from the `scottfree` source or from the reverse-compiled
+out, either from the ScottFree source or from the reverse-compiled
 *Sorcerer of Claymorgue Castle*, precisely what this does.)
 
 =item `swap_loc_default`
@@ -702,7 +701,7 @@ place.  This can be used to implement vehicles.
 =item `special` *number*
 
 Performs a "special action" that is dependent on the driver.  For
-`scottfree`, this does nothing.
+ScottFree, this does nothing.
 
 =item `continue`
 
@@ -720,7 +719,7 @@ mentioning it.
 	%comment need key in order to open door
 
 This directive allows a comment to be associated with an action in the
-Scott Adams format data file written by `sac`.  The comment is
+Scott Adams format data file written by `scottkit`.  The comment is
 attached to the most recently declared action.  Note that this is very
 different from the usual kind of comment introduced by the hash
 character (`#`) which is simply discarded by the compiler.
@@ -750,7 +749,7 @@ first action matching the players command and whose conditions are all
 satisfied.
 
 
-## GLOBAL PARAMETERS
+## Global parameters
 
 Finally, we come to the global parameters, a rag-bag of bits and
 pieces which affect the game as a whole.  In general, each of the
@@ -764,7 +763,7 @@ used more than once.
 
 This simply specifies a number which uniquely identifies the
 adventure.  I have read in the `Definition` file that comes with the
-`scottfree` distribution that this number (and all others in the
+ScottFree distribution that this number (and all others in the
 Scott Adams file format) is "apparently 16 bit".  I don't know how
 this is apparent, but it's possible that some interpreters will choke
 on numbers larger than 65536 (2^16-1), or maybe even 32767 (2^15-1)
@@ -879,29 +878,19 @@ Creates an alias for a verb.
 
 ### %include
 
-	%include foo/bar/baz.sac
+	%include foo/bar/baz.sck
 
 Includes the contents of the specified file, exactly as though they
-were included inline in the SAC file being processed.  Non-absolute
+were included inline in the ScottKit file being processed.  Non-absolute
 paths are interpreted relative to the file being parsed at that time,
 *not* relative to the working directory.  So, for example, if the
-file `subdir/thrick.sac` is being parsed, and has a line `%include
-frog.sac`, then the file of that name *in the `subdir` directory* is
+file `subdir/thrick.sck` is being parsed, and has a line `%include
+frog.sck`, then the file of that name *in the `subdir` directory* is
 used.
 
 
-## SEE ALSO
+## See also
 
-The tutorial,
-`Games::ScottAdams::Tutorial`.
+* The top-level [README](file.README.html)
+* [The ScottKit tutorial](file.tutorial.html) (XXX not yet written)
 
-
-## AUTHOR
-
-Mike Taylor E<lt>mike@miketaylor.org.ukE<gt>
-
-First version Wednesday 11th April 2001.
-
-=cut
-
-1;
