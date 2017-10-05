@@ -31,7 +31,6 @@ end
 
 mode = :play
 options = {}
-compile, decompile, play_from_source = false, false, false
 sleep_at_end = false
 
 opts = OptionParser.new do |x|
