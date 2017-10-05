@@ -1,6 +1,6 @@
 Revision history for Ruby gem ScottKit
 ======================================
-	
+
 0.4.0 (Mon Mar  1 22:20:09 GMT 2010)
 ------------------------------------
 * Move towards using YARD for documentation instead of Rdoc.  This
@@ -33,7 +33,7 @@ Revision history for Ruby gem ScottKit
 
 Still to do
 ===========
-	
+
 * Tweak compiler to break actions when they need too many arguments as
   well as when they need too many instructions.
 * Write tutorial scaffolding.
