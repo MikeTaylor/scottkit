@@ -5,7 +5,7 @@ module ScottKit
     def quote(token) #:nodoc:
       if ((token !~ /^([!a-z_0-9-]+)$/i || token =~ /\n/) ||
           Compiler::Lexer::TOKENMAP[token])
-        "\"#{token.gsub(/[""]/, '\'')}\""
+        "\"#{token.gsub('"', '\'')}\""
       else
         token
       end
