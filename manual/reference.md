@@ -8,6 +8,11 @@ ScottKit, which is freely available as a Ruby gem or from
 Like the software itself, this manual was written by
 Mike Taylor &lt;mike@miketaylor.org.uk&gt;
 
+> **NOTE.**
+> This manual was adapted from that of my old Perl module [Games::ScottAdams](http://www.miketaylor.org.uk/tech/advent/sac/Manual.html)
+> and may not yet be fully updated to reflect the better syntax of ScottKit.
+> Please let me know about any mistakes!
+
 
 ## Synopsis
 
@@ -60,11 +65,11 @@ comments have been removed) may appear anywhere in the file, and have
 no effect on the compiled adventure.
 
 All data is introduced by a *directive* - that is, a line which
-begins with a percent sign (`%`) immediately followed by a word
+begins with a recognised keyword
 specifying which directive is being used.  Common examples include
-`%room`, `%exit`, `%item` and `%action`.  Directive names are
-case-insensitive, so that `%room`, `%ROOM`, `%Room` and indeed
-`%rOoM` all mean the same thing.
+`room`, `exit`, `item` and `action`.  Directive names are
+case-insensitive, so that `room`, `ROOM`, `Room` and indeed
+`rOoM` all mean the same thing.
 
 We describe the directives in four categories, corresponding to the
 four fundamental concepts in Scott Adams adventures: the *rooms*
@@ -83,7 +88,7 @@ The one exception to this order-independence is that the order in
 which actions appear is significant, because on each turn, each
 possible action is considered in the order that appear.  Ordering
 issues are discussed in more detail in the section about the
-`%action` directive, but in summary: while the order of actions
+`action` directive, but in summary: while the order of actions
 relative to other actions is in some cases significant, the position
 of actions relative to rooms, items and global parameters is not.
 Actions may be moved ahead of and behind rooms, items and global
@@ -104,18 +109,17 @@ short, and made up of alphanumerics, possibly with underscores,
 although the only restriction enforced is that it may not contain any
 whitespace characters (space, tab, *etc.*)
 
-Apart from its name, a room is defined by a description and a set of
-available exits, each exit specifying its destination room.
+After its name comes a description enclosed in double quotes (which
+may extend across multiple lines) and a set of available exits, each
+exit specifying its destination room.
 
 
-### %room
+### room
 
-	%room chamber
-	root chamber under the stump
+	room chamber "root chamber under the stump"
 
 Creates a new room whose name is the word immediately after the
-`%room` directive, on the same line.  The following lines, up to but
-not including the next line that contains a directive, make up the
+`room` directive, on the same line.  The following string is the
 description of this room, which is what the player sees.  (The name,
 by contrast, is used only by `scottkit` itself, as an identifying tag when
 the room must be referred to when defining an exit, item or action.)
@@ -132,18 +136,17 @@ the room description with an asterisk (`*`), which is not printed but
 inhibits the automatic initial string.  For example, the room
 definition
 
-	%room ledge1
-	*I'm on a narrow ledge by a chasm. Across the chasm is
-	the Throne-room
+	room ledge1 "*I'm on a narrow ledge by a chasm. Across the chasm is
+	the Throne-room"
 
 is described to the player simply as
 
 	I'm on a narrow ledge by a chasm. Across the chasm is
 	the Throne-room
 
-### %exit
+### exit
 
-	%exit u stump
+	exit up stump
 
 Specifies that it's possible to move from the most recently defined
 room in the direction indicated by the first argument, and that doing
@@ -151,16 +154,15 @@ so takes the player to the destination indicated by the second
 argument.  Rooms may have any number of exits from zero to all
 six.
 
-The first argument to the `%room` directive must be one of the single
-letters
-`n`,
-`s`,
-`e`,
-`w`,
-`u` or
-`d`
-(or their upper-case equivalents), indicating exits in the directions
-north, south, east, west, up and down respectively.
+The first argument to the `%room` directive must be one of the directions
+`north`,
+`south`,
+`east`,
+`west`,
+`up` or
+`down`
+(or their upper-case equivalents), indicating exits in the specified
+directions.
 
 The second argument must be the name of a room defined somewhere in
 the ScottKit file.  The destination room's definition may be either
@@ -170,12 +172,11 @@ It's OK for an exit to lead back to the room it came from, and for
 more than one exit to lead in the same direction, as in the following
 example:
 
-	%room forest
-	forest
-	%exit n forest
-	%exit s forest
-	%exit e meadow
-	%exit w forest
+	room forest "forest"
+	  exit north forest
+	  exit south forest
+	  exit east meadow
+	  exit west forest
 
 
 ## Items
@@ -196,83 +197,73 @@ TUNNEL` to move inside the tunnel.  In this case, it's natural for
 both the tunnel item and the tunnel room to have the name `tunnel`.
 
 Apart from its name, an item is defined by its location and possibly
-by a "getdrop" name - see below.
+by a name by which it's called when getting or dropping it - see below.
 
-### %item
+### item
 
-	%item rubies
-	*Pot of RUBIES*
+	item rubies "*Pot of RUBIES*"
 
 Creates a new item whose name is the word immediately after the
-`%item` directive, on the same line.  The following line is the
+`item` directive, on the same line. The following string is the
 description of this item, which is what the player sees.  (The name is
 used only as an identifying tag.)
 
-If the item name begins with an asterisk (`*`) then it is considered
+If the item description begins with an asterisk (`*`) then it is considered
 to be a treasure: it, along with any other treasures, must be
-deposited in the treasury (see below) in order to win the game.  The
+deposited in the treasury (see below) in order to score points.  The
 asterisk is displayed to the user; traditionally, another asterisk
 appears at the end of treasure descriptions, but this is not enforced.
 
-### %at
+### at
 
-	%at chamber
+	at chamber
 
 By default, each item starts the game in the last room defined before
-its `%item` directive; this means that sequences like the following
+its `item` directive; this means that sequences like the following
 do The Right Thing:
 
-	%room lake
-	*I'm on the shore of a lake
-	%item water
-	water
-	%item fish
-	*GOLDEN FISH*
+	room lake "*I'm on the shore of a lake"
+	item water "water"
+	item fish "*GOLDEN FISH*"
 
 However, in some cases, it may be convenient to define items at some
 other point in a ScottKit file - for example, some authors may prefer to
 list all rooms together, then all items together.  In such cases,
 an item may be relocated to its correct starting room by providing a
-`%at` directive followed by the name of that room:
+`at` directive followed by the name of that room:
 
-	%room lake
-	*I'm on the shore of a lake
-	%room meadow
-	sunny meadow
-	%item water
-	water
-	%at lake
+	room lake "*I'm on the shore of a lake"
+	room meadow "sunny meadow"
+	item water "water"
+	at lake
 
-Items defined earlier in the ScottKit file than the first `%room`
+Items defined earlier in the ScottKit file than the first `room`
 directive are by default not in the game when it starts (though they
 may subsequently be brought into the game by DROP actions or similar -
-see below.)  This can of course be changed with `%at` directives,
+see below.)  This can of course be changed with `at` directives,
 since here as everywhere else, forward references to rooms that have
 not yet been defined are OK.
 
-### %nowhere
+### nowhere
 
-	%nowhere
+	nowhere
 
 Conversely, when defining an item that should not initially be in
 play, it may be convenient to place the definition at a point in the
-ScottKit file that places it in a room.  In this case, the `%nowhere`
+ScottKit file that places it in a room.  In this case, the `nowhere`
 directive can be used to start it off out of play.  This is
 particularly useful if, for example, an item initially in play is
 later to be replaced by one that is initially absent:
 
-	%room stump
-	damp hollow stump in the swamp
-	%item wbottle
-	Water in bottle
-	%item ebottle
-	Empty bottle
-	%nowhere
-	# will come into play when water is drunk
+	room stump "damp hollow stump in the swamp"
+	item wbottle "Water in bottle:
+	item ebottle "Empty bottle"
+	  nowhere
+	  # will come into play when water is drunk
 
-(Actually, `%at` and `%nowhere` are synonyms, so it's possible to
-include commands like "`%at`" alone to start an item out of play,
-and "`%nowhere stump`" to start it in the room called `stump`, but
+(Actually, `at` and `nowhere` are synonyms, so it's possible to
+include commands like "`at`" alone to start an item out of play,
+and "`nowhere stump`" to start it in the room called `stump`, but
 this would be a bit perverse, now, wouldn't it?)
 
 ### %getdrop
