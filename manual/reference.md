@@ -126,7 +126,6 @@ After its name comes a description enclosed in double quotes (which
 may extend across multiple lines) and a set of available exits, each
 exit specifying its destination room.
 
-
 ### room
 
 	room chamber "root chamber under the stump"
