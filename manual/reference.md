@@ -264,26 +264,24 @@ later to be replaced by one that is initially absent:
 	  nowhere
 	  # will come into play when water is drunk
 
-XXX Updated to this point
+### called
 
-### %getdrop
-
-	%getdrop lamp
+	called lamp
 
 Some of the items in a game - those described above as "objects"
 rather than "scenery" - can be picked up and dropped. Rather than
 laboriously coding these actions by hand, it's possible to have the
 game automatically handle the GET and DROP actions. In order to do
 this, it needs to know the word the user will use to specify the item,
-and this is what the `%getdrop` directive provides:
+and this is what `called` provides:
 
-	%item lamp
-	Old fashioned brass lamp
-	%getdrop lamp
+	item lamp "Old fashioned brass lamp"
+	  called lamp
 
-If no `%getdrop` name is provided, then it will not be possible for
+If no `called` name is provided, then it will not be possible for
 the player to pick up or drop the item unless explicit actions are
 coded to make this possible.
+
 
 ## Actions
 
