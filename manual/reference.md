@@ -1,7 +1,8 @@
-The ScottKit reference manual
-=============================
+The ScottKit format reference manual
+====================================
 
-This is the Reference Manual for the Scott Adams Adventure toolkit,
+This is the Reference Manual for the Scott Adams Adventure toolkit's
+source format. This is a part of
 ScottKit, which is freely available as a Ruby gem or from
 [http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)
 
