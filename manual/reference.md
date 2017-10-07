@@ -57,7 +57,7 @@ nostalgia which I can't recommend highly enough.
 ## Overview
 
 Comments may appear anywhere in a ScottKit file, and have no effect on
-the compiled adventure.  They are introduced by a hash character
+the compiled adventure. They are introduced by a hash character
 (`#`) and extend to the end of the line. (Hashes inside strings are
 literals, and do not introduce comments.)
 
@@ -79,7 +79,7 @@ lroom
 ```
 
 Each clause is introduced by a keyword, which determines what should
-follow.  Common keywords include `room`, `exit`, `item` and
+follow. Common keywords include `room`, `exit`, `item` and
 `action`. Keywords, directions, and item and object names are all
 case-sensitive.
 
@@ -89,7 +89,7 @@ through which the player moves, the *items* found in those rooms, the
 *actions* which the player can perform, and *global parameters*.
 
 With one exception, the order in which clauses and their associated
-data appear is not significant.  This yields important flexibility in
+data appear is not significant. This yields important flexibility in
 how the adventure definition file is laid out: for example, all the
 rooms may appear together followed by the items, or each room may be
 followed by the items which appear in it; items not initially in play
@@ -98,7 +98,7 @@ they will be brought into being during the game.
 
 The one exception to this order-independence is that the order in
 which actions appear is significant, because on each turn, each
-possible action is considered in the order that appear.  Ordering
+possible action is considered in the order that appear. Ordering
 issues are discussed in more detail in the section about the
 `action` clause, but in summary: while the order of actions
 relative to other actions is in some cases significant, the position
@@ -111,7 +111,7 @@ parameters with impunity.
 
 The first fundamental concept of Scott Adams adventures is the rooms:
 a connnected network of nodes between which the player can move using
-the four primary compass directions plus Up and Down.  With typical
+the four primary compass directions plus Up and Down. With typical
 topography, after moving north from one room to another, it's possible
 to move south back to the first room - but the system does not enforce
 this, making it possible to create complex mazes.
@@ -132,7 +132,7 @@ exit specifying its destination room.
 
 Creates a new room whose name is the word immediately after the
 `room` keyword. The string that follows is the
-description of this room, which is what the player sees.  (The name,
+description of this room, which is what the player sees. (The name,
 by contrast, is used only by `scottkit` itself, as an identifying tag when
 the room must be referred to when defining an exit, item or action.)
 
@@ -145,7 +145,7 @@ defined above would be described as
 
 When this behaviour is not desired, it can be overridden by beginning
 the room description with an asterisk (`*`), which is not printed but
-inhibits the automatic initial string.  For example, the room
+inhibits the automatic initial string. For example, the room
 definition
 
 	room ledge1 "*I'm on a narrow ledge by a chasm. Across the chasm is
@@ -163,13 +163,13 @@ is described to the player simply as
 Specifies that it's possible to move from the most recently defined
 room in the direction indicated by the first argument, and that doing
 so takes the player to the destination indicated by the second
-argument.  Rooms may have any number of exits from zero to all
+argument. Rooms may have any number of exits from zero to all
 six.
 
 The first argument to `exit` must be one of the directions
 `north`, `south`, `east`, `west`, `up` or `down`.
 The second argument must be the name of a room defined somewhere in
-the ScottKit file.  The destination room's definition may be either
+the ScottKit file. The destination room's definition may be either
 previous or subsequent - forward references are just fine.
 
 It's OK for an exit to lead back to the room it came from, and for
@@ -187,17 +187,17 @@ example:
 
 The second fundamental concept of Scott Adams adventures is the items:
 things that reside in a room, and in some cases can be picked up,
-carried around and left in other rooms.  Typically, some of the items
+carried around and left in other rooms. Typically, some of the items
 are "objects" like axes and keys, while others are "scenery" like
 trees, signs, *etc.*
 
 As with rooms, each item in a ScottKit file is identified by a unique
-name - typically a short, alphanumeric-plus-underscores name.  Because
+name - typically a short, alphanumeric-plus-underscores name. Because
 the concepts of room and item are so distinct in the Scott Adams
-model, it's OK for a room and an item to share the same name.  In fact
+model, it's OK for a room and an item to share the same name. In fact
 this is often the obvious thing to do - for example, consider a
 situtation where the player can see a tunnel, then type `ENTER
-TUNNEL` to move inside the tunnel.  In this case, it's natural for
+TUNNEL` to move inside the tunnel. In this case, it's natural for
 both the tunnel item and the tunnel room to have the name `tunnel`.
 
 Apart from its name, an item is defined by its location and possibly
@@ -209,12 +209,12 @@ by a name by which it's called when getting or dropping it - see below.
 
 Creates a new item whose name is the word immediately after
 `item`. The string that follows is the
-description of this item, which is what the player sees.  (The name is
+description of this item, which is what the player sees. (The name is
 used only as an identifying tag.)
 
 If the item description begins with an asterisk (`*`) then it is considered
 to be a treasure: it, along with any other treasures, must be
-deposited in the treasury (see below) in order to score points.  The
+deposited in the treasury (see below) in order to score points. The
 asterisk is displayed to the user; traditionally, another asterisk
 appears at the end of treasure descriptions, but this is not enforced.
 
@@ -231,7 +231,7 @@ it. This means that sequences like the following do The Right Thing:
 
 However, in some cases, it may be convenient to define items at some
 other point in a ScottKit file - for example, some authors may prefer to
-list all rooms together, then all items together.  In such cases,
+list all rooms together, then all items together. In such cases,
 an item may be relocated to its correct starting room by providing
 `at` followed by the name of that room:
 
@@ -243,7 +243,7 @@ an item may be relocated to its correct starting room by providing
 Items defined earlier in the ScottKit file than the first `room`
 are by default not in the game when it starts (though they
 may subsequently be brought into the game by DROP actions or similar -
-see below.)  This can of course be changed with `at`,
+see below.) This can of course be changed with `at`,
 since here as everywhere else, forward references to rooms that have
 not yet been defined are OK.
 
@@ -253,8 +253,8 @@ not yet been defined are OK.
 
 Conversely, when defining an item that should not initially be in
 play, it may be convenient to place the definition at a point in the
-ScottKit file that places it in a room.  In this case, `nowhere`
-can be used to start it off out of play.  This is
+ScottKit file that places it in a room. In this case, `nowhere`
+can be used to start it off out of play. This is
 particularly useful if, for example, an item initially in play is
 later to be replaced by one that is initially absent:
 
@@ -271,9 +271,9 @@ XXX Updated to this point
 	%getdrop lamp
 
 Some of the items in a game - those described above as "objects"
-rather than "scenery" - can be picked up and dropped.  Rather than
+rather than "scenery" - can be picked up and dropped. Rather than
 laboriously coding these actions by hand, it's possible to have the
-game automatically handle the GET and DROP actions.  In order to do
+game automatically handle the GET and DROP actions. In order to do
 this, it needs to know the word the user will use to specify the item,
 and this is what the `%getdrop` directive provides:
 
@@ -292,9 +292,9 @@ actions: things which the player can do, or which can happen to him,
 which result in changes to the state of the world.
 
 State consists primarily of the items' locations, but there are also
-some boolean flags, integer counters and saved room-numbers.  The
+some boolean flags, integer counters and saved room-numbers. The
 flags are all set to be false at the start of the game; flag number
-15 is special, and indicates whether or not it's dark.  If it is, then
+15 is special, and indicates whether or not it's dark. If it is, then
 the player can't see without a light source.
 
 No-one seems to know for sure how many flags were supported by the
@@ -309,9 +309,9 @@ any meaningful sense.)
 
 **Note.** The only reference to flag 4 is that it's cleared when the axe is
 thrown at the bear, misses and breaks the mirror (and it's never
-tested anywhere).  Inspection of the other axe-throwing actions
+tested anywhere). Inspection of the other axe-throwing actions
 suggests that this is a mistake, and that Scott intended to clear flag
-3.  And sure enough, the behaviour if you say `at bear` twice after
+3. And sure enough, the behaviour if you say `at bear` twice after
 `throw axe` is wrong: it understands the context-less second `at
 bear` command instead of refusing is and saying "What?":
 
@@ -330,7 +330,7 @@ bear` command instead of refusing is and saying "What?":
 	What?
 
 This is not really relevant to ScottKit, but interesting trivia
-nevertheless.  It's funny to find someone's bug twenty-two years after
+nevertheless. It's funny to find someone's bug twenty-two years after
 it was created!
 
 =back
@@ -340,7 +340,7 @@ code says that the author's never seen a game that uses a flag
 numbered higher than that.
 
 There are sixteen counters available, and sixteen slots in which room
-numbers can be stored.  The latter can be used to implement
+numbers can be stored. The latter can be used to implement
 sophisticated vehicles and spells which return the player to a room
 that was specified earlier - for example, the `YOHO` spell in
 *Sorceror of Claymorgue Castle*, which moves you first to a
@@ -362,7 +362,7 @@ There are four other elements of game state: the player's current
 room, indications of which of the sixteen counters and room-number
 slots are current (since some operations act on the "current
 counter" and the "current location slot") and the number of turns
-for which the light source will continue to function.  You don't need
+for which the light source will continue to function. You don't need
 to worry about this stuff much: it's mostly taken care of behind the
 scenes.
 
@@ -373,7 +373,7 @@ scenes.
 	carried key
 
 Introduces a new action which occurs when the player types a command
-equivalent to the one specified.  Equivalent here means using the
+equivalent to the one specified. Equivalent here means using the
 specified verb or a synonym together with the specified noun or a
 synonym - so depending on how the game is set up, `UNLOCK PORTAL`
 might be equivalent to `OPEN DOOR`.
@@ -385,11 +385,11 @@ that word - he may provide the verb alone or with any noun.
 
 The lines following the `%action` directive, up to but not including
 the next directive, are conditions, all of which must be satisfied in
-order for the results (see below) to happen.  There is no facility for
+order for the results (see below) to happen. There is no facility for
 specifying that conditions should be OR'red together.
 
 Each condition consists of a single-word opcode, followed by zero or
-more parameters as required by the opcode.  The following condition
+more parameters as required by the opcode. The following condition
 opcodes are supported:
 
 =over 4
@@ -420,10 +420,10 @@ True if *ITEM* is in the game (i.e. is not "nowhere").
 
 =item `moved` *ITEM*
 
-True if *ITEM* has been moved from its original location.  This
+True if *ITEM* has been moved from its original location. This
 includes the cases where an item initially not in play has been
 brought into play or vice versa, and where an item initially carried
-has been dropped or vice versa.  This only tests the current
+has been dropped or vice versa. This only tests the current
 situation, not *ITEM*'s history - so if *ITEM* is moved from its
 original room, then put back there, this test will return false.
 
@@ -437,7 +437,7 @@ True if flag number *NUM* is set.
 
 =item `counter_eq` *NUM*
 
-True if the current counter's value is *NUM*.  (A different counter
+True if the current counter's value is *NUM*. (A different counter
 may be nominated as "current" by the `select_counter` action.)
 
 =item `counter_le` *NUM*
@@ -461,7 +461,7 @@ The sense of the
 and
 `flag`
 opcodes may be negated by prefixed them with an exclamation mark
-(`!`).  There is no direct way to test for the negation of the three
+(`!`). There is no direct way to test for the negation of the three
 counter-related conditions.
 
 ### %result
@@ -472,12 +472,12 @@ counter-related conditions.
 	msg It creaks open.
 
 Introduces a sequence of results which occur if the previous
-`%action` or `%occur` (see below) directive is satisfied.  The lines
+`%action` or `%occur` (see below) directive is satisfied. The lines
 following the `%result` directive, up to, but not including, the next
 directive, are the resulting actions, which are executed in sequence.
 
 Each result action consists of a single-word opcode, followed by zero
-or more parameters as required by the opcode.  The following condition
+or more parameters as required by the opcode. The following condition
 opcodes are supported:
 
 =over 4
@@ -489,9 +489,9 @@ Moves to the specified *room* and displays its description.
 =item `look`
 
 Redisplays the description of the current room, the obvious exits and
-any visible items.  This is done automatically whenever the player
+any visible items. This is done automatically whenever the player
 moves (with the `moveto` action), `get`s an item from the current
-room, or `drop`s an item.  So far as I can tell, it need only be done
+room, or `drop`s an item. So far as I can tell, it need only be done
 explicitly when changing the value of the darkness flag.
 
 =item `look2`
@@ -509,7 +509,7 @@ otherwise.
 =item `superget` *item*
 
 The specified *item* is put in the player's inventory, even if too
-many items are already being carried.  This can be used to give the
+many items are already being carried. This can be used to give the
 player things he doesn't want, such as the chigger bites in
 *Adventureland*.
 
@@ -517,7 +517,7 @@ player things he doesn't want, such as the chigger bites in
 
 The specified *item* is put in the player's current location,
 irrespective of whether it was previous carried, there, elsewhere or
-nowhere (out of the game).  This is the standard way to bring into the
+nowhere (out of the game). This is the standard way to bring into the
 game items which begin nowhere.
 
 =item `put` *item* *room*
@@ -531,7 +531,7 @@ Puts the first-specified item into the same location as the second.
 =item `swap` *item* *item*
 
 Exchanges the two specified items, so that each occupies the location
-previously occupied by the other.  This can be used to switch one
+previously occupied by the other. This can be used to switch one
 object out of the game while bringing another in, as well as for
 swapping objects that are already in the game.
 
@@ -553,9 +553,9 @@ Lists the items that the player carrying.
 =item `score`
 
 Prints the current score, expressed as a mark out of 100, based on how
-many treasures have been stored in the treasury location.  This
+many treasures have been stored in the treasury location. This
 causes a division-by-zero error if there are no treasures in the game -
-i.e. items whose descriptions begin with an asterisk (`*`).  So games
+i.e. items whose descriptions begin with an asterisk (`*`). So games
 without treasures, such as Scott Adams's *Impossible Mission*, should
 not provide an action with this result.
 
@@ -564,7 +564,7 @@ not provide an action with this result.
 Implements death by printing an "I am dead" message, clearing the
 darkness flag and moving to the last defined room, which is
 conventionally a "limbo" room, as in *Adventureland*'s
-"Find right exit and live again!"  This is not a proper, permanent
+"Find right exit and live again!" This is not a proper, permanent
 death: for that, you need the `game_over` action.
 
 =item `game_over`
@@ -585,11 +585,11 @@ Emits a newline (i.e. moves to the beginning of the next line).
 
 =item `clear_screen`
 
-Clears the screen.  Who could have guessed?
+Clears the screen. Who could have guessed?
 
 =item `pause`
 
-Waits for two seconds.  Useful before clearing the screen.
+Waits for two seconds. Useful before clearing the screen.
 
 =item `refill_lamp`
 
@@ -599,16 +599,16 @@ the initial number of turns, as specified by `%lighttime`.
 =item `save_game`
 
 Initiates the save-game diaglogue, allowing the player to save the
-state of the game to a file.  Unfortunately, there is no corresponding
+state of the game to a file. Unfortunately, there is no corresponding
 load_game action, so the only way to use a saved game is to restart
 the interpreter, providing the name of the saved-game file on the
 command-line.
 
 =item `set_flag` *number*
 
-Sets flag *number*.  In general, this is useful only so that
+Sets flag *number*. In general, this is useful only so that
 subsequent actions and occurrences can check the value of the flag, so
-there are no pre-defined meanings to the flags.  The only flag with a
+there are no pre-defined meanings to the flags. The only flag with a
 "built-in" meaning is number 15 (darkness).
 
 =item `clear_flag` *number*
@@ -617,41 +617,41 @@ Clears flag *number*.
 
 =item `set_dark`
 
-Sets flag 15, which indicates darkness.  Exactly equivalent to
+Sets flag 15, which indicates darkness. Exactly equivalent to
 `set_flag 15`.
 
 =item `clear_dark`
 
-Clears flag 15, which indicates darkness.  Exactly equivalent to
+Clears flag 15, which indicates darkness. Exactly equivalent to
 `clear_flag 15`.
 
 =item `set_0`
 
-Sets flag 0.  Exactly equivalent to
+Sets flag 0. Exactly equivalent to
 `set_flag 0`.
 
 =item `clear_0`
 
-Clears flag 0.  Exactly equivalent to
+Clears flag 0. Exactly equivalent to
 `clear_flag 0`.
 
 =item `set_counter` *number*
 
 Sets the value of the currently selected counter to the specified
-*value*.  Negative values will not be honoured.  B<Do not confuse
+*value*. Negative values will not be honoured. B<Do not confuse
 this with the similarly named `select_counter` action!>
 
 =item `print_counter`
 
-Prints the value of the currently selected counter.  Apparently some
+Prints the value of the currently selected counter. Apparently some
 drivers can't print values greater than 99, so if you're designing
 your games for maximum portability, you should avoid using numbers
 higher than this.
 
 =item `decrease_counter`
 
-Decreases the value of the currently selected counter by one.  The
-value cannot be decreased below zero.  Surprisingly, there is no
+Decreases the value of the currently selected counter by one. The
+value cannot be decreased below zero. Surprisingly, there is no
 corresponding `increase_counter` action.
 
 =item `add_counter` *number*
@@ -666,7 +666,7 @@ Decreases the value of the currently selected counter by the specified
 
 =item `select_counter` *number*
 
-Chooses which of the sixteen counters is the current one.  Subsequent
+Chooses which of the sixteen counters is the current one. Subsequent
 `decrease_counter`, `print_counter`, etc., actions will operate on
 the nominated counter.
 
@@ -684,23 +684,23 @@ next use will bring the player back where it was first used.
 =item `swap_loc` *number*
 
 Like `swap_loc_default` but works with one of a sixteen numbered
-backup locations, nominated by *number*.  Swaps the current location
+backup locations, nominated by *number*. Swaps the current location
 with backup location *number*, so that subsequently doing `swap_loc`
 again with the same argument will result in returning to the original
-place.  This can be used to implement vehicles.
+place. This can be used to implement vehicles.
 
 =item `special` *number*
 
-Performs a "special action" that is dependent on the driver.  For
+Performs a "special action" that is dependent on the driver. For
 ScottFree, this does nothing.
 
 =item `continue`
 
-Never use this action.  It is used internally to allow a sequence of
+Never use this action. It is used internally to allow a sequence of
 actions that is too long to fit into a single action slot, but there
 is no reason at all why you would ever explicitly use it: in fact,
 this kind of low-level detail is precisely what the Scott Adams
-compiler is supposed to protect you from.  I don't know why I'm even
+compiler is supposed to protect you from. I don't know why I'm even
 mentioning it.
 
 =back
@@ -710,12 +710,12 @@ mentioning it.
 	%comment need key in order to open door
 
 This directive allows a comment to be associated with an action in the
-Scott Adams format data file written by `scottkit`.  The comment is
-attached to the most recently declared action.  Note that this is very
+Scott Adams format data file written by `scottkit`. The comment is
+attached to the most recently declared action. Note that this is very
 different from the usual kind of comment introduced by the hash
 character (`#`) which is simply discarded by the compiler.
 
-Why would you ever want to use `%comment`?  Beats me.
+Why would you ever want to use `%comment`? Beats me.
 
 ### %occur
 
@@ -723,9 +723,9 @@ Why would you ever want to use `%comment`?  Beats me.
 
 Like `%action`, the `%occur` directive introduces a sequence of zero
 or more conditions which, if fulfilled, will allow some consequences
-to result.  The difference is that `%occur` actions occur
+to result. The difference is that `%occur` actions occur
 irrespective of what command the player supplies - indeed, they happen
-before anything is typed.  They can be used to implement circumstances
+before anything is typed. They can be used to implement circumstances
 such as falling off a ledge if in an appropriately dangerous room
 while carrying a particularly heavy item.
 
@@ -735,7 +735,7 @@ all satisfied; otherwise the chance is 100%.
 
 There is one more very important difference between actions and
 occurrences: before each turn, every occurrence whose conditions are
-all satisfied is executed.  Then at most one action will happen: the
+all satisfied is executed. Then at most one action will happen: the
 first action matching the players command and whose conditions are all
 satisfied.
 
@@ -743,7 +743,7 @@ satisfied.
 ## Global parameters
 
 Finally, we come to the global parameters, a rag-bag of bits and
-pieces which affect the game as a whole.  In general, each of the
+pieces which affect the game as a whole. In general, each of the
 following directives should appear exactly once: it's an error for any
 one of them not to appear at all, and a warning is generated if any is
 used more than once.
@@ -753,16 +753,16 @@ used more than once.
 	%ident 1
 
 This simply specifies a number which uniquely identifies the
-adventure.  I have read in the `Definition` file that comes with the
+adventure. I have read in the `Definition` file that comes with the
 ScottFree distribution that this number (and all others in the
-Scott Adams file format) is "apparently 16 bit".  I don't know how
+Scott Adams file format) is "apparently 16 bit". I don't know how
 this is apparent, but it's possible that some interpreters will choke
 on numbers larger than 65536 (2^16-1), or maybe even 32767 (2^15-1)
-if they interpret the value as signed.  So you should probably pick a
+if they interpret the value as signed. So you should probably pick a
 number smaller than this.
 
 Somewhere out there, there should be a register of all Scott Adams
-format games, each with a unique identifier number.  Unfortunately, I
+format games, each with a unique identifier number. Unfortunately, I
 don't know if there is one or where it is - please contact me if you
 can point me at it (or if you want to start maintaining one!)
 
@@ -772,23 +772,23 @@ course!)
 
 Adams' original series of twelve adventures uses numbers 1-12
 (*Adventureland* has the coveted number 1, of course!), and the later
-*Sorceror of Claymorgue Castle* is number thirteen.  Unfortunately,
+*Sorceror of Claymorgue Castle* is number thirteen. Unfortunately,
 *Return to Pirate's Island* and *The Adventures of Buckaroo_Banzai*
 are both given number fourteen; and the two Questprobe adventures,
 *The Incredible Hulk* and *Spiderman* are both number two again (the
-same as the original *Pirate Adventure*.  What a crock.  At least the
+same as the original *Pirate Adventure*. What a crock. At least the
 *Adventureland* "sampler" that used to be given away for free has
 its own number, 65.
 
 To make matters worse, Brian Haworth's series of eleven *Mysterious
-Adventures* re-use the numbers 1-11.  So there are no fewer than four
-adventure number two's.  Ho hum.
+Adventures* re-use the numbers 1-11. So there are no fewer than four
+adventure number two's. Ho hum.
 
 ### %version
 
 	%version 416
 
-Specifies the version of this adventure.  Looks like Adams went
+Specifies the version of this adventure. Looks like Adams went
 through 416 design iterations before he got *Adventureland* into a
 state he was happy to release.
 
@@ -797,7 +797,7 @@ state he was happy to release.
 	%wordlen 3
 
 Specifies the number of significant letters in each word known to the
-game.  Because this is three for *Adventureland*, all longer words
+game. Because this is three for *Adventureland*, all longer words
 can be abbreviated to three letters - so the player can type `CLI
 TRE` (or indeed `CLIMAX TREMENDOUSLY`) instead of `CLIMB TREE`.
 
@@ -813,7 +813,7 @@ suitable message.
 
 	%lighttime 125
 
-Specifies how many turns the light source is good for.  Light is only
+Specifies how many turns the light source is good for. Light is only
 used up when the light source is in the game, so, for example if
 there's an unlit lamp in the game and a lit lamp initially not in the
 game, the light time doesn't start to tick down until the lamp is lit
@@ -830,8 +830,8 @@ Specifies which room the player starts in.
 	%treasury stump
 
 Specifies the room in which the player must store treasure for it to
-count towards his score.  Remember that treasures are, by definition,
-objects whose name begins with an asterisk (`*`).  The player's score
+count towards his score. Remember that treasures are, by definition,
+objects whose name begins with an asterisk (`*`). The player's score
 at any time is defined as the number of treasures that have been
 stored in the treasury, divided by the total number of treasures,
 multiplied by 100, and rounded to the nearest integer (so that it's
@@ -845,9 +845,9 @@ in a particular place.
 
 	%lightsource lamp
 
-Nominates a particular item as the light-source for the game.  When
+Nominates a particular item as the light-source for the game. When
 flag 15 (darkness) is set, the player can only see if either carrying
-or in the presence of the lightsource object.  There can be only one
+or in the presence of the lightsource object. There can be only one
 lightsource in the game - if a second is nominated, it replaces the
 first.
 
@@ -856,7 +856,7 @@ first.
 	%nalias lamp lantern
 	%nalias lamp torch
 
-Creates an alias for a noun.  Multiple uses that share one of the same
+Creates an alias for a noun. Multiple uses that share one of the same
 words (as in the example above) create an equivalence class of words
 that are all mutually synonymous.
 
@@ -872,9 +872,9 @@ Creates an alias for a verb.
 	%include foo/bar/baz.sck
 
 Includes the contents of the specified file, exactly as though they
-were included inline in the ScottKit file being processed.  Non-absolute
+were included inline in the ScottKit file being processed. Non-absolute
 paths are interpreted relative to the file being parsed at that time,
-*not* relative to the working directory.  So, for example, if the
+*not* relative to the working directory. So, for example, if the
 file `subdir/thrick.sck` is being parsed, and has a line `%include
 frog.sck`, then the file of that name *in the `subdir` directory* is
 used.
