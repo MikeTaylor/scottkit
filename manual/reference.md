@@ -261,11 +261,6 @@ later to be replaced by one that is initially absent:
 	  nowhere
 	  # will come into play when water is drunk
 
-(Actually, `at` and `nowhere` are synonyms, so it's possible to
-include commands like "`at`" alone to start an item out of play,
-and "`nowhere stump`" to start it in the room called `stump`, but
-this would be a bit perverse, now, wouldn't it?)
-
 ### %getdrop
 
 	%getdrop lamp
