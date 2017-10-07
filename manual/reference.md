@@ -207,8 +207,8 @@ by a name by which it's called when getting or dropping it - see below.
 
 	item rubies "*Pot of RUBIES*"
 
-Creates a new item whose name is the word immediately after the
-`item` directive, on the same line. The following string is the
+Creates a new item whose name is the word immediately after
+`item`. The string that follows is the
 description of this item, which is what the player sees.  (The name is
 used only as an identifying tag.)
 
@@ -223,8 +223,7 @@ appears at the end of treasure descriptions, but this is not enforced.
 	at chamber
 
 By default, each item starts the game in the last room defined before
-its `item` directive; this means that sequences like the following
-do The Right Thing:
+it. This means that sequences like the following do The Right Thing:
 
 	room lake "*I'm on the shore of a lake"
 	item water "water"
@@ -233,8 +232,8 @@ do The Right Thing:
 However, in some cases, it may be convenient to define items at some
 other point in a ScottKit file - for example, some authors may prefer to
 list all rooms together, then all items together.  In such cases,
-an item may be relocated to its correct starting room by providing a
-`at` directive followed by the name of that room:
+an item may be relocated to its correct starting room by providing
+`at` followed by the name of that room:
 
 	room lake "*I'm on the shore of a lake"
 	room meadow "sunny meadow"
@@ -242,9 +241,9 @@ an item may be relocated to its correct starting room by providing a
 	at lake
 
 Items defined earlier in the ScottKit file than the first `room`
-directive are by default not in the game when it starts (though they
+are by default not in the game when it starts (though they
 may subsequently be brought into the game by DROP actions or similar -
-see below.)  This can of course be changed with `at` directives,
+see below.)  This can of course be changed with `at`,
 since here as everywhere else, forward references to rooms that have
 not yet been defined are OK.
 
@@ -254,8 +253,8 @@ not yet been defined are OK.
 
 Conversely, when defining an item that should not initially be in
 play, it may be convenient to place the definition at a point in the
-ScottKit file that places it in a room.  In this case, the `nowhere`
-directive can be used to start it off out of play.  This is
+ScottKit file that places it in a room.  In this case, `nowhere`
+can be used to start it off out of play.  This is
 particularly useful if, for example, an item initially in play is
 later to be replaced by one that is initially absent:
 
@@ -264,6 +263,8 @@ later to be replaced by one that is initially absent:
 	item ebottle "Empty bottle"
 	  nowhere
 	  # will come into play when water is drunk
+
+XXX Updated to this point
 
 ### %getdrop
 
