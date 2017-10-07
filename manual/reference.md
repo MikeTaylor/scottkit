@@ -126,7 +126,7 @@ After its name comes a description enclosed in double quotes (which
 may extend across multiple lines) and a set of available exits, each
 exit specifying its destination room.
 
-### room
+### `room`
 
 	room chamber "root chamber under the stump"
 
@@ -156,7 +156,7 @@ is described to the player simply as
 	I'm on a narrow ledge by a chasm. Across the chasm is
 	the Throne-room
 
-### exit
+### `exit`
 
 	exit up stump
 
@@ -203,7 +203,7 @@ both the tunnel item and the tunnel room to have the name `tunnel`.
 Apart from its name, an item is defined by its location and possibly
 by a name by which it's called when getting or dropping it - see below.
 
-### item
+### `item`
 
 	item rubies "*Pot of RUBIES*"
 
@@ -218,7 +218,7 @@ deposited in the treasury (see below) in order to score points. The
 asterisk is displayed to the user; traditionally, another asterisk
 appears at the end of treasure descriptions, but this is not enforced.
 
-### at
+### `at`
 
 	at chamber
 
@@ -247,7 +247,7 @@ see below.) This can of course be changed with `at`,
 since here as everywhere else, forward references to rooms that have
 not yet been defined are OK.
 
-### nowhere
+### `nowhere`
 
 	nowhere
 
@@ -264,7 +264,7 @@ later to be replaced by one that is initially absent:
 	  nowhere
 	  # will come into play when water is drunk
 
-### called
+### `called`
 
 	called lamp
 
