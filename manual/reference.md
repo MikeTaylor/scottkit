@@ -376,11 +376,10 @@ for which the light source will continue to function. You don't need
 to worry about this stuff much: it's mostly taken care of behind the
 scenes.
 
-### %action
+### `action`
 
-	%action open door
-	here closed_door
-	carried key
+	action GET MIR when here MIRROR and here bear
+	  print "Bear won't let me"
 
 Introduces a new action which occurs when the player types a command
 equivalent to the one specified. Equivalent here means using the
