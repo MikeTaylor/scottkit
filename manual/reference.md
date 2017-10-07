@@ -293,7 +293,8 @@ State consists primarily of the items' locations, but there are also
 some boolean flags, integer counters and saved room-numbers. The
 flags are all set to be false at the start of the game; flag number
 15 is special, and indicates whether or not it's dark. If it is, then
-the player can't see without a light source.
+the player can't see without a light source. (Don't blame me for this:
+it's a fact about the Scott Adams engine.)
 
 No-one seems to know for sure how many flags were supported by the
 original Scott interpreters, but by inspection, *Adventureland* uses
@@ -301,37 +302,23 @@ flags 1 to 17, missing out flag 6 for some reason, and making only a
 single reference to flag 4 (so that it's not really "used" in
 any meaningful sense.)
 
-=over 4
-
-=item *
-
-**Note.** The only reference to flag 4 is that it's cleared when the axe is
-thrown at the bear, misses and breaks the mirror (and it's never
-tested anywhere). Inspection of the other axe-throwing actions
-suggests that this is a mistake, and that Scott intended to clear flag
-3. And sure enough, the behaviour if you say `at bear` twice after
-`throw axe` is wrong: it understands the context-less second `at
-bear` command instead of refusing is and saying "What?":
-
-	Tell me what to do ? throw axe
-	In 2 words tell me at what...like: AT TREE
-
-	Tell me what to do ? at bear
-	OH NO... Bear dodges... CRASH!
-
-	Tell me what to do ? at bear
-	OK, I threw it.
-	A voice BOOOOMS out:
-	please leave it alone
-
-	Tell me what to do ? at bear
-	What?
-
-This is not really relevant to ScottKit, but interesting trivia
-nevertheless. It's funny to find someone's bug twenty-two years after
-it was created!
-
-=back
+> **Note.** The only reference to flag 4 is that it's cleared when the axe is thrown at the bear, misses and breaks the mirror (and it's never tested anywhere). Inspection of the other axe-throwing actions suggests that this is a mistake, and that Scott intended to clear flag 3. And sure enough, the behaviour is wrong if you say `at bear` twice after `throw axe`: it understands the context-less second `at bear` command instead of refusing is and saying "What?":
+>
+>	Tell me what to do ? throw axe
+>	In 2 words tell me at what...like: AT TREE
+>
+>	Tell me what to do ? at bear
+>	OH NO... Bear dodges... CRASH!
+>
+>	Tell me what to do ? at bear
+>	OK, I threw it.
+>	A voice BOOOOMS out:
+>	please leave it alone
+>
+>	Tell me what to do ? at bear
+>	What?
+>
+>This is not really relevant to ScottKit, but interesting trivia nevertheless. It's funny to find someone's bug twenty-two years after it was created!
 
 Anyway, ScottFree implements 32 flags, and a comment in the source
 code says that the author's never seen a game that uses a flag
@@ -342,19 +329,9 @@ numbers can be stored. The latter can be used to implement
 sophisticated vehicles and spells which return the player to a room
 that was specified earlier - for example, the `YOHO` spell in
 *Sorceror of Claymorgue Castle*, which moves you first to a
-destination, then back to where you first cast it (I think.)
+destination, then back to where you first cast it (I think).
 
-=over 4
-
-=item *
-
-[Truth is, I'm not at all sure how the
-room-number slots are used; this facility is not used at all in
-*Adventureland*, which is the game I'm most familiar with; and
-looking at the reverse-engineered *Claymorgue* actions doesn't help
-much.]
-
-=back
+> Truth is, I'm not at all sure how the room-number slots are used; this facility is not used at all in *Adventureland*, which is the game I'm most familiar with; and looking at the reverse-engineered *Claymorgue* actions doesn't help much.
 
 There are four other elements of game state: the player's current
 room, indications of which of the sixteen counters and room-number
