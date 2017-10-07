@@ -289,6 +289,8 @@ The third fundamental concept of Scott Adams adventures is the
 actions: things which the player can do, or which can happen to him,
 which result in changes to the state of the world.
 
+### Game state: item locations, flags, counters, saved rooms, etc.
+
 State consists primarily of the items' locations, but there are also
 some boolean flags, integer counters and saved room-numbers. The
 flags are all set to be false at the start of the game; flag number
