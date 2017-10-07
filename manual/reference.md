@@ -1,6 +1,14 @@
 The ScottKit format reference manual
 ====================================
 
+This is the Reference Manual for the Scott Adams Adventure toolkit's
+source format. This is a part of
+ScottKit, which is freely available as a Ruby gem or from
+[http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)
+
+Like the software itself, this manual was written by
+Mike Taylor &lt;mike@miketaylor.org.uk&gt;
+
 <!-- md2toc -l 2 reference.md -->
 * [Synopsis](#synopsis)
 * [Description](#description)
@@ -36,14 +44,6 @@ The ScottKit format reference manual
     * [%include](#include)
 * [See also](#see-also)
 
-
-This is the Reference Manual for the Scott Adams Adventure toolkit's
-source format. This is a part of
-ScottKit, which is freely available as a Ruby gem or from
-[http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)
-
-Like the software itself, this manual was written by
-Mike Taylor &lt;mike@miketaylor.org.uk&gt;
 
 > **NOTE.**
 > This manual was adapted from that of my old Perl module [Games::ScottAdams](http://www.miketaylor.org.uk/tech/advent/sac/Manual.html)
