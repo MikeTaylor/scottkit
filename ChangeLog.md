@@ -39,8 +39,8 @@ Revision history for Ruby gem ScottKit
 Still to do
 ===========
 
-* Rename the "carried" keyword to avoid conflicting with condition.
-* Update test-suite to work correctly with renamed "carried".
+* Rename the `carried` and `at` keywords to avoid conflicting with condition.
+* Update test-suite to work correctly with renamed `carried` and `at`.
 * Tweak compiler to break actions when they need too many arguments as
   well as when they need too many instructions.
 * Write tutorial scaffolding.
