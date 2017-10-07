@@ -1,6 +1,39 @@
 The ScottKit format reference manual
 ====================================
 
+<!-- md2toc -l 2 reference.md -->
+* [Synopsis](#synopsis)
+* [Description](#description)
+* [Overview](#overview)
+* [Rooms](#rooms)
+    * [`room`](#room)
+    * [`exit`](#exit)
+* [Items](#items)
+    * [`item`](#item)
+    * [`at`](#at)
+    * [`nowhere`](#nowhere)
+    * [`called`](#called)
+* [Actions](#actions)
+    * [Game state: item locations, flags, counters, saved rooms, etc.](#game-state-item-locations-flags-counters-saved-rooms-etc)
+    * [%action](#action)
+    * [%result](#result)
+    * [%comment](#comment)
+    * [%occur](#occur)
+* [Global parameters](#global-parameters)
+    * [%ident](#ident)
+    * [%version](#version)
+    * [%wordlen](#wordlen)
+    * [%maxload](#maxload)
+    * [%lighttime](#lighttime)
+    * [%start](#start)
+    * [%treasury](#treasury)
+    * [%lightsource](#lightsource)
+    * [%nalias](#nalias)
+    * [%valias](#valias)
+    * [%include](#include)
+* [See also](#see-also)
+
+
 This is the Reference Manual for the Scott Adams Adventure toolkit's
 source format. This is a part of
 ScottKit, which is freely available as a Ruby gem or from
