@@ -58,25 +58,37 @@ nostalgia which I can't recommend highly enough.
 
 Comments may appear anywhere in a ScottKit file, and have no effect on
 the compiled adventure.  They are introduced by a hash character
-(`#`) and extend to the end of the line.
+(`#`) and extend to the end of the line. (Hashes inside strings are
+literals, and do not introduce comments.)
 
-Completely blank lines (and those which are completely blank after
-comments have been removed) may appear anywhere in the file, and have
-no effect on the compiled adventure.
+Aside from this, line-breaks are treated like any other whitespace:
+the ScottKit source file is treated as a sequence of tokens, which may
+be broken across lines in whatever way best suits the author: for
+example, the following sequences are all exactly equivalent:
+```
+room lroom "the living room" exit north lroom
 
-All data is introduced by a *directive* - that is, a line which
-begins with a recognised keyword
-specifying which directive is being used.  Common examples include
-`room`, `exit`, `item` and `action`.  Directive names are
-case-insensitive, so that `room`, `ROOM`, `Room` and indeed
-`rOoM` all mean the same thing.
+room lroom "the living room"
+	exit north lroom
 
-We describe the directives in four categories, corresponding to the
+room lroom
+"the living room"
+	exit
+	  north
+lroom
+```
+
+Each clause is introduced by a keyword, which determines what should
+follow.  Common keywords include `room`, `exit`, `item` and
+`action`. Keywords, directions, and item and object names are all
+case-sensitive.
+
+We describe the avaialable clauses in four categories, corresponding to the
 four fundamental concepts in Scott Adams adventures: the *rooms*
 through which the player moves, the *items* found in those rooms, the
 *actions* which the player can perform, and *global parameters*.
 
-With one exception, the order in which directives and their associated
+With one exception, the order in which clauses and their associated
 data appear is not significant.  This yields important flexibility in
 how the adventure definition file is laid out: for example, all the
 rooms may appear together followed by the items, or each room may be
@@ -88,7 +100,7 @@ The one exception to this order-independence is that the order in
 which actions appear is significant, because on each turn, each
 possible action is considered in the order that appear.  Ordering
 issues are discussed in more detail in the section about the
-`action` directive, but in summary: while the order of actions
+`action` clause, but in summary: while the order of actions
 relative to other actions is in some cases significant, the position
 of actions relative to rooms, items and global parameters is not.
 Actions may be moved ahead of and behind rooms, items and global
@@ -119,7 +131,7 @@ exit specifying its destination room.
 	room chamber "root chamber under the stump"
 
 Creates a new room whose name is the word immediately after the
-`room` directive, on the same line.  The following string is the
+`room` keyword. The string that follows is the
 description of this room, which is what the player sees.  (The name,
 by contrast, is used only by `scottkit` itself, as an identifying tag when
 the room must be referred to when defining an exit, item or action.)
@@ -154,16 +166,8 @@ so takes the player to the destination indicated by the second
 argument.  Rooms may have any number of exits from zero to all
 six.
 
-The first argument to the `%room` directive must be one of the directions
-`north`,
-`south`,
-`east`,
-`west`,
-`up` or
-`down`
-(or their upper-case equivalents), indicating exits in the specified
-directions.
-
+The first argument to `exit` must be one of the directions
+`north`, `south`, `east`, `west`, `up` or `down`.
 The second argument must be the name of a room defined somewhere in
 the ScottKit file.  The destination room's definition may be either
 previous or subsequent - forward references are just fine.
