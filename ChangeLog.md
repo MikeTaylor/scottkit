@@ -1,6 +1,11 @@
 Revision history for Ruby gem ScottKit
 ======================================
 
+1.0.0 (IN PROGRESS)
+-------------------
+* Finish translating reference guide from POD to MarkDown.
+* Update reference guide to describe ScottKit format rather then Games::ScottAdams format.
+
 0.4.0 (Mon Mar  1 22:20:09 GMT 2010)
 ------------------------------------
 * Move towards using YARD for documentation instead of Rdoc.  This
@@ -37,7 +42,6 @@ Still to do
 * Tweak compiler to break actions when they need too many arguments as
   well as when they need too many instructions.
 * Write tutorial scaffolding.
-* Write other documentation, e.g. reference guide.
 * Ensure that the right files are built by `YARD`
 * Write blog entry about ScottKit
 * Maybe modify to run against GLK using the Glkx driver
