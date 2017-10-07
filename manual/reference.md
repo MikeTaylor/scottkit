@@ -15,7 +15,10 @@ The ScottKit format reference manual
     * [`called`](#called)
 * [Actions](#actions)
     * [Game state: item locations, flags, counters, saved rooms, etc.](#game-state-item-locations-flags-counters-saved-rooms-etc)
-    * [%action](#action)
+    * [`action`](#action)
+    * [`when`](#when)
+    * [`and`](#and)
+    * [Conditions](#conditions)
     * [%result](#result)
     * [%comment](#comment)
     * [%occur](#occur)
@@ -378,57 +381,79 @@ scenes.
 
 ### `action`
 
-	action GET MIR when here MIRROR and here bear
-	  print "Bear won't let me"
+	action GET MIR
+	  when here MIRROR and here bear
+	    print "Bear won't let me"
 
 Introduces a new action which occurs when the player types a command
 equivalent to the one specified. Equivalent here means using the
 specified verb or a synonym together with the specified noun or a
 synonym - so depending on how the game is set up, `UNLOCK PORTAL`
-might be equivalent to `OPEN DOOR`.
+might be equivalent to `OPEN DOOR`. The words must be specified up to,
+and may optionally be specified beyond, the word-length specified by
+[`wordlen`: see below](#wordlen).
 
-The `%action` directive may optionally be followed on the same line
+`action` may optionally be followed
 by a verb alone instead of a verb-noun pair as above; in this case,
 the action occurs whenever the user provides any input beginning with
 that word - he may provide the verb alone or with any noun.
 
-The lines following the `%action` directive, up to but not including
-the next directive, are conditions, all of which must be satisfied in
-order for the results (see below) to happen. There is no facility for
+### `when`
+
+When this is provided, following an action, it specifies a condition
+which must be satisfied in order for the results (see below) to
+happen. If multiple `when` clauses are provided, then the action fires
+only if _all_ of the conditions are true. There is no facility for
 specifying that conditions should be OR'red together.
+
+### `and`
+
+This is a synonym for `when`, provided so that you can write
+
+	when here MIRROR and here bear
+
+instead of
+
+	when here MIRROR when here bear
+
+(In fact, you can write
+
+	and here MIRROR when here bear
+
+if you like. It means the same.)
+
+### Conditions
 
 Each condition consists of a single-word opcode, followed by zero or
 more parameters as required by the opcode. The following condition
 opcodes are supported:
 
-=over 4
-
-=item `at` *ROOM*
-
+* `at` *ROOM*
+--
 True if the player's current room is *ROOM*, which must be the name
 of a room defined somewhere in the ScottKit file.
 
-=item `carried` *ITEM*
-
+* `carried` *ITEM*
+--
 True if the player is carrying *ITEM*, which must be the name
 of an item defined somewhere in the ScottKit file.
 
-=item `here` *ITEM*
-
+* `here` *ITEM*
+--
 True if *ITEM* is in the player's current room.
 
-=item `accessible` *ITEM*
-
+* `accessible` *ITEM*
+--
 True if *ITEM* is either being carried by the player or in the
 player's current room (i.e. if either `carried ITEM` or `here
 ITEM` is true.)
 
-=item `exists` *ITEM*
-
+* `exists` *ITEM*
+--
 True if *ITEM* is in the game (i.e. is not "nowhere").
 
-=item `moved` *ITEM*
-
+* `moved` *ITEM*
+--
 True if *ITEM* has been moved from its original location. This
 includes the cases where an item initially not in play has been
 brought into play or vice versa, and where an item initially carried
@@ -436,28 +461,27 @@ has been dropped or vice versa. This only tests the current
 situation, not *ITEM*'s history - so if *ITEM* is moved from its
 original room, then put back there, this test will return false.
 
-=item `loaded`
-
+* `loaded`
+--
 True if the player is carrying at least one item.
 
-=item `flag` *NUM*
-
+* `flag` *NUM*
+--
 True if flag number *NUM* is set.
 
-=item `counter_eq` *NUM*
-
+* `counter_eq` *NUM*
+--
 True if the current counter's value is *NUM*. (A different counter
 may be nominated as "current" by the `select_counter` action.)
 
-=item `counter_le` *NUM*
-
+* `counter_le` *NUM*
+--
 True if the current counter's value is *NUM* or less.
 
-=item `counter_ge` *NUM*
-
+* `counter_ge` *NUM*
+--
 True if the current counter's value is *NUM* or more.
 
-=back
 
 The sense of the
 `at`,
