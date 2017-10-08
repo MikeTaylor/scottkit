@@ -20,6 +20,9 @@ Mike Taylor &lt;mike@miketaylor.org.uk&gt;
     * [`at`](#at)
     * [`nowhere`](#nowhere)
     * [`called`](#called)
+* [Vocabulary](#vocabulary)
+    * [`verbgroup`](#verbgroup)
+    * [`noungroup`](#noungroup)
 * [Actions](#actions)
     * [Game state: item locations, flags, counters, saved rooms, etc.](#game-state-item-locations-flags-counters-saved-rooms-etc)
     * [`action`](#action)
@@ -38,9 +41,6 @@ Mike Taylor &lt;mike@miketaylor.org.uk&gt;
     * [`start`](#start)
     * [`treasury`](#treasury)
     * [`lightsource`](#lightsource)
-    * [%nalias](#nalias)
-    * [%valias](#valias)
-    * [%include](#include)
 * [See also](#see-also)
 
 
@@ -316,6 +316,23 @@ and this is what `called` provides:
 If no `called` name is provided, then it will not be possible for
 the player to pick up or drop the item unless explicit actions are
 coded to make this possible.
+
+
+## Vocabulary
+
+### `verbgroup`
+
+	verbgroup GO ENT RUN WAL CLI
+
+Establishes a set of verbs that are synonymous: for example, Go,
+ENTER, RUN, WALK, CLIMB in the above example (which is taken from
+_Adventureland_ where the significant word-length is 3).
+
+### `noungroup`
+
+	noungroup lamp lantern
+
+Establishes a set of nouns that are synonymous.
 
 
 ## Actions
@@ -875,22 +892,6 @@ flag 15 (darkness) is set, the player can only see if either carrying
 or in the presence of the lightsource object. There can be only one
 lightsource in the game - if a second is nominated, it replaces the
 first.
-
-### %nalias
-
-	%nalias lamp lantern
-	%nalias lamp torch
-
-Creates an alias for a noun. Multiple uses that share one of the same
-words (as in the example above) create an equivalence class of words
-that are all mutually synonymous.
-
-### %valias
-
-	%valias take get
-	%valias drop leave
-
-Creates an alias for a verb.
 
 
 ## See also
