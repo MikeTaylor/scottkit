@@ -30,14 +30,14 @@ Mike Taylor &lt;mike@miketaylor.org.uk&gt;
     * [`comment`](#comment)
     * [`occur`](#occur)
 * [Global parameters](#global-parameters)
-    * [%ident](#ident)
-    * [%version](#version)
-    * [%wordlen](#wordlen)
-    * [%maxload](#maxload)
-    * [%lighttime](#lighttime)
-    * [%start](#start)
-    * [%treasury](#treasury)
-    * [%lightsource](#lightsource)
+    * [`ident`](#ident)
+    * [`version`](#version)
+    * [`wordlen`](#wordlen)
+    * [`maxload`](#maxload)
+    * [`lighttime`](#lighttime)
+    * [`start`](#start)
+    * [`treasury`](#treasury)
+    * [`lightsource`](#lightsource)
     * [%nalias](#nalias)
     * [%valias](#valias)
     * [%include](#include)
@@ -777,16 +777,16 @@ following directives should appear exactly once: it's an error for any
 one of them not to appear at all, and a warning is generated if any is
 used more than once.
 
-### %ident
+### `ident`
 
-	%ident 1
+	ident 1
 
 This simply specifies a number which uniquely identifies the
 adventure. I have read in the `Definition` file that comes with the
 ScottFree distribution that this number (and all others in the
 Scott Adams file format) is "apparently 16 bit". I don't know how
 this is apparent, but it's possible that some interpreters will choke
-on numbers larger than 65536 (2^16-1), or maybe even 32767 (2^15-1)
+on numbers larger than 65535 (2^16-1), or maybe even 32767 (2^15-1)
 if they interpret the value as signed. So you should probably pick a
 number smaller than this.
 
@@ -801,9 +801,9 @@ course!)
 
 Adams' original series of twelve adventures uses numbers 1-12
 (*Adventureland* has the coveted number 1, of course!), and the later
-*Sorceror of Claymorgue Castle* is number thirteen. Unfortunately,
+*Sorceror of Claymorgue Castle* is number 13. Unfortunately,
 *Return to Pirate's Island* and *The Adventures of Buckaroo_Banzai*
-are both given number fourteen; and the two Questprobe adventures,
+are both given number 14; and the two Questprobe adventures,
 *The Incredible Hulk* and *Spiderman* are both number two again (the
 same as the original *Pirate Adventure*. What a crock. At least the
 *Adventureland* "sampler" that used to be given away for free has
@@ -811,54 +811,54 @@ its own number, 65.
 
 To make matters worse, Brian Haworth's series of eleven *Mysterious
 Adventures* re-use the numbers 1-11. So there are no fewer than four
-adventure number two's. Ho hum.
+adventure number 2s. Ho hum.
 
-### %version
+### `version`
 
-	%version 416
+	version 416
 
 Specifies the version of this adventure. Looks like Adams went
 through 416 design iterations before he got *Adventureland* into a
 state he was happy to release.
 
-### %wordlen
+### `wordlen`
 
-	%wordlen 3
+	wordlen 3
 
 Specifies the number of significant letters in each word known to the
 game. Because this is three for *Adventureland*, all longer words
 can be abbreviated to three letters - so the player can type `CLI
 TRE` (or indeed `CLIMAX TREMENDOUSLY`) instead of `CLIMB TREE`.
 
-### %maxload
+### `maxload`
 
-	%maxload 6
+	maxload 6
 
 Specifies the maximum number of items that the player can carry at
 once - if he tries to pick up something else, the interpreter issues a
 suitable message.
 
-### %lighttime
+### `lighttime`
 
-	%lighttime 125
+	lighttime 125
 
 Specifies how many turns the light source is good for. Light is only
-used up when the light source is in the game, so, for example if
+used up when the light source is in the game -- so, for example if
 there's an unlit lamp in the game and a lit lamp initially not in the
 game, the light time doesn't start to tick down until the lamp is lit
 (i.e. the lit lamp object is brought into the game.)
 
-### %start
+### `start`
 
-	%start forest
+	start forest
 
 Specifies which room the player starts in.
 
-### %treasury
+### `treasury`
 
-	%treasury stump
+	treasury stump
 
-Specifies the room in which the player must store treasure for it to
+Specifies the room in which the player must store treasures for them to
 count towards his score. Remember that treasures are, by definition,
 objects whose name begins with an asterisk (`*`). The player's score
 at any time is defined as the number of treasures that have been
@@ -866,13 +866,9 @@ stored in the treasury, divided by the total number of treasures,
 multiplied by 100, and rounded to the nearest integer (so that it's
 always in the range 0-100.)
 
-The special room-name `-` may be used to indicate that treasures must
-be carried in order to contribute to the score, rather than deposited
-in a particular place.
+### `lightsource`
 
-### %lightsource
-
-	%lightsource lamp
+	lightsource lamp
 
 Nominates a particular item as the light-source for the game. When
 flag 15 (darkness) is set, the player can only see if either carrying
