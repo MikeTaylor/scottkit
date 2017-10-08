@@ -86,7 +86,7 @@ This manual describes the syntax of the `sck` file which `scottkit`
 compiles into Scott Adams format.
 
 All of the examples are taken from Scott Adams' first game, the
-classic *Adventureland* - a game dripping with atmosphere and
+classic _Adventureland_ - a game dripping with atmosphere and
 nostalgia which I can't recommend highly enough.
 
 
@@ -119,10 +119,11 @@ follow. Common keywords include `room`, `exit`, `item` and
 `action`. Keywords, directions, and item and object names are all
 case-sensitive.
 
-We describe the avaialable clauses in four categories, corresponding to the
-four fundamental concepts in Scott Adams adventures: the *rooms*
-through which the player moves, the *items* found in those rooms, the
-*actions* which the player can perform, and *global parameters*.
+We describe the avaialable clauses in five categories, corresponding to the
+five fundamental concepts in Scott Adams adventures: the _rooms_
+through which the player moves, the _items_ found in those rooms, the
+_vocabulary_ with which actions are described, the _actions_ which the
+player can perform, and _global parameters_. 
 
 With one exception, the order in which clauses and their associated
 data appear is not significant. This yields important flexibility in
@@ -155,7 +156,7 @@ this, making it possible to create complex mazes.
 Each room in a ScottKit file is identified by a unique name - typically
 short, and made up of alphanumerics, possibly with underscores,
 although the only restriction enforced is that it may not contain any
-whitespace characters (space, tab, *etc.*)
+whitespace characters (space, tab, _etc._)
 
 After its name comes a description enclosed in double quotes (which
 may extend across multiple lines) and a set of available exits, each
@@ -224,7 +225,7 @@ The second fundamental concept of Scott Adams adventures is the items:
 things that reside in a room, and in some cases can be picked up,
 carried around and left in other rooms. Typically, some of the items
 are "objects" like axes and keys, while others are "scenery" like
-trees, signs, *etc.*
+trees, signs, _etc._
 
 As with rooms, each item in a ScottKit file is identified by a unique
 name - typically a short, alphanumeric-plus-underscores name. Because
@@ -351,7 +352,7 @@ the player can't see without a light source. (Don't blame me for this:
 it's a fact about the Scott Adams engine.)
 
 No-one seems to know for sure how many flags were supported by the
-original Scott interpreters, but by inspection, *Adventureland* uses
+original Scott interpreters, but by inspection, _Adventureland_ uses
 flags 1 to 17, missing out flag 6 for some reason, and making only a
 single reference to flag 4 (so that it's not really "used" in
 any meaningful sense.)
@@ -382,10 +383,10 @@ There are sixteen counters available, and sixteen slots in which room
 numbers can be stored. The latter can be used to implement
 sophisticated vehicles and spells which return the player to a room
 that was specified earlier - for example, the `YOHO` spell in
-*Sorceror of Claymorgue Castle*, which moves you first to a
+_Sorceror of Claymorgue Castle_, which moves you first to a
 destination, then back to where you first cast it (I think).
 
-> Truth is, I'm not at all sure how the room-number slots are used; this facility is not used at all in *Adventureland*, which is the game I'm most familiar with; and looking at the reverse-engineered *Claymorgue* actions doesn't help much.
+> Truth is, I'm not at all sure how the room-number slots are used; this facility is not used at all in _Adventureland_, which is the game I'm most familiar with; and looking at the reverse-engineered _Claymorgue_ actions doesn't help much.
 
 There are four other elements of game state: the player's current
 room, indications of which of the sixteen counters and room-number
@@ -444,59 +445,59 @@ Each condition consists of a single-word opcode, followed by zero or
 more parameters as required by the opcode. The following condition
 opcodes are supported:
 
-* `at` *ROOM*
+* `at` _ROOM_
 --
-True if the player's current room is *ROOM*, which must be the name
+True if the player's current room is _ROOM_, which must be the name
 of a room defined somewhere in the ScottKit file.
 
-* `carried` *ITEM*
+* `carried` _ITEM_
 --
-True if the player is carrying *ITEM*, which must be the name
+True if the player is carrying _ITEM_, which must be the name
 of an item defined somewhere in the ScottKit file.
 
-* `here` *ITEM*
+* `here` _ITEM_
 --
-True if *ITEM* is in the player's current room.
+True if _ITEM_ is in the player's current room.
 
-* `accessible` *ITEM*
+* `accessible` _ITEM_
 --
-True if *ITEM* is either being carried by the player or in the
+True if _ITEM_ is either being carried by the player or in the
 player's current room (i.e. if either `carried ITEM` or `here
 ITEM` is true.)
 
-* `exists` *ITEM*
+* `exists` _ITEM_
 --
-True if *ITEM* is in the game (i.e. is not "nowhere").
+True if _ITEM_ is in the game (i.e. is not "nowhere").
 
-* `moved` *ITEM*
+* `moved` _ITEM_
 --
-True if *ITEM* has been moved from its original location. This
+True if _ITEM_ has been moved from its original location. This
 includes the cases where an item initially not in play has been
 brought into play or vice versa, and where an item initially carried
 has been dropped or vice versa. This only tests the current
-situation, not *ITEM*'s history - so if *ITEM* is moved from its
+situation, not _ITEM_'s history - so if _ITEM_ is moved from its
 original room, then put back there, this test will return false.
 
 * `loaded`
 --
 True if the player is carrying at least one item.
 
-* `flag` *NUM*
+* `flag` _NUM_
 --
-True if flag number *NUM* is set.
+True if flag number _NUM_ is set.
 
-* `counter_eq` *NUM*
+* `counter_eq` _NUM_
 --
-True if the current counter's value is *NUM*. (A different counter
+True if the current counter's value is _NUM_. (A different counter
 may be nominated as "current" by the `select_counter` action.)
 
-* `counter_le` *NUM*
+* `counter_le` _NUM_
 --
-True if the current counter's value is *NUM* or less.
+True if the current counter's value is _NUM_ or less.
 
-* `counter_ge` *NUM*
+* `counter_ge` _NUM_
 --
-True if the current counter's value is *NUM* or more.
+True if the current counter's value is _NUM_ or more.
 
 
 The sense of the
@@ -529,9 +530,9 @@ necessary, to place each result on its own line.
 
 The following opcodes are supported:
 
-* `moveto` *room*
+* `moveto` _room_
 --
-Moves to the specified *room* and displays its description.
+Moves to the specified _room_ and displays its description.
 
 * `look`
 --
@@ -548,49 +549,49 @@ op-code in the compiled game file. (Why are both of these supported?
 So that when decompiling a game that uses the latter and then
 recompiling it, it remains the same.)
 
-* `get` *item*
+* `get` _item_
 --
-The specified *item* is put in the player's inventory, unless too
+The specified _item_ is put in the player's inventory, unless too
 many items are already being carried (Cf. the `superget` action).
 This works even with items that can't be picked up and dropped
 otherwise.
 
-* `superget` *item*
+* `superget` _item_
 --
-The specified *item* is put in the player's inventory, even if too
+The specified _item_ is put in the player's inventory, even if too
 many items are already being carried. This can be used to give the
 player things he doesn't want, such as the chigger bites in
-*Adventureland*.
+_Adventureland_.
 
-* `drop` *item*
+* `drop` _item_
 --
-The specified *item* is put in the player's current location,
+The specified _item_ is put in the player's current location,
 irrespective of whether it was previous carried, there, elsewhere or
 nowhere (out of the game). This is the standard way to bring into the
 game items which begin nowhere.
 
-* `put` *item* *room*
+* `put` _item_ _room_
 --
-Puts the specified *item* in the specified *room*.
+Puts the specified _item_ in the specified _room_.
 
-* `put_with` *item1* *item2*
+* `put_with` _item1_ _item2_
 --
 Puts the first-specified item into the same location as the second.
 
-* `swap` *item1* *item2*
+* `swap` _item1_ _item2_
 --
 Exchanges the two specified items, so that each occupies the location
 previously occupied by the other. This can be used to switch one
 object out of the game while bringing another in, as well as for
 swapping objects that are already in the game.
 
-* `destroy` *item*
+* `destroy` _item_
 --
-Removes the specified *item* from the game, irrespective of whether
+Removes the specified _item_ from the game, irrespective of whether
 it was previously carried, in the current location, elsewhere or
 already out of the game (in which case it's a no-op).
 
-* `destroy2` *item*
+* `destroy2` _item_
 --
 Exactly the same as `destroy`, but implemented using a different
 op-code in the compiled game file.
@@ -605,14 +606,14 @@ Prints the current score, expressed as a mark out of 100, based on how
 many treasures have been stored in the treasury location. This
 causes a division-by-zero error if there are no treasures in the game -
 i.e. items whose descriptions begin with an asterisk (`*`). So games
-without treasures, such as Scott Adams's *Impossible Mission*, should
+without treasures, such as Scott Adams's _Impossible Mission_, should
 not provide an action with this result.
 
 * `die`
 --
 Implements death by printing an "I am dead" message, clearing the
 darkness flag and moving to the last defined room, which is
-conventionally a "limbo" room, as in *Adventureland*'s
+conventionally a "limbo" room, as in _Adventureland_'s
 "Find right exit and live again!" This is not a proper, permanent
 death: for that, you need the `game_over` action.
 
@@ -653,16 +654,16 @@ state of the game to a file. (Unfortunately, there is no corresponding
 the interpreter, providing the name of the saved-game file on the
 command-line.)
 
-* `set_flag` *number*
+* `set_flag` _number_
 --
-Sets flag *number*. In general, this is useful only so that
+Sets flag _number_. In general, this is useful only so that
 subsequent actions and occurrences can check the value of the flag, so
 there are no pre-defined meanings to the flags. The only flag with a
 "built-in" meaning is number 15 (darkness).
 
-* `clear_flag` *number*
+* `clear_flag` _number_
 --
-Clears flag *number*.
+Clears flag _number_.
 
 * `set_dark`
 --
@@ -684,10 +685,10 @@ Sets flag 0. Exactly equivalent to
 Clears flag 0. Exactly equivalent to
 `clear_flag 0`.
 
-* `set_counter` *number*
+* `set_counter` _number_
 --
 Sets the value of the currently selected counter to the specified
-*value*. Negative values will not be honoured. **Do not confuse
+_value_. Negative values will not be honoured. **Do not confuse
 this with the similarly named `select_counter` action!**
 
 * `print_counter`
@@ -704,17 +705,17 @@ value cannot be decreased below zero. Surprisingly, there is no
 corresponding `increase_counter` action, but you can use `add_counter
 1`.
 
-* `add_counter` *number*
+* `add_counter` _number_
 --
 Increases the value of the currently selected counter by the specified
-*number*.
+_number_.
 
-* `subtract_counter` *number*
+* `subtract_counter` _number_
 --
 Decreases the value of the currently selected counter by the specified
-*number*.
+_number_.
 
-* `select_counter` *number*
+* `select_counter` _number_
 --
 Chooses which of the sixteen counters is the current one. Subsequent
 `decrease_counter`, `print_counter`, etc., actions will operate on
@@ -727,15 +728,15 @@ The backup location is initially undefined, so the first use of this
 should be immediately followed by a `moveto` to a known room; the
 next use will bring the player back where it was first used.
 
-* `swap_loc` *number*
+* `swap_loc` _number_
 --
 Like `swap_loc_default` but works with one of a sixteen numbered
-backup locations, nominated by *number*. Swaps the current location
-with backup location *number*, so that subsequently doing `swap_loc`
+backup locations, nominated by _number_. Swaps the current location
+with backup location _number_, so that subsequently doing `swap_loc`
 again with the same argument will result in returning to the original
 place. This can be used to implement vehicles.
 
-* `special` *number*
+* `special` _number_
 --
 Performs a "special action" that is dependent on the driver. For
 ScottFree, this does nothing.
@@ -817,17 +818,17 @@ truly broken (although that doesn't mean we should break it more, of
 course!)
 
 Adams' original series of twelve adventures uses numbers 1-12
-(*Adventureland* has the coveted number 1, of course!), and the later
-*Sorceror of Claymorgue Castle* is number 13. Unfortunately,
-*Return to Pirate's Island* and *The Adventures of Buckaroo_Banzai*
+(_Adventureland_ has the coveted number 1, of course!), and the later
+_Sorceror of Claymorgue Castle_ is number 13. Unfortunately,
+_Return to Pirate's Island_ and _The Adventures of Buckaroo_Banzai_
 are both given number 14; and the two Questprobe adventures,
-*The Incredible Hulk* and *Spiderman* are both number two again (the
-same as the original *Pirate Adventure*. What a crock. At least the
-*Adventureland* "sampler" that used to be given away for free has
+_The Incredible Hulk_ and _Spiderman_ are both number two again (the
+same as the original _Pirate Adventure_. What a crock. At least the
+_Adventureland_ "sampler" that used to be given away for free has
 its own number, 65.
 
-To make matters worse, Brian Haworth's series of eleven *Mysterious
-Adventures* re-use the numbers 1-11. So there are no fewer than four
+To make matters worse, Brian Haworth's series of eleven _Mysterious
+Adventures_ re-use the numbers 1-11. So there are no fewer than four
 adventure number 2s. Ho hum.
 
 ### `version`
@@ -835,7 +836,7 @@ adventure number 2s. Ho hum.
 	version 416
 
 Specifies the version of this adventure. Looks like Adams went
-through 416 design iterations before he got *Adventureland* into a
+through 416 design iterations before he got _Adventureland_ into a
 state he was happy to release.
 
 ### `wordlen`
@@ -843,7 +844,7 @@ state he was happy to release.
 	wordlen 3
 
 Specifies the number of significant letters in each word known to the
-game. Because this is three for *Adventureland*, all longer words
+game. Because this is three for _Adventureland_, all longer words
 can be abbreviated to three letters - so the player can type `CLI
 TRE` (or indeed `CLIMAX TREMENDOUSLY`) instead of `CLIMB TREE`.
 
