@@ -27,9 +27,9 @@ Mike Taylor &lt;mike@miketaylor.org.uk&gt;
     * [`when`](#when)
     * [`and`](#and)
     * [Conditions](#conditions)
-    * [%result](#result)
-    * [%comment](#comment)
-    * [%occur](#occur)
+    * [Results](#results)
+    * [`comment`](#comment)
+    * [`occur`](#occur)
 * [Global parameters](#global-parameters)
     * [%ident](#ident)
     * [%version](#version)
@@ -734,25 +734,26 @@ is supposed to protect you from. I don't know why I'm even
 mentioning it.
 
 
-### %comment
+### `comment`
 
-	%comment need key in order to open door
+	comment "need key in order to open door"
 
-This directive allows a comment to be associated with an action in the
+When following a set of results (i.e. at the end of an action),
+this allows a comment to be associated with an action in the
 Scott Adams format data file written by `scottkit`. The comment is
 attached to the most recently declared action. Note that this is very
 different from the usual kind of comment introduced by the hash
 character (`#`) which is simply discarded by the compiler.
 
-Why would you ever want to use `%comment`? Beats me.
+Why would you ever want to use `comment`? Beats me.
 
-### %occur
+### `occur`
 
-	%occur 10
+	occur 10
 
-Like `%action`, the `%occur` directive introduces a sequence of zero
+Like `action`, the `occur` keyword introduces a sequence of zero
 or more conditions which, if fulfilled, will allow some consequences
-to result. The difference is that `%occur` actions occur
+to result. The difference is that `occur` actions happen
 irrespective of what command the player supplies - indeed, they happen
 before anything is typed. They can be used to implement circumstances
 such as falling off a ledge if in an appropriately dangerous room
@@ -763,8 +764,8 @@ percentage chance of the occurrence happening when its conditions are
 all satisfied; otherwise the chance is 100%.
 
 There is one more very important difference between actions and
-occurrences: before each turn, every occurrence whose conditions are
-all satisfied is executed. Then at most one action will happen: the
+occurrences: before each turn, _every_ occurrence whose conditions are
+all satisfied is executed. Then _at most one_ action will happen: the
 first action matching the players command and whose conditions are all
 satisfied.
 
