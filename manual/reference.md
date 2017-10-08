@@ -497,94 +497,94 @@ opcodes may be negated by prefixed them with an exclamation mark
 (`!`). There is no direct way to test for the negation of the three
 counter-related conditions.
 
-### %result
+### Results
 
-	%result
 	destroy closed_door
 	drop open_door
 	msg It creaks open.
 
-Introduces a sequence of results which occur if the previous
-`%action` or `%occur` (see below) directive is satisfied. The lines
-following the `%result` directive, up to, but not including, the next
-directive, are the resulting actions, which are executed in sequence.
+Following an `action` and its conditions, if any, comes a sequence of
+result which occur if the action and its conditions are
+satisfied. These are executed in sequence.
 
 Each result action consists of a single-word opcode, followed by zero
-or more parameters as required by the opcode. The following condition
-opcodes are supported:
+or more parameters as required by the opcode. It is common, but not
+necessary, to place each result on its own line.
 
-=over 4
+The following opcodes are supported:
 
-=item `moveto` *room*
-
+* `moveto` *room*
+--
 Moves to the specified *room* and displays its description.
 
-=item `look`
-
+* `look`
+--
 Redisplays the description of the current room, the obvious exits and
 any visible items. This is done automatically whenever the player
 moves (with the `moveto` action), `get`s an item from the current
 room, or `drop`s an item. So far as I can tell, it need only be done
 explicitly when changing the value of the darkness flag.
 
-=item `look2`
-
+* `look2`
+--
 Exactly the same as `look`, but implemented using a different
-op-code in the compiled game file.
+op-code in the compiled game file. (Why are both of these supported?
+So that when decompiling a game that uses the latter and then
+recompiling it, it remains the same.)
 
-=item `get` *item*
-
+* `get` *item*
+--
 The specified *item* is put in the player's inventory, unless too
 many items are already being carried (Cf. the `superget` action).
 This works even with items that can't be picked up and dropped
 otherwise.
 
-=item `superget` *item*
-
+* `superget` *item*
+--
 The specified *item* is put in the player's inventory, even if too
 many items are already being carried. This can be used to give the
 player things he doesn't want, such as the chigger bites in
 *Adventureland*.
 
-=item `drop` *item*
-
+* `drop` *item*
+--
 The specified *item* is put in the player's current location,
 irrespective of whether it was previous carried, there, elsewhere or
 nowhere (out of the game). This is the standard way to bring into the
 game items which begin nowhere.
 
-=item `put` *item* *room*
-
+* `put` *item* *room*
+--
 Puts the specified *item* in the specified *room*.
 
-=item `put_with` *item* *item*
-
+* `put_with` *item1* *item2*
+--
 Puts the first-specified item into the same location as the second.
 
-=item `swap` *item* *item*
-
+* `swap` *item1* *item2*
+--
 Exchanges the two specified items, so that each occupies the location
 previously occupied by the other. This can be used to switch one
 object out of the game while bringing another in, as well as for
 swapping objects that are already in the game.
 
-=item `destroy` *item*
-
+* `destroy` *item*
+--
 Removes the specified *item* from the game, irrespective of whether
 it was previously carried, in the current location, elsewhere or
 already out of the game (in which case it's a no-op).
 
-=item `destroy2` *item*
-
+* `destroy2` *item*
+--
 Exactly the same as `destroy`, but implemented using a different
 op-code in the compiled game file.
 
-=item `inventory`
-
+* `inventory`
+--
 Lists the items that the player carrying.
 
-=item `score`
-
+* `score`
+--
 Prints the current score, expressed as a mark out of 100, based on how
 many treasures have been stored in the treasury location. This
 causes a division-by-zero error if there are no treasures in the game -
@@ -592,151 +592,147 @@ i.e. items whose descriptions begin with an asterisk (`*`). So games
 without treasures, such as Scott Adams's *Impossible Mission*, should
 not provide an action with this result.
 
-=item `die`
-
+* `die`
+--
 Implements death by printing an "I am dead" message, clearing the
 darkness flag and moving to the last defined room, which is
 conventionally a "limbo" room, as in *Adventureland*'s
 "Find right exit and live again!" This is not a proper, permanent
 death: for that, you need the `game_over` action.
 
-=item `game_over`
-
+* `game_over`
+--
 Prints "The game is now over", waits five seconds and exits.
 
-=item `print_noun`
-
+* `print_noun`
+--
 Prints the noun that the user just typed.
 
-=item `print_noun_nl`
-
+* `print_noun_nl`
+--
 Prints the noun that the user just typed, followed by a newline.
 
-=item `nl`
-
+* `nl`
+--
 Emits a newline (i.e. moves to the beginning of the next line).
 
-=item `clear_screen`
-
+* `clear_screen`
+--
 Clears the screen. Who could have guessed?
 
-=item `pause`
-
+* `pause`
+--
 Waits for two seconds. Useful before clearing the screen.
 
-=item `refill_lamp`
-
+* `refill_lamp`
+--
 Refills the lightsource object so that it is reset to give light for
-the initial number of turns, as specified by `%lighttime`.
+the initial number of turns, as specified by `lighttime`.
 
-=item `save_game`
-
+* `save_game`
+--
 Initiates the save-game diaglogue, allowing the player to save the
-state of the game to a file. Unfortunately, there is no corresponding
-load_game action, so the only way to use a saved game is to restart
+state of the game to a file. (Unfortunately, there is no corresponding
+`load_game` action, so the only way to use a saved game is to restart
 the interpreter, providing the name of the saved-game file on the
-command-line.
+command-line.)
 
-=item `set_flag` *number*
-
+* `set_flag` *number*
+--
 Sets flag *number*. In general, this is useful only so that
 subsequent actions and occurrences can check the value of the flag, so
 there are no pre-defined meanings to the flags. The only flag with a
 "built-in" meaning is number 15 (darkness).
 
-=item `clear_flag` *number*
-
+* `clear_flag` *number*
+--
 Clears flag *number*.
 
-=item `set_dark`
-
+* `set_dark`
+--
 Sets flag 15, which indicates darkness. Exactly equivalent to
 `set_flag 15`.
 
-=item `clear_dark`
-
+* `clear_dark`
+--
 Clears flag 15, which indicates darkness. Exactly equivalent to
 `clear_flag 15`.
 
-=item `set_0`
-
+* `set_0`
+--
 Sets flag 0. Exactly equivalent to
 `set_flag 0`.
 
-=item `clear_0`
-
+* `clear_0`
+--
 Clears flag 0. Exactly equivalent to
 `clear_flag 0`.
 
-=item `set_counter` *number*
-
+* `set_counter` *number*
+--
 Sets the value of the currently selected counter to the specified
-*value*. Negative values will not be honoured. B<Do not confuse
-this with the similarly named `select_counter` action!>
+*value*. Negative values will not be honoured. **Do not confuse
+this with the similarly named `select_counter` action!**
 
-=item `print_counter`
-
+* `print_counter`
+--
 Prints the value of the currently selected counter. Apparently some
 drivers can't print values greater than 99, so if you're designing
 your games for maximum portability, you should avoid using numbers
 higher than this.
 
-=item `decrease_counter`
-
+* `decrease_counter`
+--
 Decreases the value of the currently selected counter by one. The
 value cannot be decreased below zero. Surprisingly, there is no
-corresponding `increase_counter` action.
+corresponding `increase_counter` action, but you can use `add_counter
+1`.
 
-=item `add_counter` *number*
-
+* `add_counter` *number*
+--
 Increases the value of the currently selected counter by the specified
 *number*.
 
-=item `subtract_counter` *number*
-
+* `subtract_counter` *number*
+--
 Decreases the value of the currently selected counter by the specified
 *number*.
 
-=item `select_counter` *number*
-
+* `select_counter` *number*
+--
 Chooses which of the sixteen counters is the current one. Subsequent
 `decrease_counter`, `print_counter`, etc., actions will operate on
-the nominated counter.
+the nominated counter. (Initially, counter 0 is used.)
 
-(Actually, it's not quite that simple, but it's very hard to figure
-out, either from the ScottFree source or from the reverse-compiled
-*Sorcerer of Claymorgue Castle*, precisely what this does.)
-
-=item `swap_loc_default`
-
+* `swap_loc_default`
+--
 Swaps the player between the current location and a backup location.
 The backup location is initially undefined, so the first use of this
 should be immediately followed by a `moveto` to a known room; the
 next use will bring the player back where it was first used.
 
-=item `swap_loc` *number*
-
+* `swap_loc` *number*
+--
 Like `swap_loc_default` but works with one of a sixteen numbered
 backup locations, nominated by *number*. Swaps the current location
 with backup location *number*, so that subsequently doing `swap_loc`
 again with the same argument will result in returning to the original
 place. This can be used to implement vehicles.
 
-=item `special` *number*
-
+* `special` *number*
+--
 Performs a "special action" that is dependent on the driver. For
 ScottFree, this does nothing.
 
-=item `continue`
-
-Never use this action. It is used internally to allow a sequence of
+* `continue`
+--
+**Never use this action**. It is used internally to allow a sequence of
 actions that is too long to fit into a single action slot, but there
 is no reason at all why you would ever explicitly use it: in fact,
-this kind of low-level detail is precisely what the Scott Adams
-compiler is supposed to protect you from. I don't know why I'm even
+this kind of low-level detail is precisely what ScottKit
+is supposed to protect you from. I don't know why I'm even
 mentioning it.
 
-=back
 
 ### %comment
 
