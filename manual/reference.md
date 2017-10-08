@@ -1,5 +1,4 @@
-The ScottKit format reference manual
-====================================
+# The ScottKit format reference manual
 
 This is the Reference Manual for the Scott Adams Adventure toolkit's
 source format. This is a part of
