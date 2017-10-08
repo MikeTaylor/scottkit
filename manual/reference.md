@@ -892,21 +892,11 @@ that are all mutually synonymous.
 
 Creates an alias for a verb.
 
-### %include
-
-	%include foo/bar/baz.sck
-
-Includes the contents of the specified file, exactly as though they
-were included inline in the ScottKit file being processed. Non-absolute
-paths are interpreted relative to the file being parsed at that time,
-*not* relative to the working directory. So, for example, if the
-file `subdir/thrick.sck` is being parsed, and has a line `%include
-frog.sck`, then the file of that name *in the `subdir` directory* is
-used.
-
 
 ## See also
 
 * The top-level [README](file.README.html)
 * [The ScottKit tutorial](file.tutorial.html) (XXX not yet written)
+* The Perl module [Games::ScottAdams](http://search.cpan.org/~mirk/Games-ScottAdams/)
+
 
