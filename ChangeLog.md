@@ -47,4 +47,5 @@ Still to do
 * Ensure that the right files are built by `YARD`
 * Write blog entry about ScottKit
 * Maybe modify to run against GLK using the Glkx driver
+* File inclusion
 
