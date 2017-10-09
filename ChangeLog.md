@@ -48,4 +48,5 @@ Still to do
 * Write blog entry about ScottKit
 * Maybe modify to run against GLK using the Glkx driver
 * File inclusion
+* Correct handling of darkness (see compiler warnings)
 
