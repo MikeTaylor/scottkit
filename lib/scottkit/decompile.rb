@@ -127,7 +127,7 @@ module ScottKit
 
       def render
         type = OPS[@cond][1]
-        res = quote(OPS[@cond][0])
+        res = OPS[@cond][0]
         res += " " +
           quote(type == :room ? @game.roomname(@value) :
                 type == :item ? @game.itemname(@value) :
