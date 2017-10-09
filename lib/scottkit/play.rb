@@ -13,7 +13,6 @@ module ScottKit
       @saved_room = 0
       @loc = defined?(@startloc) ? @startloc : 1
       @lampleft = defined?(@lamptime) ? @lamptime : 0
-      dark_flag = false
 
       puts "ScottKit, a Scott Adams game toolkit in Ruby."
       puts "Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>"
@@ -134,7 +133,7 @@ module ScottKit
             look
             # When moving from a light place to a dark one or vice
             # versa, this look should not happen, because we'll get a
-            # correct version of the display after to flag gets set.
+            # correct version of the display after the flag gets set.
             # I'm not sure what can be done about this.  ### Think
           elsif is_dark
             puts "I fell down and broke my neck."
@@ -323,10 +322,10 @@ module ScottKit
     end
 
     def is_dark
-      return dark_flag if @items.size <= ITEM_LAMP
+      return @flags[15] if @items.size <= ITEM_LAMP
       loc = @items[ITEM_LAMP].loc
-      #puts "dark_flag=#{dark_flag}, lamp(#{ITEM_LAMP}) at #{loc}"
-      dark_flag && loc != ROOM_CARRIED && loc != @loc
+      #puts "dark_flag=#{@flags[15]}, lamp(#{ITEM_LAMP}) at #{loc}"
+      @flags[15] && loc != ROOM_CARRIED && loc != @loc
     end
 
     public :play # Must be visible to driver program
@@ -391,13 +390,13 @@ module ScottKit
         when 53 then @game.items[args.shift].loc = @game.loc
         when 54 then @game.loc = args.shift
         when 55 then @game.items[args.shift].loc = ROOM_NOWHERE
-        when 56 then @game.dark_flag = true
-        when 57 then @game.dark_flag = false
+        when 56 then @game.flags[15] = true
+        when 57 then @game.flags[15] = false
         when 58 then @game.flags[args.shift] = true
         when 59 then @game.items[args.shift].loc = ROOM_NOWHERE
         when 60 then @game.flags[args.shift] = false
         when 61 then
-          puts "I am dead."; @game.dark_flag = false;
+          puts "I am dead."; @game.flags[15] = false;
           @game.loc = @game.rooms.size-1; @game.look
         when 62 then i = args.shift; @game.items[i].loc = args.shift
         when 63 then @game.finished(0)
