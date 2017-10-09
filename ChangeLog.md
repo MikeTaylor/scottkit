@@ -6,6 +6,7 @@ Revision history for Ruby gem ScottKit
 * Finish translating reference guide from POD to MarkDown.
 * Update reference guide to describe ScottKit format rather then Games::ScottAdams format.
 * Fix handling of darkness when playing games.
+* Support unquoted "carried" and "at" in conditions
 
 0.4.0 (Mon Mar  1 22:20:09 GMT 2010)
 ------------------------------------
@@ -40,8 +41,6 @@ Revision history for Ruby gem ScottKit
 Still to do
 ===========
 
-* Rename the `carried` and `at` keywords to avoid conflicting with condition.
-* Update test-suite to work correctly with renamed `carried` and `at`.
 * Tweak compiler to break actions when they need too many arguments as
   well as when they need too many instructions.
 * Write tutorial scaffolding.
