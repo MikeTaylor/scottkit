@@ -291,7 +291,7 @@ action SAV GAM
 action LOO:
 	look
 
-occur when "at" forest2
+occur when at forest2
 	set_dark
 
 occur when !at forest2
@@ -316,11 +316,11 @@ occur 0%
 	print "a bronze sceptre, a zinc goblet and a tin stoat."
 	comment "cont"
 
-occur when "at" "west" and !flag 6
+occur when at "west" and !flag 6
 	set_flag 6
 	print "Oh, there they are.  That wasn't as hard as I expected."
 
-occur when "at" hut
+occur when at hut
 	set_flag 7
 
 occur when !here chain
@@ -342,31 +342,31 @@ occur when flag 7 and !flag 8
 	set_flag 8
 	print "Ah, looks like I'm still missing the stoat."
 
-occur when "at" level
+occur when at level
 	set_flag 5
 
-occur when "at" "north"
+occur when at "north"
 	set_flag 5
 
-occur when "at" north1
+occur when at north1
 	set_flag 5
 
-occur when "at" "south"
+occur when at "south"
 	set_flag 5
 
-occur when "at" south1
+occur when at south1
 	set_flag 5
 
-occur when "at" forest1
+occur when at forest1
 	clear_flag 5
 
-occur when "at" wall
+occur when at wall
 	clear_flag 5
 
-occur when "at" vase
+occur when at vase
 	clear_flag 5
 
-occur when "at" again
+occur when at again
 	clear_flag 5
 
 occur when counter_eq 1
@@ -403,7 +403,7 @@ occur 0%
 	set_flag 4
 	comment "cont"
 
-occur when flag 4 and "at" glade
+occur when flag 4 and at glade
 	destroy bees
 	put bees1 tree
 
@@ -533,7 +533,7 @@ action GO ENT when here north2
 	goto "room"
 	look2
 
-action LIG PLY when "carried" Plywood
+action LIG PLY when carried Plywood
 	print "Not while I'm carrying it!"
 
 action LIG PLY when here Plywood
@@ -546,10 +546,10 @@ action LIG OAK when here Oak
 	print "My match goes out."
 	destroy match
 
-action LIG OAK when "carried" Oak
+action LIG OAK when carried Oak
 	print "Not while I'm carrying it!"
 
-action LIG BAL when "carried" wood
+action LIG BAL when carried wood
 	print "Not while I'm carrying it!"
 
 action LIG BAL when here wood
@@ -566,7 +566,7 @@ occur 0%
 action GO PAT when here bear
 	print "Bear won't let me"
 
-action GO PAT when "at" forest
+action GO PAT when at forest
 	goto forest2
 	look2
 
@@ -584,11 +584,11 @@ action GO VAS when here vase
 	goto vase
 	look2
 
-action LEA VAS when "at" vase
+action LEA VAS when at vase
 	swap_specific_room 1
 	look2
 
-action TAK OUT when "at" vase
+action TAK OUT when at vase
 	swap_specific_room 1
 	look2
 
@@ -607,7 +607,7 @@ action GO INF when here "south"
 	goto "north"
 	look2
 
-action KNO DOO when "at" cells
+action KNO DOO when at cells
 	print "Which door?  Use `knock iron` or `knock bronze`."
 
 action KNO IRO when here south1
