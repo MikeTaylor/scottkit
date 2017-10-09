@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby1.9 -w
+#!/usr/local/bin/ruby -w
 
 # Command-line driver for the ScottKit toolkit, allowing Scott
 # Adams-format adventure games to be compiled, decompiled and played.

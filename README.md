@@ -50,7 +50,7 @@ Testing
 
 Unit testing can be done as follows:
 
-	$ ruby1.9 -I lib -rrake/rake_test_loader test/test_*
+	$ ruby -I lib -rrake/rake_test_loader test/test_*
 	Loaded suite test/test_canonicalise
 	Started
 	...........

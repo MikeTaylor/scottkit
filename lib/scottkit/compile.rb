@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Test with: cd /usr/local/src/mike/scott/scottkit && ruby1.9 -I lib bin/scottkit -c data/tutorial/t7.sck
+# Test with: cd /usr/local/src/mike/scott/scottkit && ruby -I lib bin/scottkit -c data/tutorial/t7.sck
 
 require 'pp'
 

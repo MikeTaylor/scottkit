@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby1.9 -w
+#!/usr/local/bin/ruby -w
 
 # Run as: echo Bart Lisa | ./withio_test.rb && echo == && cat /tmp/xcv
 # Expecting the output:

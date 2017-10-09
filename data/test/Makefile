@@ -1,7 +1,7 @@
 # This rebuilds the files used for regression testing
 # Do this ONLY WHEN SURE that the software is correct
 
-RUN = ruby1.9 -I ../../lib ../../bin/scottkit
+RUN = ruby -I ../../lib ../../bin/scottkit
 
 **default**:
 	@echo "Use 'make rebuild' if you are SURE that the software is correct"
