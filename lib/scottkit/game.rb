@@ -248,7 +248,7 @@ module ScottKit
       0.upto(NFLAGS-1) do |i|
         @counters[i], @saved_rooms[i] = f.gets.chomp.split.map(&:to_i)
       end
-      tmp, dark_flag, @loc, @counter, @saved_room, @lampleft =
+      tmp, _UNUSED_dark_flag, @loc, @counter, @saved_room, @lampleft =
         f.gets.chomp.split.map(&:to_i)
       0.upto(NFLAGS-1) do |i|
         @flags[i] = (tmp & 1 << i) != 0
