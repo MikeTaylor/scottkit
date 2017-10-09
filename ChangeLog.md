@@ -5,6 +5,7 @@ Revision history for Ruby gem ScottKit
 -------------------
 * Finish translating reference guide from POD to MarkDown.
 * Update reference guide to describe ScottKit format rather then Games::ScottAdams format.
+* Fix handling of darkness when playing games.
 
 0.4.0 (Mon Mar  1 22:20:09 GMT 2010)
 ------------------------------------
@@ -48,5 +49,3 @@ Still to do
 * Write blog entry about ScottKit
 * Maybe modify to run against GLK using the Glkx driver
 * File inclusion
-* Correct handling of darkness (see compiler warnings)
-
