@@ -33,6 +33,9 @@ get plywood
 south
 get balsa
 south
+climb tree
+get honey
+down
 drop oak
 drop plywood
 drop balsa
@@ -45,6 +48,7 @@ get lamp
 west
 south
 south
+follow path
 give honey
 follow path
 get vase
