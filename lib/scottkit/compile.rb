@@ -147,7 +147,7 @@ module ScottKit
         conds = []
         while peek == :when || peek == :and
           skip
-          op = match :symbol
+          op = match([:symbol, :carried, :at])
           type = Condition::OPStotype[op] or
             error "unknown condition op '#{op}'"
           case type
@@ -634,7 +634,12 @@ module ScottKit
         def match(expected, estr = nil)
           token = peek
           @lookahead = nil
-          if token != expected
+          if (expected.kind_of?(Array))
+            ok = expected.any? {|x| token == x}
+          else
+            ok = token == expected
+          end
+          if (!ok)
             error("expected #{estr || expected}, got #{render(token)}" +
                   " (before `#{@buffer.lstrip}')")
           end
