@@ -5,8 +5,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "scottkit"
-    gem.summary = "ScottKit is a toolkit for compiling, decompiling and playing adventure games in the Scott Adams format."
-    gem.description = gem.summary
+    gem.license = 'GPL-2.0'
+    gem.summary = "Toolkit for Scott Adams-format adventure games"
+    gem.description = "ScottKit is a toolkit for compiling, decompiling and playing adventure games in the Scott Adams format."
     gem.email = "mike@miketaylor.org.uk"
     gem.homepage = "http://github.com/MikeTaylor/scottkit"
     gem.author = "Mike Taylor"
