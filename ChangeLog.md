@@ -4,7 +4,7 @@ Revision history for Ruby gem ScottKit
 1.1.0 (IN PROGRESS)
 -------------------
 * Documentation fix: correctly name the `present` condition (was `accessible`).
-* Documentation fix: correctly name _twelve_ actions:
+* Documentation fix: correctly name _twelve_ actions. (Thanks to Brian Jones for spotting the first of these.)
     * `moveto` -> `goto`
     * `print_noun_nl` -> `println_noun`
     * `nl` -> `println`
@@ -17,8 +17,6 @@ Revision history for Ruby gem ScottKit
     * `swap_loc_default` -> `swap_room`
     * `swap_loc` -> swap_specific_room`
     * `special` -> draw`
-
-  Thanks to Brian Jones for spotting the first of these (`goto`).
 
 1.0.0 (Wed Oct 11 21:45:27 BST 2017)
 --------------------------------------
