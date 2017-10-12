@@ -625,15 +625,15 @@ Prints "The game is now over", waits five seconds and exits.
 --
 Prints the noun that the user just typed.
 
-* `print_noun_nl`
+* `println_noun`
 --
 Prints the noun that the user just typed, followed by a newline.
 
-* `nl`
+* `println`
 --
 Emits a newline (i.e. moves to the beginning of the next line).
 
-* `clear_screen`
+* `clear`
 --
 Clears the screen. Who could have guessed?
 
@@ -675,12 +675,12 @@ Sets flag 15, which indicates darkness. Exactly equivalent to
 Clears flag 15, which indicates darkness. Exactly equivalent to
 `clear_flag 15`.
 
-* `set_0`
+* `set_flag0`
 --
 Sets flag 0. Exactly equivalent to
 `set_flag 0`.
 
-* `clear_0`
+* `clear_flag0`
 --
 Clears flag 0. Exactly equivalent to
 `clear_flag 0`.
@@ -698,19 +698,19 @@ drivers can't print values greater than 99, so if you're designing
 your games for maximum portability, you should avoid using numbers
 higher than this.
 
-* `decrease_counter`
+* `dec_counter`
 --
 Decreases the value of the currently selected counter by one. The
 value cannot be decreased below zero. Surprisingly, there is no
-corresponding `increase_counter` action, but you can use `add_counter
+corresponding `increase_counter` action, but you can use `add_to_counter
 1`.
 
-* `add_counter` _number_
+* `add_to_counter` _number_
 --
 Increases the value of the currently selected counter by the specified
 _number_.
 
-* `subtract_counter` _number_
+* `subtract_from_counter` _number_
 --
 Decreases the value of the currently selected counter by the specified
 _number_.
@@ -718,28 +718,29 @@ _number_.
 * `select_counter` _number_
 --
 Chooses which of the sixteen counters is the current one. Subsequent
-`decrease_counter`, `print_counter`, etc., actions will operate on
+`dec_counter`, `print_counter`, etc., actions will operate on
 the nominated counter. (Initially, counter 0 is used.)
 
-* `swap_loc_default`
+* `swap_room`
 --
 Swaps the player between the current location and a backup location.
 The backup location is initially undefined, so the first use of this
 should be immediately followed by a `goto` to a known room; the
 next use will bring the player back where it was first used.
 
-* `swap_loc` _number_
+* `swap_specific_room` _number_
 --
-Like `swap_loc_default` but works with one of a sixteen numbered
+Like `swap_room` but works with one of a sixteen numbered
 backup locations, nominated by _number_. Swaps the current location
-with backup location _number_, so that subsequently doing `swap_loc`
+with backup location _number_, so that subsequently doing `swap_specific_room`
 again with the same argument will result in returning to the original
 place. This can be used to implement vehicles.
 
-* `special` _number_
+* `draw` _number_
 --
-Performs a "special action" that is dependent on the driver. For
-ScottFree, this does nothing.
+Performs a "special action" that is dependent on the driver. For some
+drivers, it draws a picture specified but the number. In
+ScottKit (as in ScottFree), this does nothing.
 
 * `continue`
 --
