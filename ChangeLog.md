@@ -1,6 +1,24 @@
 Revision history for Ruby gem ScottKit
 ======================================
 
+1.1.0 (IN PROGRESS)
+-------------------
+* Documentation fix: correctly name the `present` condition (was `accessible`).
+* Documentation fix: correctly name _twelve_ actions:
+    * `moveto` -> `goto`
+    * `print_noun_nl` -> `println_noun`
+    * `nl` -> `println`
+    * `clear_screen` -> `clear`
+    * `set_0` -> `set_flag0`
+    * `clear_0` -> `clear_flag0`
+    * `decrease_counter` -> `dec_counter`
+    * `add_counter` _nu`mber_ -> add_to_counter _number_`
+    * `subtract_counter` _nu`mber_ -> subtract_from_counter _number_`
+    * `swap_loc_default` -> `swap_room`
+    * `swap_loc` _nu`mber_ -> swap_specific_room _number_`
+    * `special` _nu`mber_ -> draw _number_`
+  Thanks to Brian Jones for spotting the first of these (`goto`).
+
 1.0.0 (Wed Oct 11 21:45:27 BST 2017)
 --------------------------------------
 * Finish translating reference guide from POD to MarkDown.
