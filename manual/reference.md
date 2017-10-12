@@ -459,7 +459,7 @@ of an item defined somewhere in the ScottKit file.
 --
 True if _ITEM_ is in the player's current room.
 
-* `accessible` _ITEM_
+* `present` _ITEM_
 --
 True if _ITEM_ is either being carried by the player or in the
 player's current room (i.e. if either `carried ITEM` or `here
@@ -504,7 +504,7 @@ The sense of the
 `at`,
 `carried`,
 `here`,
-`accessible`,
+`present`,
 `exists`,
 `moved`,
 `loaded`,
