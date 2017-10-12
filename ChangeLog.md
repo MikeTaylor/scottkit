@@ -1,8 +1,8 @@
 Revision history for Ruby gem ScottKit
 ======================================
 
-1.0.0 (IN PROGRESS)
--------------------
+1.0.0 (Wed Oct 11 21:45:27 BST 2017)
+--------------------------------------
 * Finish translating reference guide from POD to MarkDown.
 * Update reference guide to describe ScottKit format rather then Games::ScottAdams format.
 * Fix handling of darkness when playing games.
