@@ -898,8 +898,8 @@ first.
 
 ## See also
 
-* The top-level [README](file.README.html)
-* [The ScottKit tutorial](file.tutorial.html) (XXX not yet written)
+* The top-level [README](../README.md)
+* [The ScottKit tutorial](../data/tutorial/tutorial.md)
 * The Perl module [Games::ScottAdams](http://search.cpan.org/~mirk/Games-ScottAdams/)
 
 
