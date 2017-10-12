@@ -530,7 +530,7 @@ necessary, to place each result on its own line.
 
 The following opcodes are supported:
 
-* `moveto` _room_
+* `goto` _room_
 --
 Moves to the specified _room_ and displays its description.
 
@@ -538,7 +538,7 @@ Moves to the specified _room_ and displays its description.
 --
 Redisplays the description of the current room, the obvious exits and
 any visible items. This is done automatically whenever the player
-moves (with the `moveto` action), `get`s an item from the current
+moves (with the `goto` action), `get`s an item from the current
 room, or `drop`s an item. So far as I can tell, it need only be done
 explicitly when changing the value of the darkness flag.
 
@@ -725,7 +725,7 @@ the nominated counter. (Initially, counter 0 is used.)
 --
 Swaps the player between the current location and a backup location.
 The backup location is initially undefined, so the first use of this
-should be immediately followed by a `moveto` to a known room; the
+should be immediately followed by a `goto` to a known room; the
 next use will bring the player back where it was first used.
 
 * `swap_loc` _number_
