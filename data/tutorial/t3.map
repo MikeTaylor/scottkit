@@ -1,0 +1,6 @@
+Chamber---------Dungeon
+[sign, key]	[door]
+		=
+		|
+		Cell
+		[*coin*]
