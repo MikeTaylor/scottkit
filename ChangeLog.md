@@ -13,10 +13,11 @@ Revision history for Ruby gem ScottKit
     * `clear_0` -> `clear_flag0`
     * `decrease_counter` -> `dec_counter`
     * `add_counter` _nu`mber_ -> add_to_counter _number_`
-    * `subtract_counter` _nu`mber_ -> subtract_from_counter _number_`
+    * `subtract_counter` -> subtract_from_counter`
     * `swap_loc_default` -> `swap_room`
-    * `swap_loc` _nu`mber_ -> swap_specific_room _number_`
-    * `special` _nu`mber_ -> draw _number_`
+    * `swap_loc` -> swap_specific_room`
+    * `special` -> draw`
+
   Thanks to Brian Jones for spotting the first of these (`goto`).
 
 1.0.0 (Wed Oct 11 21:45:27 BST 2017)
