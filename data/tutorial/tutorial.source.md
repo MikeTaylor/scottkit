@@ -1,4 +1,4 @@
-changequote(`[[[', `]]]')
+changequote(`[[[', `]]]')dnl
 # ScottKit Tutorial
 
 <!-- md2toc -l 2 tutorial.source.md -->
