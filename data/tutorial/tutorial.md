@@ -1,0 +1,373 @@
+# ScottKit Tutorial
+
+<!-- md2toc -l 2 tutorial.source.md -->
+* [Introduction](#introduction)
+* [Stage 1](#stage-1)
+    * [Stage 1 map](#stage-1-map)
+    * [Stage 1 source](#stage-1-source)
+* [Stage 2](#stage-2)
+    * [Stage 2 map](#stage-2-map)
+    * [Stage 2 source](#stage-2-source)
+* [Stage 3](#stage-3)
+    * [Stage 3 map](#stage-3-map)
+    * [Stage 3 source](#stage-3-source)
+* [Stage 4](#stage-4)
+    * [Stage 4 map](#stage-4-map)
+    * [Stage 4 source](#stage-4-source)
+* [Stage 5](#stage-5)
+    * [Stage 5 map](#stage-5-map)
+    * [Stage 5 source](#stage-5-source)
+
+## Introduction
+
+This document walks you through the process of creating a small but complete and playable game with six rooms, seven items including a single treasure, and a couple of puzzles. It makes no attempt to be complete: you need the reference manual for that. But by the time you've worked your way through this tutorial you should be familiar with rooms, items, actions and occurrences, and you'll be ready to start writing your own games.
+
+
+## Stage 1
+
+This is the minimal playable game, consisting of rooms only - and only two of them.
+
+This stage is built entirely using the %room and %exit directives.
+
+### Stage 1 map
+
+```
+
+Chamber---------Dungeon
+
+```
+
+### Stage 1 source
+
+```
+room chamber "square chamber"
+	exit east dungeon
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+```
+
+
+## Stage 2
+
+This stage introduces the first items: one portable (the coin) and one not (the sign).
+
+This stage uses the directives from the previous stage, plus `item` and `called`.
+
+### Stage 2 map
+
+```
+
+Chamber---------Dungeon
+[sign]		|
+		|
+		|
+		Cell
+		[*coin*]
+
+```
+
+### Stage 2 source
+
+```
+room chamber "square chamber"
+	exit east dungeon
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit south cell
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+```
+
+
+## Stage 3
+
+Here we introduce the first explicitly-coded actions - the previous stages' movement between locations and ability to pick up and drop items are "intrinsics" provided by the interpreter.
+
+The new action provides the first puzzle: the player needs to unlock the cell door before entering the cell to obtain the coin. The key is necessary in order to open the door.
+
+This stage uses the directives from the previous stage, plus `nowhere`, `at`, `action` and `result`.
+
+### Stage 3 map
+
+```
+
+Chamber---------Dungeon
+[sign, key]	[door]
+		=
+		|
+		Cell
+		[*coin*]
+
+```
+
+### Stage 3 source
+
+```
+action score: score
+action inventory: inventory
+action look: look
+
+room chamber "square chamber"
+	exit east dungeon
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+
+item door "Locked door"
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+
+item key "Brass key"
+	called "key"
+	at chamber
+
+item door2 "Open door leads south"
+	nowhere
+
+action open door when here door and !present key
+	print "It's locked."
+
+action open door when here door
+	swap door door2
+	print OK
+	look
+
+action go door when here door2
+	goto cell
+	look
+```
+
+
+## Stage 4
+
+This stage introduces automatic actions, or "occurrences", which occur without the player needing to do anything. In effect, they happen _to_ him rather than being done _by_ him.
+
+It also uses inline documentation in the form of an action comment (though why you'd want to do this is beyond me) and specifies the start and treasury rooms explicitly.
+
+This stage uses the directives from the previous stage, plus `occur`, `comment`, `start` and `treasury`.
+
+### Stage 4 map
+
+```
+
+Throne Room	Crypt
+[sign]		[vampire, key]
+|		|
+|		|
+Chamber---------Dungeon
+[cross]		[door]
+		=
+		|
+		Cell
+		[*coin*]
+
+```
+
+### Stage 4 source
+
+```
+start dungeon
+treasury throne
+
+action score: score
+action inventory: inventory
+action look: look
+
+room throne "gorgeously decorated throne room"
+	exit south chamber
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+room chamber "square chamber"
+	exit east dungeon
+	exit north throne
+
+item cross "Wooden cross"
+	called "cross"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit north crypt
+
+item door "Locked door"
+
+item key "Brass key"
+	called "key"
+	at crypt
+
+item door2 "Open door leads south"
+	nowhere
+
+action open door when here door and !present key
+	print "It's locked."
+
+action open door when here door
+	swap door door2
+	print OK
+	look
+
+action go door when here door2
+	goto cell
+	look
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+
+room crypt "damp, dismal crypt"
+	exit south dungeon
+
+item vampire "Vampire"
+
+occur when here vampire and !carried cross
+	print "Vampire bites me!  I'm dead!"
+	game_over
+	comment "vampire attacks unless cross is carried"
+
+occur when here vampire and "carried" cross
+	print "Vampire cowers away from the cross!"
+```
+
+
+## Stage 5
+
+This stage adds a light source (and darkness), a random occurrence and aliases for both verbs and nouns.
+
+This stage uses the directives from the previous stage, plus `lightsource`, `occur` with an argument, `verbgroup` and `noungroup`.
+
+### Stage 5 map
+
+```
+
+		Throne Room	Crypt
+		[sign, lamp]	[vampire, key]
+		|		|
+		|		|
+Cave Mouth------Chamber---------Dungeon
+		[cross]		[door]
+				=
+				|
+				Cell
+				[*coin*]
+
+```
+
+### Stage 5 source
+
+```
+start cave
+treasury throne
+
+action score: score
+action inventory: inventory
+action look: look
+
+room cave "cave mouth"
+	exit east chamber
+
+room throne "gorgeously decorated throne room"
+	exit south chamber
+
+item sign "Sign says: leave treasure here, then say SCORE"
+
+item lamp "old-fashioned brass lamp"
+	called "lamp"
+
+lightsource lamp
+
+room chamber "square chamber"
+	exit east dungeon
+	exit north throne
+	exit west cave
+
+# Flag 15 is on when and only when it is dark
+occur when "at" chamber and flag 15
+	clear_dark
+	look
+
+item cross "Wooden cross"
+	called "cross"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit north crypt
+
+occur when "at" dungeon and !flag 15
+	set_dark
+	look
+
+occur 25% when "at" dungeon
+	print "I smell something rotting to the north."
+
+item door "Locked door"
+
+item key "Brass key"
+	called "key"
+	at crypt
+
+item door2 "Open door leads south"
+	nowhere
+
+action open door when here door and !present key
+	print "It's locked."
+
+action open door when here door
+	swap door door2
+	print OK
+	look
+
+action go door when here door2
+	goto cell
+	look
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+
+room crypt "damp, dismal crypt"
+	exit south dungeon
+
+item vampire "Vampire"
+
+occur when here vampire and !carried cross
+	print "Vampire bites me!  I'm dead!"
+	game_over
+	comment "vampire attacks unless cross is carried"
+
+occur when here vampire and "carried" cross
+	print "Vampire cowers away from the cross!"
+
+verbgroup take get
+verbgroup leave drop
+noungroup lamp lantern
+```
+
+
+## Caveats
+
+This tutorial skips a lot of details. [The reference manual](../../manual/reference.md) is indispensible for filling in the gaps.
+
+The following directives are not yet discussed: `ident`, `version`, `wordlen`, `maxload`, `lighttime`.
+
+There is not yet any discussion of flags, counters and location stores.
+
+Some discussion of what makes a good game design may be appropriate.
+
