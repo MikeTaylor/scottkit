@@ -1,6 +1,10 @@
 Revision history for Ruby gem ScottKit
 ======================================
 
+1.2.0 (IN PROGRESS)
+-------------------
+* Create initial tutorial, exactly equivalent to that of Games::ScottAdams.
+
 1.1.0 (Thu Oct 12 21:59:28 BST 2017)
 ------------------------------------
 * Documentation fix: correctly name the `present` condition (was `accessible`).
