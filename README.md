@@ -104,5 +104,6 @@ Documentation
 * [ScottKit Tutorial](data/tutorial/tutorial.md)
 * [The ScottKit format reference manual](manual/reference.md)
 * [Blog-post announcing v1.0.0](https://reprog.wordpress.com/2017/10/12/scottkit-is-born-only-seven-and-a-half-years-late/)
+* [Blog-post walking through the process of creating a game](https://reprog.wordpress.com/2017/10/13/building-adventure-games-with-scottkit/)
 
 
