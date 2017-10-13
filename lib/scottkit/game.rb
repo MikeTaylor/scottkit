@@ -248,7 +248,11 @@ module ScottKit
       0.upto(NFLAGS-1) do |i|
         @counters[i], @saved_rooms[i] = f.gets.chomp.split.map(&:to_i)
       end
-      tmp, _UNUSED_dark_flag, @loc, @counter, @saved_room, @lampleft =
+      # The variable _ in the next line is the unused one that holds
+      # the redundant dark-flag from the save file. Some versions of
+      # Ruby emit an irritating warning for this if the variable name
+      # is anything else.
+      tmp, _, @loc, @counter, @saved_room, @lampleft =
         f.gets.chomp.split.map(&:to_i)
       0.upto(NFLAGS-1) do |i|
         @flags[i] = (tmp & 1 << i) != 0

@@ -3,6 +3,7 @@
 ## 1.2.0 (IN PROGRESS)
 
 * Create initial tutorial, exactly equivalent to that of Games::ScottAdams.
+* Use the special name `_` for the unused variable representing the redundant dark-flag part of save-files. This avoids an unused-variable warning when running under certain older versions of Ruby.
 
 ## 1.1.0 (Thu Oct 12 21:59:28 BST 2017)
 
