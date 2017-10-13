@@ -98,3 +98,11 @@ The `-b` (`--bug-tolerant`) option is needed for Scott Adams Adventure
 in room 50 of 36.  None of Scott's own games is so sloppy.
 
 
+Documentation
+-------------
+
+* [ScottKit Tutorial](data/tutorial/tutorial.md)
+* [The ScottKit format reference manual](manual/reference.md)
+* [Blog-post announcing v1.0.0](https://reprog.wordpress.com/2017/10/12/scottkit-is-born-only-seven-and-a-half-years-late/)
+
+
