@@ -1,0 +1,59 @@
+Nosferatu -- originally for VIC-20, now for "sac"
+=================================================
+
+															13:On Bus
+															 \
+															  ^GIVE COINS
+															 /
+							21:Dingy Hut							11:Bus Stop
+							[spade]								[(bus)]
+							|								|
+							|								|
+							20:Lawn				15:Shed				10:Graveyard	12:Witch's Cave
+							|				[bottle]			[grave]	       /[witch->lamp]
+							|				|				| \__GO GRAVE_/
+							|				|				|
+	29:Chasm---||---27:Thicket------22:W. Pond	19:On Bridge	16:E. Pond------14:Yard---||----8:Washroom--||--9:Mortuary
+	[fountain]	|		|		|		|				|
+	|		|		|		|		|				|
+	|		|		|		|		|				|
+	28:Ledge---||---26:By Thicket---23:Field--------18:Junction-----17:Swamp---||---33:Grove	7:Kitchen
+			|		|\								|
+			|		| \____________							|		  __CLIMB ROPE_
+			|		|	       \						|		 /	       \
+			25:Pit----------24:Forest	GO HOLE				1:Coffin--------2:Rat-ridden----5:Balcony	6:Ledge
+						       /						|		|
+					  ____________/							|		|
+					 /								|		|
+					30:Entrance-----31:Cavern---||--32:Chamber			3:Chamber-------4:Library
+							[stalactite,	[count,
+							 passage]	 statue]
+
+Other objects listed on paper map
+---------------------------------
+
+Crucifix engraved: Blackbeard woz ere
+Ladder
+Axe
+Lamp
+Rope
+Coins
+Water of Life
+
+Other notes on paper map
+------------------------
+
+On Bridge: ">1 Object carried => fall"
+Between Swamp and Junction: "Some sort of Barrier" 
+Forest: "needs ladder" (to climb out of pit?)
+By thicket: "JUMP"
+Field of Grass: "DIG HERE.  GO HOL"
+Entrance: "SEMIDARK"
+Cavern: "NEED LAMP / OR BREAK NECK"
+Cavern: "Throw Axe.  At Stalactite.  It shatters, see passage"
+Balcony: "Tie Rope, to Balcony.  Climb Rope"
+Washroom: "Locked doors"
+Cave: "GIVE WATER (IN BOTTLE) => GET LAMP"
+Bus stop: "WAIT: GIVE COINS"
+Chamber: "Count sleeps on altar"
+Chamber: "GO PASSAGE.  SAY 'S$'"

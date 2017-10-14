@@ -1,0 +1,10 @@
+This is a re-implementation of my 1982 game _Nosferatu_:
+http://www.miketaylor.org.uk/tech/advent/nos/
+
+It was originally written in lovingly hand-crafted BASIC for the
+VIC-20 with 8k expansion, and marketed by Terminal Software.
+
+Known bugs:
+* "wait" always summons bus.
+* "climb ladder" always works as a teleport
+* The end of the game has not been coded
