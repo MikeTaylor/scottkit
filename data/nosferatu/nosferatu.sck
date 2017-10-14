@@ -232,16 +232,16 @@ item coins "coins"
 	called COINS
 	at grove
 
-action INV:
+action INVENTORY:
 	inventory
 
-action TAK INV
+action TAKE INVENTORY
 	inventory
 
-action SCO:
+action SCORE:
 	score
 
-action SAV GAM
+action SAVE GAME
 	save_game
 
 occur when !flag 1
@@ -269,14 +269,14 @@ occur when at entrance
 	look
 	comment "everywhere outside the entrance is light"
 
-action TIE ROP when !present rope
+action TIE ROPE when !present rope
 	print "Huh?  What rope?"
 
-action TIE ROP
+action TIE ROPE
 	print "In 2 words tell me to what...like: TO TREE"
 	set_flag 3
 
-action TO BAL when flag 3 and at balcony
+action TO BALCONY when flag 3 and at balcony
 	clear_flag 3
 	destroy rope
 	drop railing
@@ -286,40 +286,40 @@ action TO when flag 3
 	clear_flag 3
 	print "What a stupid concept."
 
-action CLI ROP when here railing
+action CLIMB ROPE when here railing
 	goto ledge
 
-action CLI ROP when at ledge
+action CLIMB ROPE when at ledge
 	goto balcony
 
-action OPE DOO
+action OPEN DOOE
 	print "Which door?  Use OPEN RED or OPEN BLUE."
 
-action OPE RED when present key and here reddoor
+action OPEN RED when present key and here reddoor
 	swap reddoor redopen
 	print "OK."
 
-action WAL RED when here redopen
+action WALK RED when here redopen
 	goto mortuary
 
-action OPE BLU when present key and here bluedoor
+action OPEN BLU when present key and here bluedoor
 	swap bluedoor blueopen
 	print "OK."
 
-action WAL BLU when here blueopen
+action WALK BLU when here blueopen
 	goto yard
 
-action WAL GRA when here grave
+action WALK GRA when here grave
 	goto cave
 
-action WAI when !here bus
+action WAIT when !here bus
 	drop bus
 	print "The bus arrives."
 
-action WAL BUS when here bus
+action WALK BUS when here bus
 	goto bus
 
-action GIV WAT when here witch and present fullbottle
+action GIVE WATER when here witch and present fullbottle
 	swap bottle fullbottle
 	continue
 
@@ -327,7 +327,7 @@ occur 0%
 	swap witch lamp
 	print "Witch drinks water, rejuvenates, drops something and disappears!"
 
-action GIV COI when here conductor
+action GIVE COINS when here conductor
 	print "He takes them and rings a bell.  The bus starts."
 	pause
 	print "You arrive home."
@@ -337,34 +337,34 @@ action DIG when at field
 	swap crucifix hole
 	print "I break through to an underground chamber!"
 
-action WAL HOL when here hole
+action WALK HOLE when here hole
 	goto entrance
 
-action CLI LAD when here ladder
+action CLIMB LADDER when here ladder
 	goto forest
 
-action JUM when at bythicket
+action JUMP when at bythicket
 	goto chasm
 
-action JUM when at chasm
+action JUMP when at chasm
 	goto bythicket
 
-action FIL BOT when present bottle and here fountain
+action FILL BOTTLE when present bottle and here fountain
 	print OK
 	swap bottle fullbottle
 
-action POU WAT when present fullbottle
+action POUR WATER when present fullbottle
 	print OK
 	swap bottle fullbottle
 
-action THR AXE when !present axe
+action THROW AXE when !present axe
 	print "Huh?  What axe?"
 
-action THR AXE
+action THROW AXE
 	print "In 2 words tell me at what...like: AT TREE"
 	set_flag 2
 
-action AT STA when flag 2 and here stalactite
+action AT STALACTITE when flag 2 and here stalactite
 	clear_flag 2
 	drop axe
 	continue
@@ -379,30 +379,30 @@ action AT when flag 2
 	print "OK."
 	print "Nothing happens."
 
-action WAL PAS when here passage
+action WALK PASSAGE when here passage
 	goto underground
 
-action KIL COU when here count
+action KILL COUNT when here count
 	print "OK."
 	print "I punch him and he crumbles to dust."
 	print "Huh!  That was easier than I expected!"
 	put_with treasure sign
 
-action TEL COF
+action TELEPORT COFFIN
 	print ">Fzing!<"
 	goto coffin
 
-action HEL:
+action HELP:
 	print "You'll have to figure it out for yourself."
 
-action EXA:
+action EXAMINE:
 	print "It looks like a pretty average"
 	println_noun
 
-action WAI:
+action WAIT:
 	print "Nothing happens."
 
-action JUM:
+action JUMP:
 	print Wheee!
 
 action DIG:
