@@ -15,7 +15,7 @@ module ScottKit
       @lampleft = defined?(@lamptime) ? @lamptime : 0
 
       puts "ScottKit, a Scott Adams game toolkit in Ruby."
-      puts "Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>"
+      puts "Release 1.2, (C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>"
       puts "Distributed under the GNU software license"
 
       if file = options[:restore_file]
