@@ -17,173 +17,156 @@ verbgroup TAKE GET
 verbgroup OPEN UNLOCK
 
 room hidden "treasury"
-
 	item sign "sign says: you shouldn't be here!"
 	item treasure "*treasure* (you shouldn't be able to see this)" nowhere
 
 room coffin "coffin"
-	exit east rats
+    exit east rats
 
 room rats "rat-ridden room"
-	exit north kitchen
-	exit south chamber
-	exit east balcony
-	exit west coffin
+    exit north kitchen
+    exit south chamber
+    exit east balcony
+    exit west coffin
 
 room chamber "chamber"
-	exit north rats
-	exit east library
-
+    exit north rats
+    exit east library
 	item rope "long rope" called ROPE
 
 room library "library"
-	exit north balcony
-	exit west chamber
+    exit north balcony
+    exit west chamber
 
 room balcony "*I'm on a balcony"
-	exit south library
-	exit west rats
-
+    exit south library
+    exit west rats
 	item railing "rope tied to a railing" nowhere
 
 room ledge "*I'm on a ledge"
-
 	item dangling "dangling end of rope"
 	item key "key" called KEY
 
 room kitchen "kitchen"
-	exit north washroom
-	exit south rats
+    exit north washroom
+    exit south rats
 
 room washroom "washroom"
-	exit south kitchen
-
+    exit south kitchen
 	item reddoor "locked red door in east wall"
 	item redopen "open red door in east wall" nowhere
 	item bluedoor "locked blue door in west wall"
 
 room mortuary "mortuary"
-	exit north graveyard
-	exit west washroom
+    exit north graveyard
+    exit west washroom
 
 room graveyard "graveyard"
-	exit north busstop
-	exit south mortuary
-
+    exit north busstop
+    exit south mortuary
 	item lamp "old-fashioned brass lamp" called LAMP nowhere
 	item grave "open grave"
 
 room busstop "*I'm at a bus stop"
-	exit south graveyard
-
+    exit south graveyard
 	item bus "bus" nowhere
 
 room cave "witch's cave"
-	exit up graveyard
-
+    exit up graveyard
 	item witch "old witch"
 
 room bus "*I'm on a bus"
-	exit down busstop
-
+    exit down busstop
 	item blueopen "open blue door in west wall" nowhere
 	item conductor "bus conductor"
 
 room yard "yard"
-	exit north shed
-	exit east washroom
-	exit west pond
+    exit north shed
+    exit east washroom
+    exit west pond
 
 room shed "shed"
-	exit south yard
-
+    exit south yard
 	item bottle "empty bottle" called BOTTLE
 	item ladder "ladder" called LADDER
 
 room pond "*I'm east of a pond"
-	exit south swamp
-	exit east yard
+    exit south swamp
+    exit east yard
 
 room swamp "swamp"
-	exit north pond
-	exit east grove
-	exit west junction
+    exit north pond
+    exit east grove
+    exit west junction
 
 room junction "junction"
-	exit north bridge
-	exit east swamp
-	exit west field
+    exit north bridge
+    exit east swamp
+    exit west field
 
 room bridge "*I'm on a bridge"
-	exit north lawn
-	exit south junction
+    exit north lawn
+    exit south junction
 
 room lawn "*I'm on a lawn"
-	exit north hut
-	exit south bridge
+    exit north hut
+    exit south bridge
 
 room hut "dingy hut"
-	exit south lawn
-
+    exit south lawn
 	item spade "spade" called SPADE
 
 room westpond "*I'm west of a pond"
-	exit south field
-	exit west thicket
+    exit south field
+    exit west thicket
 
 room field "field"
-	exit north westpond
-	exit south forest
-	exit east junction
-	exit west bythicket
-
+    exit north westpond
+    exit south forest
+    exit east junction
+    exit west bythicket
 	item crucifix "crucifix engraved on the ground"
 	item hole "hole in the ground" nowhere
 
 room forest "forest"
-	exit north field
-	exit west pit
+    exit north field
+    exit west pit
 
 room pit "*I'm in a pit"
-
 	item axe "axe" called AXE
 
 room bythicket "*I'm by an impenetrable thicket"
-	exit north thicket
-	exit south pit
-	exit east field
+    exit north thicket
+    exit south pit
+    exit east field
 
 room thicket "thicket"
-	exit south bythicket
-	exit east westpond
+    exit south bythicket
+    exit east westpond
 
 room chasm "*I'm on a narrow ledge by a chasm"
-	exit north edge
+    exit north edge
 
 room edge "*I'm at the edge of a chasm"
-	exit south chasm
-
+    exit south chasm
 	item fountain "fountain of life"
 	item fullbottle "bottle full of water of life" called BOTTLE nowhere
 
 room entrance "entrance to an underground cave"
-	exit east cavern
-	exit up field
+    exit east cavern
+    exit up field
 
 room cavern "dark cavern"
-	exit west entrance
-
+    exit west entrance
 	item stalactite "stalactite"
 	item passage "passage leading east" nowhere
 
 room underground "underground chamber"
-	exit west cavern
-
+    exit west cavern
 	item count "Count Nosferatu sleeps on an altar"
 
 room grove "hidden grove"
-	exit west swamp
-
+    exit west swamp
 	item coins "coins" called COINS
 
 action INVENTORY:
