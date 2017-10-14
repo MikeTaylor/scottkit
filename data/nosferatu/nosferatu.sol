@@ -69,4 +69,21 @@ e
 throw axe
 at stalactite
 go passage
-### now what?
+kill count
+w
+w
+u
+e
+e
+e
+get coins
+w
+n
+e
+e
+go red
+n
+n
+wait
+go bus
+give coins
