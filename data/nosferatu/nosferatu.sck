@@ -142,10 +142,10 @@ room underground "underground chamber"
 room grove "hidden grove"
 	exit west swamp
 
-item here "sign says: you shouldn't be here!"
+item sign "sign says: you shouldn't be here!"
 	at home
 
-item this "*treasure* (you shouldn't be able to see this)"
+item treasure "*treasure* (you shouldn't be able to see this)"
 	nowhere
 
 item rope "long rope"
@@ -155,20 +155,20 @@ item rope "long rope"
 item railing "rope tied to a railing"
 	nowhere
 
-item rope1 "dangling end of rope"
+item dangling "dangling end of rope"
 	at ledge
 
 item key "key"
 	called KEY
 	at ledge
 
-item wall "locked red door in east wall"
+item reddoor "locked red door in east wall"
 	at washroom
 
-item wall1 "open red door in east wall"
+item redopen "open red door in east wall"
 	nowhere
 
-item wall2 "locked blue door in west wall"
+item bluedoor "locked blue door in west wall"
 	at washroom
 
 item lamp "old-fashioned brass lamp"
@@ -184,7 +184,7 @@ item bus "bus"
 item witch "old witch"
 	at cave
 
-item wall3 "open blue door in west wall"
+item blueopen "open blue door in west wall"
 	nowhere
 
 item conductor "bus conductor"
@@ -202,30 +202,30 @@ item spade "spade"
 	called SPA
 	at hut
 
-item ground "crucifix engraved on the ground"
+item crucifix "crucifix engraved on the ground"
 	at field
 
-item ground1 "hole in the ground"
+item hole "hole in the ground"
 	nowhere
 
 item axe "axe"
 	called AXE
 	at pit
 
-item life "fountain of life"
+item fountain "fountain of life"
 	at edge
 
-item life1 "bottle full of water of life"
+item fullbottle "bottle full of water of life"
 	called BOT
 	nowhere
 
 item stalactite "stalactite"
 	at cavern
 
-item "east" "passage leading east"
+item passage "passage leading east"
 	nowhere
 
-item altar "Count Nosferatu sleeps on an altar"
+item count "Count Nosferatu sleeps on an altar"
 	at underground
 
 item coins "coins"
@@ -295,18 +295,18 @@ action CLI ROP when at ledge
 action OPE DOO
 	print "Which door?  Use OPEN RED or OPEN BLUE."
 
-action OPE RED when present key and here wall
-	swap wall wall1
+action OPE RED when present key and here reddoor
+	swap reddoor redopen
 	print "OK."
 
-action WAL RED when here wall1
+action WAL RED when here redopen
 	goto mortuary
 
-action OPE BLU when present key and here wall2
-	swap wall2 wall3
+action OPE BLU when present key and here bluedoor
+	swap bluedoor blueopen
 	print "OK."
 
-action WAL BLU when here wall3
+action WAL BLU when here blueopen
 	goto yard
 
 action WAL GRA when here grave
@@ -319,8 +319,8 @@ action WAI when !here bus
 action WAL BUS when here bus
 	goto bus
 
-action GIV WAT when here witch and present life1
-	swap bottle life1
+action GIV WAT when here witch and present fullbottle
+	swap bottle fullbottle
 	continue
 
 occur 0%
@@ -334,10 +334,10 @@ action GIV COI when here conductor
 	game_over
 
 action DIG when at field
-	swap ground ground1
+	swap crucifix hole
 	print "I break through to an underground chamber!"
 
-action WAL HOL when here ground1
+action WAL HOL when here hole
 	goto entrance
 
 action CLI LAD when here ladder
@@ -349,13 +349,13 @@ action JUM when at bythicket
 action JUM when at chasm
 	goto bythicket
 
-action FIL BOT when present bottle and here life
+action FIL BOT when present bottle and here fountain
 	print OK
-	swap bottle life1
+	swap bottle fullbottle
 
-action POU WAT when present life1
+action POU WAT when present fullbottle
 	print OK
-	swap bottle life1
+	swap bottle fullbottle
 
 action THR AXE when !present axe
 	print "Huh?  What axe?"
@@ -370,7 +370,7 @@ action AT STA when flag 2 and here stalactite
 	continue
 
 occur 0%
-	swap stalactite "east"
+	swap stalactite passage
 	print "Stalactite smashes, revealing a passage beyond!"
 
 action AT when flag 2
@@ -379,14 +379,14 @@ action AT when flag 2
 	print "OK."
 	print "Nothing happens."
 
-action WAL PAS when here "east"
+action WAL PAS when here passage
 	goto underground
 
-action KIL COU when here altar
+action KIL COU when here count
 	print "OK."
 	print "I punch him and he crumbles to dust."
 	print "Huh!  That was easier than I expected!"
-	put_with this here
+	put_with treasure sign
 
 action TEL COF
 	print ">Fzing!<"
