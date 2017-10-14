@@ -85,14 +85,33 @@ room graveyard "graveyard"
 	exit north busstop
 	exit south mortuary
 
+	item lamp "old-fashioned brass lamp"
+		called LAMP
+		nowhere
+
+	item grave "open grave"
+		at graveyard
+
 room busstop "*I'm at a bus stop"
 	exit south graveyard
+
+	item bus "bus"
+		nowhere
 
 room cave "witch's cave"
 	exit up graveyard
 
+	item witch "old witch"
+		at cave
+
 room bus "*I'm on a bus"
 	exit down busstop
+
+	item blueopen "open blue door in west wall"
+		nowhere
+
+	item conductor "bus conductor"
+		at bus
 
 room yard "yard"
 	exit north shed
@@ -101,6 +120,14 @@ room yard "yard"
 
 room shed "shed"
 	exit south yard
+
+	item bottle "empty bottle"
+		called BOTTLE
+		at shed
+
+	item ladder "ladder"
+		called LADDER
+		at shed
 
 room pond "*I'm east of a pond"
 	exit south swamp
@@ -127,6 +154,10 @@ room lawn "*I'm on a lawn"
 room hut "dingy hut"
 	exit south lawn
 
+	item spade "spade"
+		called SPADE
+		at hut
+
 room westpond "*I'm west of a pond"
 	exit south field
 	exit west thicket
@@ -137,11 +168,21 @@ room field "field"
 	exit east junction
 	exit west bythicket
 
+	item crucifix "crucifix engraved on the ground"
+		at field
+
+	item hole "hole in the ground"
+		nowhere
+
 room forest "forest"
 	exit north field
 	exit west pit
 
 room pit "*I'm in a pit"
+
+	item axe "axe"
+		called AXE
+		at pit
 
 room bythicket "*I'm by an impenetrable thicket"
 	exit north thicket
@@ -158,6 +199,13 @@ room chasm "*I'm on a narrow ledge by a chasm"
 room edge "*I'm at the edge of a chasm"
 	exit south chasm
 
+	item fountain "fountain of life"
+		at edge
+
+	item fullbottle "bottle full of water of life"
+		called BOTTLE
+		nowhere
+
 room entrance "entrance to an underground cave"
 	exit east cavern
 	exit up field
@@ -165,72 +213,24 @@ room entrance "entrance to an underground cave"
 room cavern "dark cavern"
 	exit west entrance
 
+	item stalactite "stalactite"
+		at cavern
+
+	item passage "passage leading east"
+		nowhere
+
 room underground "underground chamber"
 	exit west cavern
+
+	item count "Count Nosferatu sleeps on an altar"
+		at underground
 
 room grove "hidden grove"
 	exit west swamp
 
-item lamp "old-fashioned brass lamp"
-	called LAMP
-	nowhere
-
-item grave "open grave"
-	at graveyard
-
-item bus "bus"
-	nowhere
-
-item witch "old witch"
-	at cave
-
-item blueopen "open blue door in west wall"
-	nowhere
-
-item conductor "bus conductor"
-	at bus
-
-item bottle "empty bottle"
-	called BOTTLE
-	at shed
-
-item ladder "ladder"
-	called LADDER
-	at shed
-
-item spade "spade"
-	called SPADE
-	at hut
-
-item crucifix "crucifix engraved on the ground"
-	at field
-
-item hole "hole in the ground"
-	nowhere
-
-item axe "axe"
-	called AXE
-	at pit
-
-item fountain "fountain of life"
-	at edge
-
-item fullbottle "bottle full of water of life"
-	called BOTTLE
-	nowhere
-
-item stalactite "stalactite"
-	at cavern
-
-item passage "passage leading east"
-	nowhere
-
-item count "Count Nosferatu sleeps on an altar"
-	at underground
-
-item coins "coins"
-	called COINS
-	at grove
+	item coins "coins"
+		called COINS
+		at grove
 
 action INVENTORY:
 	inventory
