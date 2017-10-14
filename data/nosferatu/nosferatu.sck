@@ -17,6 +17,12 @@ verbgroup OPEN UNLOCK
 room home "treasury"
 	treasury home
 
+	item sign "sign says: you shouldn't be here!"
+		at home
+
+	item treasure "*treasure* (you shouldn't be able to see this)"
+		nowhere
+
 room coffin "coffin"
 	exit east rats
 	start coffin
@@ -31,6 +37,10 @@ room chamber "chamber"
 	exit north rats
 	exit east library
 
+	item rope "long rope"
+		called ROPE
+		at chamber
+
 room library "library"
 	exit north balcony
 	exit west chamber
@@ -39,11 +49,30 @@ room balcony "*I'm on a balcony"
 	exit south library
 	exit west rats
 
+	item railing "rope tied to a railing"
+		nowhere
+
 room ledge "*I'm on a ledge"
+
+	item dangling "dangling end of rope"
+		at ledge
+
+	item key "key"
+		called KEY
+		at ledge
 
 room kitchen "kitchen"
 	exit north washroom
 	exit south rats
+
+	item reddoor "locked red door in east wall"
+		at washroom
+
+	item redopen "open red door in east wall"
+		nowhere
+
+	item bluedoor "locked blue door in west wall"
+		at washroom
 
 room washroom "washroom"
 	exit south kitchen
@@ -141,35 +170,6 @@ room underground "underground chamber"
 
 room grove "hidden grove"
 	exit west swamp
-
-item sign "sign says: you shouldn't be here!"
-	at home
-
-item treasure "*treasure* (you shouldn't be able to see this)"
-	nowhere
-
-item rope "long rope"
-	called ROPE
-	at chamber
-
-item railing "rope tied to a railing"
-	nowhere
-
-item dangling "dangling end of rope"
-	at ledge
-
-item key "key"
-	called KEY
-	at ledge
-
-item reddoor "locked red door in east wall"
-	at washroom
-
-item redopen "open red door in east wall"
-	nowhere
-
-item bluedoor "locked blue door in west wall"
-	at washroom
 
 item lamp "old-fashioned brass lamp"
 	called LAMP
