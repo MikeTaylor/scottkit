@@ -7,6 +7,7 @@ wordlen 3
 maxload 5
 start coffin
 treasury hidden
+lightsource lamp
 lighttime 100
 unknown1 19540
 unknown2 0
@@ -56,6 +57,7 @@ room washroom "washroom"
 	item reddoor "locked red door in east wall"
 	item redopen "open red door in east wall" nowhere
 	item bluedoor "locked blue door in west wall"
+	item blueopen "open blue door in west wall" nowhere
 
 room mortuary "mortuary"
     exit north graveyard
@@ -64,7 +66,6 @@ room mortuary "mortuary"
 room graveyard "graveyard"
     exit north busstop
     exit south mortuary
-	item lamp "old-fashioned brass lamp" called LAMP nowhere
 	item grave "open grave"
 
 room busstop "*I'm at a bus stop"
@@ -74,10 +75,10 @@ room busstop "*I'm at a bus stop"
 room cave "witch's cave"
     exit up graveyard
 	item witch "old witch"
+	item lamp "old-fashioned brass lamp" called LAMP nowhere
 
 room bus "*I'm on a bus"
     exit down busstop
-	item blueopen "open blue door in west wall" nowhere
 	item conductor "bus conductor"
 
 room yard "yard"
