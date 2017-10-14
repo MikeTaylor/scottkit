@@ -1,5 +1,5 @@
 test: nosferatu.sao
-	scottkit -e $< < nosferatu.sol | diff nosferatu.script -
+	scottkit -W -e $< < nosferatu.sol | diff nosferatu.script -
 
 nosferatu.sao: nosferatu.sck
 	scottkit -c $< > $@
