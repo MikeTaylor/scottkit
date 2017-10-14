@@ -14,11 +14,11 @@ verbgroup LEAVE DROP
 verbgroup TAKE GET
 verbgroup OPEN UNLOCK
 
-room home "treasury"
-	treasury home
+room hidden "treasury"
+	treasury hidden
 
 	item sign "sign says: you shouldn't be here!"
-		at home
+		at hidden
 
 	item treasure "*treasure* (you shouldn't be able to see this)"
 		nowhere
