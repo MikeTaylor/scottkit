@@ -295,6 +295,91 @@ Obvious exits: West.
 I can also see: axe, passage leading east
 
 Tell me what to do ? go passage
-Tell me what to do ? ### now what?
-You use word(s) I don't know!
-Tell me what to do ? 
+Tell me what to do ? kill count
+OK.
+I punch him and he crumbles to dust.
+Huh!  That was easier than I expected!
+Tell me what to do ? w
+
+I'm in a dark cavern
+Obvious exits: West.
+I can also see: axe, passage leading east
+
+
+I'm in a dark cavern
+Obvious exits: West.
+I can also see: axe, passage leading east
+
+Tell me what to do ? w
+
+I'm in a entrance to an underground cave
+Obvious exits: East, Up.
+
+
+I'm in a entrance to an underground cave
+Obvious exits: East, Up.
+
+Tell me what to do ? u
+
+I'm in a field
+Obvious exits: North, South, East, West.
+I can also see: spade, hole in the ground
+
+Tell me what to do ? e
+
+I'm in a junction
+Obvious exits: North, East, West.
+
+Tell me what to do ? e
+
+I'm in a swamp
+Obvious exits: North, East, West.
+
+Tell me what to do ? e
+
+I'm in a hidden grove
+Obvious exits: West.
+I can also see: coins
+
+Tell me what to do ? get coins
+O.K.
+Tell me what to do ? w
+
+I'm in a swamp
+Obvious exits: North, East, West.
+
+Tell me what to do ? n
+
+I'm east of a pond
+Obvious exits: South, East.
+
+Tell me what to do ? e
+
+I'm in a yard
+Obvious exits: North, East, West.
+
+Tell me what to do ? e
+
+I'm in a washroom
+Obvious exits: South.
+I can also see: key, open red door in east wall, open blue door in west wall
+
+Tell me what to do ? go red
+Tell me what to do ? n
+
+I'm in a graveyard
+Obvious exits: North, South.
+I can also see: open grave
+
+Tell me what to do ? n
+
+I'm at a bus stop
+Obvious exits: South.
+
+Tell me what to do ? wait
+The bus arrives.
+Tell me what to do ? go bus
+Tell me what to do ? give coins
+He takes them and rings a bell.  The bus starts.
+You arrive home.
+The game is now over.
