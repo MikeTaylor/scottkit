@@ -5,6 +5,8 @@ ident 18401
 version 1
 wordlen 3
 maxload 5
+start coffin
+treasury hidden
 lighttime 100
 unknown1 19540
 unknown2 0
@@ -15,14 +17,12 @@ verbgroup TAKE GET
 verbgroup OPEN UNLOCK
 
 room hidden "treasury"
-	treasury hidden
 
 	item sign "sign says: you shouldn't be here!"
 	item treasure "*treasure* (you shouldn't be able to see this)" nowhere
 
 room coffin "coffin"
 	exit east rats
-	start coffin
 
 room rats "rat-ridden room"
 	exit north kitchen
