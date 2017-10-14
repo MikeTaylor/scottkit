@@ -8,18 +8,18 @@ maxload 5
 lighttime 100
 unknown1 19540
 unknown2 0
-start coffin
-treasury "treasury"
 
-verbgroup WAL ENT GO RUN
-verbgroup LEA DRO
-verbgroup TAK GET
-verbgroup OPE UNL
+verbgroup WALK ENTER GO RUN
+verbgroup LEAVE DROP
+verbgroup TAKE GET
+verbgroup OPEN UNLOCK
 
-room "treasury" "treasury"
+room home "treasury"
+	treasury home
 
 room coffin "coffin"
 	exit east "room"
+	start coffin
 
 room "room" "rat-ridden room"
 	exit north kitchen
@@ -143,7 +143,7 @@ room grove "hidden grove"
 	exit west swamp
 
 item here "sign says: you shouldn't be here!"
-	at "treasury"
+	at home
 
 item this "*treasure* (you shouldn't be able to see this)"
 	nowhere
