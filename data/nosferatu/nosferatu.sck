@@ -18,17 +18,17 @@ room home "treasury"
 	treasury home
 
 room coffin "coffin"
-	exit east "room"
+	exit east rats
 	start coffin
 
-room "room" "rat-ridden room"
+room rats "rat-ridden room"
 	exit north kitchen
 	exit south chamber
 	exit east balcony
 	exit west coffin
 
 room chamber "chamber"
-	exit north "room"
+	exit north rats
 	exit east library
 
 room library "library"
@@ -37,13 +37,13 @@ room library "library"
 
 room balcony "*I'm on a balcony"
 	exit south library
-	exit west "room"
+	exit west rats
 
 room ledge "*I'm on a ledge"
 
 room kitchen "kitchen"
 	exit north washroom
-	exit south "room"
+	exit south rats
 
 room washroom "washroom"
 	exit south kitchen
@@ -53,17 +53,17 @@ room mortuary "mortuary"
 	exit west washroom
 
 room graveyard "graveyard"
-	exit north stop
+	exit north busstop
 	exit south mortuary
 
-room stop "*I'm at a bus stop"
+room busstop "*I'm at a bus stop"
 	exit south graveyard
 
 room cave "witch's cave"
 	exit up graveyard
 
 room bus "*I'm on a bus"
-	exit down stop
+	exit down busstop
 
 room yard "yard"
 	exit north shed
@@ -98,15 +98,15 @@ room lawn "*I'm on a lawn"
 room hut "dingy hut"
 	exit south lawn
 
-room pond1 "*I'm west of a pond"
+room westpond "*I'm west of a pond"
 	exit south field
 	exit west thicket
 
 room field "field"
-	exit north pond1
+	exit north westpond
 	exit south forest
 	exit east junction
-	exit west thicket1
+	exit west bythicket
 
 room forest "forest"
 	exit north field
@@ -114,29 +114,29 @@ room forest "forest"
 
 room pit "*I'm in a pit"
 
-room thicket1 "*I'm by an impenetrable thicket"
+room bythicket "*I'm by an impenetrable thicket"
 	exit north thicket
 	exit south pit
 	exit east field
 
 room thicket "thicket"
-	exit south thicket1
-	exit east pond1
+	exit south bythicket
+	exit east westpond
 
 room chasm "*I'm on a narrow ledge by a chasm"
-	exit north chasm1
+	exit north edge
 
-room chasm1 "*I'm at the edge of a chasm"
+room edge "*I'm at the edge of a chasm"
 	exit south chasm
 
-room cave1 "entrance to an underground cave"
+room entrance "entrance to an underground cave"
 	exit east cavern
 	exit up field
 
 room cavern "dark cavern"
-	exit west cave1
+	exit west entrance
 
-room chamber1 "underground chamber"
+room underground "underground chamber"
 	exit west cavern
 
 room grove "hidden grove"
@@ -213,7 +213,7 @@ item axe "axe"
 	at pit
 
 item life "fountain of life"
-	at chasm1
+	at edge
 
 item life1 "bottle full of water of life"
 	called BOT
@@ -226,7 +226,7 @@ item "east" "passage leading east"
 	nowhere
 
 item altar "Count Nosferatu sleeps on an altar"
-	at chamber1
+	at underground
 
 item coins "coins"
 	called COI
@@ -264,7 +264,7 @@ occur when at cavern
 	look
 	comment "everywhere inside the cavern is dark"
 
-occur when at cave1
+occur when at entrance
 	clear_dark
 	look
 	comment "everywhere outside the entrance is light"
@@ -338,16 +338,16 @@ action DIG when at field
 	print "I break through to an underground chamber!"
 
 action WAL HOL when here ground1
-	goto cave1
+	goto entrance
 
 action CLI LAD when here ladder
 	goto forest
 
-action JUM when at thicket1
+action JUM when at bythicket
 	goto chasm
 
 action JUM when at chasm
-	goto thicket1
+	goto bythicket
 
 action FIL BOT when present bottle and here life
 	print OK
@@ -380,7 +380,7 @@ action AT when flag 2
 	print "Nothing happens."
 
 action WAL PAS when here "east"
-	goto chamber1
+	goto underground
 
 action KIL COU when here altar
 	print "OK."
