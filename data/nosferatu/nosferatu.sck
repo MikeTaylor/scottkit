@@ -299,24 +299,24 @@ action OPEN RED when present key and here reddoor
 	swap reddoor redopen
 	print "OK."
 
-action WALK RED when here redopen
+action GO RED when here redopen
 	goto mortuary
 
 action OPEN BLU when present key and here bluedoor
 	swap bluedoor blueopen
 	print "OK."
 
-action WALK BLU when here blueopen
+action GO BLU when here blueopen
 	goto yard
 
-action WALK GRA when here grave
+action GO GRA when here grave
 	goto cave
 
 action WAIT when !here bus
 	drop bus
 	print "The bus arrives."
 
-action WALK BUS when here bus
+action GO BUS when here bus
 	goto bus
 
 action GIVE WATER when here witch and present fullbottle
@@ -337,7 +337,7 @@ action DIG when at field
 	swap crucifix hole
 	print "I break through to an underground chamber!"
 
-action WALK HOLE when here hole
+action GO HOLE when here hole
 	goto entrance
 
 action CLIMB LADDER when here ladder
@@ -379,7 +379,7 @@ action AT when flag 2
 	print "OK."
 	print "Nothing happens."
 
-action WALK PASSAGE when here passage
+action GO PASSAGE when here passage
 	goto underground
 
 action KILL COUNT when here count
