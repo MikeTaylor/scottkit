@@ -292,7 +292,7 @@ action CLIMB ROPE when here railing
 action CLIMB ROPE when at ledge
 	goto balcony
 
-action OPEN DOOE
+action OPEN DOOR
 	print "Which door?  Use OPEN RED or OPEN BLUE."
 
 action OPEN RED when present key and here reddoor
