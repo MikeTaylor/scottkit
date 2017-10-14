@@ -1,0 +1,409 @@
+# 35 rooms, 27 items, 46 actions
+# 29 messages, 1 treasures, 30 verbs/nouns
+ident 18401
+version 1
+wordlen 3
+maxload 5
+lighttime 100
+unknown1 19540
+unknown2 0
+start coffin
+treasury "treasury"
+
+verbgroup WAL ENT GO RUN
+verbgroup LEA DRO
+verbgroup TAK GET
+verbgroup OPE UNL
+
+room "treasury" "treasury"
+
+room coffin "coffin"
+	exit east "room"
+
+room "room" "rat-ridden room"
+	exit north kitchen
+	exit south chamber
+	exit east balcony
+	exit west coffin
+
+room chamber "chamber"
+	exit north "room"
+	exit east library
+
+room library "library"
+	exit north balcony
+	exit west chamber
+
+room balcony "*I'm on a balcony"
+	exit south library
+	exit west "room"
+
+room ledge "*I'm on a ledge"
+
+room kitchen "kitchen"
+	exit north washroom
+	exit south "room"
+
+room washroom "washroom"
+	exit south kitchen
+
+room mortuary "mortuary"
+	exit north graveyard
+	exit west washroom
+
+room graveyard "graveyard"
+	exit north stop
+	exit south mortuary
+
+room stop "*I'm at a bus stop"
+	exit south graveyard
+
+room cave "witch's cave"
+	exit up graveyard
+
+room bus "*I'm on a bus"
+	exit down stop
+
+room yard "yard"
+	exit north shed
+	exit east washroom
+	exit west pond
+
+room shed "shed"
+	exit south yard
+
+room pond "*I'm east of a pond"
+	exit south swamp
+	exit east yard
+
+room swamp "swamp"
+	exit north pond
+	exit east grove
+	exit west junction
+
+room junction "junction"
+	exit north bridge
+	exit east swamp
+	exit west field
+
+room bridge "*I'm on a bridge"
+	exit north lawn
+	exit south junction
+
+room lawn "*I'm on a lawn"
+	exit north hut
+	exit south bridge
+
+room hut "dingy hut"
+	exit south lawn
+
+room pond1 "*I'm west of a pond"
+	exit south field
+	exit west thicket
+
+room field "field"
+	exit north pond1
+	exit south forest
+	exit east junction
+	exit west thicket1
+
+room forest "forest"
+	exit north field
+	exit west pit
+
+room pit "*I'm in a pit"
+
+room thicket1 "*I'm by an impenetrable thicket"
+	exit north thicket
+	exit south pit
+	exit east field
+
+room thicket "thicket"
+	exit south thicket1
+	exit east pond1
+
+room chasm "*I'm on a narrow ledge by a chasm"
+	exit north chasm1
+
+room chasm1 "*I'm at the edge of a chasm"
+	exit south chasm
+
+room cave1 "entrance to an underground cave"
+	exit east cavern
+	exit up field
+
+room cavern "dark cavern"
+	exit west cave1
+
+room chamber1 "underground chamber"
+	exit west cavern
+
+room grove "hidden grove"
+	exit west swamp
+
+item here "sign says: you shouldn't be here!"
+	at "treasury"
+
+item this "*treasure* (you shouldn't be able to see this)"
+	nowhere
+
+item rope "long rope"
+	called ROP
+	at chamber
+
+item railing "rope tied to a railing"
+	nowhere
+
+item rope1 "dangling end of rope"
+	at ledge
+
+item key "key"
+	called KEY
+	at ledge
+
+item wall "locked red door in east wall"
+	at washroom
+
+item wall1 "open red door in east wall"
+	nowhere
+
+item wall2 "locked blue door in west wall"
+	at washroom
+
+item lamp "old-fashioned brass lamp"
+	called LAM
+	nowhere
+
+item grave "open grave"
+	at graveyard
+
+item bus "bus"
+	nowhere
+
+item witch "old witch"
+	at cave
+
+item wall3 "open blue door in west wall"
+	nowhere
+
+item conductor "bus conductor"
+	at bus
+
+item bottle "empty bottle"
+	called BOT
+	at shed
+
+item ladder "ladder"
+	called LAD
+	at shed
+
+item spade "spade"
+	called SPA
+	at hut
+
+item ground "crucifix engraved on the ground"
+	at field
+
+item ground1 "hole in the ground"
+	nowhere
+
+item axe "axe"
+	called AXE
+	at pit
+
+item life "fountain of life"
+	at chasm1
+
+item life1 "bottle full of water of life"
+	called BOT
+	nowhere
+
+item stalactite "stalactite"
+	at cavern
+
+item "east" "passage leading east"
+	nowhere
+
+item altar "Count Nosferatu sleeps on an altar"
+	at chamber1
+
+item coins "coins"
+	called COI
+	at grove
+
+action INV:
+	inventory
+
+action TAK INV
+	inventory
+
+action SCO:
+	score
+
+action SAV GAM
+	save_game
+
+occur when !flag 1
+	set_flag 1
+	print "Welcome to `NOSFERATU`"
+	print "Written by Mike Taylor, starting Sunday 25th November 2001"
+	continue
+
+occur 0%
+	print "This is a demo for the `sac` adventure system --"
+	print "See http://www.miketaylor.org.uk/tech/advent/sac/"
+	println
+	print "Your task is to kill the evil count Nosferatu."
+
+action DIG when !present spade
+	print "I can't dig without a spade."
+
+occur when at cavern
+	set_dark
+	look
+	comment "everywhere inside the cavern is dark"
+
+occur when at cave1
+	clear_dark
+	look
+	comment "everywhere outside the entrance is light"
+
+action TIE ROP when !present rope
+	print "Huh?  What rope?"
+
+action TIE ROP
+	print "In 2 words tell me to what...like: TO TREE"
+	set_flag 3
+
+action TO BAL when flag 3 and at balcony
+	clear_flag 3
+	destroy rope
+	drop railing
+	print "OK."
+
+action TO when flag 3
+	clear_flag 3
+	print "What a stupid concept."
+
+action CLI ROP when here railing
+	goto ledge
+
+action CLI ROP when at ledge
+	goto balcony
+
+action OPE DOO
+	print "Which door?  Use OPEN RED or OPEN BLUE."
+
+action OPE RED when present key and here wall
+	swap wall wall1
+	print "OK."
+
+action WAL RED when here wall1
+	goto mortuary
+
+action OPE BLU when present key and here wall2
+	swap wall2 wall3
+	print "OK."
+
+action WAL BLU when here wall3
+	goto yard
+
+action WAL GRA when here grave
+	goto cave
+
+action WAI when !here bus
+	drop bus
+	print "The bus arrives."
+
+action WAL BUS when here bus
+	goto bus
+
+action GIV WAT when here witch and present life1
+	swap bottle life1
+	continue
+
+occur 0%
+	swap witch lamp
+	print "Witch drinks water, rejuvenates, drops something and disappears!"
+
+action GIV COI when here conductor
+	print "He takes them and rings a bell.  The bus starts."
+	pause
+	print "You arrive home."
+	game_over
+
+action DIG when at field
+	swap ground ground1
+	print "I break through to an underground chamber!"
+
+action WAL HOL when here ground1
+	goto cave1
+
+action CLI LAD when here ladder
+	goto forest
+
+action JUM when at thicket1
+	goto chasm
+
+action JUM when at chasm
+	goto thicket1
+
+action FIL BOT when present bottle and here life
+	print OK
+	swap bottle life1
+
+action POU WAT when present life1
+	print OK
+	swap bottle life1
+
+action THR AXE when !present axe
+	print "Huh?  What axe?"
+
+action THR AXE
+	print "In 2 words tell me at what...like: AT TREE"
+	set_flag 2
+
+action AT STA when flag 2 and here stalactite
+	clear_flag 2
+	drop axe
+	continue
+
+occur 0%
+	swap stalactite "east"
+	print "Stalactite smashes, revealing a passage beyond!"
+
+action AT when flag 2
+	clear_flag 2
+	drop axe
+	print "OK."
+	print "Nothing happens."
+
+action WAL PAS when here "east"
+	goto chamber1
+
+action KIL COU when here altar
+	print "OK."
+	print "I punch him and he crumbles to dust."
+	print "Huh!  That was easier than I expected!"
+	put_with this here
+
+action TEL COF
+	print ">Fzing!<"
+	goto coffin
+
+action HEL:
+	print "You'll have to figure it out for yourself."
+
+action EXA:
+	print "It looks like a pretty average"
+	println_noun
+
+action WAI:
+	print "Nothing happens."
+
+action JUM:
+	print Wheee!
+
+action DIG:
+	print "I find nothing."
+
