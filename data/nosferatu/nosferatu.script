@@ -1,0 +1,300 @@
+ScottKit, a Scott Adams game toolkit in Ruby.
+Release 1.0, (C) 2010 Mike Taylor <mike@miketaylor.org.uk>
+Distributed under the GNU software license
+
+I'm in a coffin
+Obvious exits: East.
+
+Welcome to "NOSFERATU"
+Written by Mike Taylor, starting Sunday 25th November 2001
+This is a demo for the "sac" adventure system --
+See http://www.miketaylor.org.uk/tech/advent/sac/
+
+Your task is to kill the evil count Nosferatu.
+Tell me what to do ? e
+
+I'm in a rat-ridden room
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? s
+
+I'm in a chamber
+Obvious exits: North, East.
+I can also see: long rope
+
+Tell me what to do ? get rope
+O.K.
+Tell me what to do ? e
+
+I'm in a library
+Obvious exits: North, West.
+
+Tell me what to do ? n
+
+I'm on a balcony
+Obvious exits: South, West.
+
+Tell me what to do ? tie rope
+In 2 words tell me to what...like: TO TREE
+Tell me what to do ? to balcony
+OK.
+Tell me what to do ? climb rope
+Tell me what to do ? get key 
+O.K.
+Tell me what to do ? climb rope 
+Tell me what to do ? w
+
+I'm in a rat-ridden room
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? n
+
+I'm in a kitchen
+Obvious exits: North, South.
+
+Tell me what to do ? n
+
+I'm in a washroom
+Obvious exits: South.
+I can also see: locked red door in east wall, locked blue door in west wall
+
+Tell me what to do ? open red
+OK.
+Tell me what to do ? open blue
+OK.
+Tell me what to do ? drop key
+O.K.
+Tell me what to do ? go blue
+Tell me what to do ? n
+
+I'm in a shed
+Obvious exits: South.
+I can also see: empty bottle, ladder
+
+Tell me what to do ? get bottle
+O.K.
+Tell me what to do ? get ladder
+O.K.
+Tell me what to do ? s
+
+I'm in a yard
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm east of a pond
+Obvious exits: South, East.
+
+Tell me what to do ? s
+
+I'm in a swamp
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm in a junction
+Obvious exits: North, East, West.
+
+Tell me what to do ? n
+
+I'm on a bridge
+Obvious exits: North, South.
+
+Tell me what to do ? n
+
+I'm on a lawn
+Obvious exits: North, South.
+
+Tell me what to do ? n
+
+I'm in a dingy hut
+Obvious exits: South.
+I can also see: spade
+
+Tell me what to do ? get spade
+O.K.
+Tell me what to do ? s
+
+I'm on a lawn
+Obvious exits: North, South.
+
+Tell me what to do ? s
+
+I'm on a bridge
+Obvious exits: North, South.
+
+Tell me what to do ? s
+
+I'm in a junction
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm in a field
+Obvious exits: North, South, East, West.
+I can also see: crucifix engraved on the ground
+
+Tell me what to do ? dig
+I break through to an underground chamber!
+Tell me what to do ? drop spade
+O.K.
+Tell me what to do ? w
+
+I'm by an impenetrable thicket
+Obvious exits: North, South, East.
+
+Tell me what to do ? jump
+Tell me what to do ? n
+
+I'm at the edge of a chasm
+Obvious exits: South.
+I can also see: fountain of life
+
+Tell me what to do ? fill bottle
+OK
+Tell me what to do ? s
+
+I'm on a narrow ledge by a chasm
+Obvious exits: North.
+
+Tell me what to do ? jump
+Tell me what to do ? e
+
+I'm in a field
+Obvious exits: North, South, East, West.
+I can also see: spade, hole in the ground
+
+Tell me what to do ? e
+
+I'm in a junction
+Obvious exits: North, East, West.
+
+Tell me what to do ? e
+
+I'm in a swamp
+Obvious exits: North, East, West.
+
+Tell me what to do ? n
+
+I'm east of a pond
+Obvious exits: South, East.
+
+Tell me what to do ? e
+
+I'm in a yard
+Obvious exits: North, East, West.
+
+Tell me what to do ? e
+
+I'm in a washroom
+Obvious exits: South.
+I can also see: key, open red door in east wall, open blue door in west wall
+
+Tell me what to do ? go red
+Tell me what to do ? n
+
+I'm in a graveyard
+Obvious exits: North, South.
+I can also see: open grave
+
+Tell me what to do ? go grave
+Tell me what to do ? give water
+Witch drinks water, rejuvenates, drops something and disappears!
+Tell me what to do ? drop bottle
+O.K.
+Tell me what to do ? get lamp
+O.K.
+Tell me what to do ? u
+
+I'm in a graveyard
+Obvious exits: North, South.
+I can also see: open grave
+
+Tell me what to do ? s
+
+I'm in a mortuary
+Obvious exits: North, West.
+
+Tell me what to do ? w
+
+I'm in a washroom
+Obvious exits: South.
+I can also see: key, open red door in east wall, open blue door in west wall
+
+Tell me what to do ? go blue
+Tell me what to do ? w
+
+I'm east of a pond
+Obvious exits: South, East.
+
+Tell me what to do ? s
+
+I'm in a swamp
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm in a junction
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm in a field
+Obvious exits: North, South, East, West.
+I can also see: spade, hole in the ground
+
+Tell me what to do ? w
+
+I'm by an impenetrable thicket
+Obvious exits: North, South, East.
+
+Tell me what to do ? s
+
+I'm in a pit
+I can also see: axe
+
+Tell me what to do ? get axe
+O.K.
+Tell me what to do ? drop ladder
+O.K.
+Tell me what to do ? climb ladder
+Tell me what to do ? n
+
+I'm in a field
+Obvious exits: North, South, East, West.
+I can also see: spade, hole in the ground
+
+Tell me what to do ? go hole
+
+I'm in a entrance to an underground cave
+Obvious exits: East, Up.
+
+Tell me what to do ? e
+
+I'm in a dark cavern
+Obvious exits: West.
+I can also see: stalactite
+
+
+I'm in a dark cavern
+Obvious exits: West.
+I can also see: stalactite
+
+Tell me what to do ? throw axe
+In 2 words tell me at what...like: AT TREE
+
+I'm in a dark cavern
+Obvious exits: West.
+I can also see: stalactite
+
+Tell me what to do ? at stalactite
+Stalactite smashes, revealing a passage beyond!
+
+I'm in a dark cavern
+Obvious exits: West.
+I can also see: axe, passage leading east
+
+Tell me what to do ? go passage
+Tell me what to do ? ### now what?
+You use word(s) I don't know!
+Tell me what to do ? 

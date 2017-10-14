@@ -1,0 +1,234 @@
+19540
+26
+45
+28
+34
+5
+2
+1
+3
+100
+28
+1
+
+750 0 0 0 0 0 9900 0
+1507 0 0 0 0 0 9900 0
+900 0 0 0 0 0 9750 0
+1058 0 0 0 0 0 10650 0
+100 29 20 0 0 0 8701 373
+0 0 0 0 0 0 454 12905
+1200 352 0 0 0 0 900 0
+100 644 0 0 0 0 8464 0
+100 624 0 0 0 0 8614 0
+1359 52 0 0 0 0 1050 0
+1359 60 0 0 0 0 1258 0
+1810 68 124 60 40 60 9055 7959
+1800 68 60 0 0 0 9010 0
+1959 62 140 0 0 0 8100 0
+1959 144 120 0 0 0 8100 0
+2111 0 0 0 0 0 1650 0
+2112 103 122 120 140 0 10809 0
+162 142 200 0 0 0 8100 0
+2113 103 162 160 260 0 10809 0
+163 262 300 0 0 0 8100 0
+164 202 260 0 0 0 8100 0
+2400 225 220 0 0 0 7962 0
+165 222 280 0 0 0 8100 0
+2566 242 443 300 440 0 10873 0
+0 240 180 0 0 0 10813 0
+2567 282 0 0 0 0 2188 2313
+1200 484 360 380 0 0 10816 0
+168 382 620 0 0 0 8100 0
+1969 322 500 0 0 0 8100 0
+3000 544 580 0 0 0 8100 0
+3000 584 540 0 0 0 8100 0
+3170 303 422 300 440 0 2622 0
+3316 443 300 440 0 0 2622 0
+3471 412 0 0 0 0 2700 0
+3471 40 0 0 0 0 2908 0
+3622 48 462 40 400 0 9053 10950
+0 460 480 0 0 0 10820 0
+3600 48 40 400 0 0 9053 1371
+173 482 660 0 0 0 8100 0
+3774 502 20 0 0 0 1372 3525
+3925 40 0 0 0 0 3654 0
+4050 0 0 0 0 0 3750 0
+4200 0 0 0 0 0 3985 0
+2400 0 0 0 0 0 3150 0
+3000 0 0 0 0 0 4050 0
+1200 0 0 0 0 0 4200 0
+
+"AUT" "ANY"
+"WAL" "NOR"
+"*ENT" "SOU"
+"*GO" "EAS"
+"*RUN" "WES"
+"INV" "UP"
+"SCO" "DOW"
+"SAV" "INV"
+"DIG" "GAM"
+"TIE" "ROP"
+"TAK" "BAL"
+"*GET" "DOO"
+"TO" "RED"
+"CLI" "BLU"
+"OPE" "GRA"
+"*UNL" "BUS"
+"WAI" "WAT"
+"GIV" "COI"
+"LEA" "HOL"
+"*DRO" "LAD"
+"JUM" "BOT"
+"FIL" "AXE"
+"POU" "STA"
+"THR" "PAS"
+"AT" "COU"
+"KIL" "COF"
+"TEL" "KEY"
+"HEL" "LAM"
+"EXA" "SPA"
+
+0 0 0 0 0 0 ""
+0 0 0 0 0 0 "treasury"
+0 0 3 0 0 0 "coffin"
+8 4 6 2 0 0 "rat-ridden room"
+3 0 5 0 0 0 "chamber"
+6 0 0 4 0 0 "library"
+0 5 0 3 0 0 "*I'm on a balcony"
+0 0 0 0 0 0 "*I'm on a ledge"
+9 3 0 0 0 0 "kitchen"
+0 8 0 0 0 0 "washroom"
+11 0 0 9 0 0 "mortuary"
+12 10 0 0 0 0 "graveyard"
+0 11 0 0 0 0 "*I'm at a bus stop"
+0 0 0 0 11 0 "witch's cave"
+0 0 0 0 0 12 "*I'm on a bus"
+16 0 9 17 0 0 "yard"
+0 15 0 0 0 0 "shed"
+0 18 15 0 0 0 "*I'm east of a pond"
+17 0 34 19 0 0 "swamp"
+20 0 18 24 0 0 "junction"
+21 19 0 0 0 0 "*I'm on a bridge"
+22 20 0 0 0 0 "*I'm on a lawn"
+0 21 0 0 0 0 "dingy hut"
+0 24 0 28 0 0 "*I'm west of a pond"
+23 25 19 27 0 0 "field"
+24 0 0 26 0 0 "forest"
+0 0 0 0 0 0 "*I'm in a pit"
+28 26 24 0 0 0 "*I'm by an impenetrable thicket"
+0 27 23 0 0 0 "thicket"
+30 0 0 0 0 0 "*I'm on a narrow ledge by a chasm"
+0 29 0 0 0 0 "*I'm at the edge of a chasm"
+0 0 32 0 24 0 "entrance to an underground cave"
+0 0 0 31 0 0 "dark cavern"
+0 0 0 32 0 0 "underground chamber"
+0 0 0 18 0 0 "hidden grove"
+
+""
+"Welcome to `NOSFERATU`"
+"Written by Mike Taylor, starting Sunday 25th November 2001"
+"This is a demo for the `sac` adventure system --"
+"See http://www.miketaylor.org.uk/tech/advent/sac/"
+"Your task is to kill the evil count Nosferatu."
+"I can't dig without a spade."
+"Huh?  What rope?"
+"In 2 words tell me to what...like: TO TREE"
+"OK."
+"What a stupid concept."
+"Which door?  Use OPEN RED or OPEN BLUE."
+"The bus arrives."
+"Witch drinks water, rejuvenates, drops something and disappears!"
+"He takes them and rings a bell.  The bus starts."
+"You arrive home."
+"I break through to an underground chamber!"
+"OK"
+"Huh?  What axe?"
+"In 2 words tell me at what...like: AT TREE"
+"Stalactite smashes, revealing a passage beyond!"
+"Nothing happens."
+"I punch him and he crumbles to dust."
+"Huh!  That was easier than I expected!"
+">Fzing!<"
+"You'll have to figure it out for yourself."
+"It looks like a pretty average"
+"Wheee!"
+"I find nothing."
+
+"sign says: you shouldn't be here!" 1
+"*treasure* (you shouldn't be able to see this)" 0
+"long rope/ROP/" 4
+"rope tied to a railing" 0
+"dangling end of rope" 7
+"key/KEY/" 7
+"locked red door in east wall" 9
+"open red door in east wall" 0
+"locked blue door in west wall" 9
+"old-fashioned brass lamp/LAM/" 0
+"open grave" 11
+"bus" 0
+"old witch" 13
+"open blue door in west wall" 0
+"bus conductor" 14
+"empty bottle/BOT/" 16
+"ladder/LAD/" 16
+"spade/SPA/" 22
+"crucifix engraved on the ground" 24
+"hole in the ground" 0
+"axe/AXE/" 26
+"fountain of life" 30
+"bottle full of water of life/BOT/" 0
+"stalactite" 32
+"passage leading east" 0
+"Count Nosferatu sleeps on an altar" 33
+"coins/COI/" 34
+
+""
+""
+""
+""
+""
+""
+""
+"everywhere inside the cavern is dark"
+"everywhere outside the entrance is light"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+1
+18401
+0
