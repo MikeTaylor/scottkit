@@ -302,14 +302,14 @@ action OPEN RED when present key and here reddoor
 action GO RED when here redopen
 	goto mortuary
 
-action OPEN BLU when present key and here bluedoor
+action OPEN BLUE when present key and here bluedoor
 	swap bluedoor blueopen
 	print "OK."
 
-action GO BLU when here blueopen
+action GO BLUE when here blueopen
 	goto yard
 
-action GO GRA when here grave
+action GO GRAVE when here grave
 	goto cave
 
 action WAIT when !here bus
