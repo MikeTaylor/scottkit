@@ -149,7 +149,7 @@ item treasure "*treasure* (you shouldn't be able to see this)"
 	nowhere
 
 item rope "long rope"
-	called ROP
+	called ROPE
 	at chamber
 
 item railing "rope tied to a railing"
@@ -172,7 +172,7 @@ item bluedoor "locked blue door in west wall"
 	at washroom
 
 item lamp "old-fashioned brass lamp"
-	called LAM
+	called LAMP
 	nowhere
 
 item grave "open grave"
@@ -191,15 +191,15 @@ item conductor "bus conductor"
 	at bus
 
 item bottle "empty bottle"
-	called BOT
+	called BOTTLE
 	at shed
 
 item ladder "ladder"
-	called LAD
+	called LADDER
 	at shed
 
 item spade "spade"
-	called SPA
+	called SPADE
 	at hut
 
 item crucifix "crucifix engraved on the ground"
@@ -216,7 +216,7 @@ item fountain "fountain of life"
 	at edge
 
 item fullbottle "bottle full of water of life"
-	called BOT
+	called BOTTLE
 	nowhere
 
 item stalactite "stalactite"
@@ -229,7 +229,7 @@ item count "Count Nosferatu sleeps on an altar"
 	at underground
 
 item coins "coins"
-	called COI
+	called COINS
 	at grove
 
 action INV:
