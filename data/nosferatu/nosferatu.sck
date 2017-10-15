@@ -13,8 +13,8 @@ wordlen 3
 maxload 5
 start coffin
 treasury hidden
-lightsource lamp
-lighttime 100
+lightsource litlamp
+lighttime 999
 unknown1 19540
 unknown2 0
 
@@ -24,8 +24,9 @@ verbgroup TAKE GET
 verbgroup OPEN UNLOCK
 verbgroup LOOK L
 
-room hidden "treasury"
-	item sign "sign says: you shouldn't be here!"
+noungroup AXE AX
+
+room hidden "hidden treasury"
 	item treasure "*treasure* (you shouldn't be able to see this)" nowhere
 
 room coffin "tall, satin-lined wooden box."
@@ -41,6 +42,8 @@ room crypt "dark crypt."
     exit north empty
     exit east library
 	item sarcophagus "stone Sarcophagus"
+	item body "decomposing Body" nowhere
+	item dust "pile of Dust" nowhere
 	item cross "wooden Cross" called CROSS nowhere
 
 room library "*I'm in the library."
@@ -66,12 +69,13 @@ room kitchen "*I'm in the kitchen"
     exit north washroom
     exit south empty
 	item whisky "bottle of Whisky" called WHISKY
+	item emptybottle "empty whisky Bottle" called BOTTLE nowhere
 
 room washroom "*I'm in the washroom."
     exit south kitchen
     exit east mortuary
-	item bluedoor "locked blue door in west wall"
-	item blueopen "open blue door in west wall" nowhere
+	item lockeddoor "locked Door"
+	item opendoor "wide open Door" nowhere
 	item rope "long Rope" called ROPE
 
 room mortuary "*I'm in the mortuary."
@@ -89,99 +93,116 @@ room busstop "*I'm by a bus-stop."
     exit south graveyard
 	item bus "large red no. 29 Bus" nowhere
 
-room cave "witch's cave"
-    exit up graveyard
-	item witch "old witch"
-	item lamp "old-fashioned brass lamp" called LAMP nowhere
+room cave "dark gloomy cave."
+	item witch "wrinkled old Witch"
+	item gravehole "Hole (above me)"
+	item lamp "old Lamp" called LAMP nowhere
+	item litlamp "lit Lamp" called LAMP nowhere
 
 room bus "*I'm on a double-decker bus."
     exit south busstop
 	item conductor "bus Conductor"
 
-room yard "yard"
+room yard "rather dark yard."
     exit north shed
     exit east washroom
     exit west pond
+	item axe "sharp Axe" called AXE
 
-room shed "shed"
+room shed "daek shed"
     exit south yard
-	item bottle "empty bottle" called BOTTLE
-	item ladder "ladder" called LADDER
+	item ladder "tall Ladder" called LADDER
 
-room pond "*I'm east of a pond"
+room pond "*I'm by a fishpond ..."
     exit south swamp
     exit east yard
+	item shark "maneating Shark!"
 
-room swamp "swamp"
+room swamp "damp swamp."
     exit north pond
-    exit east grove
+    exit east grove # This exit does not exist in the original
     exit west junction
 
-room junction "junction"
+room junction "*I'm on a track. To my North is a bridge over a pond."
     exit north bridge
     exit east swamp
     exit west field
 
-room bridge "*I'm on a bridge"
+room bridge "*I'm on a very flimsy bridge..."
     exit north lawn
     exit south junction
+	# XXX should fall to death if carrying more than one item
 
-room lawn "*I'm on a lawn"
-    exit north hut
+room lawn "*I'm on a lawn to the North of a point."
+    exit north hut # This exit does not exist in the original
     exit south bridge
+	item hut "Hut with locked door"
+	item smashed "Hut with smashed door" nowhere
 
-room hut "dingy hut"
+room hut "small hut"
     exit south lawn
-	item spade "spade" called SPADE
+	item spade "garden Spade" called SPADE
+	item stick "sharp wooden Stick" called STICK
+		# The stick seems to be a complete red herring
 
-room westpond "*I'm west of a pond"
+room westpond "*I'm west of a pond."
     exit south field
-    exit west thicket
+    exit west cliff
 
-room field "field"
+room field "summy field."
     exit north westpond
     exit south forest
     exit east junction
     exit west bythicket
-	item crucifix "crucifix engraved on the ground"
-	item hole "hole in the ground" nowhere
+	item crucifix "crusifix engraved on the ground"
+	item pit "Pit in the ground" nowhere
 
 room forest "forest"
     exit north field
-    exit west pit
+    exit west inpit
 
-room pit "*I'm in a pit"
-	item axe "axe" called AXE
+room inpit "*I'm in a pit"
 
-room bythicket "*I'm by an impenetrable thicket"
-    exit north thicket
-    exit south pit
+room bythicket "*I'm north of a rather smelly hole."
+    exit north cliff
+    exit south inpit
     exit east field
+	item wall2 "brick Wall"
 
-room thicket "thicket"
+room cliff "*I'm at the top of a cliff."
     exit south bythicket
     exit east westpond
+	item thicket "inpenetrable Thicket"
+	item mutilated "mutilated thicket" nowhere
+	item sign1 "Sign here says: 'EXA NO FO TROHS'"
+	item sign2 "SHORT OF AN AXE' is written backwards on a Sign nearby'" nowhere
 
-room chasm "*I'm on a narrow ledge by a chasm"
+room chasm "*I'm on a narrow ledge, East of a chasm."
     exit north edge
+	item wall1 "brick Wall"
+	item match "safety Match" called MATCH
 
-room edge "*I'm at the edge of a chasm"
+room edge "*I'm at the edge of a deep chasm."
     exit south chasm
-	item fountain "fountain of life"
-	item fullbottle "bottle full of water of life" called BOTTLE nowhere
+    exit east cliff
+	item water "Water of youth"
+	item fountain "Fountain of youth"
+	item holeinthicket "Hole in thicket"
+	item bottle "whisky Bottle" called BOTTLE nowhere
 
-room entrance "entrance to an underground cave"
-    exit east cavern
-    exit up field
+room bottom "*I'm at the bottom of a deep hole."
+	item tunnel "secret Tunnel"
 
-room cavern "dark cavern"
-    exit west entrance
-	item stalactite "stalactite"
-	item passage "passage leading east" nowhere
+room cavern "subterranean cavern."
+    exit south bottom
+	item stalactite "Stalactites hanging from the ceiling"
+	item entrance "entrance to cave" nowhere
 
-room underground "underground chamber"
-    exit west cavern
-	item count "Count Nosferatu sleeps on an altar"
+room underground "cavern where the count sleeps."
+    exit south cavern
+	item count "the count Nosferatu"
+	item altar "stone Altar"
+	item bloodstone "giant *BLOODSTONE*" called BLOODSTONE
 
 room grove "hidden grove"
     exit west swamp
@@ -211,17 +232,21 @@ occur when !flag 1
 	print "Your task is to kill the evil count Nosferatu and get back home."
 
 action DIG when !present spade
-	print "I can't dig without a spade."
+	print "I'll need a spade."
 
-occur when at cavern
+occur when at cavern and !flag 15
 	set_dark
-	look
+	look # XXX should only do this when changing state
 	comment "everywhere inside the cavern is dark"
 
-occur when at entrance
+occur when at bottom and flag 15
 	clear_dark
-	look
-	comment "everywhere outside the entrance is light"
+	look # XXX should only do this when changing state
+	comment "everywhere outside the bottom of the pit is light"
+
+occur when at underground and !carried cross
+	print "Nosferatu rises from his altar, and bites my neck!"
+	game_over
 
 action TIE ROPE when !present rope
 	print "Huh?  What rope?"
@@ -254,14 +279,13 @@ action CLIMB ROPE when at ledge and carried kipper
 action CLIMB ROPE when at ledge
 	goto balcony
 
-action OPEN DOOR
-	print "Which door? Use OPEN BLUE."
-
-action OPEN BLUE when present key and here bluedoor
-	swap bluedoor blueopen
+action OPEN DOOR when present key and here lockeddoor
+	swap lockeddoor opendoor
 	print "OK."
+	look
+	comment "In the original, this created a new exit leading west, but we can't do that in the Scott Adams engine. Instead, the player must GO DOOR."
 
-action GO BLUE when here blueopen
+action GO DOOR when here opendoor
 	goto yard
 
 action GO GRAVE when here grave
@@ -274,13 +298,13 @@ action WAIT when !here bus
 action GO BUS when here bus
 	goto bus
 
-action GIVE WATER when here witch and present fullbottle
-	swap bottle fullbottle
-	continue
-
-occur 0%
+action DROP BOTTLE when here witch and carried water
+	destroy water
+	drop bottle
+	continue occur 0%
 	swap witch lamp
-	print "Witch drinks water, rejuvenates, drops something and disappears!"
+	print "The witch drinks the water, rejuvenates, drops something, and disappears!"
+	look
 
 action GIVE COINS when here conductor
 	print "He takes them and rings a bell.  The bus starts."
@@ -289,11 +313,12 @@ action GIVE COINS when here conductor
 	game_over
 
 action DIG when at field
-	swap crucifix hole
+	swap crucifix pit
 	print "I break through to an underground chamber!"
+	look
 
-action GO HOLE when here hole
-	goto entrance
+action GO PIT when here pit
+	goto bottom
 
 action CLIMB LADDER when here ladder
 	goto forest
@@ -304,29 +329,41 @@ action JUMP when at bythicket
 action JUMP when at chasm
 	goto bythicket
 
-action FILL BOTTLE when present bottle and here fountain
+action GET WATER when present emptybottle and here fountain
 	print OK
-	swap bottle fullbottle
+	swap emptybottle bottle
+	superget water
 
-action POUR WATER when present fullbottle
+action POUR WATER when carried water
 	print OK
-	swap bottle fullbottle
+	destroy water
+	swap bottle emptybottle
 
 action THROW AXE when !present axe
 	print "Huh?  What axe?"
 
 action THROW AXE
-	print "In 2 words tell me at what...like: AT TREE"
+	print "At what (eg. at bus)"
 	set_flag 2
+
+action AT DOOR when flag 2 and here hut
+	clear_flag 2
+	drop axe
+	continue occur 0%
+	swap hut smashed
+	print "It shatters!"
+	look
+
+action GO DOOR when here smashed
+	goto hut
 
 action AT STALACTITE when flag 2 and here stalactite
 	clear_flag 2
 	drop axe
-	continue
-
-occur 0%
-	swap stalactite passage
-	print "Stalactite smashes, revealing a passage beyond!"
+	continue occur 0%
+	swap stalactite entrance
+	print "It shatters!"
+	look
 
 action AT when flag 2
 	clear_flag 2
@@ -334,14 +371,14 @@ action AT when flag 2
 	print "OK."
 	print "Nothing happens."
 
-action GO PASSAGE when here passage
+action GO ENTRANCE when here entrance
 	goto underground
 
 action KILL COUNT when here count
 	print "OK."
 	print "I punch him and he crumbles to dust."
 	print "Huh!  That was easier than I expected!"
-	put_with treasure sign
+	put treasure hidden
 
 action TELEPORT COFFIN
 	print ">Fzing!<"
@@ -363,15 +400,47 @@ action DRINK WHISKY when present whisky
 	print "OK."
 	print "Burp!  It's good!"
 	print "I feel stronger."
+	swap whisky emptybottle
 	set_flag 4
 
 action OPEN SARCOPHAGUS when here sarcophagus and flag 4
 	print "I find something!"
+	drop body
 	drop cross
 	look
 
 action OPEN SARCOPHAGUS when here sarcophagus
-       print "It's too heavy!"
+	print "It's too heavy!"
+
+action GET BODY when here body
+	print "It turns to dust!"
+	destroy body
+	drop dust
+
+action GET DUST when here dust
+	print "It slips through my fingers"
+
+action CHOP THICKET when carried axe and here thicket
+	swap thicket mutilated
+	continue occur 0%
+	swap sign1 sign2
+	print "OK"
+
+action GO THICKET when here mutilated
+	goto edge
+
+action GO HOLE when here gravehole
+	goto graveyard
+
+action GO TUNNEL when here tunnel
+	goto cavern
+
+# XXX Should require the match. Check original for message when it's missing
+action LIGHT LAMP when present lamp
+	swap lamp litlamp
+	print "OK"
+	look
+	comment "We only really want to look if it was previously dark. Can do this with flags."
 
 action HELP:
 	print "You'll have to figure it out for yourself."
