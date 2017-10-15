@@ -24,30 +24,70 @@ I'm in a dark crypt.
 Obvious exits: North, East.
 I can also see: stone Sarcophagus
 
-Tell me what to do ? get rope
-It's beyond my power to do that.
 Tell me what to do ? e
 
 I'm in the library.
 Obvious exits: North, West.
 I can also see: transylvanian Atlas, book of Magic, book of Games
 
+Tell me what to do ? get magic
+O.K.
+Tell me what to do ? read magic		Magic word is: 'OVYEZ'
+The book says:
+
+Magic word id: 'OVYEZ'
+Tell me what to do ? drop magic
+O.K.
 Tell me what to do ? n
+
+I'm on a balcony overlooking a tall cliff.
+Obvious exits: South, West.
+I can also see: balcony Rail
+
+Tell me what to do ? w
+
+I'm in an empty room.
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? n
+
+I'm in the kitchen
+Obvious exits: North, South.
+I can also see: bottle of Whisky
+
+Tell me what to do ? n
+
+I'm in the washroom.
+Obvious exits: South, East.
+I can also see: locked Door, long Rope
+
+Tell me what to do ? get rope
+O.K.
+Tell me what to do ? s
+
+I'm in the kitchen
+Obvious exits: North, South.
+I can also see: bottle of Whisky
+
+Tell me what to do ? s
+
+I'm in an empty room.
+Obvious exits: North, South, East, West.
+
+Tell me what to do ? e
 
 I'm on a balcony overlooking a tall cliff.
 Obvious exits: South, West.
 I can also see: balcony Rail
 
 Tell me what to do ? tie rope
-Huh?  What rope?
-Tell me what to do ? to balcony
-I can't do that yet.
+To what (eg. to key)
+Tell me what to do ? to rail
+OK.
 Tell me what to do ? climb rope
-I can't do that yet.
-Tell me what to do ? get key 
-It's beyond my power to do that.
-Tell me what to do ? climb rope 
-I can't do that yet.
+Tell me what to do ? get key			(The scarlet kipper is a red herring)
+O.K.
+Tell me what to do ? climb rope
 Tell me what to do ? w
 
 I'm in an empty room.
@@ -59,190 +99,33 @@ I'm in the kitchen
 Obvious exits: North, South.
 I can also see: bottle of Whisky
 
-Tell me what to do ? n
-
-I'm in the washroom.
-Obvious exits: South, East.
-I can also see: locked blue door in west wall, long Rope
-
-Tell me what to do ? open red
-You use word(s) I don't know!
-Tell me what to do ? open blue
-I can't do that yet.
-Tell me what to do ? drop key
-It's beyond my power to do that.
-Tell me what to do ? go blue
-I can't do that yet.
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? get bottle
-It's beyond my power to do that.
-Tell me what to do ? get ladder
-It's beyond my power to do that.
-Tell me what to do ? s
-
-I'm in the kitchen
-Obvious exits: North, South.
-I can also see: bottle of Whisky
-
-Tell me what to do ? w
-I can't go in that direction.
+Tell me what to do ? get whisky
+O.K.
 Tell me what to do ? s
 
 I'm in an empty room.
 Obvious exits: North, South, East, West.
 
-Tell me what to do ? w
-
-I'm in a tall, satin-lined wooden box.
-Obvious exits: East.
-
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? get spade
-It's beyond my power to do that.
 Tell me what to do ? s
-I can't go in that direction.
-Tell me what to do ? s
-I can't go in that direction.
-Tell me what to do ? s
-I can't go in that direction.
-Tell me what to do ? w
-I can't go in that direction.
-Tell me what to do ? dig
-I can't dig without a spade.
-Tell me what to do ? drop spade
-It's beyond my power to do that.
-Tell me what to do ? w
-I can't go in that direction.
-Tell me what to do ? jump
-Wheee!
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? fill bottle
-I can't do that yet.
-Tell me what to do ? s
-I can't go in that direction.
-Tell me what to do ? jump
-Wheee!
-Tell me what to do ? e
-
-I'm in an empty room.
-Obvious exits: North, South, East, West.
-
-Tell me what to do ? e
-
-I'm on a balcony overlooking a tall cliff.
-Obvious exits: South, West.
-I can also see: balcony Rail
-
-Tell me what to do ? e
-I can't go in that direction.
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? e
-I can't go in that direction.
-Tell me what to do ? e
-I can't go in that direction.
-Tell me what to do ? go red
-You use word(s) I don't know!
-Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? go grave
-I can't do that yet.
-Tell me what to do ? give water
-I can't do that yet.
-Tell me what to do ? drop bottle
-It's beyond my power to do that.
-Tell me what to do ? get lamp
-It's beyond my power to do that.
-Tell me what to do ? u
-I can't go in that direction.
-Tell me what to do ? s
-
-I'm in the library.
-Obvious exits: North, West.
-I can also see: transylvanian Atlas, book of Magic, book of Games
-
-Tell me what to do ? w
 
 I'm in a dark crypt.
 Obvious exits: North, East.
 I can also see: stone Sarcophagus
 
-Tell me what to do ? go blue
-I can't do that yet.
-Tell me what to do ? w
-I can't go in that direction.
-Tell me what to do ? s
-I can't go in that direction.
-Tell me what to do ? w
-I can't go in that direction.
-Tell me what to do ? w
-I can't go in that direction.
-Tell me what to do ? w
-I can't go in that direction.
-Tell me what to do ? s
-I can't go in that direction.
-Tell me what to do ? get axe
-It's beyond my power to do that.
-Tell me what to do ? drop ladder
-It's beyond my power to do that.
-Tell me what to do ? climb ladder
-I can't do that yet.
+Tell me what to do ? drink whisky		(Otherwise the lid is too heavy to move)
+OK.
+Burp!  It's good!
+I feel stronger.
+Tell me what to do ? open sarcophagus
+I find something!
+
+I'm in a dark crypt.
+Obvious exits: North, East.
+I can also see: stone Sarcophagus, decomposing Body, wooden Cross
+
+Tell me what to do ? get cross		(Carrying this stops the Count killing me)
+O.K.
 Tell me what to do ? n
-
-I'm in an empty room.
-Obvious exits: North, South, East, West.
-
-Tell me what to do ? go hole
-I can't do that yet.
-Tell me what to do ? e
-
-I'm on a balcony overlooking a tall cliff.
-Obvious exits: South, West.
-I can also see: balcony Rail
-
-Tell me what to do ? throw axe
-Huh?  What axe?
-Tell me what to do ? at stalactite
-I can't do that yet.
-Tell me what to do ? go passage
-I can't do that yet.
-Tell me what to do ? kill count
-I can't do that yet.
-Tell me what to do ? w
-
-I'm in an empty room.
-Obvious exits: North, South, East, West.
-
-Tell me what to do ? w
-
-I'm in a tall, satin-lined wooden box.
-Obvious exits: East.
-
-Tell me what to do ? u
-I can't go in that direction.
-Tell me what to do ? e
-
-I'm in an empty room.
-Obvious exits: North, South, East, West.
-
-Tell me what to do ? e
-
-I'm on a balcony overlooking a tall cliff.
-Obvious exits: South, West.
-I can also see: balcony Rail
-
-Tell me what to do ? e
-I can't go in that direction.
-Tell me what to do ? get coins
-It's beyond my power to do that.
-Tell me what to do ? w
 
 I'm in an empty room.
 Obvious exits: North, South, East, West.
@@ -251,26 +134,319 @@ Tell me what to do ? n
 
 I'm in the kitchen
 Obvious exits: North, South.
-I can also see: bottle of Whisky
 
-Tell me what to do ? e
-I can't go in that direction.
-Tell me what to do ? e
-I can't go in that direction.
-Tell me what to do ? go red
-You use word(s) I don't know!
 Tell me what to do ? n
 
 I'm in the washroom.
 Obvious exits: South, East.
-I can also see: locked blue door in west wall, long Rope
+I can also see: locked Door
+
+Tell me what to do ? open door
+OK.
+
+I'm in the washroom.
+Obvious exits: South, East.
+I can also see: wide open Door
+
+Tell me what to do ? drop key
+O.K.
+Tell me what to do ? go door			(Just "w" in the original, where a new exit opens)
+Tell me what to do ? get axe
+O.K.
+Tell me what to do ? n
+
+I'm in a daek shed
+Obvious exits: South.
+I can also see: tall Ladder
+
+Tell me what to do ? get ladder
+O.K.
+Tell me what to do ? s
+
+I'm in a rather dark yard.
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm by a fishpond ...
+Obvious exits: South, East.
+I can also see: maneating Shark!
+
+Tell me what to do ? s
+
+I'm in a damp swamp.
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm on a track. To my North is a bridge over a pond.
+Obvious exits: North, East, West.
+
+Tell me what to do ? drop bottle
+O.K.
+Tell me what to do ? drop ladder
+O.K.
+Tell me what to do ? drop cross
+O.K.
+Tell me what to do ? n
+
+I'm on a very flimsy bridge...
+Obvious exits: North, South.
 
 Tell me what to do ? n
-I can't go in that direction.
-Tell me what to do ? wait
-The bus arrives.
-Tell me what to do ? go bus
-Tell me what to do ? give coins
-He takes them and rings a bell.  The bus starts.
-You arrive home.
-The game is now over.
+
+I'm on a lawn to the North of a point.
+Obvious exits: North, South.
+I can also see: Hut with locked door
+
+Tell me what to do ? throw axe
+At what (eg. at bus)
+Tell me what to do ? at door
+It shatters!
+
+I'm on a lawn to the North of a point.
+Obvious exits: North, South.
+I can also see: sharp Axe, Hut with smashed door
+
+Tell me what to do ? go door			(Just "n" in the original, where a new exit opens)
+Tell me what to do ? get spade
+O.K.
+Tell me what to do ? s
+
+I'm on a lawn to the North of a point.
+Obvious exits: North, South.
+I can also see: sharp Axe, Hut with smashed door
+
+Tell me what to do ? s
+
+I'm on a very flimsy bridge...
+Obvious exits: North, South.
+
+Tell me what to do ? s
+
+I'm on a track. To my North is a bridge over a pond.
+Obvious exits: North, East, West.
+I can also see: wooden Cross, empty whisky Bottle, tall Ladder
+
+Tell me what to do ? drop spade
+O.K.
+Tell me what to do ? n
+
+I'm on a very flimsy bridge...
+Obvious exits: North, South.
+
+Tell me what to do ? n
+
+I'm on a lawn to the North of a point.
+Obvious exits: North, South.
+I can also see: sharp Axe, Hut with smashed door
+
+Tell me what to do ? get axe
+O.K.
+Tell me what to do ? s
+
+I'm on a very flimsy bridge...
+Obvious exits: North, South.
+
+Tell me what to do ? s
+
+I'm on a track. To my North is a bridge over a pond.
+Obvious exits: North, East, West.
+I can also see: wooden Cross, empty whisky Bottle, tall Ladder, garden Spade
+
+Tell me what to do ? get bottle
+O.K.
+Tell me what to do ? w
+
+I'm in a summy field.
+Obvious exits: North, South, East, West.
+I can also see: crusifix engraved on the ground
+
+Tell me what to do ? n
+
+I'm west of a pond.
+Obvious exits: South, West.
+
+Tell me what to do ? w
+
+I'm at the top of a cliff.
+Obvious exits: South, East.
+I can also see: inpenetrable Thicket, Sign here says: 'EXA NO FO TROHS'
+
+Tell me what to do ? chop thicket
+OK
+Tell me what to do ? go thicket		(Just "w" in the original, where a new exit opens)
+Tell me what to do ? get water
+OK
+Tell me what to do ? s
+
+I'm on a narrow ledge, East of a chasm.
+Obvious exits: North.
+I can also see: brick Wall, safety Match
+
+Tell me what to do ? get match
+O.K.
+Tell me what to do ? n
+
+I'm at the edge of a deep chasm.
+Obvious exits: South, East.
+I can also see: Fountain of youth, Hole in thicket
+
+Tell me what to do ? e
+
+I'm at the top of a cliff.
+Obvious exits: South, East.
+I can also see: mutilated thicket, SHORT OF AN AXE' is written backwards on a Sign nearby'
+
+Tell me what to do ? s
+
+I'm north of a rather smelly hole.
+Obvious exits: North, South, East.
+I can also see: brick Wall
+
+Tell me what to do ? e
+
+I'm in a summy field.
+Obvious exits: North, South, East, West.
+I can also see: crusifix engraved on the ground
+
+Tell me what to do ? e
+
+I'm on a track. To my North is a bridge over a pond.
+Obvious exits: North, East, West.
+I can also see: wooden Cross, tall Ladder, garden Spade
+
+Tell me what to do ? e
+
+I'm in a damp swamp.
+Obvious exits: North, East, West.
+
+Tell me what to do ? n
+
+I'm by a fishpond ...
+Obvious exits: South, East.
+I can also see: maneating Shark!
+
+Tell me what to do ? e
+
+I'm in a rather dark yard.
+Obvious exits: North, East, West.
+
+Tell me what to do ? e
+
+I'm in the washroom.
+Obvious exits: South, East.
+I can also see: brass Key, wide open Door
+
+Tell me what to do ? e
+
+I'm in the mortuary.
+Obvious exits: North, West.
+I can also see: 7-pound Mallet
+
+Tell me what to do ? n
+
+I'm in a desolate windswept graveyard.
+Obvious exits: North, South.
+I can also see: newely dug open Grave, tombstone engraved: BEWARE THE WITCH
+
+Tell me what to do ? go grave
+Tell me what to do ? drop bottle
+The witch drinks the water, rejuvenates, drops something, and disappears!
+
+I'm in a dark gloomy cave.
+I can also see: Hole (above me), old Lamp, whisky Bottle
+
+Tell me what to do ? get lamp
+O.K.
+Tell me what to do ? go hole
+Tell me what to do ? s
+
+I'm in the mortuary.
+Obvious exits: North, West.
+I can also see: 7-pound Mallet
+
+Tell me what to do ? w
+
+I'm in the washroom.
+Obvious exits: South, East.
+I can also see: brass Key, wide open Door
+
+Tell me what to do ? go door			(Just "w" in the original, where a new exit opens)
+Tell me what to do ? w
+
+I'm by a fishpond ...
+Obvious exits: South, East.
+I can also see: maneating Shark!
+
+Tell me what to do ? s
+
+I'm in a damp swamp.
+Obvious exits: North, East, West.
+
+Tell me what to do ? w
+
+I'm on a track. To my North is a bridge over a pond.
+Obvious exits: North, East, West.
+I can also see: wooden Cross, tall Ladder, garden Spade
+
+Tell me what to do ? get spade
+O.K.
+Tell me what to do ? get ladder
+O.K.
+Tell me what to do ? w
+
+I'm in a summy field.
+Obvious exits: North, South, East, West.
+I can also see: crusifix engraved on the ground
+
+Tell me what to do ? dig hole
+I break through to an underground chamber!
+
+I'm in a summy field.
+Obvious exits: North, South, East, West.
+I can also see: Pit in the ground
+
+Tell me what to do ? drop spade
+O.K.
+Tell me what to do ? e
+
+I'm on a track. To my North is a bridge over a pond.
+Obvious exits: North, East, West.
+I can also see: wooden Cross
+
+Tell me what to do ? get cross
+O.K.
+Tell me what to do ? w
+
+I'm in a summy field.
+Obvious exits: North, South, East, West.
+I can also see: garden Spade, Pit in the ground
+
+Tell me what to do ? go pit
+Tell me what to do ? drop ladder
+O.K.
+Tell me what to do ? go tunnel
+
+I can't see. It is too dark!
+
+Tell me what to do ? light lamp
+OK
+
+I'm in a subterranean cavern.
+Obvious exits: South.
+I can also see: Stalactites hanging from the ceiling
+
+Tell me what to do ? drop match
+O.K.
+Tell me what to do ? throw axe
+At what (eg. at bus)
+Tell me what to do ? at stalactite
+It shatters!
+
+I'm in a subterranean cavern.
+Obvious exits: South.
+I can also see: sharp Axe, safety Match, entrance to cave
+
+Tell me what to do ? go entrance		(Just "n" in the original, where a new exit opens)
+Tell me what to do ? 
