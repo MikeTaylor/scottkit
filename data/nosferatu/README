@@ -4,6 +4,9 @@ http://www.miketaylor.org.uk/tech/advent/nos/
 It was originally written in lovingly hand-crafted BASIC for the
 VIC-20 with 8k expansion, and marketed by Terminal Software.
 
+To play the VIC-20 original in an emulator:
+$ xvic -memory 8k -autostart ~/web/new/comp/tech/advent/nos/NOSFERAT.TAP
+
 Known bugs:
 * "wait" always summons bus.
 * "climb ladder" always works as a teleport
