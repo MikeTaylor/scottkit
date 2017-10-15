@@ -1,6 +1,12 @@
 # NOSFERATU: a vampire-themed adventure game
 # By Mike Taylor, copyright (C) 1982, 2001 and 2017
 
+# Use of flags:
+# 1: Start-of-game message has been printed
+# 2: THROW AXE has been issued: awaiting AT THING
+# 3: TIE ROPE has been issued: awaiting TO THING
+# 4: Whisky has been drunk
+
 ident 18401
 version 1
 wordlen 3
@@ -16,6 +22,7 @@ verbgroup WALK ENTER GO RUN
 verbgroup LEAVE DROP
 verbgroup TAKE GET
 verbgroup OPEN UNLOCK
+verbgroup LOOK L
 
 room hidden "treasury"
 	item sign "sign says: you shouldn't be here!"
@@ -34,24 +41,26 @@ room crypt "dark crypt."
     exit north empty
     exit east library
 	item sarcophagus "stone Sarcophagus"
+	item cross "wooden Cross" called CROSS nowhere
 
 room library "*I'm in the library."
     exit north balcony
     exit west crypt
 
-	item atlas "transylvanian Atlas"
-	item magic "book of Magic"
-	item games "book of Games"
+	item atlas "transylvanian Atlas" called ATLAS
+	item magic "book of Magic" called MAGIC
+	item games "book of Games" called GAMES
 
 room balcony "*I'm on a balcony overlooking a tall cliff."
     exit south library
     exit west empty
+	item ropetied "rope tied to rail" nowhere
 	item rail "balcony Rail"
-	item ropetied "rope tied to a railing" nowhere
 
-room ledge "*I'm on a ledge"
-	item dangling "dangling end of rope"
-	item key "key" called KEY
+room ledge "*I'm on a narrow ledge high up on a cliff."
+	item key "brass Key" called KEY
+	item kipper "scarlet Kipper" called KIPPER
+	item hanging "hanging Rope"
 
 room kitchen "*I'm in the kitchen"
     exit north washroom
@@ -218,10 +227,10 @@ action TIE ROPE when !present rope
 	print "Huh?  What rope?"
 
 action TIE ROPE
-	print "In 2 words tell me to what...like: TO TREE"
+	print "To what (eg. to key)"
 	set_flag 3
 
-action TO BALCONY when flag 3 and at balcony
+action TO RAIL when flag 3 and at balcony
 	clear_flag 3
 	destroy rope
 	drop ropetied
@@ -231,8 +240,16 @@ action TO when flag 3
 	clear_flag 3
 	print "What a stupid concept."
 
+action TO:
+	print "Huh?"
+
 action CLIMB ROPE when here ropetied
 	goto ledge
+
+action CLIMB ROPE when at ledge and carried kipper
+	print "I'm too heavy: I fall!"
+	game_over
+	comment "We would rather this happen carrying more than one object, but this is near enough."
 
 action CLIMB ROPE when at ledge
 	goto balcony
@@ -330,6 +347,32 @@ action TELEPORT COFFIN
 	print ">Fzing!<"
 	goto coffin
 
+action READ BOOK
+	print "Which one?"
+
+action READ ATLAS when present atlas
+	print "The book says:\n\nNear the forest is a disused cess-pet."
+
+action READ MAGIC when present magic
+	print "The book says:\n\nMagic word id: 'OVYEZ'"
+
+action READ GAMES when present games
+	print "The book says:\n\nBored with this game already, huh?"
+
+action DRINK WHISKY when present whisky
+	print "OK."
+	print "Burp!  It's good!"
+	print "I feel stronger."
+	set_flag 4
+
+action OPEN SARCOPHAGUS when here sarcophagus and flag 4
+	print "I find something!"
+	drop cross
+	look
+
+action OPEN SARCOPHAGUS when here sarcophagus
+       print "It's too heavy!"
+
 action HELP:
 	print "You'll have to figure it out for yourself."
 
@@ -346,15 +389,6 @@ action JUMP:
 action DIG:
 	print "I find nothing."
 
-action READ BOOK
-	print "Which one?"
-
-action READ ATLAS when present atlas
-	print "The book says:\n\nNear the forest is a disused cess-pet."
-
-action READ MAGIC when present magic
-	print "The book says:\n\nMagic word id: 'OVYEZ'"
-
-action READ GAMES when present games
-	print "The book says:\n\nBored with this game already, huh?"
+action LOOK:
+	look
 
