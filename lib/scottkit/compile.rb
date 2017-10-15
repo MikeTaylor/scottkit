@@ -346,6 +346,8 @@ module ScottKit
             if op == 0
               next
             elsif op == "print"
+              arg0.gsub!('\n', "\n");
+              arg0.gsub!('\t', "\t");
               if !(msgno = messagemap[arg0])
                 messages << arg0
                 msgno = messagemap[arg0] = messages.size-1
