@@ -6,6 +6,8 @@
 * Use the special name `_` for the unused variable representing the redundant dark-flag part of save-files. This avoids an unused-variable warning when running under certain older versions of Ruby.
 * Top-level README links to the tutorial and reference manual.
 * Add new game, [`data/nosferatu`](data/nosferatu), ported from the Games::ScottAdams reimplementation of the 1982 VIC-20 BASIC game. This is incomplete.
+* Escape sequences for newline (`\n`) and tab (`\t`) are interpreted in printed strings.
+* Add discussion of the `print` action to the reference guide.
 
 ## 1.1.0 (Thu Oct 12 21:59:28 BST 2017)
 
