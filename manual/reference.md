@@ -530,6 +530,10 @@ necessary, to place each result on its own line.
 
 The following opcodes are supported:
 
+* `print` _string_
+--
+Prints the specified string. Within that string, `\n` sequences are interpreted as newlines, and `\t` sequences as tabs.
+
 * `goto` _room_
 --
 Moves to the specified _room_ and displays its description.
