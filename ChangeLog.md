@@ -1,6 +1,6 @@
 # Revision history for Ruby gem ScottKit
 
-## 1.2.0 (IN PROGRESS)
+## 1.2.0 (Mon Oct 16 15:11:44 BST 2017)
 
 * Create initial tutorial, exactly equivalent to that of Games::ScottAdams.
 * Use the special name `_` for the unused variable representing the redundant dark-flag part of save-files. This avoids an unused-variable warning when running under certain older versions of Ruby.
