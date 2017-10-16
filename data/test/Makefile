@@ -12,7 +12,8 @@ rebuild-decompile:
 	$(RUN) -d ../adams/adv01.dat > adv01.decompile
 
 rebuild-play:
-	### Rebuild crystal, etc.
+	$(RUN) -e -s 12368 -W -f crystal.solution crystal.sao > crystal.transcript
+	$(RUN) -e -s 12368 -W -f t7.solution t7.sao > t7.transcript
 
 .PHONY: rebuild rebuild-decompile rebuild-play
 
