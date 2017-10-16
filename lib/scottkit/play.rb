@@ -44,6 +44,10 @@ module ScottKit
           break
         end
         words = line.chomp.split
+        if words.length == 0
+          puts "I don't understand your command."
+          next
+        end
         execute_command(words[0], words[1])
         if items.size > ITEM_LAMP &&
             items[ITEM_LAMP].loc != ROOM_NOWHERE && @lampleft > 0
