@@ -1,5 +1,14 @@
 # Revision history for Ruby gem ScottKit
 
+## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
+
+* Fix v1.3.0 bug: hasty implementation of lint meant compilation would fail if no lint option was provided. Now works correctly again.
+* Play mode no longer crashes on an empty line of input
+* Add support for opcode 84 `print_noun` (without newline).
+* Remove ScottKit version number from startup message in play mode, as it messes up regression tests. It's in the usage message now.
+* New file, `bin/md5ruby`: needed for regenerating regresssion expectations, since the `md5` program on MacOS produces different results from Ruby's MD5 digest when given non-ASCII input. Use this for regenerating `data/test/adams/*.md5`
+* The reimplementation of _Nosferatu_ is now complete in that it is possible to play the game through to a successful completion. However, it's not ready for release, as many incorrect actions still need to be handled gracefully.
+
 ## 1.3.0 (Mon Oct 16 20:27:43 BST 2017)
 
 * Support `--lint` (`-L`) command-line option. Fixes issue 1.
