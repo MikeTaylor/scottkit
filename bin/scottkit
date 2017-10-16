@@ -59,6 +59,12 @@ opts = OptionParser.new do |x|
   x.on("-s", "--random-seed VAL", "Set random seed for repeatability") { |val|
     options[:random_seed] = Integer(val)
   }
+  x.on("-L", "--lint STR", "Lint options: a string of the following:
+        e       Ensure rooms all have at least one way out (no traps)
+        E       Ensure rooms all have at least two ways in/out (no dead ends)
+        r       Ensure all rooms are reachable from the start room") { |val|
+    options[:lint] = val;
+  }
   x.on("-b", "--bug-tolerant", "Copy with out-of-range locations, etc.") {
     options[:bug_tolerant] = true
   }
