@@ -230,7 +230,7 @@ occur when !flag 1
 	print "This is a demo for the `ScottKit` adventure system --"
 	print "See https://github.com/MikeTaylor/scottkit/"
 	println
-	print "Your task is to kill the evil count Nosferatu and get back home."
+	print "Your task: kill the evil count Nosferatu and return home with his bloodstone."
 
 action DIG when !present spade
 	print "I'll need a spade."
