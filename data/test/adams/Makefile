@@ -9,5 +9,5 @@ RUN = ruby -I ../../../lib ../../../bin/scottkit
 rebuild:
 	for i in 01 02 04; do \
 		$(RUN) -e -s 12368 -W ../../adams/adv$$i.dat < adv$$i.solution > adv$$i.transcript; \
-		md5sum adv$$i.transcript | sed 's/ .*//' > adv$$i.transcript.md5; \
+		ruby ../../../bin/md5ruby adv$$i.transcript > adv$$i.transcript.md5; \
 	done
