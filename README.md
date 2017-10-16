@@ -107,5 +107,6 @@ Documentation
   * [Scottkit is born! Only seven and a half years late!](https://reprog.wordpress.com/2017/10/12/scottkit-is-born-only-seven-and-a-half-years-late/)
   * [Building adventure games with ScottKit](https://reprog.wordpress.com/2017/10/13/building-adventure-games-with-scottkit/)
   * [Rooms and items in ScottKit](https://reprog.wordpress.com/2017/10/14/rooms-and-items-in-scottkit/)
+  * [Actions in ScottKit](https://reprog.wordpress.com/2017/10/16/actions-in-scottkit/)
 
 
