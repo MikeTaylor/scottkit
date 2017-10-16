@@ -209,7 +209,7 @@ module ScottKit
 
 
       def generate_code(tree)
-        lintOptions = @game.options[:lint]
+        lintOptions = @game.options[:lint] || ''
         @had_errors = false
         rooms = tree.rooms
         items = tree.items
