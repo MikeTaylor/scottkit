@@ -209,6 +209,7 @@ module ScottKit
 
 
       def generate_code(tree)
+        lintOptions = @game.options[:lint]
         @had_errors = false
         rooms = tree.rooms
         items = tree.items
@@ -236,6 +237,26 @@ module ScottKit
           !loc ? 1 : roommap[loc] or
             gerror "#{caption} room '#{loc}' does not exist"
         }
+
+        begin # lint
+          no_exits = []
+          dead_ends = []
+          rooms.each.with_index do |room, index|
+            next if index == 0
+            next if 
+            if room.exits.length == 0
+              no_exits.push room.name
+            elsif room.exits.length == 1
+              dead_ends.push room.name
+            end
+          end
+          if lintOptions.match('e') && no_exits.length > 0
+            gwarning "#{no_exits.length} rooms with no exits: " + no_exits.map { |x| "'#{x}'" }.join(', ')
+          end
+          if lintOptions.match('E') && dead_ends.length > 0
+            gwarning "#{dead_ends.length} rooms that are dead ends: " + dead_ends.map { |x| "'#{x}'" }.join(', ')
+          end
+        end
 
         # Resolve room names in exits
         rooms.each do |room|
@@ -510,6 +531,10 @@ module ScottKit
         0
       end
 
+      def gwarning(str)
+        $stderr.puts "warning: #{str}"
+        0
+      end
 
       public :compile_to_stdout # Must be visible to Game.compile()
       public :parse # Used by test_compile.rb
