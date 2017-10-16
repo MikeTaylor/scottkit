@@ -120,7 +120,6 @@ room pond "*I'm by a fishpond ..."
 
 room swamp "damp swamp."
     exit north pond
-    exit east grove # This exit does not exist in the original
     exit west junction
 
 room junction "*I'm on a track. To my North is a bridge over a pond."
@@ -157,11 +156,16 @@ room field "summy field."
 	item crucifix "crusifix engraved on the ground"
 	item pit "Pit in the ground" nowhere
 
-room forest "forest"
+room forest "*I'm in an oak-forest."
     exit north field
+    exit south forest
     exit west inpit
+    exit east forest
+	item trees "oak-Trees"
+	item treesign "Sign says: 'TREES ARE RESERVED FOR COFFINS'"
 
-room inpit "*I'm in a pit"
+room inpit "*I'm at the bottom of a disused cesspit."
+	item coins "golden Coins" called COINS
 
 room bythicket "*I'm north of a rather smelly hole."
     exit north cliff
@@ -203,10 +207,6 @@ room underground "cavern where the count sleeps."
 	item count "the count Nosferatu"
 	item altar "stone Altar"
 	item bloodstone "giant *BLOODSTONE*" called BLOODSTONE
-
-room grove "hidden grove"
-    exit west swamp
-	item coins "coins" called COINS
 
 action INVENTORY:
 	inventory
@@ -272,7 +272,7 @@ action CLIMB ROPE when here ropetied
 	goto ledge
 
 action CLIMB ROPE when at ledge and carried kipper
-	print "I'm too heavy: I fall!"
+	print "I'm too heavy:\nI fall!"
 	game_over
 	comment "We would rather this happen carrying more than one object, but this is near enough."
 
@@ -388,7 +388,7 @@ action READ BOOK
 	print "Which one?"
 
 action READ ATLAS when present atlas
-	print "The book says:\n\nNear the forest is a disused cess-pet."
+	print "The book says:\n\nNear the forest is a disused cess-pit."
 
 action READ MAGIC when present magic
 	print "The book says:\n\nMagic word id: 'OVYEZ'"
@@ -410,7 +410,7 @@ action OPEN SARCOPHAGUS when here sarcophagus and flag 4
 	look
 
 action OPEN SARCOPHAGUS when here sarcophagus
-	print "It's too heavy!"
+	print "The lid's too heavy!"
 
 action GET BODY when here body
 	print "It turns to dust!"
