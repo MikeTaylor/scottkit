@@ -1,0 +1,10 @@
+#!/usr/local/bin/ruby -w
+
+# It seems we need this because the md5 program on MacOS produces
+# different results from Ruby's MD5 digest when given non-ASCII input.
+
+require 'digest/md5'
+
+file = File.open(ARGV[0], "rb")
+contents = file.read
+puts Digest::MD5.hexdigest(contents)
