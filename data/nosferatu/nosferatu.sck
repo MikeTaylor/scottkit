@@ -26,7 +26,7 @@ verbgroup LOOK L
 
 noungroup AXE AX
 
-room hidden "hidden treasury"
+room hidden "hidden treasury."
 	item treasure "*treasure* (you shouldn't be able to see this)" nowhere
 
 room coffin "tall, satin-lined wooden box."
@@ -65,7 +65,7 @@ room ledge "*I'm on a narrow ledge high up on a cliff."
 	item kipper "scarlet Kipper" called KIPPER
 	item hanging "hanging Rope"
 
-room kitchen "*I'm in the kitchen"
+room kitchen "*I'm in the kitchen."
     exit north washroom
     exit south empty
 	item whisky "bottle of Whisky" called WHISKY
@@ -109,7 +109,7 @@ room yard "rather dark yard."
     exit west pond
 	item axe "sharp Axe" called AXE
 
-room shed "daek shed"
+room shed "dark shed."
     exit south yard
 	item ladder "tall Ladder" called LADDER
 
@@ -132,13 +132,13 @@ room bridge "*I'm on a very flimsy bridge..."
     exit south junction
 	# XXX should fall to death if carrying more than one item
 
-room lawn "*I'm on a lawn to the North of a point."
+room lawn "*I'm on a lawn to the North of a pond."
     exit north hut # This exit does not exist in the original
     exit south bridge
 	item hut "Hut with locked door"
 	item smashed "Hut with smashed door" nowhere
 
-room hut "small hut"
+room hut "small hut."
     exit south lawn
 	item spade "garden Spade" called SPADE
 	item stick "sharp wooden Stick" called STICK
@@ -148,7 +148,7 @@ room westpond "*I'm west of a pond."
     exit south field
     exit west cliff
 
-room field "summy field."
+room field "sunny field."
     exit north westpond
     exit south forest
     exit east junction
@@ -386,6 +386,12 @@ action TELEPORT COFFIN
 
 action READ BOOK
 	print "Which one?"
+
+action READ LIBRARY when at library
+	print "OK, but it'll take a while."
+	println
+	pause
+	print "That was boring!  It was in Transylvanian!"
 
 action READ ATLAS when present atlas
 	print "The book says:\n\nNear the forest is a disused cess-pit."
