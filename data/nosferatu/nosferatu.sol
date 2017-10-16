@@ -102,3 +102,26 @@ drop match
 throw axe
 at stalactite
 go entrance		(Just "n" in the original, where a new exit opens)
+say ovyez
+get bloodstone
+s
+s
+climb ladder
+get ladder
+w
+drop ladder
+drop lamp
+get coins
+climb ladder
+n
+e
+e
+n
+e
+e
+e
+n
+n
+wait
+go bus
+give coins
