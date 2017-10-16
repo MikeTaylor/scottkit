@@ -81,9 +81,8 @@
 
 ## Still to do
 
-* Linting options: see https://github.com/MikeTaylor/scottkit/issues/1
-* Tweak compiler to break actions when they need too many arguments as
-  well as when they need too many instructions.
+* The `goto` action result should automatically describe the new room.
+* Tweak compiler to break actions when they need too many arguments as well as when they need too many instructions.
 * Ensure that the right files are built by `YARD`
 * Maybe modify to run against GLK using the Glkx driver
 * File inclusion
