@@ -1,5 +1,12 @@
 # Revision history for Ruby gem ScottKit
 
+## 1.3.0 (Mon Oct 16 20:27:43 BST 2017)
+
+* Support `--lint` (`-L`) command-line option. Fixes issue 1.
+  Argument is a string of characters:
+  * `e` -- check for rooms with no exits (traps)
+  * `E` -- check for rooms with only one exit (dead ends)
+
 ## 1.2.0 (Mon Oct 16 15:11:44 BST 2017)
 
 * Create initial tutorial, exactly equivalent to that of Games::ScottAdams.
