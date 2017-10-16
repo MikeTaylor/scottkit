@@ -518,7 +518,7 @@ counter-related conditions.
 
 	destroy closed_door
 	drop open_door
-	msg It creaks open.
+	print It creaks open.
 
 Following an `action` and its conditions, if any, comes a sequence of
 result which occur if the action and its conditions are
