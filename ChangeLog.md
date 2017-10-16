@@ -65,6 +65,7 @@
 
 ## Still to do
 
+* Linting options: see https://github.com/MikeTaylor/scottkit/issues/1
 * Tweak compiler to break actions when they need too many arguments as
   well as when they need too many instructions.
 * Ensure that the right files are built by `YARD`
