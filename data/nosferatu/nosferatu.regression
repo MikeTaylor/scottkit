@@ -1,14 +1,14 @@
 19540
-53
-66
-43
-34
+55
+67
+44
+33
 5
 2
 1
 3
 999
-42
+44
 1
 
 750 0 0 0 0 0 9900 0
@@ -35,7 +35,7 @@
 162 382 260 0 0 0 8100 0
 2400 425 420 0 0 0 7966 0
 163 422 280 0 0 0 8100 0
-2714 442 861 860 920 0 8303 10950
+2714 442 921 920 980 0 8303 10950
 0 440 480 0 0 0 10817 9600
 2565 522 0 0 0 0 2788 2913
 1200 484 680 700 0 0 10820 9600
@@ -43,40 +43,41 @@
 1967 562 500 0 0 0 8100 0
 3000 544 580 0 0 0 8100 0
 3000 584 540 0 0 0 8100 0
-1518 283 882 280 920 860 3222 11100
-3168 861 860 920 280 0 3205 10800
+1518 283 942 280 980 920 3222 11100
+3168 921 920 980 280 0 3205 10800
 3319 552 0 0 0 0 3300 0
 3319 40 0 0 0 0 3508 0
 3461 48 602 40 540 0 9053 10950
 0 600 620 0 0 0 10824 9600
 161 622 440 0 0 0 8100 0
-3471 48 962 40 540 0 9053 10950
-0 960 980 0 0 0 10824 9600
+3471 48 1022 40 540 0 9053 10950
+0 1020 1040 0 0 0 10824 9600
 3450 48 40 540 0 0 9053 1825
-172 982 660 0 0 0 8100 0
-3623 1002 0 20 0 0 1826 4112
+172 1042 660 0 0 0 8100 0
+3623 1062 0 20 0 0 1826 4112
 3774 40 0 0 0 0 4254 0
 3925 0 0 0 0 0 4350 0
-3926 103 0 0 0 0 4500 0
-3927 123 0 0 0 0 4650 0
-3908 143 0 0 0 0 4800 0
-4078 263 0 0 0 0 1833 5173
+3926 104 0 0 0 0 4586 13231
+3927 103 0 0 0 0 4800 0
+3928 123 0 0 0 0 4950 0
+3908 143 0 0 0 0 5100 0
+4079 263 0 0 0 0 1835 5473
 0 260 280 80 0 0 10858 0
-2129 22 88 40 80 0 5303 8014
-2129 22 0 0 0 0 5400 0
-1530 42 40 60 0 0 5605 7950
-1531 62 0 0 0 0 5700 0
-4232 541 742 740 760 0 10873 0
-0 780 800 0 0 0 10821 0
-182 762 600 0 0 0 8100 0
-183 462 220 0 0 0 8100 0
-184 942 640 0 0 0 8100 0
-4385 483 480 180 0 0 10821 9600
-4500 0 0 0 0 0 5850 0
-4650 0 0 0 0 0 6085 0
+2130 22 88 40 80 0 5603 8014
+2130 22 0 0 0 0 5700 0
+1531 42 40 60 0 0 5905 7950
+1532 62 0 0 0 0 6000 0
+4233 541 802 800 820 0 10873 0
+0 840 860 0 0 0 10821 0
+183 822 600 0 0 0 8100 0
+184 462 220 0 0 0 8100 0
+185 1002 640 0 0 0 8100 0
+4386 483 480 180 0 0 10821 9600
+4500 0 0 0 0 0 6150 0
+4650 0 0 0 0 0 6385 0
 2400 0 0 0 0 0 3750 0
-3000 0 0 0 0 0 6150 0
-1200 0 0 0 0 0 6300 0
+3000 0 0 0 0 0 6450 0
+1200 0 0 0 0 0 6600 0
 4800 0 0 0 0 0 9600 0
 
 "AUT" "ANY"
@@ -105,14 +106,15 @@
 "AT" "COU"
 "KIL" "COF"
 "TEL" "BOO"
-"REA" "ATL"
-"DRI" "MAG"
-"CHO" "WHI"
-"LIG" "SAR"
-"HEL" "BOD"
-"EXA" "DUS"
-"LOO" "THI"
-"*L" "HOL"
+"REA" "LIB"
+"DRI" "ATL"
+"CHO" "MAG"
+"LIG" "WHI"
+"HEL" "SAR"
+"EXA" "BOD"
+"LOO" "DUS"
+"*L" "THI"
+"" "HOL"
 "" "TUN"
 "" "LAM"
 "" "CRO"
@@ -125,14 +127,14 @@
 "" "BLO"
 
 0 0 0 0 0 0 ""
-0 0 0 0 0 0 "hidden treasury"
+0 0 0 0 0 0 "hidden treasury."
 0 0 3 0 0 0 "tall, satin-lined wooden box."
 8 4 6 2 0 0 "*I'm in an empty room."
 3 0 5 0 0 0 "dark crypt."
 6 0 0 4 0 0 "*I'm in the library."
 0 5 0 3 0 0 "*I'm on a balcony overlooking a tall cliff."
 0 0 0 0 0 0 "*I'm on a narrow ledge high up on a cliff."
-9 3 0 0 0 0 "*I'm in the kitchen"
+9 3 0 0 0 0 "*I'm in the kitchen."
 0 8 10 0 0 0 "*I'm in the washroom."
 11 0 0 9 0 0 "*I'm in the mortuary."
 12 10 0 0 0 0 "desolate windswept graveyard."
@@ -140,17 +142,17 @@
 0 0 0 0 0 0 "dark gloomy cave."
 0 12 0 0 0 0 "*I'm on a double-decker bus."
 16 0 9 17 0 0 "rather dark yard."
-0 15 0 0 0 0 "daek shed"
+0 15 0 0 0 0 "dark shed."
 0 18 15 0 0 0 "*I'm by a fishpond ..."
-17 0 34 19 0 0 "damp swamp."
+17 0 0 19 0 0 "damp swamp."
 20 0 18 24 0 0 "*I'm on a track. To my North is a bridge over a pond."
 21 19 0 0 0 0 "*I'm on a very flimsy bridge..."
-22 20 0 0 0 0 "*I'm on a lawn to the North of a point."
-0 21 0 0 0 0 "small hut"
+22 20 0 0 0 0 "*I'm on a lawn to the North of a pond."
+0 21 0 0 0 0 "small hut."
 0 24 0 28 0 0 "*I'm west of a pond."
-23 25 19 27 0 0 "summy field."
-24 0 0 26 0 0 "forest"
-0 0 0 0 0 0 "*I'm in a pit"
+23 25 19 27 0 0 "sunny field."
+24 25 25 26 0 0 "*I'm in an oak-forest."
+0 0 0 0 0 0 "*I'm at the bottom of a disused cesspit."
 28 26 24 0 0 0 "*I'm north of a rather smelly hole."
 0 27 23 0 0 0 "*I'm at the top of a cliff."
 30 0 0 0 0 0 "*I'm on a narrow ledge, East of a chasm."
@@ -158,7 +160,6 @@
 0 0 0 0 0 0 "*I'm at the bottom of a deep hole."
 0 31 0 0 0 0 "subterranean cavern."
 0 32 0 0 0 0 "cavern where the count sleeps."
-0 0 0 18 0 0 "hidden grove"
 
 ""
 "Welcome to `NOSFERATU`, by Mike Taylor."
@@ -175,7 +176,8 @@
 "OK."
 "What a stupid concept."
 "Huh?"
-"I'm too heavy: I fall!"
+"I'm too heavy:
+I fall!"
 "The bus arrives."
 "The witch drinks the water, rejuvenates, drops something, and disappears!"
 "He takes them and rings a bell.  The bus starts."
@@ -190,9 +192,11 @@
 "Huh!  That was easier than I expected!"
 ">Fzing!<"
 "Which one?"
+"OK, but it'll take a while."
+"That was boring!  It was in Transylvanian!"
 "The book says:
 
-Near the forest is a disused cess-pet."
+Near the forest is a disused cess-pit."
 "The book says:
 
 Magic word id: 'OVYEZ'"
@@ -202,7 +206,7 @@ Bored with this game already, huh?"
 "Burp!  It's good!"
 "I feel stronger."
 "I find something!"
-"It's too heavy!"
+"The lid's too heavy!"
 "It turns to dust!"
 "It slips through my fingers"
 "You'll have to figure it out for yourself."
@@ -246,6 +250,9 @@ Bored with this game already, huh?"
 "sharp wooden Stick/STI/" 22
 "crusifix engraved on the ground" 24
 "Pit in the ground" 0
+"oak-Trees" 25
+"Sign says: 'TREES ARE RESERVED FOR COFFINS'" 25
+"golden Coins/COI/" 26
 "brick Wall" 27
 "inpenetrable Thicket" 28
 "mutilated thicket" 0
@@ -263,7 +270,6 @@ Bored with this game already, huh?"
 "the count Nosferatu" 33
 "stone Altar" 33
 "giant *BLOODSTONE*/BLO/" 33
-"coins/COI/" 34
 
 ""
 ""
@@ -285,6 +291,7 @@ Bored with this game already, huh?"
 "We would rather this happen carrying more than one object, but this is near enough."
 ""
 "In the original, this created a new exit leading west, but we can't do that in the Scott Adams engine. Instead, the player must GO DOOR."
+""
 ""
 ""
 ""

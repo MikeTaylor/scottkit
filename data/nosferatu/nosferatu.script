@@ -51,7 +51,7 @@ Obvious exits: North, South, East, West.
 
 Tell me what to do ? n
 
-I'm in the kitchen
+I'm in the kitchen.
 Obvious exits: North, South.
 I can also see: bottle of Whisky
 
@@ -65,7 +65,7 @@ Tell me what to do ? get rope
 O.K.
 Tell me what to do ? s
 
-I'm in the kitchen
+I'm in the kitchen.
 Obvious exits: North, South.
 I can also see: bottle of Whisky
 
@@ -95,7 +95,7 @@ Obvious exits: North, South, East, West.
 
 Tell me what to do ? n
 
-I'm in the kitchen
+I'm in the kitchen.
 Obvious exits: North, South.
 I can also see: bottle of Whisky
 
@@ -132,7 +132,7 @@ Obvious exits: North, South, East, West.
 
 Tell me what to do ? n
 
-I'm in the kitchen
+I'm in the kitchen.
 Obvious exits: North, South.
 
 Tell me what to do ? n
@@ -155,7 +155,7 @@ Tell me what to do ? get axe
 O.K.
 Tell me what to do ? n
 
-I'm in a daek shed
+I'm in a dark shed.
 Obvious exits: South.
 I can also see: tall Ladder
 
@@ -175,7 +175,7 @@ I can also see: maneating Shark!
 Tell me what to do ? s
 
 I'm in a damp swamp.
-Obvious exits: North, East, West.
+Obvious exits: North, West.
 
 Tell me what to do ? w
 
@@ -195,7 +195,7 @@ Obvious exits: North, South.
 
 Tell me what to do ? n
 
-I'm on a lawn to the North of a point.
+I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
 I can also see: Hut with locked door
 
@@ -204,7 +204,7 @@ At what (eg. at bus)
 Tell me what to do ? at door
 It shatters!
 
-I'm on a lawn to the North of a point.
+I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
 I can also see: sharp Axe, Hut with smashed door
 
@@ -213,7 +213,7 @@ Tell me what to do ? get spade
 O.K.
 Tell me what to do ? s
 
-I'm on a lawn to the North of a point.
+I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
 I can also see: sharp Axe, Hut with smashed door
 
@@ -237,7 +237,7 @@ Obvious exits: North, South.
 
 Tell me what to do ? n
 
-I'm on a lawn to the North of a point.
+I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
 I can also see: sharp Axe, Hut with smashed door
 
@@ -258,7 +258,7 @@ Tell me what to do ? get bottle
 O.K.
 Tell me what to do ? w
 
-I'm in a summy field.
+I'm in a sunny field.
 Obvious exits: North, South, East, West.
 I can also see: crusifix engraved on the ground
 
@@ -306,7 +306,7 @@ I can also see: brick Wall
 
 Tell me what to do ? e
 
-I'm in a summy field.
+I'm in a sunny field.
 Obvious exits: North, South, East, West.
 I can also see: crusifix engraved on the ground
 
@@ -319,7 +319,7 @@ I can also see: wooden Cross, tall Ladder, garden Spade
 Tell me what to do ? e
 
 I'm in a damp swamp.
-Obvious exits: North, East, West.
+Obvious exits: North, West.
 
 Tell me what to do ? n
 
@@ -382,7 +382,7 @@ I can also see: maneating Shark!
 Tell me what to do ? s
 
 I'm in a damp swamp.
-Obvious exits: North, East, West.
+Obvious exits: North, West.
 
 Tell me what to do ? w
 
@@ -396,14 +396,14 @@ Tell me what to do ? get ladder
 O.K.
 Tell me what to do ? w
 
-I'm in a summy field.
+I'm in a sunny field.
 Obvious exits: North, South, East, West.
 I can also see: crusifix engraved on the ground
 
 Tell me what to do ? dig hole
 I break through to an underground chamber!
 
-I'm in a summy field.
+I'm in a sunny field.
 Obvious exits: North, South, East, West.
 I can also see: Pit in the ground
 
@@ -419,7 +419,7 @@ Tell me what to do ? get cross
 O.K.
 Tell me what to do ? w
 
-I'm in a summy field.
+I'm in a sunny field.
 Obvious exits: North, South, East, West.
 I can also see: garden Spade, Pit in the ground
 
