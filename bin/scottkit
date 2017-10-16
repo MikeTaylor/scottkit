@@ -61,8 +61,7 @@ opts = OptionParser.new do |x|
   }
   x.on("-L", "--lint STR", "Lint options: a string of the following:
         e       Ensure rooms all have at least one way out (no traps)
-        E       Ensure rooms all have at least two ways in/out (no dead ends)
-        r       Ensure all rooms are reachable from the start room") { |val|
+        E       Ensure rooms all have at least two ways in/out (no dead ends)") { |val|
     options[:lint] = val;
   }
   x.on("-b", "--bug-tolerant", "Copy with out-of-range locations, etc.") {
