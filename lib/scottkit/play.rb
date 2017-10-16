@@ -429,7 +429,7 @@ module ScottKit
             @game.counters[which], @game.counter
         when 82 then @game.counter += args.shift
         when 83 then @game.counter -= args.shift
-        #84 print_noun unused in Adventureland/Pirate
+        when 84 then print @game.noun
         when 85 then puts @game.noun
         when 86 then puts
         when 87 then which = args.shift
