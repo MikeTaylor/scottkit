@@ -62,11 +62,11 @@ Unit testing can be done as follows:
 Game format
 -----------
 
-The file `notes/Definition-scottfree-1.14.txt` is taken from the
+The file [`notes/Definition-scottfree-1.14.txt`](notes/Definition-scottfree-1.14.txt) is copied from the
 ScottFree package, which contains another interpreter for Scott Adams
 games.  I got this file from release 1.14-9 of ScottFree.
-`notes/Definition.txt` is my modified version of this file, since the
-original had several mistakes.  `notes/Definition-saved-game.txt` is
+[`notes/Definition.txt`](notes/Definition.txt) is my modified version of this file, since the
+original had several mistakes.  [`notes/Definition-saved-game.txt`](notes/Definition-saved-game.txt) is
 my own analysis of the format of saved games from ScottFree.  (Saved
 games from ScottFree and ScottKit can be freely interchanged.)
 
@@ -81,7 +81,8 @@ The directory `data` contains game files:
 * `test` - games files used by unit-test suite
 * `tutorial` - tiny game used in ScottKit tutorial
 * `crystal` - Crystal of Chaos, a game written to exercise ScottKit
-* `dan-and-matt.sck` - game written by my two eldest sons
+* `dan-and-matt` - game written by my two eldest sons
+* `nosferatu` -- a partial reimplementation of my 1982 VIC-20 BASIC game
 
 I have verified that ScottKit can be used to play and win Scott
 Adams's games #1, 2, and 4: *Adventureland*, *Pirate Adventure* and
