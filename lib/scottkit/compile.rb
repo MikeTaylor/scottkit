@@ -132,8 +132,8 @@ module ScottKit
 
       def parse_occur
         match :occur
-        if peek == :percent
-          chance = match :percent
+        if peek == :percentage
+          chance = match :percentage
           skip if peek == ":" # optional
         else
           chance = nil
@@ -642,7 +642,7 @@ module ScottKit
             :symbol
           elsif match = @buffer.match(/^(\d+)%/)
             @lexeme, @buffer = match[1], match.post_match
-            :percent
+            :percentsge
           elsif match = @buffer.match(/^([!a-z_0-9-]+)/i)
             @lexeme, @buffer = match[1], match.post_match
             TOKENMAP[@lexeme] || :symbol
@@ -683,7 +683,7 @@ module ScottKit
             lexeme
           elsif token == :symbol
             "\"#{lexeme}\""
-          elsif token == :percent
+          elsif token == :percentage
             "'#{lexeme}%'"
           else
             nil
