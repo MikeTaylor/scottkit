@@ -3,6 +3,7 @@
 ## 1.5.0 (IN PROGRESS)
 
 * Improvements to _Nosferatu_.
+* Minor improvements to tutorial map 4 and subsequent.
 
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
 
