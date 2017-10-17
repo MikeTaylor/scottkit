@@ -108,5 +108,6 @@ Documentation
   * [Building adventure games with ScottKit](https://reprog.wordpress.com/2017/10/13/building-adventure-games-with-scottkit/)
   * [Rooms and items in ScottKit](https://reprog.wordpress.com/2017/10/14/rooms-and-items-in-scottkit/)
   * [Actions in ScottKit](https://reprog.wordpress.com/2017/10/16/actions-in-scottkit/)
+  * [Occurrences (or daemons) in ScottKit](https://reprog.wordpress.com/2017/10/17/occurrences-or-daemons-in-scottkit/)
 
 
