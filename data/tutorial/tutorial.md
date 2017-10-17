@@ -203,7 +203,7 @@ room dungeon "gloomy dungeon"
 	exit west chamber
 	exit north crypt
 
-occur 25% when "at" dungeon
+occur 25% when at dungeon
 	print "I smell something rotting to the north."
 
 item door "Locked door"
@@ -238,16 +238,16 @@ room crypt "damp, dismal crypt"
 
 item vampire "Vampire"
 
-occur 25% when here vampire and !carried cross
-	print "Vampire bites me!  I'm dead!"
-	game_over
-	comment "vampire can attack unless cross is carried"
+occur when here vampire and carried cross
+	print "Vampire cowers away from the cross!"
 
 occur when here vampire and !carried cross
 	print "Vampire looks hungrily at me."
 
-occur when here vampire and "carried" cross
-	print "Vampire cowers away from the cross!"
+occur 25% when here vampire and !carried cross
+	print "Vampire bites me!  I'm dead!"
+	game_over
+	comment "vampire can attack unless cross is carried"
 
 action get key when present vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
@@ -306,7 +306,7 @@ room chamber "square chamber"
 	exit west cave
 
 # Flag 15 is on when and only when it is dark
-occur when "at" chamber and flag 15
+occur when at chamber and flag 15
 	clear_dark
 	look
 
@@ -317,11 +317,11 @@ room dungeon "gloomy dungeon"
 	exit west chamber
 	exit north crypt
 
-occur when "at" dungeon and !flag 15
+occur when at dungeon and !flag 15
 	set_dark
 	look
 
-occur 25% when "at" dungeon
+occur 25% when at dungeon
 	print "I smell something rotting to the north."
 
 item door "Locked door"
@@ -364,7 +364,7 @@ occur 25% when here vampire and !carried cross
 occur when here vampire and !carried cross
 	print "Vampire looks hungrily at me."
 
-occur when here vampire and "carried" cross
+occur when here vampire and carried cross
 	print "Vampire cowers away from the cross!"
 
 action get key when present vampire and !carried cross
