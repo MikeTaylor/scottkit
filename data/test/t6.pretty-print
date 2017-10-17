@@ -208,17 +208,31 @@
     gathered_args=nil>,
    #<struct ScottKit::Game::Compiler::CAction
     verb=nil,
-    noun=nil,
+    noun="25",
     conds=[["here", "vampire"], ["!carried", "cross"]],
     instructions=
      [["print", ["Vampire bites me!  I'm dead!"]], ["game_over", []]],
-    comment="vampire attacks unless cross is carried",
+    comment="vampire can attack unless cross is carried",
+    gathered_args=nil>,
+   #<struct ScottKit::Game::Compiler::CAction
+    verb=nil,
+    noun=nil,
+    conds=[["here", "vampire"], ["!carried", "cross"]],
+    instructions=[["print", ["Vampire looks hungrily at me."]]],
+    comment=nil,
     gathered_args=nil>,
    #<struct ScottKit::Game::Compiler::CAction
     verb=nil,
     noun=nil,
     conds=[["here", "vampire"], ["carried", "cross"]],
     instructions=[["print", ["Vampire cowers away from the cross!"]]],
+    comment=nil,
+    gathered_args=nil>,
+   #<struct ScottKit::Game::Compiler::CAction
+    verb="get",
+    noun="key",
+    conds=[["present", "vampire"], ["!carried", "cross"]],
+    instructions=[["print", ["I'm not going anywhere near that vampire!"]]],
     comment=nil,
     gathered_args=nil>],
  verbgroups=[["take", "get"], ["leave", "drop"]],
