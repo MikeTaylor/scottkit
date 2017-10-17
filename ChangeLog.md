@@ -1,5 +1,9 @@
 # Revision history for Ruby gem ScottKit
 
+## 1.5.0 (IN PROGRESS)
+
+* Improvements to _Nosferatu_.
+
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
 
 * Fix v1.3.0 bug: hasty implementation of lint meant compilation would fail if no lint option was provided. Now works correctly again.
