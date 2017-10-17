@@ -426,7 +426,7 @@ action READ ATLAS when present atlas
 	print "The book says:\n\nNear the forest is a disused cess-pit."
 
 action READ MAGIC when present magic
-	print "The book says:\n\nMagic word id: 'OVYEZ'"
+	print "The book says:\n\nMagic word is: 'OVYEZ'"
 
 action READ GAMES when present games
 	print "The book says:\n\nBored with this game already, huh?"
