@@ -4,7 +4,7 @@ ScottKit - a toolkit for Scott Adams-style adventure games
 **Homepage**:  [http://rdoc.info/projects/MikeTaylor/scottkit](http://rdoc.info/projects/MikeTaylor/scottkit)   
 **Git**:       [http://github.com/MikeTaylor/scottkit](http://github.com/MikeTaylor/scottkit)   
 **Author**:    Mike Taylor <mike@miketaylor.org.uk>   
-**Copyright**: 2009-2010   
+**Copyright**: 2009-2010, 2017
 **License**:   GNU GPL, version 2 - see file GPL-2
 
 
