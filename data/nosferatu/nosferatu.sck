@@ -271,6 +271,7 @@ action TO:
 
 action CLIMB ROPE when here ropetied
 	goto ledge
+	look
 
 action CLIMB ROPE when at ledge and carried kipper
 	print "I'm too heavy:\nI fall!"
@@ -279,6 +280,7 @@ action CLIMB ROPE when at ledge and carried kipper
 
 action CLIMB ROPE when at ledge
 	goto balcony
+	look
 
 action OPEN DOOR when present key and here lockeddoor
 	swap lockeddoor opendoor
@@ -288,9 +290,11 @@ action OPEN DOOR when present key and here lockeddoor
 
 action GO DOOR when here opendoor
 	goto yard
+	look
 
 action GO GRAVE when here grave
 	goto cave
+	look
 
 action WAIT when !here bus
 	print "Time passes..."
@@ -300,6 +304,7 @@ action WAIT when !here bus
 
 action GO BUS when here bus
 	goto bus
+	look
 
 action DROP BOTTLE when here witch and carried water
 	destroy water
@@ -330,20 +335,25 @@ action DIG when at field
 
 action GO PIT when here pit
 	goto bottom
+	look
 
 action CLIMB LADDER when here ladder and at bottom
 	goto forest
 	drop ladder
+	look
 
 action CLIMB LADDER when here ladder and at inpit
 	goto forest
 	drop ladder
+	look
 
 action JUMP when at bythicket
 	goto chasm
+	look
 
 action JUMP when at chasm
 	goto bythicket
+	look
 
 action GET WATER when present emptybottle and here fountain
 	print OK
@@ -372,6 +382,7 @@ action AT DOOR when flag 2 and here hut
 
 action GO DOOR when here smashed
 	goto hut
+	look
 
 action AT STALACTITE when flag 2 and here stalactite
 	clear_flag 2
@@ -389,6 +400,7 @@ action AT when flag 2
 
 action GO ENTRANCE when here entrance
 	goto underground
+	look
 
 action KILL COUNT when here count
 	print "OK."
@@ -399,6 +411,7 @@ action KILL COUNT when here count
 action TELEPORT COFFIN
 	print ">Fzing!<"
 	goto coffin
+	look
 
 action READ BOOK
 	print "Which one?"
@@ -450,12 +463,15 @@ action CHOP THICKET when carried axe and here thicket
 
 action GO THICKET when here mutilated
 	goto edge
+	look
 
 action GO HOLE when here gravehole
 	goto graveyard
+	look
 
 action GO TUNNEL when here tunnel
 	goto cavern
+	look
 
 # XXX Should require the match. Check original for message when it's missing
 action LIGHT LAMP when present lamp
