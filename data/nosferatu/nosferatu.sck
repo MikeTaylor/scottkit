@@ -245,7 +245,11 @@ occur when at bottom and flag 15
 	look # XXX should only do this when changing state
 	comment "everywhere outside the bottom of the pit is light"
 
-occur when at underground and !carried cross
+occur when here count and !carried cross
+	print "Nosferatu rises from his altar, and bites my neck!"
+	game_over
+
+action TAKE BLOODSTONE when here count
 	print "Nosferatu rises from his altar, and bites my neck!"
 	game_over
 
@@ -485,6 +489,7 @@ action SAY OVYEZ when here count
        println_noun
        println
        print "Nosferatu vanishes in a cloud of smoke!"
+       destroy count
        look
 
 action HELP:
