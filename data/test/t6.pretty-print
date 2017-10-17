@@ -231,7 +231,7 @@
    #<struct ScottKit::Game::Compiler::CAction
     verb="get",
     noun="key",
-    conds=[["present", "vampire"], ["!carried", "cross"]],
+    conds=[["here", "vampire"], ["!carried", "cross"]],
     instructions=[["print", ["I'm not going anywhere near that vampire!"]]],
     comment=nil,
     gathered_args=nil>],
