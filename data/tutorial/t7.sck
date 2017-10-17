@@ -55,8 +55,12 @@ room throne "gorgeously decorated throne room"
 
 item sign "Sign says: leave treasure here, then say SCORE"
 
-item lamp "old-fashioned brass lamp" called "lamp"
-item empty_lamp "empty lamp" called "lamp" nowhere
+item lamp "old-fashioned brass lamp"
+	called "lamp"
+
+item empty_lamp "empty lamp"
+	called "lamp" nowhere
+
 lightsource lamp
 
 occur 100% when flag 16
@@ -98,7 +102,7 @@ item key "Brass key"
 item door2 "Open door leads south"
 	nowhere
 
-action open door when here door and !carried key
+action open door when here door and !present key
 	print "It's locked."
 
 action open door when here door
