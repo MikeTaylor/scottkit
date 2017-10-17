@@ -642,7 +642,7 @@ module ScottKit
             :symbol
           elsif match = @buffer.match(/^(\d+)%/)
             @lexeme, @buffer = match[1], match.post_match
-            :percentsge
+            :percentage
           elsif match = @buffer.match(/^([!a-z_0-9-]+)/i)
             @lexeme, @buffer = match[1], match.post_match
             TOKENMAP[@lexeme] || :symbol
