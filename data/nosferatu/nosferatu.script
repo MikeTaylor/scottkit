@@ -12,7 +12,7 @@ Welcome to "NOSFERATU", by Mike Taylor.
 This is a demo for the "ScottKit" adventure system --
 See https://github.com/MikeTaylor/scottkit/
 
-Your task is to kill the evil count Nosferatu and get back home.
+Your task: kill the evil count Nosferatu and return home with his bloodstone.
 Tell me what to do ? e
 
 I'm in an empty room.
@@ -35,7 +35,7 @@ O.K.
 Tell me what to do ? read magic		Magic word is: 'OVYEZ'
 The book says:
 
-Magic word id: 'OVYEZ'
+Magic word is: 'OVYEZ'
 Tell me what to do ? drop magic
 O.K.
 Tell me what to do ? n
@@ -85,9 +85,18 @@ To what (eg. to key)
 Tell me what to do ? to rail
 OK.
 Tell me what to do ? climb rope
+
+I'm on a narrow ledge high up on a cliff.
+I can also see: brass Key, scarlet Kipper, hanging Rope
+
 Tell me what to do ? get key			(The scarlet kipper is a red herring)
 O.K.
 Tell me what to do ? climb rope
+
+I'm on a balcony overlooking a tall cliff.
+Obvious exits: South, West.
+I can also see: rope tied to rail, balcony Rail
+
 Tell me what to do ? w
 
 I'm in an empty room.
@@ -151,6 +160,11 @@ I can also see: wide open Door
 Tell me what to do ? drop key
 O.K.
 Tell me what to do ? go door			(Just "w" in the original, where a new exit opens)
+
+I'm in a rather dark yard.
+Obvious exits: North, East, West.
+I can also see: sharp Axe
+
 Tell me what to do ? get axe
 O.K.
 Tell me what to do ? n
@@ -209,6 +223,11 @@ Obvious exits: North, South.
 I can also see: sharp Axe, Hut with smashed door
 
 Tell me what to do ? go door			(Just "n" in the original, where a new exit opens)
+
+I'm in a small hut.
+Obvious exits: South.
+I can also see: garden Spade, sharp wooden Stick
+
 Tell me what to do ? get spade
 O.K.
 Tell me what to do ? s
@@ -276,6 +295,11 @@ I can also see: inpenetrable Thicket, Sign here says: 'EXA NO FO TROHS'
 Tell me what to do ? chop thicket
 OK
 Tell me what to do ? go thicket		(Just "w" in the original, where a new exit opens)
+
+I'm at the edge of a deep chasm.
+Obvious exits: South, East.
+I can also see: Water of youth, Fountain of youth, Hole in thicket
+
 Tell me what to do ? get water
 OK
 Tell me what to do ? s
@@ -351,6 +375,10 @@ Obvious exits: North, South.
 I can also see: newely dug open Grave, tombstone engraved: BEWARE THE WITCH
 
 Tell me what to do ? go grave
+
+I'm in a dark gloomy cave.
+I can also see: wrinkled old Witch, Hole (above me)
+
 Tell me what to do ? drop bottle
 The witch drinks the water, rejuvenates, drops something, and disappears!
 
@@ -360,6 +388,11 @@ I can also see: Hole (above me), old Lamp, whisky Bottle
 Tell me what to do ? get lamp
 O.K.
 Tell me what to do ? go hole
+
+I'm in a desolate windswept graveyard.
+Obvious exits: North, South.
+I can also see: newely dug open Grave, tombstone engraved: BEWARE THE WITCH
+
 Tell me what to do ? s
 
 I'm in the mortuary.
@@ -373,6 +406,10 @@ Obvious exits: South, East.
 I can also see: brass Key, wide open Door
 
 Tell me what to do ? go door			(Just "w" in the original, where a new exit opens)
+
+I'm in a rather dark yard.
+Obvious exits: North, East, West.
+
 Tell me what to do ? w
 
 I'm by a fishpond ...
@@ -424,9 +461,18 @@ Obvious exits: North, South, East, West.
 I can also see: garden Spade, Pit in the ground
 
 Tell me what to do ? go pit
+
+I'm at the bottom of a deep hole.
+I can also see: secret Tunnel
+
 Tell me what to do ? drop ladder
 O.K.
 Tell me what to do ? go tunnel
+
+I'm in a subterranean cavern.
+Obvious exits: South.
+I can also see: Stalactites hanging from the ceiling
+
 
 I can't see. It is too dark!
 
@@ -449,6 +495,11 @@ Obvious exits: South.
 I can also see: sharp Axe, safety Match, entrance to cave
 
 Tell me what to do ? go entrance		(Just "n" in the original, where a new exit opens)
+
+I'm in a cavern where the count sleeps.
+Obvious exits: South.
+I can also see: the count Nosferatu, stone Altar, giant *BLOODSTONE*
+
 Tell me what to do ? say ovyez
 OK.
 ovyez
@@ -477,6 +528,11 @@ I'm at the bottom of a deep hole.
 I can also see: tall Ladder, secret Tunnel
 
 Tell me what to do ? climb ladder
+
+I'm in an oak-forest.
+Obvious exits: North, South, East, West.
+I can also see: tall Ladder, oak-Trees, Sign says: 'TREES ARE RESERVED FOR COFFINS'
+
 Tell me what to do ? get ladder
 O.K.
 Tell me what to do ? w
@@ -491,6 +547,11 @@ O.K.
 Tell me what to do ? get coins
 O.K.
 Tell me what to do ? climb ladder
+
+I'm in an oak-forest.
+Obvious exits: North, South, East, West.
+I can also see: tall Ladder, oak-Trees, Sign says: 'TREES ARE RESERVED FOR COFFINS'
+
 Tell me what to do ? n
 
 I'm in a sunny field.
@@ -545,6 +606,11 @@ Tell me what to do ? wait
 Time passes...
 A bus arrives!
 Tell me what to do ? go bus
+
+I'm on a double-decker bus.
+Obvious exits: South.
+I can also see: bus Conductor
+
 Tell me what to do ? give coins
 He takes them, the bus starts, and I'm home
 with Nosferatu's Bloodstone.
