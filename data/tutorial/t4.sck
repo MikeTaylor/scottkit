@@ -67,5 +67,5 @@ occur 25% when here vampire and !carried cross
 	game_over
 	comment "vampire can attack unless cross is carried"
 
-action get key when present vampire and !carried cross
+action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"

@@ -136,7 +136,7 @@ occur when here vampire and !carried cross
 occur when here vampire and carried cross
 	print "Vampire cowers away from the cross!"
 
-action get key when present vampire and !carried cross
+action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
 verbgroup take get
