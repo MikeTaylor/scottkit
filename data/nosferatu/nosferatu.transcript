@@ -150,6 +150,7 @@ I'm in the washroom.
 Obvious exits: South, East.
 I can also see: locked Door
 
+I feel weaker.
 Tell me what to do ? open door
 OK.
 
@@ -211,7 +212,7 @@ Tell me what to do ? n
 
 I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
-I can also see: Hut with locked door
+I can also see: hut with locked Door
 
 Tell me what to do ? throw axe
 At what (eg. at bus)
@@ -220,7 +221,7 @@ It shatters!
 
 I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
-I can also see: sharp Axe, Hut with smashed door
+I can also see: sharp Axe, hut with smashed Door
 
 Tell me what to do ? go door			(Just "n" in the original, where a new exit opens)
 
@@ -234,7 +235,7 @@ Tell me what to do ? s
 
 I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
-I can also see: sharp Axe, Hut with smashed door
+I can also see: sharp Axe, hut with smashed Door
 
 Tell me what to do ? s
 
@@ -258,7 +259,7 @@ Tell me what to do ? n
 
 I'm on a lawn to the North of a pond.
 Obvious exits: North, South.
-I can also see: sharp Axe, Hut with smashed door
+I can also see: sharp Axe, hut with smashed Door
 
 Tell me what to do ? get axe
 O.K.
