@@ -459,6 +459,9 @@ action DRINK WHISKY when present whisky
 	set_flag 4
 	set_counter 7
 
+occur when counter_gt 1
+	dec_counter
+
 occur when counter_eq 1
 	dec_counter
 	print "I feel weaker."
