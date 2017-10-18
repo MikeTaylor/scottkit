@@ -189,6 +189,7 @@ room chasm "*I'm on a narrow ledge, East of a chasm."
     exit north edge
 	item wall1 "brick Wall"
 	item match "safety Match" called MATCH
+	item spentmatch "spent Match" called MATCH nowhere
 
 room edge "*I'm at the edge of a deep chasm."
     exit south chasm
@@ -545,12 +546,25 @@ action GO TUNNEL when here tunnel
 	goto cavern
 	look
 
-# XXX Should require the match. Check original for message when it's missing
-action LIGHT LAMP when present lamp
+action LIGHT: when present spentmatch
+	print "Using a SPENT match?"
+
+action LIGHT: when !present match
+	print "First I need a match."
+
+action LIGHT LAMP when !present lamp
+	print "I don't have it."
+
+action LIGHT LAMP
 	swap lamp litlamp
+	swap match spentmatch
 	print "OK"
 	look
 	comment "We only really want to look if it was previously dark. Can do this with flags."
+
+action LIGHT:
+	swap match spentmatch
+	print "It won't burn."
 
 action SAY OVYEZ when here count
 	print "OK."
@@ -600,3 +614,4 @@ action SCREAM:
 # Debugging
 action TELEPORT YARD print "Fzing!" goto yard look
 action TELEPORT HUT print "Fzing!" goto hut look
+action TELEPORT CHASM print "Fzing!" goto chasm look

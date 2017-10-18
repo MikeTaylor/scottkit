@@ -34,14 +34,14 @@ To do:
 30	READ any book if not carried: I don't have it.
 31	DRINK WHISKY if not carried: I don't have it.
 32 OK	THROW AXE if not carried: I don't have it.
-33	LIGHT LAMP if not carried: I don't have it.
+33 OK	LIGHT LAMP if not carried: I don't have it.
 34	GET ROPE when it's tied: "It's tied to a rail!"
 35	GET WATER when without the empty bottle: "I need a container."
 36	TO anything when without rope: "I haven't got a rope."
 37 OK	AT anything when without axe: "I need an ax."
-38	LIGHT anything without match: "First I need a match."
-39	After failed LIGHT, another try: "Using a SPENT match?"
-40	LIGHT anything other than lamp: "It won't burn."
+38 OK	LIGHT anything without match: "First I need a match."
+39 OK	After failed LIGHT, another try: "Using a SPENT match?"
+40 OK	LIGHT anything other than lamp: "It won't burn."
 41	DIG without spade: "I'll need a spade."
 
 Can't be done:
