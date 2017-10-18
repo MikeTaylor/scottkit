@@ -312,7 +312,7 @@ action GO GRAVE when here grave
 	goto cave
 	look
 
-action WAIT when !here bus
+action WAIT when at busstop and !here bus
 	print "Time passes..."
 	pause
 	print "A bus arrives!"
@@ -543,6 +543,8 @@ action EXAMINE:
 	println_noun
 
 action WAIT:
+	print "Time passes..."
+	pause
 	print "Nothing happens."
 
 action JUMP:

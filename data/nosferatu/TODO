@@ -13,7 +13,7 @@ To do:
 9 OK	"I've already done it!" for hole already dug
 10 OK	"It's locked!" when opening either door without key
 11 OK	"He doesn't want it." when giving something other than coins
-12	"Time passes..." pause "Nothing happens." for wait
+12 OK	"Time passes..." pause "Nothing happens." for wait
 13	"Nothing happens" when saying anything
 14	"It bounces off." when thowing the axe at the wrong thing
 15	GO BUS when it's not present: "It's not here."
