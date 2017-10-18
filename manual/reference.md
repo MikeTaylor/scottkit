@@ -495,9 +495,9 @@ may be nominated as "current" by the `select_counter` action.)
 --
 True if the current counter's value is _NUM_ or less.
 
-* `counter_ge` _NUM_
+* `counter_gt` _NUM_
 --
-True if the current counter's value is _NUM_ or more.
+True if the current counter's value is greater than _NUM_. Note the asymmetry here: you can check for less-than-or-equal, or strictly-greater-than; but not for strictly-less-than or greater-than-or-equal.
 
 
 The sense of the
