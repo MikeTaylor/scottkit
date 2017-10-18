@@ -139,8 +139,8 @@ room bridge "*I'm on a very flimsy bridge..."
 room lawn "*I'm on a lawn to the North of a pond."
     exit north hut # This exit does not exist in the original
     exit south bridge
-	item hut "Hut with locked door"
-	item smashed "Hut with smashed door" nowhere
+	item hut "hut with locked Door"
+	item smashed "hut with smashed Door" nowhere
 
 room hut "small hut."
     exit south lawn
@@ -235,7 +235,7 @@ occur when !flag 1
 	println
 	print "Your task: kill the evil count Nosferatu and return home with his bloodstone."
 
-action DIG when !present spade
+action DIG HOLE when !present spade
 	print "I'll need a spade."
 
 occur when at cavern and !flag 15
@@ -348,10 +348,13 @@ occur when flag 5 and !carried bloodstone
 	print "without Nosferatu's Bloodstone."
 	game_over
 
-action DIG when at field
+action DIG HOLE when present crucifix
 	swap crucifix pit
 	print "I break through to an underground chamber!"
 	look
+
+action DIG HOLE when present pit
+	print "I've already done it!"
 
 action GO PIT when here pit
 	goto bottom
@@ -459,6 +462,9 @@ action DRINK WHISKY when present whisky
 	set_flag 4
 	set_counter 7
 
+action DRINK WHISKY when present emptybottle
+	print "I've already done it!"
+
 occur when counter_gt 1
 	dec_counter
 
@@ -492,6 +498,9 @@ action CHOP THICKET when carried axe and here thicket
 	continue occur 0%
 	swap sign1 sign2
 	print "OK"
+
+action CHOP THICKET when here mutilated
+	print "I've already done it!"
 
 action GO THICKET when here mutilated
 	goto edge
@@ -533,8 +542,11 @@ action WAIT:
 action JUMP:
 	print Wheee!
 
-action DIG:
+action DIG HOLE:
 	print "I find nothing."
+
+action DIG:
+	print "I can only dig a hole"
 
 action LOOK:
 	look
@@ -547,3 +559,6 @@ action SCREAM:
 	print "`Yaaaagh!`"
 	print "Nothing happens."
 
+# Debugging
+action TELEPORT YARD print "Fzing!" goto yard look
+action TELEPORT HUT print "Fzing!" goto hut look
