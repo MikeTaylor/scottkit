@@ -322,6 +322,9 @@ action GO BUS when here bus
 	goto bus
 	look
 
+action GO BUS
+	print "It's not here."
+
 action DROP BOTTLE when here witch and carried water
 	destroy water
 	drop bottle
@@ -366,15 +369,25 @@ action GO PIT when here pit
 	goto bottom
 	look
 
-action CLIMB LADDER when here ladder and at bottom
+action CLIMB LADDER when !here ladder
+	print "It's not here."
+
+action CLIMB LADDER when at bottom
 	goto forest
 	drop ladder
 	look
 
-action CLIMB LADDER when here ladder and at inpit
+action CLIMB LADDER when at inpit
 	goto forest
 	drop ladder
 	look
+
+action CLIMB LADDER
+	print "not now."
+
+action CLIMB:
+	print "I can't climb a"
+	println_noun
 
 action JUMP when at bythicket
 	goto chasm

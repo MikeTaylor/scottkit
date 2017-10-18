@@ -16,13 +16,13 @@ To do:
 12 OK	"Time passes..." pause "Nothing happens." for wait
 13 OK	"Nothing happens" when saying anything
 14 OK	"It bounces off." when thowing the axe at the wrong thing
-15	GO BUS when it's not present: "It's not here."
-16	CLIMB LADDER when it's not present: "It's not here."
+15 OK	GO BUS when it's not present: "It's not here."
+16 OK	CLIMB LADDER when it's not present: "It's not here."
 17	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
 18	CHOP TREE: "What's the point?"
 19	TIE anything but rope: I can't tie a NOUN
 20	TO anything but rail: I can't tie a rope to a NOUN
-21	CLIMB anything but ladder and rope: I can't climb a NOUN
+21 OK	CLIMB anything but ladder and rope: I can't climb a NOUN
 22	READ anything other than a book: I can't read a NOUN
 23	OPEN anything but door or sarcophagus: I can't open a NOUN
 24	DRINK anything but whisky (even water): I can't drink a NOUN
