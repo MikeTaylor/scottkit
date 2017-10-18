@@ -193,7 +193,7 @@ room chasm "*I'm on a narrow ledge, East of a chasm."
 room edge "*I'm at the edge of a deep chasm."
     exit south chasm
     exit east cliff
-	item water "Water of youth"
+	item water "Water of youth" called water
 	item fountain "Fountain of youth"
 	item holeinthicket "Hole in thicket"
 	item bottle "whisky Bottle" called BOTTLE nowhere
@@ -295,6 +295,15 @@ action OPEN DOOR when present key and here lockeddoor
 	look
 	comment "In the original, this created a new exit leading west, but we can't do that in the Scott Adams engine. Instead, the player must GO DOOR."
 
+action OPEN DOOR when here lockeddoor
+	print "It's locked!"
+
+action OPEN DOOR when present key and here hut
+	print "My key won't fit!"
+
+action OPEN DOOR when here hut
+	print "It's locked!"
+
 action GO DOOR when here opendoor
 	goto yard
 	look
@@ -320,6 +329,10 @@ action DROP BOTTLE when here witch and carried water
 	swap witch lamp
 	print "The witch drinks the water, rejuvenates, drops something, and disappears!"
 	look
+
+action DROP WATER when carried water and !here fountain
+	print "It soaks away."
+	destroy water
 
 action GIVE COINS when here conductor
 	print "He takes them, the bus starts, and I'm home"
@@ -513,4 +526,12 @@ action DIG:
 
 action LOOK:
 	look
+
+action QUIT:
+	game_over
+
+action SCREAM:
+	print "OK."
+	print "`Yaaaagh!`"
+	print "Nothing happens."
 

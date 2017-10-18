@@ -2,16 +2,16 @@ Things still to be done, based on my analysis of the BASIC code:
 $HOME/web/new/comp/tech/advent/nos/basic-notes
 
 To do:
-1	Handle "quit" command
-2	Handle "scream" command: "Yaaaagh!", then nothing happens
-3	Dropping water: "It soaks away." Then the water is gone for good
-4	"open door" at shed results in "My key won't fit!"
+1 OK	Handle "quit" command
+2 OK	Handle "scream" command: "Yaaaagh!", then nothing happens
+3 OK	Dropping water: "It soaks away." Then the water is gone for good
+4 OK	"open door" at shed results in "My key won't fit!"
 5	Drinking whisky makes me stronger for 6 turns, then: "I feel weaker."
 6	"I've already done it!" for sarcophagus already open
 7	"I've already done it!" for whisky already drunk
 8	"I've already done it!" for thicket already chopped
 9	"I've already done it!" for hole already dug
-10	"It's locked!" when opening either door without key
+10 OK	"It's locked!" when opening either door without key
 11	"He doesn't want it." when giving something other than coins
 12	"Time passes..." pause "Nothing happens." for wait
 13	"Nothing happens" when saying anything
