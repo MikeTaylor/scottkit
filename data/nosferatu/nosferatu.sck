@@ -464,6 +464,9 @@ occur when counter_eq 1
 	print "I feel weaker."
 	clear_flag 4
 
+action OPEN SARCOPHAGUS when here sarcophagus and exists cross
+	print "I've already done it!"
+
 action OPEN SARCOPHAGUS when here sarcophagus and flag 4
 	print "I find something!"
 	drop body
