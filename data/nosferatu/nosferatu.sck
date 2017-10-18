@@ -19,11 +19,14 @@ lighttime 999
 unknown1 19540
 unknown2 0
 
-verbgroup WALK ENTER GO RUN
-verbgroup LEAVE DROP
-verbgroup TAKE GET
-verbgroup OPEN UNLOCK
+verbgroup GO ENTER WALK RUN
+verbgroup TAKE GET G
+verbgroup DROP LEAVE D
 verbgroup LOOK L
+verbgroup INVENTORY I
+verbgroup QUIT Q
+verbgroup OPEN UNLOCK
+verbgroup CHOP CUT
 
 noungroup AXE AX
 
