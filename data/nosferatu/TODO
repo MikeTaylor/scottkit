@@ -1,0 +1,45 @@
+Things still to be done, based on my analysis of the BASIC code:
+$HOME/web/new/comp/tech/advent/nos/basic-notes
+
+To do:
+	Handle "quit" command
+	Handle "scream" command: "Yaaaagh!", then nothing happens
+	Dropping water empties the bottle; thee water is gone for good
+	"open door" at shed results in "My key won't fit!"
+	Drinking whisky only makes me stronger for 6 turns
+	Match becomes spent after an attempt to light anything
+	"I've already done it!" for sarcophagus already open
+	"I've already done it!" for whisky already drunk
+	"I've already done it!" for thicket already chopped
+	"I've already done it!" for hole already dug
+	"It's locked!" when opening either door without key
+	"He doesn't want it." when giving something other than coins
+	"Time passes..." pause "Nothing happens." for wait
+	"Nothing happens" when saying anything
+	"It bounces off." when thowing the axe at the wrong thing
+	GO BUS when it's not present: "It's not here."
+	CLIMB LADDER when it's not present: "It's not here."
+	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
+	CHOP TREE: "What's the point?"
+	TIE anything but robe: I can't tie a NOUN
+	TO anything but rail: I can't tie a rope to a NOUN
+	CLIMB anything but ladder and rope: I can't climb a NOUN
+	READ anything other than a book: I can't read a NOUN
+	OPEN anything but door or sarcophagus: I can't open a NOUN
+	DRINK anything but whisky (even water): I can't drink a NOUN
+	THROW anything but the axe: I can't throw a NOUN
+	CHOP anything but tree or thicket: I can't chop a NOUN
+	DIG anything but hole: I can't dig a NOUN
+	TIE ROPE if not carried: I don't have it.
+	GIVE COINS if not carried: I don't have it.
+	READ any book if not carried: I don't have it.
+	DRINK WHISKY if not carried: I don't have it.
+	THROW AXE if not carried: I don't have it.
+	LIGHT LAMP if not carried: I don't have it.
+
+Can't be done:
+	Climbing rope carrying more than one item, fall and die
+	If on bridge carrying more than one item, fall and die
+	If carrying 4 or more objects, the ladder breaks
+
+More generally, check all strings and see that they are included.
