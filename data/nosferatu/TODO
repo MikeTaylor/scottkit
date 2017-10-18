@@ -20,8 +20,8 @@ To do:
 16 OK	CLIMB LADDER when it's not present: "It's not here."
 17 OK	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
 18 OK	CHOP TREE: "What's the point?"
-19	TIE anything but rope: I can't tie a NOUN
-20	TO anything but rail: I can't tie a rope to a NOUN
+19 OK	TIE anything but rope: I can't tie a NOUN
+20 OK	TO anything but rail: I can't tie a rope to a NOUN
 21 OK	CLIMB anything but ladder and rope: I can't climb a NOUN
 22	READ anything other than a book: I can't read a NOUN
 23	OPEN anything but door or sarcophagus: I can't open a NOUN
@@ -29,15 +29,15 @@ To do:
 25 OK	THROW anything but the axe: I can't throw a NOUN
 26	CHOP anything but tree or thicket: I can't chop a NOUN
 27	DIG anything but hole: I can't dig a NOUN
-28	TIE ROPE if not carried: I don't have it.
+28 OK	TIE ROPE if not carried: I don't have it.
 29 OK	GIVE COINS if not carried: I don't have it.
 30 NO	READ any book if not carried: I don't have it.
 31	DRINK WHISKY if not carried: I don't have it.
 32 OK	THROW AXE if not carried: I don't have it.
 33 OK	LIGHT LAMP if not carried: I don't have it.
-34	GET ROPE when it's tied: "It's tied to a rail!"
+34 OK	GET ROPE when it's tied: "It's tied to a rail!"
 35	GET WATER when without the empty bottle: "I need a container."
-36	TO anything when without rope: "I haven't got a rope."
+36 OK	TO anything when without rope: "I haven't got a rope."
 37 OK	AT anything when without axe: "I need an ax."
 38 OK	LIGHT anything without match: "First I need a match."
 39 OK	After failed LIGHT, another try: "Using a SPENT match?"
