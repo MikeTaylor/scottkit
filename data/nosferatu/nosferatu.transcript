@@ -84,6 +84,11 @@ Tell me what to do ? tie rope
 To what (eg. to key)
 Tell me what to do ? to rail
 OK.
+
+I'm on a balcony overlooking a tall cliff.
+Obvious exits: South, West.
+I can also see: rope tied to rail, balcony Rail
+
 Tell me what to do ? climb rope
 
 I'm on a narrow ledge high up on a cliff.
@@ -295,6 +300,11 @@ I can also see: inpenetrable Thicket, Sign here says: 'EXA NO FO TROHS'
 
 Tell me what to do ? chop thicket
 OK
+
+I'm at the top of a cliff.
+Obvious exits: South, East.
+I can also see: mutilated thicket, SHORT OF AN AXE' is written backwards on a Sign nearby'
+
 Tell me what to do ? go thicket		(Just "w" in the original, where a new exit opens)
 
 I'm at the edge of a deep chasm.
@@ -606,6 +616,11 @@ Obvious exits: South.
 Tell me what to do ? wait
 Time passes...
 A bus arrives!
+
+I'm by a bus-stop.
+Obvious exits: South.
+I can also see: large red no. 29 Bus
+
 Tell me what to do ? go bus
 
 I'm on a double-decker bus.
