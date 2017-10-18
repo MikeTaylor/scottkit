@@ -2,47 +2,47 @@ Things still to be done, based on my analysis of the BASIC code:
 $HOME/web/new/comp/tech/advent/nos/basic-notes
 
 To do:
-	Handle "quit" command
-	Handle "scream" command: "Yaaaagh!", then nothing happens
-	Dropping water: "It soaks away." Then the water is gone for good
-	"open door" at shed results in "My key won't fit!"
-	Drinking whisky makes me stronger for 6 turns, then: "I feel weaker."
-	"I've already done it!" for sarcophagus already open
-	"I've already done it!" for whisky already drunk
-	"I've already done it!" for thicket already chopped
-	"I've already done it!" for hole already dug
-	"It's locked!" when opening either door without key
-	"He doesn't want it." when giving something other than coins
-	"Time passes..." pause "Nothing happens." for wait
-	"Nothing happens" when saying anything
-	"It bounces off." when thowing the axe at the wrong thing
-	GO BUS when it's not present: "It's not here."
-	CLIMB LADDER when it's not present: "It's not here."
-	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
-	CHOP TREE: "What's the point?"
-	TIE anything but rope: I can't tie a NOUN
-	TO anything but rail: I can't tie a rope to a NOUN
-	CLIMB anything but ladder and rope: I can't climb a NOUN
-	READ anything other than a book: I can't read a NOUN
-	OPEN anything but door or sarcophagus: I can't open a NOUN
-	DRINK anything but whisky (even water): I can't drink a NOUN
-	THROW anything but the axe: I can't throw a NOUN
-	CHOP anything but tree or thicket: I can't chop a NOUN
-	DIG anything but hole: I can't dig a NOUN
-	TIE ROPE if not carried: I don't have it.
-	GIVE COINS if not carried: I don't have it.
-	READ any book if not carried: I don't have it.
-	DRINK WHISKY if not carried: I don't have it.
-	THROW AXE if not carried: I don't have it.
-	LIGHT LAMP if not carried: I don't have it.
-	GET ROPE when it's tied: "It's tied to a rail!"
-	GET WATER when without the empty bottle: "I need a container."
-	TO anything when without rope: "I haven't got a rope."
-	AT anything when without axe: "I need an ax."
-	LIGHT anything without match: "First I need a match."
-	After failed LIGHT, another try: "Using a SPENT match?"
-	LIGHT anything other than lamp: "It won't burn."
-	DIG without spade: "I'll need a spade."
+1	Handle "quit" command
+2	Handle "scream" command: "Yaaaagh!", then nothing happens
+3	Dropping water: "It soaks away." Then the water is gone for good
+4	"open door" at shed results in "My key won't fit!"
+5	Drinking whisky makes me stronger for 6 turns, then: "I feel weaker."
+6	"I've already done it!" for sarcophagus already open
+7	"I've already done it!" for whisky already drunk
+8	"I've already done it!" for thicket already chopped
+9	"I've already done it!" for hole already dug
+10	"It's locked!" when opening either door without key
+11	"He doesn't want it." when giving something other than coins
+12	"Time passes..." pause "Nothing happens." for wait
+13	"Nothing happens" when saying anything
+14	"It bounces off." when thowing the axe at the wrong thing
+15	GO BUS when it's not present: "It's not here."
+16	CLIMB LADDER when it's not present: "It's not here."
+17	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
+18	CHOP TREE: "What's the point?"
+19	TIE anything but rope: I can't tie a NOUN
+20	TO anything but rail: I can't tie a rope to a NOUN
+21	CLIMB anything but ladder and rope: I can't climb a NOUN
+22	READ anything other than a book: I can't read a NOUN
+23	OPEN anything but door or sarcophagus: I can't open a NOUN
+24	DRINK anything but whisky (even water): I can't drink a NOUN
+25	THROW anything but the axe: I can't throw a NOUN
+26	CHOP anything but tree or thicket: I can't chop a NOUN
+27	DIG anything but hole: I can't dig a NOUN
+28	TIE ROPE if not carried: I don't have it.
+29	GIVE COINS if not carried: I don't have it.
+30	READ any book if not carried: I don't have it.
+31	DRINK WHISKY if not carried: I don't have it.
+32	THROW AXE if not carried: I don't have it.
+33	LIGHT LAMP if not carried: I don't have it.
+34	GET ROPE when it's tied: "It's tied to a rail!"
+35	GET WATER when without the empty bottle: "I need a container."
+36	TO anything when without rope: "I haven't got a rope."
+37	AT anything when without axe: "I need an ax."
+38	LIGHT anything without match: "First I need a match."
+39	After failed LIGHT, another try: "Using a SPENT match?"
+40	LIGHT anything other than lamp: "It won't burn."
+41	DIG without spade: "I'll need a spade."
 
 Can't be done:
 	Climbing rope carrying more than one item, fall and die
