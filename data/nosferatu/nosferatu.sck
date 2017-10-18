@@ -534,6 +534,9 @@ action CHOP THICKET when carried axe and here thicket
 action CHOP THICKET when here mutilated
 	print "I've already done it!"
 
+action CHOP TREE when here trees
+	print "What's the point?"
+
 action GO THICKET when here mutilated
 	goto edge
 	look
@@ -610,6 +613,10 @@ action SCREAM:
 	print "OK."
 	print "`Yaaaagh!`"
 	print "Nothing happens."
+
+action GET SHARK when here shark
+	print "He doesn't seem to be too keen on that idea: He's eating me!"
+	game_over
 
 # Debugging
 action TELEPORT YARD print "Fzing!" goto yard look

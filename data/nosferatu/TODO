@@ -18,8 +18,8 @@ To do:
 14 OK	"It bounces off." when thowing the axe at the wrong thing
 15 OK	GO BUS when it's not present: "It's not here."
 16 OK	CLIMB LADDER when it's not present: "It's not here."
-17	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
-18	CHOP TREE: "What's the point?"
+17 OK	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
+18 OK	CHOP TREE: "What's the point?"
 19	TIE anything but rope: I can't tie a NOUN
 20	TO anything but rail: I can't tie a rope to a NOUN
 21 OK	CLIMB anything but ladder and rope: I can't climb a NOUN
@@ -31,7 +31,7 @@ To do:
 27	DIG anything but hole: I can't dig a NOUN
 28	TIE ROPE if not carried: I don't have it.
 29 OK	GIVE COINS if not carried: I don't have it.
-30	READ any book if not carried: I don't have it.
+30 NO	READ any book if not carried: I don't have it.
 31	DRINK WHISKY if not carried: I don't have it.
 32 OK	THROW AXE if not carried: I don't have it.
 33 OK	LIGHT LAMP if not carried: I don't have it.
