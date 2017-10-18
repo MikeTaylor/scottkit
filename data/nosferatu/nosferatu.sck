@@ -334,9 +334,15 @@ action DROP WATER when carried water and !here fountain
 	print "It soaks away."
 	destroy water
 
+action GIVE COINS when here conductor and !present coins
+	print "I don't have it."
+
 action GIVE COINS when here conductor
 	print "He takes them, the bus starts, and I'm home"
 	set_flag 5
+
+action GIVE: when here conductor
+	print "He doesn't want it."
 
 occur when flag 5 and carried bloodstone
 	print "with Nosferatu's Bloodstone."

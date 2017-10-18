@@ -12,7 +12,7 @@ To do:
 8 OK	"I've already done it!" for thicket already chopped
 9 OK	"I've already done it!" for hole already dug
 10 OK	"It's locked!" when opening either door without key
-11	"He doesn't want it." when giving something other than coins
+11 OK	"He doesn't want it." when giving something other than coins
 12	"Time passes..." pause "Nothing happens." for wait
 13	"Nothing happens" when saying anything
 14	"It bounces off." when thowing the axe at the wrong thing
@@ -30,7 +30,7 @@ To do:
 26	CHOP anything but tree or thicket: I can't chop a NOUN
 27	DIG anything but hole: I can't dig a NOUN
 28	TIE ROPE if not carried: I don't have it.
-29	GIVE COINS if not carried: I don't have it.
+29 OK	GIVE COINS if not carried: I don't have it.
 30	READ any book if not carried: I don't have it.
 31	DRINK WHISKY if not carried: I don't have it.
 32	THROW AXE if not carried: I don't have it.
