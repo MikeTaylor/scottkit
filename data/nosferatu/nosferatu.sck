@@ -528,12 +528,12 @@ action LIGHT LAMP when present lamp
 	comment "We only really want to look if it was previously dark. Can do this with flags."
 
 action SAY OVYEZ when here count
-       print "OK."
-       println_noun
-       println
-       print "Nosferatu vanishes in a cloud of smoke!"
-       destroy count
-       look
+	print "OK."
+	println_noun
+	println
+	print "Nosferatu vanishes in a cloud of smoke!"
+	destroy count
+	look
 
 action SAY:
 	print "OK."
