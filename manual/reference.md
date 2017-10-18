@@ -532,7 +532,7 @@ The following opcodes are supported:
 
 * `print` _string_
 --
-Prints the specified string. Within that string, `\n` sequences are interpreted as newlines, and `\t` sequences as tabs.
+Prints the specified string. Within that string, `\n` sequences are interpreted as newlines, and `\t` sequences as tabs. Since double-quotes are used to enclose the string, they may not appear within it. So backquotes (`` ` ``) are replaced by double quotes when they are printed.
 
 * `goto` _room_
 --
