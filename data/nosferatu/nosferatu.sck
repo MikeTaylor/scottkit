@@ -535,6 +535,11 @@ action SAY OVYEZ when here count
        destroy count
        look
 
+action SAY:
+	print "OK."
+	println_noun
+	print "Nothing happens"
+
 action HELP:
 	print "You'll have to figure it out for yourself."
 
