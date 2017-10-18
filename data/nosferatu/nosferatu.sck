@@ -268,6 +268,7 @@ action TO RAIL when flag 3 and at balcony
 	destroy rope
 	drop ropetied
 	print "OK."
+	look
 
 action TO when flag 3
 	clear_flag 3
@@ -317,6 +318,7 @@ action WAIT when at busstop and !here bus
 	pause
 	print "A bus arrives!"
 	drop bus
+	look
 
 action GO BUS when here bus
 	goto bus
@@ -516,6 +518,7 @@ action GET BODY when here body
 	print "It turns to dust!"
 	destroy body
 	drop dust
+	look
 
 action GET DUST when here dust
 	print "It slips through my fingers"
@@ -525,6 +528,7 @@ action CHOP THICKET when carried axe and here thicket
 	continue occur 0%
 	swap sign1 sign2
 	print "OK"
+	look
 
 action CHOP THICKET when here mutilated
 	print "I've already done it!"
