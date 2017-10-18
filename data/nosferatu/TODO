@@ -42,7 +42,7 @@ To do:
 38 OK	LIGHT anything without match: "First I need a match."
 39 OK	After failed LIGHT, another try: "Using a SPENT match?"
 40 OK	LIGHT anything other than lamp: "It won't burn."
-41	DIG without spade: "I'll need a spade."
+41 OK	DIG without spade: "I'll need a spade."
 
 Can't be done:
 	Climbing rope carrying more than one item, fall and die
