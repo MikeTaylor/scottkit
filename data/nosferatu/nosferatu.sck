@@ -457,6 +457,12 @@ action DRINK WHISKY when present whisky
 	print "I feel stronger."
 	swap whisky emptybottle
 	set_flag 4
+	set_counter 7
+
+occur when counter_eq 1
+	dec_counter
+	print "I feel weaker."
+	clear_flag 4
 
 action OPEN SARCOPHAGUS when here sarcophagus and flag 4
 	print "I find something!"
