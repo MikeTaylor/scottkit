@@ -120,7 +120,7 @@ room shed "dark shed."
 room pond "*I'm by a fishpond ..."
     exit south swamp
     exit east yard
-	item shark "maneating Shark!"
+	item shark "maneating Shark!" called SHARK
 
 room swamp "damp swamp."
     exit north pond
@@ -394,14 +394,18 @@ action POUR WATER when carried water
 	destroy water
 	swap bottle emptybottle
 
-action THROW AXE when !present axe
-	print "Huh?  What axe?"
+action THROW AXE when !carried axe
+	print "I don't have it."
 
 action THROW AXE
 	print "At what (eg. at bus)"
 	set_flag 2
 
-action AT DOOR when flag 2 and here hut
+action THROW:
+       print "I can't throw a"
+       println_noun
+
+action AT DOOR when carried axe and flag 2 and here hut
 	clear_flag 2
 	drop axe
 	continue occur 0%
@@ -413,7 +417,7 @@ action GO DOOR when here smashed
 	goto hut
 	look
 
-action AT STALACTITE when flag 2 and here stalactite
+action AT STALACTITE when carried axe and flag 2 and here stalactite
 	clear_flag 2
 	drop axe
 	continue occur 0%
@@ -421,11 +425,15 @@ action AT STALACTITE when flag 2 and here stalactite
 	print "It shatters!"
 	look
 
-action AT when flag 2
+action AT when carried axe and flag 2
 	clear_flag 2
 	drop axe
 	print "OK."
-	print "Nothing happens."
+	print "It bounces off."
+
+action AT when !carried axe and flag 2
+	print "I need an ax."
+	comment "For some reason, the original uses 'ax' here rather then 'axe'."
 
 action GO ENTRANCE when here entrance
 	goto underground

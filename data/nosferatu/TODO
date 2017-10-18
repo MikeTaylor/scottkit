@@ -15,7 +15,7 @@ To do:
 11 OK	"He doesn't want it." when giving something other than coins
 12 OK	"Time passes..." pause "Nothing happens." for wait
 13 OK	"Nothing happens" when saying anything
-14	"It bounces off." when thowing the axe at the wrong thing
+14 OK	"It bounces off." when thowing the axe at the wrong thing
 15	GO BUS when it's not present: "It's not here."
 16	CLIMB LADDER when it's not present: "It's not here."
 17	GET SHARK: "He doesn't seem to be too keen on that idea: He's eating me!"
@@ -26,19 +26,19 @@ To do:
 22	READ anything other than a book: I can't read a NOUN
 23	OPEN anything but door or sarcophagus: I can't open a NOUN
 24	DRINK anything but whisky (even water): I can't drink a NOUN
-25	THROW anything but the axe: I can't throw a NOUN
+25 OK	THROW anything but the axe: I can't throw a NOUN
 26	CHOP anything but tree or thicket: I can't chop a NOUN
 27	DIG anything but hole: I can't dig a NOUN
 28	TIE ROPE if not carried: I don't have it.
 29 OK	GIVE COINS if not carried: I don't have it.
 30	READ any book if not carried: I don't have it.
 31	DRINK WHISKY if not carried: I don't have it.
-32	THROW AXE if not carried: I don't have it.
+32 OK	THROW AXE if not carried: I don't have it.
 33	LIGHT LAMP if not carried: I don't have it.
 34	GET ROPE when it's tied: "It's tied to a rail!"
 35	GET WATER when without the empty bottle: "I need a container."
 36	TO anything when without rope: "I haven't got a rope."
-37	AT anything when without axe: "I need an ax."
+37 OK	AT anything when without axe: "I need an ax."
 38	LIGHT anything without match: "First I need a match."
 39	After failed LIGHT, another try: "Using a SPENT match?"
 40	LIGHT anything other than lamp: "It won't burn."
