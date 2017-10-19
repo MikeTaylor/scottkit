@@ -655,7 +655,3 @@ action GET SHARK when here shark
 	print "He doesn't seem to be too keen on that idea: He's eating me!"
 	game_over
 
-# Debugging
-action TELEPORT YARD print "Fzing!" goto yard look
-action TELEPORT HUT print "Fzing!" goto hut look
-action TELEPORT CHASM print "Fzing!" goto chasm look
