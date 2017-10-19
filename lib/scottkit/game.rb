@@ -16,8 +16,8 @@ module ScottKit
         :maxload, :lamptime #:nodoc:
 
     # Variable during run (but mostly set only within this class)
-    attr_reader :flags, :counters, :saved_rooms, :noun, :lampleft #:nodoc:
-    attr_accessor :loc, :counter, :saved_room #:nodoc:
+    attr_reader :flags, :counters, :saved_rooms, :noun #:nodoc:
+    attr_accessor :loc, :counter, :saved_room, :lampleft #:nodoc:
 
     private
 
