@@ -1,6 +1,6 @@
 # Revision history for Ruby gem ScottKit
 
-## 1.5.0 (IN PROGRESS)
+## 1.5.0 (Fri Oct 20 00:38:57 BST 2017)
 
 * Improvements to _Nosferatu_. This game is now as close as I can make it to the 1982 original, including bug-compatibility for mis-spellings and the behaviour of water.
 * Minor improvements to tutorial map 4 and subsequent.
