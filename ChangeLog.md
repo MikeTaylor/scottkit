@@ -6,6 +6,7 @@
 * Minor improvements to tutorial map 4 and subsequent.
 * Add '--teleport' command-line option, which generates `teleport ROOM` actions for every room. For use in game development and debugging. Fixes issue #4.
 * Add '--superget' command-line option, which generates `sg ITEM` actions for every item. For use in game development and debugging. Fixes issue #5.
+* The `refill_lamp` action now works correctly. It seems it never did work, but I didn't notice because my walkthroughs of _Adventureland_ were too efficient to require lamp-refilling!
 
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
 
