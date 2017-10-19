@@ -1,14 +1,14 @@
 19540
 56
-116
-50
+113
+47
 33
 5
 2
 1
 3
 999
-76
+75
 1
 
 750 0 0 0 0 0 9900 0
@@ -125,9 +125,6 @@
 5850 0 0 0 0 0 9450 0
 6150 0 0 0 0 0 2074 18000
 1540 582 0 0 0 0 18813 0
-4241 300 0 0 0 0 18954 9600
-4242 440 0 0 0 0 18954 9600
-4243 580 0 0 0 0 18954 9600
 
 "AUT" "ANY"
 "GO" "NOR"
@@ -170,10 +167,7 @@
 "*L" "LAM"
 "QUI" "OVY"
 "*Q" "SHA"
-"SCR" "YAR"
-"" "HUT"
-"" "CHA"
-"" "CRO"
+"SCR" "CRO"
 "" "KEY"
 "" "KIP"
 "" "MAL"
@@ -299,7 +293,6 @@ Bored with this game already, huh?"
 "I can only dig a hole"
 "`Yaaaagh!`"
 "He doesn't seem to be too keen on that idea: He's eating me!"
-"Fzing!"
 
 "*treasure* (you shouldn't be able to see this)" 0
 "stone Sarcophagus" 4
@@ -462,9 +455,6 @@ Bored with this game already, huh?"
 ""
 ""
 "cont"
-""
-""
-""
 ""
 ""
 ""
