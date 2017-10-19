@@ -45,6 +45,9 @@ opts = OptionParser.new do |x|
   x.on("-p", "--play-from-source", "Compile and play from source") {
     mode = :play_from_source
   }
+  x.on("-t", "--teleport", "Generate teleporting actions (for debugging)") {
+    options[:teleport] = true
+  }
   x.on("-w", "--wizard", "Wizard mode (enable debugging commands)") {
     options[:wizard_mode] = true
   }

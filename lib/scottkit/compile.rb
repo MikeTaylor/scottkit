@@ -214,6 +214,19 @@ module ScottKit
         rooms = tree.rooms
         items = tree.items
 
+        if (@game.options[:teleport])
+          rooms.each.with_index { |room, i|
+            next if i == 0
+            instructions = [
+              [ "print", "*** Fzing! ***" ],
+              [ "goto", room.name ],
+              [ "look" ]
+            ]
+            tree.actions.push CAction.new('teleport', room.name, [],
+                                          instructions, '')
+          }
+        end
+
         if tree.lightsource then
           # The light-source is always item #9, so swap as necessary
           lindex = items.index { |x| x.name == tree.lightsource } or

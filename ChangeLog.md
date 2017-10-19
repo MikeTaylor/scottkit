@@ -4,6 +4,7 @@
 
 * Improvements to _Nosferatu_. This game is now as close as I can make it to the 1982 original, including bug-compatibility for mis-spellings and the behaviour of water.
 * Minor improvements to tutorial map 4 and subsequent.
+* Add '--teleport' command-line option, which generates `teleport ROOM` actions for every room. For use in game development and debugging. Fixes issue #4.
 
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
 
