@@ -67,7 +67,7 @@ occur 100% when flag 16
 	clear_flag 16
 	swap lamp empty_lamp
 	look
-	comment "The engine set flag 16 when the lamp runs out"
+	comment "The engine sets flag 16 when the lamp runs out"
 
 room chamber "square chamber"
 	exit east dungeon
@@ -125,16 +125,16 @@ room crypt "damp, dismal crypt"
 
 item vampire "Vampire"
 
-occur 25% when here vampire and !carried cross
-	print "Vampire bites me!  I'm dead!"
-	game_over
-	comment "vampire can attack unless cross is carried"
+occur when here vampire and carried cross
+	print "Vampire cowers away from the cross!"
 
 occur when here vampire and !carried cross
 	print "Vampire looks hungrily at me."
 
-occur when here vampire and carried cross
-	print "Vampire cowers away from the cross!"
+occur 25% when here vampire and !carried cross
+	print "Vampire bites me!  I'm dead!"
+	game_over
+	comment "vampire can attack unless cross is carried"
 
 action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
