@@ -93,3 +93,4 @@
 * Ensure that the right files are built by `YARD`
 * Maybe modify to run against GLK using the Glkx driver
 * File inclusion
+* "Your light is growing dim." -- see ScottFree
