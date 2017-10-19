@@ -409,10 +409,13 @@ action JUMP when at chasm
 	goto bythicket
 	look
 
-action GET WATER when present emptybottle and here fountain
+action GET WATER when present emptybottle and here water
 	print OK
 	swap emptybottle bottle
 	superget water
+
+action GET WATER when here water
+	print "I need a container."
 
 action POUR WATER when carried water
 	print OK
@@ -493,6 +496,10 @@ action READ MAGIC when present magic
 action READ GAMES when present games
 	print "The book says:\n\nBored with this game already, huh?"
 
+action READ:
+	print "I can't read a"
+	println_noun
+
 action DRINK WHISKY when present whisky
 	print "OK."
 	print "Burp!  It's good!"
@@ -503,6 +510,13 @@ action DRINK WHISKY when present whisky
 
 action DRINK WHISKY when present emptybottle
 	print "I've already done it!"
+
+action DRINK WHISKY
+	print "I don't have it."
+
+action DRINK:
+	print "I can't drink a"
+	println_noun
 
 occur when counter_gt 1
 	dec_counter
@@ -524,6 +538,10 @@ action OPEN SARCOPHAGUS when here sarcophagus and flag 4
 action OPEN SARCOPHAGUS when here sarcophagus
 	print "The lid's too heavy!"
 
+action OPEN:
+	print "I can't open a"
+	println_noun
+
 action GET BODY when here body
 	print "It turns to dust!"
 	destroy body
@@ -543,8 +561,18 @@ action CHOP THICKET when carried axe and here thicket
 action CHOP THICKET when here mutilated
 	print "I've already done it!"
 
-action CHOP TREE when here trees
+action CHOP THICKET when carried axe
+	print "not now."
+
+action CHOP TREE when carried axe and here trees
 	print "What's the point?"
+
+action CHOP when !carried axe
+	print "I need an ax."
+
+action CHOP:
+	print "I can't chop a"
+	println_noun
 
 action GO THICKET when here mutilated
 	goto edge
