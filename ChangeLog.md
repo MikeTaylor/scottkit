@@ -2,7 +2,7 @@
 
 ## 1.5.0 (IN PROGRESS)
 
-* Improvements to _Nosferatu_.
+* Improvements to _Nosferatu_. This game is now as close as I can make it to the 1982 original, including bug-compatibility for mis-spellings and the behaviour of water.
 * Minor improvements to tutorial map 4 and subsequent.
 
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
