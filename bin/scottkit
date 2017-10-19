@@ -45,7 +45,7 @@ opts = OptionParser.new do |x|
   x.on("-p", "--play-from-source", "Compile and play from source") {
     mode = :play_from_source
   }
-  x.on("-w", "--wizard", "Wizard mode (enabled debugging commands)") {
+  x.on("-w", "--wizard", "Wizard mode (enable debugging commands)") {
     options[:wizard_mode] = true
   }
   x.on("-l", "--load-game FILE", "Load a previously saved game") { |file|
