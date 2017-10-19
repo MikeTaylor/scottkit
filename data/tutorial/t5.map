@@ -3,7 +3,7 @@
 		|		|
 		|		|
 Cave Mouth------Chamber---------Dungeon
-		[cross]		[door]
+[station]	[cross]		[door]
 				=
 				|
 				Cell
