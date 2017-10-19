@@ -191,9 +191,9 @@ module ScottKit
     def wizard_command(verb, noun)
       optnames = {
         "c" => :show_conditions,
-        "i"  => :show_instructions,
-        "r"  => :show_random,
-        "p"  => :show_parse,
+        "i" => :show_instructions,
+        "r" => :show_random,
+        "p" => :show_parse,
       }
 
       if verb.upcase == "#SG" # superget
