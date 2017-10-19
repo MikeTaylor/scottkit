@@ -227,6 +227,18 @@ module ScottKit
           }
         end
 
+        if (@game.options[:superget])
+          items.each.with_index { |item, i|
+            next if i == 0
+            instructions = [
+              [ "print", "*** Fzapp! ***" ],
+              [ "superget", item.name ],
+            ]
+            tree.actions.push CAction.new('sg', item.name, [],
+                                          instructions, '')
+          }
+        end
+
         if tree.lightsource then
           # The light-source is always item #9, so swap as necessary
           lindex = items.index { |x| x.name == tree.lightsource } or

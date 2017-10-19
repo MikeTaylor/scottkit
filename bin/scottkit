@@ -48,6 +48,9 @@ opts = OptionParser.new do |x|
   x.on("-t", "--teleport", "Generate teleporting actions (for debugging)") {
     options[:teleport] = true
   }
+  x.on("-g", "--superget", "Generate superget actions (for debugging)") {
+    options[:superget] = true
+  }
   x.on("-w", "--wizard", "Wizard mode (enable debugging commands)") {
     options[:wizard_mode] = true
   }
