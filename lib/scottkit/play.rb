@@ -13,6 +13,7 @@ module ScottKit
       @saved_room = 0
       @loc = defined?(@startloc) ? @startloc : 1
       @lampleft = defined?(@lamptime) ? @lamptime : 0
+      @need_to_look = nil;
 
       puts "ScottKit, a Scott Adams game toolkit in Ruby."
       puts "(C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>"
@@ -34,9 +35,13 @@ module ScottKit
         raise "#$0: can't read input file '#{file}': #$!" if !@fh
       end
 
-      look
+      actually_look
       while true
         run_matching_actions(0, 0)
+        if @need_to_look
+          actually_look
+        end
+        @need_to_look = nil;
         return @finished != 0 if @finished
         print "Tell me what to do ? "
         if !(line = gets)
@@ -55,6 +60,9 @@ module ScottKit
           if @lampleft == 0
             puts "Your light has run out"
             @flags[FLAG_LAMPDEAD] = true
+            if is_dark
+              need_to_look
+            end
           elsif @lampleft < 25 && @lampleft % 5 == 0
 	    puts("Your light is growing dim.");
           end
@@ -136,11 +144,7 @@ module ScottKit
           newloc = @rooms[@loc].exits[i-1]
           if newloc != 0
             @loc = newloc
-            look
-            # When moving from a light place to a dark one or vice
-            # versa, this look should not happen, because we'll get a
-            # correct version of the display after the flag gets set.
-            # I'm not sure what can be done about this.  ### Think
+            need_to_look
           elsif is_dark
             puts "I fell down and broke my neck."
             finished(0)
@@ -212,7 +216,7 @@ module ScottKit
           puts "#{i} out of range 0..#{@rooms.count}"
         else
           @loc = i
-          look
+          need_to_look
         end
       elsif verb.upcase == "#WHERE" # find an item
         i = Integer(noun)
@@ -265,7 +269,11 @@ module ScottKit
       end
     end
 
-    def look #:nodoc:
+    def need_to_look(val = :always)
+      @need_to_look = val
+    end
+
+    def actually_look #:nodoc:
       puts
       if is_dark
         return print "I can't see. It is too dark!\n\n"
@@ -335,7 +343,7 @@ module ScottKit
     end
 
     public :play # Must be visible to driver program
-    public :prompt_and_save, :look, :score, :ncarried, :inventory, :finished # Invoked from Instruction.execute()
+    public :prompt_and_save, :need_to_look, :score, :ncarried, :inventory, :finished # Invoked from Instruction.execute()
 
 
     class Condition
@@ -403,10 +411,10 @@ module ScottKit
         when 60 then @game.flags[args.shift] = false
         when 61 then
           puts "I am dead."; @game.flags[15] = false;
-          @game.loc = @game.rooms.size-1; @game.look
+          @game.loc = @game.rooms.size-1; @game.need_to_look
         when 62 then i = args.shift; @game.items[i].loc = args.shift
         when 63 then @game.finished(0)
-        when 64 then @game.look
+        when 64 then @game.need_to_look
         when 65 then @game.score
         when 66 then @game.inventory
         when 67 then @game.flags[0] = true
@@ -425,7 +433,7 @@ module ScottKit
         when 74 then @game.items[args.shift].loc = ROOM_CARRIED
         when 75 then i1 = args.shift; i2 = args.shift
           @game.items[i1].loc = @game.items[i2].loc
-        when 76 then @game.look
+        when 76 then @game.need_to_look
         when 77 then @game.counter -= 1
         when 78 then print @game.counter, " "
         when 79 then @game.counter = args.shift

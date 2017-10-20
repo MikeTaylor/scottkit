@@ -8,6 +8,7 @@
 * Add '--superget' command-line option, which generates `sg ITEM` actions for every item. For use in game development and debugging. Fixes issue #5.
 * The `refill_lamp` action now works correctly. It seems it never did work, but I didn't notice because my walkthroughs of _Adventureland_ were too efficient to require lamp-refilling!
 * Emit "Your light is growing dim" message every five turns when less than 25 left.
+* When moving into a dark room, the description is no longer displayed before "It's too dark" message. Fixes issue #7.
 
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
 
