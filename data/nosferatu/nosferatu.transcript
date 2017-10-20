@@ -150,12 +150,12 @@ I'm in the kitchen.
 Obvious exits: North, South.
 
 Tell me what to do ? n
+I feel weaker.
 
 I'm in the washroom.
 Obvious exits: South, East.
 I can also see: locked Door
 
-I feel weaker.
 Tell me what to do ? open door
 OK.
 
@@ -480,11 +480,6 @@ Tell me what to do ? drop ladder
 O.K.
 Tell me what to do ? go tunnel
 
-I'm in a subterranean cavern.
-Obvious exits: South.
-I can also see: Stalactites hanging from the ceiling
-
-
 I can't see. It is too dark!
 
 Tell me what to do ? light lamp
@@ -530,10 +525,6 @@ Obvious exits: South.
 I can also see: sharp Axe, spent Match, entrance to cave
 
 Tell me what to do ? s
-
-I'm at the bottom of a deep hole.
-I can also see: tall Ladder, secret Tunnel
-
 
 I'm at the bottom of a deep hole.
 I can also see: tall Ladder, secret Tunnel
