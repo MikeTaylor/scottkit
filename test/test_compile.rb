@@ -34,7 +34,7 @@ class TestCompile < Test::Unit::TestCase #:nodoc:
   def test_parser
     game = ScottKit::Game.new({})
     # It's a clumsy API, but then we're peeking where we're not invited
-    compiler = ScottKit::Game::Compiler.new(game, "data/tutorial/t6.sck")
+    compiler = ScottKit::Game::Compiler.new(game, "data/test/t6.sck")
     tree = compiler.parse
     got = tree.pretty_inspect
     expected = File.read("data/test/t6.pretty-print")
