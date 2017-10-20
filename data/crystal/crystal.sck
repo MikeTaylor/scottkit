@@ -9,7 +9,6 @@ ident 18400
 version 1
 wordlen 3
 maxload 5
-lighttime 100
 start hut
 treasury hut
 
