@@ -144,7 +144,7 @@ occur 25% when here vampire and !carried cross
 action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
-verbgroup take get
-verbgroup leave drop
+verbgroup get take g
+verbgroup drop leave
 noungroup lamp lantern
 noungroup doorbell bell
