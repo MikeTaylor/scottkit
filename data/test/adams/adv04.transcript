@@ -21,12 +21,12 @@ Tell me what to do ? get ring
 O.K.
 OK
 Tell me what to do ? north
+Window just slAmmed shut
 
 I'm in a room in the castle
 Obvious exits: South.
-I can also see: Open Window
+I can also see: Closed Window
 
-Window just slAmmed shut
 Tell me what to do ? south
 
 I'm in a chapel
@@ -42,12 +42,12 @@ I can also see: Large fireplace
 Tell me what to do ? west
 I can't go in that direction.
 Tell me what to do ? go fireplace
+I hear strange sounds, as if someone were moaning.
 
 I'm in a large fireplace
 Obvious exits: South.
 I can also see: Closed Flue, Dusty Idol
 
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? listen
 I hear strange sounds, as if someone were moaning.
 Its very faint.
@@ -89,11 +89,6 @@ I'm in a large fireplace
 Obvious exits: South.
 I can also see: Dark Chimney, Open Flue
 
-
-I'm in a large fireplace
-Obvious exits: South.
-I can also see: Dark Chimney, Open Flue
-
 Tell me what to do ? south
 
 I'm in a Ballroom
@@ -117,12 +112,12 @@ O.K.
 Tell me what to do ? wave ring
 Ring glows briefly & door vanishes
 Tell me what to do ? look
+I see nothing very special.
 
 I'm in a Tunnel
 Obvious exits: West.
 I can also see: Slick chute leading downward
 
-I see nothing very special.
 Tell me what to do ? drop ring
 O.K.
 Tell me what to do ? west
@@ -228,11 +223,6 @@ I'm in a room in the castle
 Obvious exits: North, West.
 I can also see: Big kettle, Dark hole
 
-
-I'm in a room in the castle
-Obvious exits: North, West.
-I can also see: Big kettle, Dark hole
-
 Tell me what to do ? north
 
 I'm in a room in the castle
@@ -247,12 +237,12 @@ O.K.
 Tell me what to do ? drop sword
 O.K.
 Tell me what to do ? look
+I see nothing very special.
 
 I'm in a room in the castle
 Obvious exits: South, East.
 I can also see: Animal heads, Dull & broken sword, Closed SAfe
 
-I see nothing very special.
 Tell me what to do ? open safe
 Safe's combination lock is numbered from 33 to 38.
 Tell me what to do ? east
@@ -330,12 +320,12 @@ Obvious exits: North, East.
 I can also see: Wide open door
 
 Tell me what to do ? go door
+A beam of light shines on grave
 
 I'm in a Graveyard
 Obvious exits: East.
 I can also see: GrAves, Rusting SAW
 
-A beam of light shines on grave
 Tell me what to do ? examine grave
 Amongst the GRAVES is a four leaf clover.
 A sign here says:
@@ -424,12 +414,12 @@ won't budge!
 Tell me what to do ? get doll
 O.K.
 Tell me what to do ? south
+Raven crys something outside
 
 I'm in a room in the castle
 Obvious exits: South.
 I can also see: Open Window
 
-Raven crys something outside
 Tell me what to do ? south
 
 I'm in a chapel
@@ -468,12 +458,12 @@ O.K.
 Tell me what to do ? go chute
 I slide back down
 Tell me what to do ? go hole
+You startled medium & she vanished
 
 I'm in Medium Maegen's Mad Room
 Obvious exits: West.
 I can also see: Crystal Ball
 
-You startled medium & she vanished
 Tell me what to do ? get ball
 A sepulchral voice says:
 It belongs to the medium
@@ -485,12 +475,12 @@ friend. I also see a -moving- bag helping you through a tight
 squeeze!"
 Tell me what to do ? examine ball
 I see nothing very special.
+Spirit vibrations drive me from room.
 
 I'm in a Tunnel
 Obvious exits: West.
 I can also see: Sapphire ring, Slick chute leading downward
 
-Spirit vibrations drive me from room.
 Tell me what to do ? west
 
 I'm in a chapel
@@ -504,12 +494,12 @@ Obvious exits: East.
 I can also see: Large fireplace
 
 Tell me what to do ? go fireplace
+I hear strange sounds, as if someone were moaning.
 
 I'm in a large fireplace
 Obvious exits: South.
 I can also see: Dark Chimney, Open Flue
 
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? go chimney
 
 I can't see. It is too dark!
@@ -522,15 +512,12 @@ O.K.
 I hear strange sounds, as if someone were moaning.
 Tell me what to do ? down
 Dangerous to move in the dark!
-
-I can't see. It is too dark!
-
+I hear strange sounds, as if someone were moaning.
 
 I'm in a large fireplace
 Obvious exits: South.
 I can also see: Dark Chimney, Open Flue
 
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? south
 
 I'm in a Ballroom
@@ -566,12 +553,12 @@ OK
 Tell me what to do ? dial 33
 OK
 Tell me what to do ? look
+I see nothing very special.
 
 I'm in a room in the castle
 Obvious exits: South, East.
 I can also see: Animal heads, Dull & broken sword, Open SAfe
 
-I see nothing very special.
 Tell me what to do ? examine safe
 There's an antique hammer here
 Tell me what to do ? get hammer
@@ -629,13 +616,13 @@ O.K.
 Tell me what to do ? drop hammer
 O.K.
 Tell me what to do ? look
+I see nothing very special.
+I hear strange sounds, as if someone were moaning.
 
 I'm in a Chimney
 Obvious exits: Down.
 I can also see: Broken glass, Soot, Nails, Wooden boards, Antique hammer, GrAting
 
-I see nothing very special.
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? get gratin
 It's beyond my power to do that.
 Tell me what to do ? saw grating
@@ -649,12 +636,12 @@ O.K.
 I hear strange sounds, as if someone were moaning.
 Tell me what to do ? push button
 Heavy duty exhaust fan comes on & sucks me up!
+I hear strange sounds, as if someone were moaning.
 
 I'm in a narrow part of the chimney
 Obvious exits: Down.
 I can also see: Stuck Chimney Sweep
 
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? listen
 HELP ME, I'm stuck!
 I hear strange sounds, as if someone were moaning.
@@ -678,11 +665,6 @@ Obvious exits: Down.
 I can also see: Broken glass, Soot, Nails, Wooden boards, Antique hammer, Rusting SAW, Button in the wall, Broken grating
 
 Tell me what to do ? down
-
-I'm in a large fireplace
-Obvious exits: South.
-I can also see: Dark Chimney, Open Flue
-
 
 I'm in a large fireplace
 Obvious exits: South.
@@ -800,11 +782,11 @@ I can also see: Slippery chute leading up, Crack in the wall, Hole in the wall
 Tell me what to do ? wave bag
 There's a CLAP OF THUNDER!
 Tell me what to do ? look
+I see nothing very special.
 
 I'm in a room in the castle
 I can also see: Slippery chute leading up, Wide crack in the wall, Hole in the wall
 
-I see nothing very special.
 Tell me what to do ? go crack
 OK
 
@@ -831,20 +813,20 @@ I'm in a room in the castle
 I can also see: Slippery chute leading up, Wide crack in the wall, Hole in the wall
 
 Tell me what to do ? go hol
+You startled medium & she vanished
 
 I'm in Medium Maegen's Mad Room
 Obvious exits: West.
-I can also see: Crystal Ball, Spirit Medium
+I can also see: Crystal Ball
 
-You startled medium & she vanished
 Tell me what to do ? look ball
 I see nothing very special.
+Spirit vibrations drive me from room.
 
 I'm in a Tunnel
 Obvious exits: West.
 I can also see: Sapphire ring, Slick chute leading downward
 
-Spirit vibrations drive me from room.
 Tell me what to do ? west
 
 I'm in a chapel
@@ -867,10 +849,10 @@ Double bubble toil & trouble the encAntAtions Are About to peAk!
 Tell me what to do ? yell chant
 There's a CLAP OF THUNDER!
 Pins fall out of doll
+HURRAH! Look who is in the room!
+The game is now over.
 
 I'm in a chapel
 Obvious exits: North, South, East, West.
 I can also see: Four leaf clover, Open Coffin, Doll, Smiling Count Cristo
 
-HURRAH! Look who is in the room!
-The game is now over.

@@ -167,9 +167,6 @@ I can't see. It is too dark!
 Tell me what to do ? up
 Dangerous to move in the dark!
 
-I can't see. It is too dark!
-
-
 I'm in a semi-dark hole by the root chamber
 Obvious exits: Up.
 I can also see: Open door with a hallway beyond
@@ -269,11 +266,6 @@ I'm in a long down sloping hall
 Obvious exits: Up, Down.
 
 Tell me what to do ? u
-
-I'm in a semi-dark hole by the root chamber
-Obvious exits: Up.
-I can also see: Open door with a hallway beyond
-
 
 I'm in a semi-dark hole by the root chamber
 Obvious exits: Up.
@@ -427,11 +419,6 @@ I'm in a semi-dark hole by the root chamber
 Obvious exits: Up.
 I can also see: Open door with a hallway beyond
 
-
-I'm in a semi-dark hole by the root chamber
-Obvious exits: Up.
-I can also see: Open door with a hallway beyond
-
 Tell me what to do ? unlight lamp
 OK
 Lamp is off
@@ -578,11 +565,6 @@ I'm in a long down sloping hall
 Obvious exits: Up, Down.
 
 Tell me what to do ? u
-
-I'm in a semi-dark hole by the root chamber
-Obvious exits: Up.
-I can also see: Open door with a hallway beyond
-
 
 I'm in a semi-dark hole by the root chamber
 Obvious exits: Up.
@@ -767,12 +749,12 @@ I can also see: Large outdoor Advertisement, Hole
 
 Tell me what to do ? w
 
+I'm bitten by chiggers.
+
 I'm in a dismal swamp
 Obvious exits: North, East, West.
 I can also see: -HOLLOW- stump and remains of a felled tree, Evil smelling mud, Swamp gas, Patches of "OILY" slime, Chiggers
 
-
-I'm bitten by chiggers.
 Tell me what to do ? take mud
 O.K.
 OK
