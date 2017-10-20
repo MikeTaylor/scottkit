@@ -17,7 +17,7 @@ treasury hut
 verbgroup go enter follow run walk
 verbgroup take get
 verbgroup leave drop
-#verbgroup cut chop ### currently causes a collision
+verbgroup cut chop
 verbgroup batter ram
 
 # ----------------------------------------------------------------------------
