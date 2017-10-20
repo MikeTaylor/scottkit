@@ -55,6 +55,8 @@ module ScottKit
           if @lampleft == 0
             puts "Your light has run out"
             @flags[FLAG_LAMPDEAD] = true
+          elsif @lampleft < 25 && @lampleft % 5 == 0
+	    puts("Your light is growing dim.");
           end
         end
       end
