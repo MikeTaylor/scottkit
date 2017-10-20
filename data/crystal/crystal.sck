@@ -30,13 +30,13 @@ action save game: save_game
 action look: look
 
 # The path is dark; nowhere else is
-occur when "at" path
+occur when "at" path and !flag 15
 	set_dark
-	###look # Hard to make this work right in a non-curses driver
+	look
 
-occur when !at path
+occur when !at path and flag 15
 	clear_dark
-	###look # Hard to make this work right in a non-curses driver
+	look
 
 occur when !flag 1
 	set_flag 1
