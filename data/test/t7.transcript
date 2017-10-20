@@ -29,6 +29,7 @@ I can also see: Wooden cross
 Tell me what to do ? get cross
 O.K.
 Tell me what to do ? north
+Your light is growing dim.
 
 I'm in a gorgeously decorated throne room
 Obvious exits: South.
@@ -47,42 +48,39 @@ I'm in a gloomy dungeon
 Obvious exits: North, West.
 I can also see: Locked door
 
-
-I'm in a gloomy dungeon
-Obvious exits: North, West.
-I can also see: Locked door
-
 Tell me what to do ? north
+Vampire cowers away from the cross!
 
 I'm in a damp, dismal crypt
 Obvious exits: South.
 I can also see: Brass key, Vampire
 
-Vampire cowers away from the cross!
 Tell me what to do ? drop lamp
 O.K.
+Your light is growing dim.
 Vampire cowers away from the cross!
 Tell me what to do ? get key
 O.K.
 Vampire cowers away from the cross!
 Tell me what to do ? south
+I smell something rotting to the north.
 
 I can't see. It is too dark!
 
-I smell something rotting to the north.
 Tell me what to do ? drop key
 O.K.
 I smell something rotting to the north.
 Tell me what to do ? north
 Dangerous to move in the dark!
+Vampire cowers away from the cross!
 
 I'm in a damp, dismal crypt
 Obvious exits: South.
 I can also see: old-fashioned brass lamp, Vampire
 
-Vampire cowers away from the cross!
 Tell me what to do ? get lamp
 O.K.
+Your light is growing dim.
 Vampire cowers away from the cross!
 Tell me what to do ? south
 
@@ -96,13 +94,14 @@ Tell me what to do ? get key
 O.K.
 Tell me what to do ? open door
 OK
+I smell something rotting to the north.
 
 I'm in a gloomy dungeon
 Obvious exits: North, West.
 I can also see: Wooden cross, Open door leads south
 
-I smell something rotting to the north.
 Tell me what to do ? go door
+Your light is growing dim.
 
 I'm in a dungeon cell
 Obvious exits: North.
@@ -123,16 +122,7 @@ Tell me what to do ? west
 I'm in a square chamber
 Obvious exits: North, East, West.
 
-
-I'm in a square chamber
-Obvious exits: North, East, West.
-
 Tell me what to do ? north
-
-I'm in a gorgeously decorated throne room
-Obvious exits: South.
-I can also see: Sign says: leave treasure here, then say SCORE
-
 Your light has run out
 
 I'm in a gorgeously decorated throne room
