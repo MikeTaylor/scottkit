@@ -249,7 +249,7 @@ occur 25% when here vampire and !carried cross
 	game_over
 	comment "vampire can attack unless cross is carried"
 
-action get key when present vampire and !carried cross
+action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 ```
 
@@ -269,7 +269,7 @@ This stage uses the directives from the previous stage, plus `lightsource`, `occ
 		|		|
 		|		|
 Cave Mouth------Chamber---------Dungeon
-		[cross]		[door]
+[station]	[cross]		[door]
 				=
 				|
 				Cell
@@ -287,6 +287,11 @@ action score: score
 action inventory: inventory
 action look: look
 
+occur when !flag 1
+	print "Welcome to the Tutorial adventure."
+	print "You must find a gold coin and store it."
+	set_flag 1
+
 room cave "cave mouth"
 	exit east chamber
 
@@ -298,7 +303,32 @@ item sign "Sign says: leave treasure here, then say SCORE"
 item lamp "old-fashioned brass lamp"
 	called "lamp"
 
-lightsource lamp
+item lit_lamp "lit lamp"
+	called "lamp" nowhere
+
+item empty_lamp "empty lamp"
+	called "lamp" nowhere
+
+lightsource lit_lamp
+lighttime 10
+
+action light lamp when present lamp
+	swap lamp lit_lamp
+	print "OK, lamp is now lit and will burn for 10 turns."
+	look
+
+occur when flag 16
+	clear_flag 16
+	swap lit_lamp empty_lamp
+	look
+	comment "The engine sets flag 16 when the lamp runs out"
+
+item station "lamp-refilling station" at cave
+
+action refill lamp when here station and present empty_lamp
+	destroy empty_lamp
+	refill_lamp
+	print "The lamp is now full and lit."
 
 room chamber "square chamber"
 	exit east dungeon
@@ -356,18 +386,18 @@ room crypt "damp, dismal crypt"
 
 item vampire "Vampire"
 
+occur when here vampire and carried cross
+	print "Vampire cowers away from the cross!"
+
+occur when here vampire and !carried cross
+	print "Vampire looks hungrily at me."
+
 occur 25% when here vampire and !carried cross
 	print "Vampire bites me!  I'm dead!"
 	game_over
 	comment "vampire can attack unless cross is carried"
 
-occur when here vampire and !carried cross
-	print "Vampire looks hungrily at me."
-
-occur when here vampire and carried cross
-	print "Vampire cowers away from the cross!"
-
-action get key when present vampire and !carried cross
+action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
 verbgroup take get
