@@ -35,7 +35,7 @@ sleep_at_end = false
 
 opts = OptionParser.new do |x|
   x.banner = "Usage: #$0 [options] [<data-file>]
-(ScottKit version 1.4.0)"
+(ScottKit version 1.5.0)"
   x.on("-c", "--compile", "Compile <data-file> instead of loading") {
     mode = :compile
   }
