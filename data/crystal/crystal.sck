@@ -483,7 +483,7 @@ room forest2 "forest"
 item pool "Bubbling pool"
 
 action go pool when here pool
-	goto pool
+	goto onpool
 	look2
 
 action hold breath when counter_gt 0
@@ -493,8 +493,13 @@ action hold breath
 	set_counter 6
 	print "OK"
 
+room onpool "bubbling pool, treading water"
+	exit north forest2
+	exit down pool
+
 room pool "bubbling pool, just below the water level"
-	exit up forest2
+	exit up onpool
+	exit south river1
 
 item inflow "inflow from the south"
 

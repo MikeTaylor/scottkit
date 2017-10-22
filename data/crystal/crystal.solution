@@ -55,8 +55,9 @@ get vase
 north
 east
 examine vase
-hold breath
 go pool
+hold breath
+down
 go inflow
 south
 drop vase
@@ -79,6 +80,7 @@ get out
 north
 north
 up
+north
 north
 west
 west

@@ -30,12 +30,16 @@ Hut-------------Clearing--------Glade--->CLIMB, <Down---Top of Beech
 		[bear]		[pool]
 		|		vGO POOL, ^Up
 		|		|
-		Forest Path	In Pool
-		[vase]		[inflow]
-	 ______/(why here?!)	vGO INFLOW
+		Forest Path	On pool
+		[vase]		|
+	 ______/(why here?!)	|
 	/			|
-	Inside vase		River1
-	[key]			|
+	Inside vase		In Pool
+	[key]			[inflow]
+				vGO INFLOW
+				|
+				River1
+				|
 				|
 				|
 				River2
