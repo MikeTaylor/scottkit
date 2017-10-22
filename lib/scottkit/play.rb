@@ -1,6 +1,5 @@
 module ScottKit
   class Game
-    private
 
     # Returns 1 if the game was won, 0 otherwise
     def play
@@ -70,6 +69,8 @@ module ScottKit
       end
       0
     end
+
+    private
 
     # Get a line from @fh if defined, otherwise $stdin
     def gets
@@ -342,7 +343,6 @@ module ScottKit
       @flags[15] && loc != ROOM_CARRIED && loc != @loc
     end
 
-    public :play # Must be visible to driver program
     public :prompt_and_save, :need_to_look, :score, :ncarried, :inventory, :finished # Invoked from Instruction.execute()
 
 
