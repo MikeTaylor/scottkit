@@ -6,27 +6,32 @@ module ScottKit
       prepare_to_play
 
       while true
+        # TODO: Find out if this can move to the bottom of the loop. If so we
+        # could probably turn the outter loop into `while !finished?`
         run_matching_actions(0, 0)
-        if @need_to_look
-          actually_look
-        end
+
+        actually_look if @need_to_look
 
         return @finished if finished?
 
         print "Tell me what to do ? "
         if !(line = gets)
+          # TODO: Find out when we would we end up here?
           puts
           break
         end
+
         words = line.chomp.split
         if words.length == 0
           puts "I don't understand your command."
           next
         end
+
         execute_command(words[0], words[1])
 
         process_lighting
       end
+
       0
     end
 
