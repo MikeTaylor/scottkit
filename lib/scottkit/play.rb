@@ -24,19 +24,8 @@ module ScottKit
           next
         end
         execute_command(words[0], words[1])
-        if items.size > ITEM_LAMP &&
-            items[ITEM_LAMP].loc != ROOM_NOWHERE && @lampleft > 0
-          @lampleft -= 1
-          if @lampleft == 0
-            puts "Your light has run out"
-            @flags[FLAG_LAMPDEAD] = true
-            if is_dark
-              need_to_look
-            end
-          elsif @lampleft < 25 && @lampleft % 5 == 0
-	    puts("Your light is growing dim.");
-          end
-        end
+
+        process_lighting
       end
       0
     end
@@ -78,6 +67,21 @@ module ScottKit
 
     def finished?
       !@finished.nil?
+    end
+
+    def process_lighting
+      if items.size > ITEM_LAMP && items[ITEM_LAMP].loc != ROOM_NOWHERE && @lampleft > 0
+        @lampleft -= 1
+        if @lampleft == 0
+          puts "Your light has run out"
+          @flags[FLAG_LAMPDEAD] = true
+          if is_dark
+            need_to_look
+          end
+        elsif @lampleft < 25 && @lampleft % 5 == 0
+        puts("Your light is growing dim.");
+        end
+      end
     end
 
     # Get a line from @fh if defined, otherwise $stdin
