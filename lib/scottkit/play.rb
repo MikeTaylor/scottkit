@@ -11,7 +11,8 @@ module ScottKit
           actually_look
         end
 
-        return @finished != 0 if @finished
+        return @finished if finished?
+
         print "Tell me what to do ? "
         if !(line = gets)
           puts
@@ -73,6 +74,10 @@ module ScottKit
         @fh = File.new(file)
         raise "#$0: can't read input file '#{file}': #$!" if !@fh
       end
+    end
+
+    def finished?
+      !@finished.nil?
     end
 
     # Get a line from @fh if defined, otherwise $stdin
@@ -151,7 +156,7 @@ module ScottKit
             need_to_look
           elsif is_dark
             puts "I fell down and broke my neck."
-            finished(0)
+            finish(0)
           else
             puts "I can't go in that direction."
           end
@@ -320,7 +325,7 @@ module ScottKit
       puts "On a scale of 0 to 100, that rates #{100*count/@ntreasures}."
       if (count == @ntreasures)
         puts "Well done."
-        finished(1)
+        finish(1)
       end
     end
 
@@ -331,7 +336,7 @@ module ScottKit
       save(name)
     end
 
-    def finished(win) #:nodoc:
+    def finish(win) #:nodoc:
       puts "The game is now over."
       sleep 2 if !options[:no_wait]
       @finished = win
@@ -348,8 +353,7 @@ module ScottKit
       @flags[15] && loc != ROOM_CARRIED && loc != @loc
     end
 
-    public :prompt_and_save, :need_to_look, :score, :ncarried, :inventory, :finished # Invoked from Instruction.execute()
-
+    public :prompt_and_save, :need_to_look, :score, :ncarried, :inventory, :finish # Invoked from Instruction.execute()
 
     class Condition
       def evaluate
@@ -418,7 +422,7 @@ module ScottKit
           puts "I am dead."; @game.flags[15] = false;
           @game.loc = @game.rooms.size-1; @game.need_to_look
         when 62 then i = args.shift; @game.items[i].loc = args.shift
-        when 63 then @game.finished(0)
+        when 63 then @game.finish(0)
         when 64 then @game.need_to_look
         when 65 then @game.score
         when 66 then @game.inventory
