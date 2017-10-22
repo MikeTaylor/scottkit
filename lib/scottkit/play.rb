@@ -3,44 +3,14 @@ module ScottKit
 
     # Returns 1 if the game was won, 0 otherwise
     def play
-      @finished = nil
-      @items.each { |x| x.loc = x.startloc }
-      @flags = Array.new(NFLAGS) { false } # weird way to set a default
-      @counters = Array.new(NFLAGS) { 0 }
-      @saved_rooms = Array.new(NFLAGS) { 0 }
-      @counter = 0
-      @saved_room = 0
-      @loc = defined?(@startloc) ? @startloc : 1
-      @lampleft = defined?(@lamptime) ? @lamptime : 0
-      @need_to_look = nil;
+      prepare_to_play
 
-      puts "ScottKit, a Scott Adams game toolkit in Ruby."
-      puts "(C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>"
-      puts "Distributed under the GNU GPL version 2 license,"
-
-      if file = options[:restore_file]
-        restore(file)
-        puts "Restored saved game #{file}"
-      end
-
-      if seed = options[:random_seed]
-        puts "Setting random seed #{seed}"
-        srand(seed)
-      end
-
-      @fh = nil
-      if file = options[:read_file]
-        @fh = File.new(file)
-        raise "#$0: can't read input file '#{file}': #$!" if !@fh
-      end
-
-      actually_look
       while true
         run_matching_actions(0, 0)
         if @need_to_look
           actually_look
         end
-        @need_to_look = nil;
+
         return @finished != 0 if @finished
         print "Tell me what to do ? "
         if !(line = gets)
@@ -71,6 +41,39 @@ module ScottKit
     end
 
     private
+
+    def prepare_to_play
+      @finished = nil
+      @items.each { |x| x.loc = x.startloc }
+      @flags = Array.new(NFLAGS) { false } # weird way to set a default
+      @counters = Array.new(NFLAGS) { 0 }
+      @saved_rooms = Array.new(NFLAGS) { 0 }
+      @counter = 0
+      @saved_room = 0
+      @loc = defined?(@startloc) ? @startloc : 1
+      @lampleft = defined?(@lamptime) ? @lamptime : 0
+      @need_to_look = true;
+
+      puts "ScottKit, a Scott Adams game toolkit in Ruby."
+      puts "(C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>"
+      puts "Distributed under the GNU GPL version 2 license,"
+
+      if file = options[:restore_file]
+        restore(file)
+        puts "Restored saved game #{file}"
+      end
+
+      if seed = options[:random_seed]
+        puts "Setting random seed #{seed}"
+        srand(seed)
+      end
+
+      @fh = nil
+      if file = options[:read_file]
+        @fh = File.new(file)
+        raise "#$0: can't read input file '#{file}': #$!" if !@fh
+      end
+    end
 
     # Get a line from @fh if defined, otherwise $stdin
     def gets
@@ -275,6 +278,8 @@ module ScottKit
     end
 
     def actually_look #:nodoc:
+      @need_to_look = nil;
+
       puts
       if is_dark
         return print "I can't see. It is too dark!\n\n"
