@@ -6,6 +6,7 @@
 * When moving into a dark room, the description is no longer displayed before "It's too dark" message. Fixes issue #7.
 * Use a saved, non-moving copy of `t6.sck` in regression-tests. Avoids pointless failures when I work on the tutorials.
 * Do not omit scottkit.gemspec from git repo. Fixes #9.
+* Add support for Travis CI. Fixes #12.
 
 ## 1.5.0 (Fri Oct 20 00:38:57 BST 2017)
 
