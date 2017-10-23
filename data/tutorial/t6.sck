@@ -120,6 +120,15 @@ occur 25% when here vampire and !carried cross
 action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
+item rum "bottle of rum" called rum at cell
+ 
+action drink rum when carried rum
+	destroy rum
+	print "OK. I feel funny."
+
+action inventory when !exists rum
+	print "I'm carrying ... uh ... you're my best mate, you are."
+
 action score: score
 action inventory: inventory
 action look: look
@@ -136,4 +145,5 @@ action examine:
 
 verbgroup get take g
 verbgroup drop leave
+verbgroup examine x
 noungroup lamp lantern
