@@ -1,51 +1,27 @@
 start cave
 treasury throne
 
-action score: score
-action inventory: inventory
-action look: look
-
 occur when !flag 1
 	print "Welcome to the Tutorial adventure."
 	print "You must find a gold coin and store it."
 	set_flag 1
 
 room cave "cave mouth"
-
-item doorbell "doorbell"
-
-item entrance "entrance to cave"
-	nowhere
-
-action go entrance when here entrance
-	goto chamber
-	look
-
-action ring doorbell when here doorbell and !here entrance
-	set_counter 4
-	print "Ding dong!"
-
-occur
-	dec_counter
-
-occur when counter_eq 2
-	print "I hear an ominous rumble."
-
-occur when counter_eq 1
-	put entrance cave
-	print "The rocks collapse leaving a way in."
-	look
-
-action wait:
-	print "Time passes ..."
+	exit east chamber
 
 room throne "gorgeously decorated throne room"
 	exit south chamber
 
-item sign "Sign says: leave treasure here, then say SCORE"
+item sign "sign"
+
+action examine sign when present sign
+	print "It says: leave treasure here, then say SCORE"
 
 item lamp "old-fashioned brass lamp"
 	called "lamp"
+
+action examine lamp when present lamp
+	print "It is not lit."
 
 item lit_lamp "lit lamp"
 	called "lamp" nowhere
@@ -144,7 +120,20 @@ occur 25% when here vampire and !carried cross
 action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
+action score: score
+action inventory: inventory
+action look: look
+action save game: save_game
+
+action quit game
+	print "OK, goodbye."
+	game_over
+action quit:
+	print "Did you mean to quit? If so, type QUIT GAME."
+
+action examine:
+	print "I see nothing special."
+
 verbgroup get take g
 verbgroup drop leave
 noungroup lamp lantern
-noungroup doorbell bell
