@@ -16,7 +16,7 @@ module ScottKit
 
         print "Tell me what to do ? "
         if !(line = gets)
-          # TODO: Find out when we would we end up here?
+          # End of file
           puts
           break
         end
