@@ -50,7 +50,7 @@ class TestCanonicalise < Test::Unit::TestCase #:nodoc:
 
   def canonicalise(name, type, options = {})
     #puts "#{name}: options=#{options}"
-    filename = "data/#{name}"
+    filename = "games/#{name}"
 
     if !File::readable?(filename)
       if self.respond_to? :skip
