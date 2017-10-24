@@ -62,11 +62,11 @@ Unit testing can be done as follows:
 Game format
 -----------
 
-The file [`notes/Definition-scottfree-1.14.txt`](notes/Definition-scottfree-1.14.txt) is copied from the
+The file [`docs/notes/Definition-scottfree-1.14.txt`](docs/notes/Definition-scottfree-1.14.txt) is copied from the
 ScottFree package, which contains another interpreter for Scott Adams
 games.  I got this file from release 1.14-9 of ScottFree.
-[`notes/Definition.txt`](notes/Definition.txt) is my modified version of this file, since the
-original had several mistakes.  [`notes/Definition-saved-game.txt`](notes/Definition-saved-game.txt) is
+[`docs/notes/Definition.txt`](docs/notes/Definition.txt) is my modified version of this file, since the
+original had several mistakes.  [`docs/notes/Definition-saved-game.txt`](docs/notes/Definition-saved-game.txt) is
 my own analysis of the format of saved games from ScottFree.  (Saved
 games from ScottFree and ScottKit can be freely interchanged.)
 
