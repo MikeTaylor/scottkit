@@ -103,7 +103,7 @@ Documentation
 -------------
 
 * [ScottKit Tutorial](data/tutorial/tutorial.md)
-* [The ScottKit format reference manual](manual/reference.md)
+* [The ScottKit format reference manual](docs/reference.md)
 * A series of blog-posts about ScottKit:
   * [Scottkit is born! Only seven and a half years late!](https://reprog.wordpress.com/2017/10/12/scottkit-is-born-only-seven-and-a-half-years-late/)
   * [Building adventure games with ScottKit](https://reprog.wordpress.com/2017/10/13/building-adventure-games-with-scottkit/)

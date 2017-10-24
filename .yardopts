@@ -1,1 +1,1 @@
---no-private bin/scottkit lib/**/.rb - ChangeLog.md GPL-2.txt notes/Definition.txt notes/Definition-saved-game.txt manual/reference.md
+--no-private bin/scottkit lib/**/.rb - ChangeLog.md GPL-2.txt notes/Definition.txt notes/Definition-saved-game.txt docs/reference.md
