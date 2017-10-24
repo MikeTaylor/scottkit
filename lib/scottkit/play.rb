@@ -1,41 +1,23 @@
 module ScottKit
   class Game
-
     # Returns 1 if the game was won, 0 otherwise
     def play
       prepare_to_play
 
-      while true
-        # TODO: Find out if this can move to the bottom of the loop. If so we
-        # could probably turn the outter loop into `while !finished?`
-        run_matching_actions(0, 0)
+      while !finished?
+        prompt_for_turn
 
-        actually_look if @need_to_look
-
-        return @finished if finished?
-
-        print "Tell me what to do ? "
         if !(line = gets)
           # End of file -- we're done
           puts
           break
         end
 
-        words = line.chomp.split
-        if words.length == 0
-          puts "I don't understand your command."
-          next
-        end
-
-        execute_command(words[0], words[1])
-
-        process_lighting
+        process_turn(line)
       end
 
-      0
+      return @finished
     end
-
-    private
 
     def prepare_to_play
       @finished = nil
@@ -72,9 +54,31 @@ module ScottKit
       actually_look
     end
 
+    def prompt_for_turn
+      run_matching_actions(0, 0)
+
+      actually_look if @need_to_look
+
+      print "Tell me what to do ? "
+    end
+
+    def process_turn(line)
+      words = line.chomp.split
+      if words.length == 0
+        puts "I don't understand your command."
+        return
+      end
+
+      execute_command(words[0], words[1])
+
+      process_lighting
+    end
+
     def finished?
       !@finished.nil?
     end
+
+    private
 
     def process_lighting
       if items.size > ITEM_LAMP && items[ITEM_LAMP].loc != ROOM_NOWHERE && @lampleft > 0
@@ -364,7 +368,8 @@ module ScottKit
       @flags[15] && loc != ROOM_CARRIED && loc != @loc
     end
 
-    public :prompt_and_save, :need_to_look, :score, :ncarried, :inventory, :finish # Invoked from Instruction.execute()
+    # Invoked from Instruction.execute()
+    public :prompt_and_save, :need_to_look, :score, :ncarried, :inventory, :finish
 
     class Condition
       def evaluate
