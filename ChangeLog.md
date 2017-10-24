@@ -1,19 +1,22 @@
 # Revision history for Ruby gem ScottKit
 
-## 1.6.0 (IN PROGRESS)
+## 1.6.0 (Wed Oct 25 00:19:29 BST 2017)
 
 * Emit "Your light is growing dim" message every five turns when less than 25 left.
-* When moving into a dark room, the description is no longer displayed before "It's too dark" message. Fixes issue #7.
+* When moving into a dark room, the description is no longer displayed before "It's too dark" message. Fixes #7.
 * Use a saved, non-moving copy of `t6.sck` in regression-tests. Avoids pointless failures when I work on the tutorials.
 * Do not omit scottkit.gemspec from git repo. Fixes #9.
 * Add support for Travis CI. Fixes #12.
+* Refactor main play loop to facilitate external driver code. Fixes #8.
+* Move all documentation into new `docs` directory. Fixes #17.
+* Rename `data` directory to `games`, and adjust test-suite etc. accordingly. Fixes #20.
 
 ## 1.5.0 (Fri Oct 20 00:38:57 BST 2017)
 
 * Improvements to _Nosferatu_. This game is now as close as I can make it to the 1982 original, including bug-compatibility for mis-spellings and the behaviour of water.
 * Minor improvements to tutorial map 4 and subsequent.
-* Add '--teleport' command-line option, which generates `teleport ROOM` actions for every room. For use in game development and debugging. Fixes issue #4.
-* Add '--superget' command-line option, which generates `sg ITEM` actions for every item. For use in game development and debugging. Fixes issue #5.
+* Add '--teleport' command-line option, which generates `teleport ROOM` actions for every room. For use in game development and debugging. Fixes #4.
+* Add '--superget' command-line option, which generates `sg ITEM` actions for every item. For use in game development and debugging. Fixes #5.
 * The `refill_lamp` action now works correctly. It seems it never did work, but I didn't notice because my walkthroughs of _Adventureland_ were too efficient to require lamp-refilling!
 
 ## 1.4.0 (Tue Oct 17 00:52:09 BST 2017)
@@ -27,7 +30,7 @@
 
 ## 1.3.0 (Mon Oct 16 20:27:43 BST 2017)
 
-* Support `--lint` (`-L`) command-line option. Fixes issue 1.
+* Support `--lint` (`-L`) command-line option. Fixes #1.
   Argument is a string of characters:
   * `e` -- check for rooms with no exits (traps)
   * `E` -- check for rooms with only one exit (dead ends)
