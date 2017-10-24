@@ -9,23 +9,23 @@ class TestSave < Test::Unit::TestCase #:nodoc:
 
   def test_save_crystal
     game = ScottKit::Game.new({ :random_seed => 12368, :echo_input => true })
-    game.load(IO.read("data/test/crystal.sao"))
-    withIO(File.new("data/test/crystal.save-script"), 
+    game.load(IO.read("games/test/crystal.sao"))
+    withIO(File.new("games/test/crystal.save-script"), 
            File.new("/dev/null", "w")) do
       game.play()
     end
-    assert_equal(File.read("TMP"), File.read("data/test/crystal.save-file"))
+    assert_equal(File.read("TMP"), File.read("games/test/crystal.save-file"))
     File.unlink "TMP"
   end
 
   def test_resave_crystal
     game = ScottKit::Game.new({ :random_seed => 12368, :echo_input => true,
-        :restore_file => "data/test/crystal.save-file" })
-    game.load(IO.read("data/test/crystal.sao"))
+        :restore_file => "games/test/crystal.save-file" })
+    game.load(IO.read("games/test/crystal.sao"))
     withIO(StringIO.new("save game\nTMP"), File.new("/dev/null", "w")) do
       game.play()
     end
-    assert_equal(File.read("TMP"), File.read("data/test/crystal.save-file"))
+    assert_equal(File.read("TMP"), File.read("games/test/crystal.save-file"))
     File.unlink "TMP"
   end
 end

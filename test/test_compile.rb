@@ -23,7 +23,7 @@ class TestCompile < Test::Unit::TestCase #:nodoc:
 
   def test_lexer
     game = ScottKit::Game.new({})
-    lexer = ScottKit::Game::Compiler::Lexer.new(game, "data/tutorial/t1.sck")
+    lexer = ScottKit::Game::Compiler::Lexer.new(game, "games/tutorial/t1.sck")
     EXPECTED.each do |x| token, lexeme = *x
       got = lexer.lex
       assert_equal(token, got)
@@ -34,10 +34,10 @@ class TestCompile < Test::Unit::TestCase #:nodoc:
   def test_parser
     game = ScottKit::Game.new({})
     # It's a clumsy API, but then we're peeking where we're not invited
-    compiler = ScottKit::Game::Compiler.new(game, "data/test/t6.sck")
+    compiler = ScottKit::Game::Compiler.new(game, "games/test/t6.sck")
     tree = compiler.parse
     got = tree.pretty_inspect
-    expected = File.read("data/test/t6.pretty-print")
+    expected = File.read("games/test/t6.pretty-print")
     # Remove hex object addresses from pretty-printed trees
     assert_equal(got.gsub(/0x\h+/, ""), expected.gsub(/0x\h+/, ""))
   end
@@ -46,9 +46,9 @@ class TestCompile < Test::Unit::TestCase #:nodoc:
     game = ScottKit::Game.new({})
     f = StringIO.new
     withIO(nil, f) do
-      game.compile_to_stdout("data/test/crystal.sck") or
+      game.compile_to_stdout("games/test/crystal.sck") or
         raise "couldn't compile crystal.sck"
     end
-    assert_equal(f.string, File.read("data/test/crystal.sao"))
+    assert_equal(f.string, File.read("games/test/crystal.sao"))
   end
 end
