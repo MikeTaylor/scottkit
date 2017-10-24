@@ -102,7 +102,7 @@ in room 50 of 36.  None of Scott's own games is so sloppy.
 Documentation
 -------------
 
-* [ScottKit Tutorial](data/tutorial/tutorial.md)
+* [ScottKit Tutorial](docs/tutorial.md)
 * [The ScottKit format reference manual](docs/reference.md)
 * A series of blog-posts about ScottKit:
   * [Scottkit is born! Only seven and a half years late!](https://reprog.wordpress.com/2017/10/12/scottkit-is-born-only-seven-and-a-half-years-late/)
