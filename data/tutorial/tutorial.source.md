@@ -135,7 +135,7 @@ include(t5.sck)dnl
 
 ## Caveats
 
-This tutorial skips a lot of details. [The reference manual](../../manual/reference.md) is indispensible for filling in the gaps.
+This tutorial skips a lot of details. [The reference manual](../../docs/reference.md) is indispensible for filling in the gaps.
 
 The following directives are not yet discussed: `ident`, `version`, `wordlen`, `maxload`, `lighttime`.
 
