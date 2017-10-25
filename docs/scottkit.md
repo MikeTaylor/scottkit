@@ -2,13 +2,18 @@
 
 The document describes the program `scottkit` that invokes the Ruby Gem of the same name to compile, decompile and play adventure games. It is in the form of a Unix manual page. See [below](#see-also) for documentation of the various file formats.
 
-<!-- md2toc -l 2 program.md -->
+<!-- md2toc -l 2 scottkit.md -->
 * [Name](#name)
 * [Synopsis](#synopsis)
 * [Description](#description)
+    * [Mode options](#mode-options)
+    * [Compilation options](#compilation-options)
+    * [Play options](#play-options)
+    * [Debugging options](#debugging-options)
 * [Examples](#examples)
 * [Diagnostics](#diagnostics)
 * [Environment](#environment)
+* [Licence](#licence)
 * [See also](#see-also)
 * [Bugs](#bugs)
 
