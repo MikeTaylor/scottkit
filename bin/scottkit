@@ -64,7 +64,7 @@ opts = OptionParser.new do |x|
   x.on("-e", "--echo", "Echo input commands to output") {
     options[:echo_input] = true
   }
-  x.on("-s", "--random-seed VAL", "Set random seed for repeatability") { |val|
+  x.on("-s", "--random-seed NUM", "Set random seed for repeatability") { |val|
     options[:random_seed] = Integer(val)
   }
   x.on("-L", "--lint STR", "Lint options: a string of the following:
@@ -72,7 +72,7 @@ opts = OptionParser.new do |x|
         E       Ensure rooms all have at least two ways in/out (no dead ends)") { |val|
     options[:lint] = val;
   }
-  x.on("-b", "--bug-tolerant", "Copy with out-of-range locations, etc.") {
+  x.on("-b", "--bug-tolerant", "Cope with out-of-range locations, etc.") {
     options[:bug_tolerant] = true
   }
   x.on("-z", "--sleep-at-end", "Sleep for a long time after program ends") {
