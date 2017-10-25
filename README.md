@@ -111,5 +111,5 @@ Documentation
   * [Actions in ScottKit](https://reprog.wordpress.com/2017/10/16/actions-in-scottkit/)
   * [Occurrences (or daemons) in ScottKit](https://reprog.wordpress.com/2017/10/17/occurrences-or-daemons-in-scottkit/)
   * [Darkness and light in ScottKit](https://reprog.wordpress.com/2017/10/21/darkness-and-light-in-scottkit/)
-
+  * [Boilerplate for ScottKit games: standard actions](https://reprog.wordpress.com/2017/10/25/boilerplate-for-scottkit-games-standard-actions/)
 
