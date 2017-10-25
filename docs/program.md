@@ -97,14 +97,23 @@ The following options are supported:
 
 ## Environment
 
+## Licence
+
+[GNU General Public License, version 2](../GPL-2.txt).
+
 ## See also
 
-* Source
-* Reference
-* Tutorial
-* ScottFree
-* Description
-* Description.saved-game
-
+* [The source code](https://github.com/MikeTaylor/scottkit)
+* [The reference guide for the ScottKit source language](https://github.com/MikeTaylor/scottkit/blob/master/docs/reference.md)
+* [The ScottKit tutorial](https://github.com/MikeTaylor/scottkit/blob/master/docs/tutorial.md)
+* [Description of the compiled format](https://github.com/MikeTaylor/scottkit/blob/master/docs/notes/Definition.txt)
+* [Description of saved-game format](https://github.com/MikeTaylor/scottkit/blob/master/docs/notes/Definition-saved-game.txt)
+* [ScottFree](https://packages.debian.org/stable/scottfree), another interpreter for adventure games in Scott Adams compiled format
+  
 ## Bugs
+
+See
+[the issue tracker](https://github.com/MikeTaylor/scottkit/issues)
+and the TODOs list at the end of 
+[the change-log](https://github.com/MikeTaylor/scottkit/blob/master/ChangeLog.md).
 
