@@ -12,7 +12,7 @@ The document describes the program `scottkit` that invokes the Ruby Gem of the s
     * [Debugging options](#debugging-options)
 * [Examples](#examples)
 * [Diagnostics](#diagnostics)
-* [Environment](#environment)
+* [Author](#author)
 * [Licence](#licence)
 * [See also](#see-also)
 * [Bugs](#bugs)
@@ -67,17 +67,17 @@ The following options are supported, The mode options control which of the four 
 ### Compilation options
 
 * **-t**, **--teleport**  
-  Generate teleporting actions (for debugging)
+  In addition to the actions specified in the source file, generates teleporting actions which can be used during development to allow easy access to difficult-to-reach parts of the map. An action **TELEPORT _ROOM**_ is generated for each room in the game. _ROOM_ is the name that the room is assigned in the source file, which may not be the same as its user-visible description. Note that if multiple rooms have names that are identical in the first few letters (e.g. **MEADOW1**, **MEADOW2**), then teleport actions for the rooms will be indistinguishable, and teleporting to the first of these locations only will be supported.
 
 * **-g**, **--superget**  
-  Generate superget actions (for debugging)
+  In addition to the actions specified in the source file, generates superget actions which can be used during development to allow easy access to difficult-to-reach items. An action **SG _ITEM**_ is generated for each item in the game. _ITEM_ is the name that the item is assigned in the source file, which may not be the same as its user-visible description. Note that if multiple items have names that are identical in the first few letters (e.g. **LAMP_LIT**, **LAMP_EMPTY**), then superget actions for the items will be indistinguishable, and supergetting the first of these items only will be supported.
 
 * **-L** _string_, **--lint** _string_  
-  Lint options: a string of the following:
+  Lint: warn about questionable constructions in the source file. The _string_ consists of a sequence of lint options. At present, the following lint options are supported:
   * **e**  
-    Ensure rooms all have at least one way out (no traps)
+    Report rooms that do not have at least one way out (i.e. rooms that are traps).
   * **E**  
-    Ensure rooms all have at least two ways in/out (no dead ends)
+    Report rooms that do not have at least two ways out (i.e. rooms that are dead ends).
 
 ### Play options
 
@@ -124,13 +124,26 @@ The following options are supported, The mode options control which of the four 
 
 ## Examples
 
+XXX
+
 ## Diagnostics
 
-## Environment
+Exits with status:
+
+* 0 if all is well
+* 1 if compilation fails
+* 2 if the command-line is invalid
+
+## Author
+
+Mike Taylor `<mike@miketaylor.org.uk>`
 
 ## Licence
 
+All code and documentation is furnished under the
 [GNU General Public License, version 2](../GPL-2.txt).
+
+Note that the Scott Adams and Brian Haworth adventure games are _not_ incuded under this licence. Although they are freely available for download, all rights are reserved to their respective copyright holders.
 
 ## See also
 
