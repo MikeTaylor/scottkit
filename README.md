@@ -74,7 +74,7 @@ games from ScottFree and ScottKit can be freely interchanged.)
 Games
 -----
 
-The directory `data` contains game files:
+The directory [`games`](games) contains game files:
 
 * `adams` - Scott Adams's classic games (see Makefile for details)
 * `howarth` - Brian Howarth's  games (see Makefile for details)
