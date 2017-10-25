@@ -81,6 +81,8 @@ The following options are supported, The mode options control which of the four 
 
 ### Play options
 
+XXX to be written
+
 * **-s** _number_, **--random-seed** _number_  
   Set random seed for repeatability
 
@@ -107,6 +109,8 @@ The following options are supported, The mode options control which of the four 
 
 ### Debugging options
 
+XXX to be written
+
 * **-T**, **--show-tokens**  
   Show lexical tokens as they are read
 
@@ -124,7 +128,7 @@ The following options are supported, The mode options control which of the four 
 
 ## Examples
 
-XXX
+XXX to be written
 
 ## Diagnostics
 
