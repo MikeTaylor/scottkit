@@ -103,7 +103,7 @@ begin
   raise "#$0: No data-file specified" if ARGV.size != 1
 rescue
   $stderr.puts $!, opts
-  exit 1
+  exit 2
 end
 
 exitval = 0
