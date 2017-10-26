@@ -541,10 +541,7 @@ Moves to the specified _room_ and displays its description.
 * `look`
 --
 Redisplays the description of the current room, the obvious exits and
-any visible items. This is done automatically whenever the player
-moves (with the `goto` action), `get`s an item from the current
-room, or `drop`s an item. So far as I can tell, it need only be done
-explicitly when changing the value of the darkness flag.
+any visible items. (In [a future version](https://github.com/MikeTaylor/scottkit/issues/3), this will be done automatically whenever the player moves (with the `goto` action), `get`s an item from the current room, or `drop`s an item. Then it will only need to be done explicitly when changing the value of the darkness flag.)
 
 * `look2`
 --
