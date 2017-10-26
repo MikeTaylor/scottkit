@@ -81,13 +81,11 @@ The following options are supported, The mode options control which of the four 
 
 ### Play options
 
-XXX to be written
-
 * **-s** _number_, **--random-seed** _number_  
   Set the random seed to specified _number_, allowing a game to be played repeatably even if it contains random elements. Two runs of the same game using the same random seem will result in the same random events, whereas if no seed is specific then each run will generate different random numbers.
 
 * **-l** _file_, **--load-game** _file_  
-  Load a previously saved game from the named _file_, allowing the player to continue from where the previous session was saved.
+  Load a previously saved game from the named _file_, allowing the player to continue from where the previous session was saved. (It is also possible to load a saved game from within ScottKit, using the special command **#LOAD** _filename_.)
 
 * **-f** _file_, **--read-file** _file_  
   Read the initial set of player commands from the named _file_, with control reverting to the player once the contents of the file have been exhausted. This is useful when creating walkthroughs, as they can be incrementally extended with the results of the user's experiments. Note that the effects of a given set of commands are only predictable when run using the same random seed on each run (see **-s** above).
@@ -99,13 +97,15 @@ XXX to be written
   Do not wait on pause actions or death. This is generally not a good idea when playing a game interactively, but allows automated run-throughs (with **-f**, see above) to proceed very quickly.
 
 * **-z**, **--sleep-at-end**  
-  Sleep for a long time after program ends
+  Sleep for a long time after program ends. This is useful when running in a DOS Shell under Windows, so that error messages can be seen before the window closes after the program exits.
 
 * **-b**, **--bug-tolerant**  
-  Cope with out-of-range locations, etc.
+  Tolerate out-of-range room-numbers as the locations of items, and also compile such room-names using special names of the form `_ROOM`_number_.  (This is not necessary when dealing with well-formed games, but _Buckaroo Banzai_ is not well-formed.)
 
 * **-w**, **--wizard**  
-  Wizard mode (enable debugging commands)
+  Wizard mode: enables debugging commands **#SG**, **#GO**, **#WHERE**, **#SET** and **#CLEAR**. See the `wizard_command` method in [play.rb](../lib/scottkit/play.rb).
+
+  XXX to be written
 
 ### Debugging options
 
