@@ -1,5 +1,9 @@
 # Revision history for Ruby gem ScottKit
 
+## 1.7.0 (IN PROGRESS)
+
+* Add Unix-style [manual-page](docs/scottkit.md) for the top-level `scottkit` program. Fixes #18.
+
 ## 1.6.0 (Wed Oct 25 00:19:29 BST 2017)
 
 * Emit "Your light is growing dim" message every five turns when less than 25 left.
