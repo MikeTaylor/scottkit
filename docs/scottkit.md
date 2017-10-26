@@ -124,22 +124,21 @@ The following options are supported, The mode options control which of the four 
 
 ### Debugging options
 
-XXX to be written
-
 * **-T**, **--show-tokens**  
-  Show lexical tokens as they are read
+  Show lexical tokens as they are read. This is the only debugging option that affects compile-time behaviour, and so has no corresponding run-time #SET wizard-mode command.
 
 * **-P**, **--show-parse**  
-  Show results of parsing verb/noun
+  Show the results of parsing the verb and noun out of user input. The index numbers of the verb and noun within the compiled game is emitted.
 
 * **-C**, **--show-conditions**  
-  Show conditions being evaluated
+  Show the conditions of actions and occurrences as they are evaluated, together with the result of their evaluation.
+  At present, the format for this is rather ugly and verbose. That will change: see [issue 25](https://github.com/MikeTaylor/scottkit/issues/25).
 
 * **-I**, **--show-instructions**  
-  Show instructions being executed
+  Show instructions before they are executed.
 
 * **-R**, **--show-random**  
-  Show rolls of the random dice
+  Show rolls of the random dice. This happens whenever an occurrence with less than a 100% chance of happening occurs.
 
 ## Examples
 
