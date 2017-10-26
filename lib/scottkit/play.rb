@@ -488,10 +488,12 @@ module ScottKit
 
     class Action
       def execute(test_chance)
+        log = ''
         all_conds_true = @conds.map { |x| t = x.evaluate
-          @game.dputs(:show_conditions, "  #{x.render()} -> #{t}"); t }.
-          reduce(true) { |acc, val| acc && val }
-        @game.dputs :show_conditions, "    #{all_conds_true}"
+          log += "(#{x.render()})=#{t} ";
+          t }.
+        reduce(true) { |acc, val| acc && val }
+        @game.dputs :show_conditions, "    #{log}-> #{all_conds_true}"
         return :failconds if !all_conds_true
 
         if (test_chance && @verb == 0 && @noun < 100)
