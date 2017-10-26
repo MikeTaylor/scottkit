@@ -85,6 +85,8 @@ I can also see: Large outdoor Advertisement, Hole
 
 Tell me what to do ? w
 
+I'm bitten by chiggers.
+
 I'm in a dismal swamp
 Obvious exits: North, East, West.
 I can also see: Cypress tree, Evil smelling mud, Swamp gas, Patches of "OILY" slime, Chiggers
@@ -134,6 +136,7 @@ I can also see: -HOLLOW- stump and remains of a felled tree, Evil smelling mud, 
 Tell me what to do ? get mud
 O.K.
 OK
+BOY that really hit the spot!
 Tell me what to do ? go stump
 
 I'm in a damp hollow stump in the swamp
@@ -701,6 +704,8 @@ I can also see: Large african bees, Sign here says "In many cases mud is good. I
 
 Tell me what to do ? s
 
+I'm bitten by chiggers.
+
 I'm in a dismal swamp
 Obvious exits: North, East, West.
 I can also see: -HOLLOW- stump and remains of a felled tree, Evil smelling mud, Swamp gas, Patches of "OILY" slime, Chiggers
@@ -743,13 +748,13 @@ Tell me what to do ? catch fish
 O.K.
 Tell me what to do ? s
 
+My chigger bites are now INFECTED!
+
 I'm at the edge of a BOTTOMLESS hole
 Obvious exits: North, West.
 I can also see: Large outdoor Advertisement, Hole
 
 Tell me what to do ? w
-
-I'm bitten by chiggers.
 
 I'm in a dismal swamp
 Obvious exits: North, East, West.

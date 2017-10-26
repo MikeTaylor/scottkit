@@ -42,7 +42,6 @@ I can also see: Large fireplace
 Tell me what to do ? west
 I can't go in that direction.
 Tell me what to do ? go fireplace
-I hear strange sounds, as if someone were moaning.
 
 I'm in a large fireplace
 Obvious exits: South.
@@ -51,26 +50,26 @@ I can also see: Closed Flue, Dusty Idol
 Tell me what to do ? listen
 I hear strange sounds, as if someone were moaning.
 Its very faint.
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? get idol
 O.K.
 I hear strange sounds, as if someone were moaning.
+My idol acted strange
+Some dust fell off it and it glowed briefly.
 Tell me what to do ? examine idol
 Boy it looks dusty.
 I see nothing very special.
+I hear strange sounds, as if someone were moaning.
 Tell me what to do ? open flue
 OK
 Tell me what to do ? listen
 I hear strange sounds, as if someone were moaning.
 Its very faint.
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? go chimney
+I hear strange sounds, as if someone were moaning.
 
 I can't see. It is too dark!
 
 Tell me what to do ? rub idol
-My idol acted strange
-Some dust fell off it and it glowed briefly.
 My idol acted strange
 Some dust fell off it and it glowed briefly.
 Tell me what to do ? clean idol
@@ -84,6 +83,7 @@ Tell me what to do ? listen
 I hear strange sounds, as if someone were moaning.
 Its much louder up here.
 Tell me what to do ? down
+I hear strange sounds, as if someone were moaning.
 
 I'm in a large fireplace
 Obvious exits: South.
@@ -269,6 +269,7 @@ Looks almost like lemonade. Yummy!
 Tell me what to do ? drink chemicals
 There's a CLAP OF THUNDER!
 I'm now 4 feet tall!
+One of the test tubes EXPLODED!
 Tell me what to do ? west
 
 I'm in a room in the castle
@@ -320,7 +321,6 @@ Obvious exits: North, East.
 I can also see: Wide open door
 
 Tell me what to do ? go door
-A beam of light shines on grave
 
 I'm in a Graveyard
 Obvious exits: East.
@@ -330,6 +330,7 @@ Tell me what to do ? examine grave
 Amongst the GRAVES is a four leaf clover.
 A sign here says:
 This grAve reserved for you!
+A beam of light shines on grave
 Tell me what to do ? get clover
 O.K.
 OK
@@ -414,7 +415,6 @@ won't budge!
 Tell me what to do ? get doll
 O.K.
 Tell me what to do ? south
-Raven crys something outside
 
 I'm in a room in the castle
 Obvious exits: South.
@@ -509,7 +509,6 @@ Plaque says: "safe --> 38 33"
 I hear strange sounds, as if someone were moaning.
 Tell me what to do ? drop glass
 O.K.
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? down
 Dangerous to move in the dark!
 I hear strange sounds, as if someone were moaning.
@@ -608,7 +607,6 @@ Tell me what to do ? get nails
 Nails were rusted but I got them out.
 Tell me what to do ? get boards
 O.K.
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? drop nails
 O.K.
 Tell me what to do ? drop boards
@@ -617,7 +615,6 @@ Tell me what to do ? drop hammer
 O.K.
 Tell me what to do ? look
 I see nothing very special.
-I hear strange sounds, as if someone were moaning.
 
 I'm in a Chimney
 Obvious exits: Down.
@@ -633,7 +630,6 @@ Tell me what to do ? drop saw
 O.K.
 Tell me what to do ? drop grating
 O.K.
-I hear strange sounds, as if someone were moaning.
 Tell me what to do ? push button
 Heavy duty exhaust fan comes on & sucks me up!
 I hear strange sounds, as if someone were moaning.
@@ -703,7 +699,6 @@ I hear someone mumbling.
 Tell me what to do ? listen
 Ju-Ju man says:"My bag is now yours! Its magic will help you
  -CRACK- the curse!".
-I hear someone mumbling.
 Tell me what to do ? down
 
 I'm in a Dingy Looking Stairwell
@@ -737,6 +732,7 @@ I can also see: Ju-Ju bag, Chem tubes
 Tell me what to do ? get bag
 O.K.
 OK
+One of the test tubes EXPLODED!
 Tell me what to do ? west
 
 I'm in a room in the castle
