@@ -409,7 +409,7 @@ module ScottKit
       # Returns true iff interpreter should continue to next action
       def execute(args)
         @game.dputs :show_instructions,
-          "      executing #{self.render(args.clone)}"
+          "    executing #{self.render(args.clone)}"
         if (@op == 0)
           return false # shouldn't happen
         elsif (@op <= 51)
@@ -493,17 +493,17 @@ module ScottKit
           log += "(#{x.render()})=#{t} ";
           t }.
         reduce(true) { |acc, val| acc && val }
-        @game.dputs :show_conditions, "    #{log}-> #{all_conds_true}"
+        @game.dputs :show_conditions, "#{log}-> #{all_conds_true}"
         return :failconds if !all_conds_true
 
         if (test_chance && @verb == 0 && @noun < 100)
           # It's an occurrence and may be random
           dice = Integer(rand()*100)
           if dice >= @noun
-            @game.dputs :show_random, "    #{dice} >= #{@noun}% -> nop"
+            @game.dputs :show_random, "  #{dice} >= #{@noun}% -> nop"
             return :success
           else
-            @game.dputs :show_random, "    #{dice} < #{@noun}%"
+            @game.dputs :show_random, "  #{dice} < #{@noun}%"
           end
         end
 

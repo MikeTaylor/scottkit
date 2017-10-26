@@ -261,7 +261,7 @@ module ScottKit
     end
 
     def dputs(level, *args) #:nodoc:
-      puts args.map { |x| "##{x}" } if @options[level]
+      puts args.map { |x| "# #{x}" } if @options[level]
     end
 
     # Compiles the specified game-source file, writing the resulting
