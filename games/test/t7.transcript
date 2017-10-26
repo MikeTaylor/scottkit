@@ -43,6 +43,7 @@ I'm in a square chamber
 Obvious exits: North, East, West.
 
 Tell me what to do ? east
+I smell something rotting to the north.
 
 I'm in a gloomy dungeon
 Obvious exits: North, West.
@@ -63,13 +64,11 @@ Tell me what to do ? get key
 O.K.
 Vampire cowers away from the cross!
 Tell me what to do ? south
-I smell something rotting to the north.
 
 I can't see. It is too dark!
 
 Tell me what to do ? drop key
 O.K.
-I smell something rotting to the north.
 Tell me what to do ? north
 Dangerous to move in the dark!
 Vampire cowers away from the cross!
@@ -92,9 +91,9 @@ Tell me what to do ? drop cross
 O.K.
 Tell me what to do ? get key
 O.K.
+I smell something rotting to the north.
 Tell me what to do ? open door
 OK
-I smell something rotting to the north.
 
 I'm in a gloomy dungeon
 Obvious exits: North, West.
