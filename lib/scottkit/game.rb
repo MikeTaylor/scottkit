@@ -1,6 +1,7 @@
 module ScottKit
   class Game
-    NFLAGS = 16 #:nodoc: (The most that ScottFree save-game format supports)
+    NFLAGS = 32 #:nodoc: (The most that will fit in a single 4-byte integer)
+    NCOUNTERS = 16 #:nodoc: (The most that ScottFree save-game format supports)
     VERB_GO = 1 #:nodoc:
     VERB_GET = 10 #:nodoc:
     VERB_DROP = 18 #:nodoc:
@@ -227,7 +228,7 @@ module ScottKit
     def save(name)
       f = File.new(name, "w") or
         raise "#$0: can't save game to #{name}: #$!"
-      f.print(0.upto(NFLAGS-1).map { |i|
+      f.print(0.upto(NCOUNTERS-1).map { |i|
         String(@counters[i]) + " " + String(@saved_rooms[i]) + "\n"
       }.join)
       f.print(0.upto(NFLAGS-1).reduce(0) { |acc, i|
@@ -245,7 +246,7 @@ module ScottKit
     def restore(name)
       f = File.new(name) or
         raise "#$0: can't restore game from #{name}: #$!"
-      0.upto(NFLAGS-1) do |i|
+      0.upto(NCOUNTERS-1) do |i|
         @counters[i], @saved_rooms[i] = f.gets.chomp.split.map(&:to_i)
       end
       # The variable _ in the next line is the unused one that holds
