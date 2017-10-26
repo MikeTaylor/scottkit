@@ -84,19 +84,19 @@ The following options are supported, The mode options control which of the four 
 XXX to be written
 
 * **-s** _number_, **--random-seed** _number_  
-  Set random seed for repeatability
+  Set the random seed to specified _number_, allowing a game to be played repeatably even if it contains random elements. Two runs of the same game using the same random seem will result in the same random events, whereas if no seed is specific then each run will generate different random numbers.
 
 * **-l** _file_, **--load-game** _file_  
-  Load a previously saved game
+  Load a previously saved game from the named _file_, allowing the player to continue from where the previous session was saved.
 
 * **-f** _file_, **--read-file** _file_  
-  Read initial commands from file
+  Read the initial set of player commands from the named _file_, with control reverting to the player once the contents of the file have been exhausted. This is useful when creating walkthroughs, as they can be incrementally extended with the results of the user's experiments. Note that the effects of a given set of commands are only predictable when run using the same random seed on each run (see **-s** above).
 
 * **-e**, **--echo**  
-  Echo input commands to output
+  Echo input commands to output. This is useful when feeding input to a game and capturing the output as a transcript.
 
 * **-W**, **--no-wait**  
-  Do not wait on pause actions or death
+  Do not wait on pause actions or death. This is generally not a good idea when playing a game interactively, but allows automated run-throughs (with **-f**, see above) to proceed very quickly.
 
 * **-z**, **--sleep-at-end**  
   Sleep for a long time after program ends
