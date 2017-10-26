@@ -135,7 +135,6 @@ The following options are supported, The mode options control which of the four 
 
 * **-C**, **--show-conditions**  
   Show the conditions of actions and occurrences as they are evaluated, together with the result of their evaluation.
-  At present, the format for this is rather ugly and verbose. That will change: see [issue 25](https://github.com/MikeTaylor/scottkit/issues/25).
 
 * **-I**, **--show-instructions**  
   Show instructions before they are executed.
