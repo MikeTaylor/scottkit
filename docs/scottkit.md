@@ -103,9 +103,24 @@ The following options are supported, The mode options control which of the four 
   Tolerate out-of-range room-numbers as the locations of items, and also compile such room-names using special names of the form `_ROOM`_number_.  (This is not necessary when dealing with well-formed games, but _Buckaroo Banzai_ is not well-formed.)
 
 * **-w**, **--wizard**  
-  Wizard mode: enables debugging commands **#SG**, **#GO**, **#WHERE**, **#SET** and **#CLEAR**. See the `wizard_command` method in [play.rb](../lib/scottkit/play.rb).
+  Wizard mode: enables debugging verbs. These can be typed during game-play to manipulate the world in ways not allowed for by the code of the game.
 
-  XXX to be written
+  * **#GO** -- "teleport": the noun is a room number, and the player immediately moves to the specified room..
+
+  * **#SG** -- "superget". the noun is an item number, and the specified item is added to the player's inventory irrespective of whether it is present or any other condition.
+
+  * **#WHERE** -- locates an item. The noun is an item number, and the number of the room that contains that item is printed. Can be used with #GO to move to the room containing a specified item.
+
+  * **#SET** -- sets a debugging flag. Acceptable nouns are:
+
+    * **p** -- shows the result of parsing commands, as though **--show-tokens** had been specified.
+    * **c** -- shows the conditions of actions and occurrences as they are evaluated, as though **--show-conditions** had been specified.
+    * **i** -- shows the instructions that are executed, as though **--show-instructions** had been specified.
+    * **r** -- shows the result of random rolls, as though **--show-random** had been specified.
+
+  * **#CLEAR** -- clears a debugging flag. The same nouns are supported as for #SET.
+
+  The #GO, #SG and #WHERE commands work only in terms of room and item _numbers_, not names, because they take effect only at run-time when they are working with a compiled game. Only the source file knows the names of room and items. That is why the **--teleport** and **--superget** compilation options are provided: because they take effect at compile-time, they support use of room and item names.
 
 ### Debugging options
 
@@ -113,9 +128,6 @@ XXX to be written
 
 * **-T**, **--show-tokens**  
   Show lexical tokens as they are read
-
-* **-R**, **--show-random**  
-  Show rolls of the random dice
 
 * **-P**, **--show-parse**  
   Show results of parsing verb/noun
@@ -125,6 +137,9 @@ XXX to be written
 
 * **-I**, **--show-instructions**  
   Show instructions being executed
+
+* **-R**, **--show-random**  
+  Show rolls of the random dice
 
 ## Examples
 
