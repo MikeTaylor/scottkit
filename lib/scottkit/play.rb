@@ -494,7 +494,8 @@ module ScottKit
         @game.dputs :show_conditions, "    #{all_conds_true}"
         return :failconds if !all_conds_true
 
-        if (test_chance && @verb == 0) # It's an occurrence and may be random
+        if (test_chance && @verb == 0 && @noun < 100)
+          # It's an occurrence and may be random
           dice = Integer(rand()*100)
           if dice >= @noun
             @game.dputs :show_random, "    #{dice} >= #{@noun}% -> nop"

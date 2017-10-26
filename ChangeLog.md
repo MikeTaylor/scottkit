@@ -3,6 +3,7 @@
 ## 1.7.0 (IN PROGRESS)
 
 * Add Unix-style [manual-page](docs/scottkit.md) for the top-level `scottkit` program. Fixes #18.
+* Do not test a random roll when occurrences have probability 100% (and so do not emit debugging output). Fixes #26.
 
 ## 1.6.0 (Wed Oct 25 00:19:29 BST 2017)
 
