@@ -142,7 +142,65 @@ The following options are supported, The mode options control which of the four 
 
 ## Examples
 
-XXX to be written
+In the follow short but complete transcript, we:
+* Create the source file, **trivial.sck**, for a game.
+* Compile it into a game file, **trivial.sao**.
+* Look at the compiled form of the game.
+* Play the game
+* Decompile the game file back to source.
+
+```
+$ cat > trivial.sck
+room chamber "beautifully decorated chamber"
+  exit north cave
+room cave "dingy cave"
+  exit south chamber 
+$ scottkit -c trivial.sck > trivial.sao
+$ cat trivial.sao | fmt | grep .
+0 -1 -1 18 2 -1 1 0 3 -1 0 1
+"AUT" "ANY" "GO" "NOR" "" "SOU" "" "EAS" "" "WES" "" "UP" "" "DOW"
+"" "" "" "" "" "" "GET" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+"" "DRO" ""
+0 0 0 0 0 0 "" 2 0 0 0 0 0 "beautifully decorated chamber" 0 1 0 0
+0 0 "dingy cave"
+""
+0 0 0
+$ 
+$ scottkit trivial.sao 
+ScottKit, a Scott Adams game toolkit in Ruby.
+(C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>
+Distributed under the GNU GPL version 2 license,
+
+I'm in a beautifully decorated chamber
+Obvious exits: North.
+
+Tell me what to do ? n
+
+I'm in a dingy cave
+Obvious exits: South.
+
+Tell me what to do ? ^D
+$ scottkit -d trivial.sao 
+# 3 rooms, 0 items, 0 actions
+# 1 messages, 0 treasures, 19 verbs/nouns
+ident 0
+version 0
+wordlen 3
+maxload -1
+lighttime -1
+unknown1 0
+unknown2 0
+start chamber
+treasury chamber
+
+room chamber "beautifully decorated chamber"
+	exit north cave
+
+room cave "dingy cave"
+	exit south chamber
+
+$ 
+```
 
 ## Diagnostics
 
