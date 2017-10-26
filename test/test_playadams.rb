@@ -6,7 +6,7 @@ require 'scottkit/withio'
 
 class TestPlayAdams < Test::Unit::TestCase #:nodoc:
   def test_play_adams
-    %w{01 02 04}.each do |num|
+    %w{01 04}.each do |num|
       play("adv#{num}")
     end
   end
