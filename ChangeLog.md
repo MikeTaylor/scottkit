@@ -4,6 +4,7 @@
 
 * Add Unix-style [manual-page](docs/scottkit.md) for the top-level `scottkit` program. Fixes #18.
 * Do not test a random roll when occurrences have probability 100% (and so do not emit debugging output). Fixes #26.
+* More concise (single-line) format for :show_conditions output. Fixes #25.
 
 ## 1.6.0 (Wed Oct 25 00:19:29 BST 2017)
 
