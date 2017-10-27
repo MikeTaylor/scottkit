@@ -108,8 +108,6 @@
 
 ## Still to do
 
-* The `goto` action result should automatically describe the new room.
 * Tweak compiler to break actions when they need too many arguments as well as when they need too many instructions.
-* Ensure that the right files are built by `YARD`
-* Maybe modify to run against GLK using the Glkx driver
-* File inclusion
+* Modify to run in a ScottFree-like way using Curses.
+* File inclusion.
