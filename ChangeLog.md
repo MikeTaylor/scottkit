@@ -108,6 +108,6 @@
 
 ## Still to do
 
-* Tweak compiler to break actions when they need too many arguments as well as when they need too many instructions.
-* Modify to run in a ScottFree-like way using Curses.
-* File inclusion.
+* Tweak compiler to break actions when they need too many arguments as well as when they need too many instructions. Issue #31
+* Modify to run in a ScottFree-like way using Curses. Issue #30
+* File inclusion. Issue #29
