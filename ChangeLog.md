@@ -7,6 +7,7 @@
 * More concise (single-line) format for :show_conditions output. Fixes #25.
 * Coherently indent output from -R, -C and -I, yielding and integrated debugging log. Fixes #27.
 * Fully support 32 flags by separating NCOUNTERS out from NFLAGS. Fixes #28.
+* Remove TODOs from the end of change-log: they are now all in the issue-tracker.
 
 ## 1.6.0 (Wed Oct 25 00:19:29 BST 2017)
 
@@ -105,9 +106,3 @@
 
 * Initial release.
 
-
-## Still to do
-
-* Tweak compiler to break actions when they need too many arguments as well as when they need too many instructions. Issue #31
-* Modify to run in a ScottFree-like way using Curses. Issue #30
-* File inclusion. Issue #29
