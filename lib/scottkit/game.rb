@@ -20,8 +20,6 @@ module ScottKit
     attr_reader :flags, :counters, :saved_rooms, :noun #:nodoc:
     attr_accessor :loc, :counter, :saved_room, :lampleft #:nodoc:
 
-    private
-
     # Creates a new game, with no room, items or actions -- load must
     # be called to make the game ready for playing, or
     # compile_to_stdout can be called to generate a new game-file.
@@ -107,6 +105,13 @@ module ScottKit
       @rooms, @items, @actions, @nouns, @verbs, @messages =
         [], [], [], [], [], []
     end
+
+    # Print debugging output
+    def dputs(level, *args) #:nodoc:
+      super.puts args.map { |x| "# #{x}" } if @options[level]
+    end
+
+    private
 
     # Virtual accessor
     def dark_flag #:nodoc:
@@ -261,10 +266,6 @@ module ScottKit
       @items.each { |item| item.loc = f.gets.to_i }
     end
 
-    def dputs(level, *args) #:nodoc:
-      puts args.map { |x| "# #{x}" } if @options[level]
-    end
-
     # Compiles the specified game-source file, writing the resulting
     # object file to stdout, whence it should be redirected into a
     # file so that it can be played.  Yes, this API is sucky: it would
@@ -290,7 +291,6 @@ module ScottKit
 
     public :load, :compile_to_stdout # Must be visible to driver program
     public :roomname, :itemname # Needed by Condition.render()
-    public :dputs # Needed for contained classes' debugging output
     public :dirname # Needed by compiler
     public :dark_flag= # Invoked from Instruction.execute()
 
