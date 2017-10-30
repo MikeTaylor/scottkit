@@ -20,6 +20,8 @@ module ScottKit
     attr_reader :flags, :counters, :saved_rooms, :noun #:nodoc:
     attr_accessor :loc, :counter, :saved_room, :lampleft #:nodoc:
 
+    attr_reader :output
+
     # Creates a new game, with no room, items or actions -- load must
     # be called to make the game ready for playing, or
     # compile_to_stdout can be called to generate a new game-file.
@@ -42,9 +44,13 @@ module ScottKit
     #                       file to restore before starting to play.
     #
     # [+read_file+]         If specified, the name of a file of game
-    #                       commands to be run after restoring s saved
+    #                       commands to be run after restoring a saved
     #                       game (if any) and before starting to read
     #                       commands from the user.
+    #
+    # [+output+]            If specified, a writable IO stream for
+    #                       capturing the game's output.  Defaults to
+    #                       <tt>$stdout</tt> if nothing is provided.
     #
     # [+echo_input+]        If true, then game commands are echoed
     #                       before being executed.  This is useful
@@ -104,6 +110,15 @@ module ScottKit
       @options = options
       @rooms, @items, @actions, @nouns, @verbs, @messages =
         [], [], [], [], [], []
+      @output = options[:output] || $stdout
+    end
+
+    def puts *args
+      output.puts(*args)
+    end
+
+    def print *args
+      output.print(*args)
     end
 
     # Print debugging output

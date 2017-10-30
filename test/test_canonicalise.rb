@@ -1,7 +1,6 @@
 require 'test/unit'
 require 'scottkit/game'
 require 'stringio'
-require 'scottkit/withio'
 
 # The idea here is that we can start with a source file and compile it
 # once.  Decompiling the result will of course yield a different

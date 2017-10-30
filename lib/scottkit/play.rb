@@ -411,15 +411,15 @@ module ScottKit
         if (@op == 0)
           return false # shouldn't happen
         elsif (@op <= 51)
-          puts @game.messages[@op].gsub('`', '"')
+          @game.puts @game.messages[@op].gsub('`', '"')
           return false
         elsif (@op >= 102)
-          puts @game.messages[@op-50].gsub('`', '"')
+          @game.puts @game.messages[@op-50].gsub('`', '"')
           return false
         else case @op
         when 52 then
           if @game.ncarried == @game.maxload
-            puts "I've too much to carry!"
+            @game.puts "I've too much to carry!"
           else
             @game.items[args.shift].loc = ROOM_CARRIED
           end
@@ -432,7 +432,7 @@ module ScottKit
         when 59 then @game.items[args.shift].loc = ROOM_NOWHERE
         when 60 then @game.flags[args.shift] = false
         when 61 then
-          puts "I am dead."; @game.flags[15] = false;
+          @game.puts "I am dead."; @game.flags[15] = false;
           @game.loc = @game.rooms.size-1; @game.need_to_look
         when 62 then i = args.shift; @game.items[i].loc = args.shift
         when 63 then @game.finish(0)
@@ -457,7 +457,7 @@ module ScottKit
           @game.items[i1].loc = @game.items[i2].loc
         when 76 then @game.need_to_look
         when 77 then @game.counter -= 1
-        when 78 then print @game.counter, " "
+        when 78 then @game.print @game.counter, " "
         when 79 then @game.counter = args.shift
         when 80 then @game.loc, @game.saved_room = @game.saved_room, @game.loc
         when 81 then which = args.shift
@@ -465,9 +465,9 @@ module ScottKit
             @game.counters[which], @game.counter
         when 82 then @game.counter += args.shift
         when 83 then @game.counter -= args.shift
-        when 84 then print @game.noun
-        when 85 then puts @game.noun
-        when 86 then puts
+        when 84 then @game.print @game.noun
+        when 85 then @game.puts @game.noun
+        when 86 then @game.puts
         when 87 then which = args.shift
           @game.loc, @game.saved_rooms[which] =
             @game.saved_rooms[which], @game.loc

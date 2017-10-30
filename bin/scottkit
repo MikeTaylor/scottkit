@@ -17,7 +17,6 @@ $VERBOSE = true
 require 'optparse'
 require 'stringio'
 require 'scottkit/game'
-require 'scottkit/withio'
 
 
 def play(game)

@@ -99,7 +99,6 @@ Gem::Specification.new do |s|
     "lib/scottkit/decompile.rb",
     "lib/scottkit/game.rb",
     "lib/scottkit/play.rb",
-    "lib/scottkit/withio.rb",
     "scottkit.gemspec",
     "test/test_canonicalise.rb",
     "test/test_compile.rb",
@@ -107,7 +106,6 @@ Gem::Specification.new do |s|
     "test/test_play.rb",
     "test/test_playadams.rb",
     "test/test_save.rb",
-    "test/withio_test.rb"
   ]
   s.homepage = "http://github.com/MikeTaylor/scottkit".freeze
   s.licenses = ["GPL-2.0".freeze]

@@ -2,7 +2,6 @@ require 'test/unit'
 require 'scottkit/game'
 require 'stringio'
 require 'digest/md5'
-require 'scottkit/withio'
 
 class TestPlayAdams < Test::Unit::TestCase #:nodoc:
   def test_play_adams

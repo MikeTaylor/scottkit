@@ -1,7 +1,6 @@
 require 'test/unit'
 require 'scottkit/game'
 require 'stringio'
-require 'scottkit/withio'
 
 class TestCompile < Test::Unit::TestCase #:nodoc:
   EXPECTED = [
