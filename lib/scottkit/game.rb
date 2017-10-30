@@ -286,7 +286,7 @@ module ScottKit
     #
     def compile_to_stdout(filename, fh = nil)
       compiler = ScottKit::Game::Compiler.new(self, filename, fh)
-      compiler.compile_to_stdout
+      compiler.compile_to($stdout)
     end
 
     public :load, :compile_to_stdout # Must be visible to driver program
