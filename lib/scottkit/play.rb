@@ -33,7 +33,7 @@ module ScottKit
 
       puts "ScottKit, a Scott Adams game toolkit in Ruby."
       puts "(C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>"
-      puts "Distributed under the GNU GPL version 2 license,"
+      puts "Distributed under the GNU GPL version 2 license."
 
       if file = options[:restore_file]
         restore(file)
