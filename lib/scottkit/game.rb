@@ -23,8 +23,9 @@ module ScottKit
     attr_reader :input, :output
 
     # Creates a new game, with no room, items or actions -- load must
-    # be called to make the game ready for playing, or
-    # compile_to_stdout can be called to generate a new game-file.
+    # be called to make the game ready for playing, or compile can be
+    # called to generate a new game-file.
+    #
     # The options hash affects various aspects of how the game will be
     # loaded, played and compiled.  The following symbols are
     # recognised as keys in the options hash:
@@ -304,12 +305,11 @@ module ScottKit
     # function is that its behaviour is influenced by the game's
     # options.)
     #
-    def compile_to_stdout(filename, fh = nil)
-      compiler = ScottKit::Game::Compiler.new(self, filename, fh)
-      compiler.compile_to($stdout)
+    def compile(out, filename, fh = nil)
+      ScottKit::Game::Compiler.new(self, filename, fh).compile_to(out)
     end
 
-    public :load, :compile_to_stdout # Must be visible to driver program
+    public :load, :compile # Must be visible to driver program
     public :roomname, :itemname # Needed by Condition.render()
     public :dirname # Needed by compiler
     public :dark_flag= # Invoked from Instruction.execute()

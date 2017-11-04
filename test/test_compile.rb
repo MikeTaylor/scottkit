@@ -43,11 +43,9 @@ class TestCompile < Test::Unit::TestCase #:nodoc:
 
   def test_code_generator
     game = ScottKit::Game.new({})
-    f = StringIO.new
-    withIO(nil, f) do
-      game.compile_to_stdout("games/test/crystal.sck") or
-        raise "couldn't compile crystal.sck"
-    end
-    assert_equal(f.string, File.read("games/test/crystal.sao"))
+    compiled_game = StringIO.new
+    game.compile(compiled_game, "games/test/crystal.sck") or
+      raise "couldn't compile crystal.sck"
+    assert_equal(compiled_game.string, File.read("games/test/crystal.sao"))
   end
 end

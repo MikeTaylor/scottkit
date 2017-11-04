@@ -16,7 +16,7 @@ class TestCanonicalise < Test::Unit::TestCase #:nodoc:
   def test_2canonicalise_crystal
     canonicalise("crystal/crystal.sck", :source)
   end
-    
+
   def test_3canonicalise_adams
     %w{
       adv01
@@ -43,7 +43,7 @@ class TestCanonicalise < Test::Unit::TestCase #:nodoc:
         x[0] = ""
         options[:bug_tolerant] = true
       end
-      canonicalise("adams/#{x}.dat", :object, options) 
+      canonicalise("adams/#{x}.dat", :object, options)
     end
   end
 
@@ -75,12 +75,10 @@ class TestCanonicalise < Test::Unit::TestCase #:nodoc:
 
   def compile(source, options)
     game = ScottKit::Game.new(options)
-    f = StringIO.new
-    withIO(nil, f) do
-      game.compile_to_stdout(nil, StringIO.new(source)) or
-        raise "couldn't compile"
-    end
-    f.string
+    output = StringIO.new
+    game.compile(output, nil, StringIO.new(source)) or
+      raise "couldn't compile"
+    output.string
   end
 
   def decompile(object, options)
