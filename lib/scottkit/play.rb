@@ -93,14 +93,15 @@ module ScottKit
       end
     end
 
-    # Get a line from @fh if defined, otherwise $stdin
+    # Get a line from @fh if defined, otherwise input
     def gets
       line = nil
       if (@fh)
         line = @fh.gets
+        # Clear the read_file handle when all the input is consumed.
         @fh = nil if !line
       end
-      line = $stdin.gets if !line
+      line = input.gets if !line
       return nil if !line
       puts line if @fh || options[:echo_input]
       line

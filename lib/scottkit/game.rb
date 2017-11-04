@@ -20,7 +20,7 @@ module ScottKit
     attr_reader :flags, :counters, :saved_rooms, :noun #:nodoc:
     attr_accessor :loc, :counter, :saved_room, :lampleft #:nodoc:
 
-    attr_reader :output
+    attr_reader :input, :output
 
     # Creates a new game, with no room, items or actions -- load must
     # be called to make the game ready for playing, or
@@ -51,6 +51,10 @@ module ScottKit
     # [+output+]            If specified, a writable IO stream for
     #                       capturing the game's output.  Defaults to
     #                       <tt>$stdout</tt> if nothing is provided.
+    #
+    # [+input+]             If specified, a readable IO stream for
+    #                       capturing the game's input.  Defaults to
+    #                       <tt>$stdin</tt> if nothing is provided.
     #
     # [+echo_input+]        If true, then game commands are echoed
     #                       before being executed.  This is useful
@@ -110,6 +114,7 @@ module ScottKit
       @options = options
       @rooms, @items, @actions, @nouns, @verbs, @messages =
         [], [], [], [], [], []
+      @input  = options[:input]  || $stdin
       @output = options[:output] || $stdout
     end
 
