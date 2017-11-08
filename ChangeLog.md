@@ -8,6 +8,7 @@
 * Coherently indent output from -R, -C and -I, yielding and integrated debugging log. Fixes #27.
 * Fully support 32 flags by separating NCOUNTERS out from NFLAGS. Fixes #28.
 * Remove TODOs from the end of change-log: they are now all in the issue-tracker.
+* The GET action no longer automatically outputs "O.K.", bringing it in line with the behaviour of classic interpreters. Fixes #34.
 
 ## 1.6.0 (Wed Oct 25 00:19:29 BST 2017)
 

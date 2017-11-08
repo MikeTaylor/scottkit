@@ -22,7 +22,6 @@ Obvious exits: Down.
 I can also see: Open window, Books in a bookcase
 
 Tell me what to do ? get book
-O.K.
 There's a strange sound
 Tell me what to do ? examine book
 There's something there all right. Maybe I should
@@ -194,7 +193,6 @@ O.K.
 Tell me what to do ? drop matches
 O.K.
 Tell me what to do ? get book
-O.K.
 OK
 Tell me what to do ? say yoho
 Everything spins around and suddenly I'm elsewhere...
@@ -217,10 +215,8 @@ Tell me what to do ? get rug
 Sorry I can't
 Its nailed to the floor!
 Tell me what to do ? get nails
-O.K.
 OK
 Tell me what to do ? get rug
-O.K.
 OK
 There's a strange sound
 Tell me what to do ? drop rug
@@ -297,7 +293,6 @@ Tell me what to do ? read plans
 They're plans to build the Jolly Roger (a Pirate ship!)
 You'll need: hammer, nails, lumber, anchor, sails, and a keel.
 Tell me what to do ? get chest
-O.K.
 OK
 Tell me what to do ? west
 
@@ -336,7 +331,6 @@ Obvious exits: North, South, East, West.
 I can also see: Fish, Salt water
 
 Tell me what to do ? get water
-O.K.
 OK
 Tell me what to do ? get fish
 O.K.
@@ -518,7 +512,6 @@ It's beyond my power to do that.
 Tell me what to do ? build ship
 No, something is missing!
 Tell me what to do ? get book
-O.K.
 OK
 Tell me what to do ? get keys
 O.K.
@@ -562,7 +555,6 @@ I can also see: Large blood soaked book, Unlit torch, Matches, Small ship's keel
 "Welcome to Pirates Island, watch out for the tide!", Sack of crackers, Note
 
 Tell me what to do ? get chest
-O.K.
 OK
 Parrot ate a cracker.
 Tell me what to do ? get plans
@@ -601,7 +593,6 @@ I can't do that yet.
 Tell me what to do ? get sack
 O.K.
 Tell me what to do ? get parrot
-O.K.
 The Parrot crys:
 "Pieces of eight"
 Tell me what to do ? get sand
@@ -618,7 +609,6 @@ About 20 pounds. Try: "SET SAIL"
 Tell me what to do ? set sail
 I can't do that yet.
 Tell me what to do ? get book
-O.K.
 OK
 Tell me what to do ? get sneakers
 O.K.
@@ -753,7 +743,6 @@ O.K.
 Tell me what to do ? get dubloons
 It's beyond my power to do that.
 Tell me what to do ? get parrot
-O.K.
 The Parrot crys:
 "Pieces of eight"
 Tell me what to do ? west
@@ -848,7 +837,6 @@ Parrot ate a cracker.
 Tell me what to do ? drop shovel
 O.K.
 Tell me what to do ? get book
-O.K.
 OK
 Tell me what to do ? say yoho
 Everything spins around and suddenly I'm elsewhere...

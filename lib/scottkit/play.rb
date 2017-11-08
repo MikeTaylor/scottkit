@@ -424,7 +424,6 @@ module ScottKit
             puts "I've too much to carry!"
           else
             @game.items[args.shift].loc = ROOM_CARRIED
-            puts "O.K."
           end
         when 53 then @game.items[args.shift].loc = @game.loc
         when 54 then @game.loc = args.shift
