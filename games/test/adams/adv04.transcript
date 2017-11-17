@@ -2,13 +2,13 @@ ScottKit, a Scott Adams game toolkit in Ruby.
 (C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>
 Distributed under the GNU GPL version 2 license.
 Setting random seed 12368
+Welcome to ADVENTURE:4, "VOODOO CASTLE" by Alexis ADAMS.
+Dedicated to all MOMS!
 
 I'm in a chapel
 Obvious exits: North, South, East, West.
 I can also see: Closed Coffin
 
-Welcome to ADVENTURE:4, "VOODOO CASTLE" by Alexis ADAMS.
-Dedicated to all MOMS!
 Tell me what to do ? open coffin
 OK
 Tell me what to do ? examine coffin

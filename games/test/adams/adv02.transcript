@@ -2,13 +2,13 @@ ScottKit, a Scott Adams game toolkit in Ruby.
 (C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>
 Distributed under the GNU GPL version 2 license.
 Setting random seed 12368
+* Welcome to Adventure number 2: "pirate adventure"
+  by Alexis & Scott Adams, dedicated: Ted Heeren & Paul Sharland
+Remember you can always ask for "help".
 
 I'm in a Flat in london
 I can also see: Flight of stairs, Sign says: "Bring *TREASURES* here, say: SCORE", Bottle of rum, Rug, Safety sneakers, Sack of crackers
 
-* Welcome to Adventure number 2: "pirate adventure"
-  by Alexis & Scott Adams, dedicated: Ted Heeren & Paul Sharland
-Remember you can always ask for "help".
 Tell me what to do ? get bottle
 O.K.
 Tell me what to do ? get sneakers

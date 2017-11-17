@@ -50,8 +50,6 @@ module ScottKit
         @fh = File.new(file)
         raise "#$0: can't read input file '#{file}': #$!" if !@fh
       end
-
-      actually_look
     end
 
     def prompt_for_turn

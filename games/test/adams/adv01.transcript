@@ -2,11 +2,6 @@ ScottKit, a Scott Adams game toolkit in Ruby.
 (C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>
 Distributed under the GNU GPL version 2 license.
 Setting random seed 12368
-
-I'm in a forest
-Obvious exits: North, South, East, West.
-I can also see: Trees
-
 A voice BOOOOMS out:
 
 Welcome to Adventure number: 1 "ADVENTURELAND".
@@ -14,6 +9,11 @@ In this Adventure you're to find *TREASURES* & store them away.
 
 To see how well you're doing say: "SCORE"
 Remember you can always say "HELP"
+
+I'm in a forest
+Obvious exits: North, South, East, West.
+I can also see: Trees
+
 Tell me what to do ? xyz
 You use word(s) I don't know!
 Tell me what to do ? jump

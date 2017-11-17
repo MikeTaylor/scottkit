@@ -2,12 +2,12 @@ ScottKit, a Scott Adams game toolkit in Ruby.
 (C) 2010-2017 Mike Taylor <mike@miketaylor.org.uk>
 Distributed under the GNU GPL version 2 license.
 Setting random seed 12368
+Welcome to the Tutorial adventure.
+You must find a gold coin and store it.
 
 I'm in a cave mouth
 I can also see: doorbell
 
-Welcome to the Tutorial adventure.
-You must find a gold coin and store it.
 Tell me what to do ? ring bell
 Ding dong!
 Tell me what to do ? wait
