@@ -50,3 +50,8 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+task :regenerate do
+  sh "cd games/test && make rebuild"
+  sh "cd games/test/adams && make rebuild"
+end
