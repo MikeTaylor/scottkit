@@ -1,11 +1,5 @@
-# Generate diffs from t5 to this, then apply them to t6 to yield new t7
-
 start cave
 treasury throne
-
-action score: score
-action inventory: inventory
-action look: look
 
 occur when !flag 1
 	print "Welcome to the Tutorial adventure."
@@ -44,10 +38,16 @@ action wait:
 room throne "gorgeously decorated throne room"
 	exit south chamber
 
-item sign "Sign says: leave treasure here, then say SCORE"
+item sign "sign"
+
+action examine sign when present sign
+	print "It says: leave treasure here, then say SCORE"
 
 item lamp "old-fashioned brass lamp"
 	called "lamp"
+
+action examine lamp when present lamp
+	print "It is not lit."
 
 item lit_lamp "lit lamp"
 	called "lamp" nowhere
@@ -146,7 +146,31 @@ occur 25% when here vampire and !carried cross
 action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
+item rum "bottle of rum" called rum at cell
+
+action drink rum when carried rum
+	destroy rum
+	print "OK. I feel funny."
+
+action inventory when !exists rum
+	print "I'm carrying ... uh ... you're my best mate, you are."
+
+action score: score
+action inventory: inventory
+action look: look
+action save game: save_game
+
+action quit game
+	print "OK, goodbye."
+	game_over
+action quit:
+	print "Did you mean to quit? If so, type QUIT GAME."
+
+action examine:
+	print "I see nothing special."
+
 verbgroup get take g
 verbgroup drop leave
+verbgroup examine x
 noungroup lamp lantern
 noungroup doorbell bell
