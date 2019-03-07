@@ -18,6 +18,11 @@ changequote(`[[[', `]]]')dnl
 * [Stage 5](#stage-5)
     * [Stage 5 map](#stage-5-map)
     * [Stage 5 source](#stage-5-source)
+* [Stage 6](#stage-6)
+    * [Stage 6 map](#stage-6-map)
+    * [Stage 6 source](#stage-6-source)
+* [Caveats](#caveats)
+
 
 ## Introduction
 
@@ -28,7 +33,7 @@ This document walks you through the process of creating a small but complete and
 
 This is the minimal playable game, consisting of rooms only - and only two of them.
 
-This stage is built entirely using the %room and %exit directives.
+This stage is built entirely using the `%room` and `%exit` directives.
 
 ### Stage 1 map
 
@@ -131,6 +136,29 @@ include(t5.map)dnl
 ```
 include(t5.sck)dnl
 ```
+
+
+## Stage 6
+
+This stage adds standard boilerplate actions for `save game`, `quit game` and `examine`; is uses `examine` for several objects (and so makes the sign description less verbose), and shows how to override the standard behaviour of a verb (`inventory`) under unusual circumstances.
+
+This stage uses the same directives as the previous stage (and has the same map as that stage).
+
+### Stage 6 map
+
+```
+
+include(t6.map)dnl
+
+```
+
+### Stage 6 source
+
+```
+include(t6.sck)dnl
+```
+
+
 
 
 ## Caveats
