@@ -20,6 +20,9 @@
 * [Stage 6](#stage-6)
     * [Stage 6 map](#stage-6-map)
     * [Stage 6 source](#stage-6-source)
+* [Stage 7](#stage-7)
+    * [Stage 7 map](#stage-7-map)
+    * [Stage 7 source](#stage-7-source)
 * [Caveats](#caveats)
 
 
@@ -589,6 +592,209 @@ noungroup lamp lantern
 ```
 
 
+## Stage 7
+
+This stage uses a counter to implement a timed event: there is initially no way into the main complex, but ringing the doorbell in the first location starts a timer that results in a cave-in, and an entrance becoming available.
+
+This stage uses the same directives as the previous stage (and has the same map as that stage).
+
+### Stage 7 map
+
+```
+
+		Throne Room	Crypt
+		[sign, lamp]	[vampire, key]
+		|		|
+		|		|
+Cave Mouth--||--Chamber---------Dungeon
+[doorbell,	[cross]		[door]
+ (entrance),			=
+ station]			|
+				Cell
+				[*coin*]
+
+```
+
+### Stage 7 source
+
+```
+start cave
+treasury throne
+
+occur when !flag 1
+	print "Welcome to the Tutorial adventure."
+	print "You must find a gold coin and store it."
+	set_flag 1
+
+room cave "cave mouth"
+
+item doorbell "doorbell"
+
+item entrance "entrance to cave"
+	nowhere
+
+action go entrance when here entrance
+	goto chamber
+	look
+
+action ring doorbell when here doorbell and !here entrance
+	set_counter 4
+	print "Ding dong!"
+
+occur
+	dec_counter
+
+occur when counter_eq 2
+	print "I hear an ominous rumble."
+
+occur when counter_eq 1
+	put entrance cave
+	print "The rocks collapse leaving a way in."
+	look
+
+action wait:
+	print "Time passes ..."
+
+room throne "gorgeously decorated throne room"
+	exit south chamber
+
+item sign "sign"
+
+action examine sign when present sign
+	print "It says: leave treasure here, then say SCORE"
+
+item lamp "old-fashioned brass lamp"
+	called "lamp"
+
+action examine lamp when present lamp
+	print "It is not lit."
+
+item lit_lamp "lit lamp"
+	called "lamp" nowhere
+
+item empty_lamp "empty lamp"
+	called "lamp" nowhere
+
+lightsource lit_lamp
+lighttime 10
+
+action light lamp when present lamp
+	swap lamp lit_lamp
+	print "OK, lamp is now lit and will burn for 10 turns."
+	look
+
+occur when flag 16
+	clear_flag 16
+	swap lit_lamp empty_lamp
+	look
+	comment "The engine sets flag 16 when the lamp runs out"
+
+item station "lamp-refilling station" at cave
+
+action refill lamp when here station and present empty_lamp
+	destroy empty_lamp
+	refill_lamp
+	print "The lamp is now full and lit."
+
+room chamber "square chamber"
+	exit east dungeon
+	exit north throne
+	exit west cave
+
+# Flag 15 is on when and only when it is dark
+occur when at chamber and flag 15
+	clear_dark
+	look
+
+item cross "Wooden cross"
+	called "cross"
+
+room dungeon "gloomy dungeon"
+	exit west chamber
+	exit north crypt
+
+occur when at dungeon and !flag 15
+	set_dark
+	look
+
+occur 25% when at dungeon
+	print "I smell something rotting to the north."
+
+item door "Locked door"
+
+item key "Brass key"
+	called "key"
+	at crypt
+
+item door2 "Open door leads south"
+	nowhere
+
+action open door when here door and !present key
+	print "It's locked."
+
+action open door when here door
+	swap door door2
+	print OK
+	look
+
+action go door when here door2
+	goto cell
+	look
+
+room cell "dungeon cell"
+	exit north dungeon
+
+item coin "*Gold coin*"
+	called "coin"
+
+room crypt "damp, dismal crypt"
+	exit south dungeon
+
+item vampire "Vampire"
+
+occur when here vampire and carried cross
+	print "Vampire cowers away from the cross!"
+
+occur when here vampire and !carried cross
+	print "Vampire looks hungrily at me."
+
+occur 25% when here vampire and !carried cross
+	print "Vampire bites me!  I'm dead!"
+	game_over
+	comment "vampire can attack unless cross is carried"
+
+action get key when here vampire and !carried cross
+	print "I'm not going anywhere near that vampire!"
+
+item rum "bottle of rum" called rum at cell
+
+action drink rum when carried rum
+	destroy rum
+	print "OK. I feel funny."
+
+action inventory when !exists rum
+	print "I'm carrying ... uh ... you're my best mate, you are."
+
+action score: score
+action inventory: inventory
+action look: look
+action save game: save_game
+
+action quit game
+	print "OK, goodbye."
+	game_over
+action quit:
+	print "Did you mean to quit? If so, type QUIT GAME."
+
+action examine:
+	print "I see nothing special."
+
+verbgroup get take g
+verbgroup drop leave
+verbgroup examine x
+noungroup lamp lantern
+noungroup doorbell bell
+```
 
 
 ## Caveats
