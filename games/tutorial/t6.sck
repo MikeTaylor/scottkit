@@ -121,7 +121,7 @@ action get key when here vampire and !carried cross
 	print "I'm not going anywhere near that vampire!"
 
 item rum "bottle of rum" called rum at cell
- 
+
 action drink rum when carried rum
 	destroy rum
 	print "OK. I feel funny."
