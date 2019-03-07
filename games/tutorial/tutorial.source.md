@@ -21,6 +21,9 @@ changequote(`[[[', `]]]')dnl
 * [Stage 6](#stage-6)
     * [Stage 6 map](#stage-6-map)
     * [Stage 6 source](#stage-6-source)
+* [Stage 7](#stage-7)
+    * [Stage 7 map](#stage-7-map)
+    * [Stage 7 source](#stage-7-source)
 * [Caveats](#caveats)
 
 
@@ -159,6 +162,25 @@ include(t6.sck)dnl
 ```
 
 
+## Stage 7
+
+This stage uses a counter to implement a timed event: there is initially no way into the main complex, but ringing the doorbell in the first location starts a timer that results in a cave-in, and an entrance becoming available.
+
+This stage uses the same directives as the previous stage (and has a very similar map to that stage).
+
+### Stage 7 map
+
+```
+
+include(t7.map)dnl
+
+```
+
+### Stage 7 source
+
+```
+include(t7.sck)dnl
+```
 
 
 ## Caveats
