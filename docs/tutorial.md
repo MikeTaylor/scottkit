@@ -101,7 +101,7 @@ Here we introduce the first explicitly-coded actions - the previous stages' move
 
 The new action provides the first puzzle: the player needs to unlock the cell door before entering the cell to obtain the coin. The key is necessary in order to open the door.
 
-This stage uses the directives from the previous stage, plus `nowhere`, `at`, `action` and `result`.
+This stage uses the directives from the previous stage, plus `nowhere`, `at`, and `action`.
 
 ### Stage 3 map
 
