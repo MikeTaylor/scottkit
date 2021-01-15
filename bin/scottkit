@@ -17,7 +17,6 @@ $VERBOSE = true
 require 'optparse'
 require 'stringio'
 require 'scottkit/game'
-require 'scottkit/withio'
 
 
 def play(game)
@@ -110,19 +109,17 @@ exitval = 0
 game = ScottKit::Game.new(options)
 case mode
 when :play_from_source
-  f = StringIO.new
-  withIO(nil, f) do
-    if !game.compile_to_stdout(ARGV[0])
-      $stderr.puts "#$0: compilation failed: not playing"
-      exitval = 1
-    end
+  compiled_game = StringIO.new
+  if !game.compile(compiled_game, ARGV[0])
+    $stderr.puts "#$0: compilation failed: not playing"
+    exitval = 1
   end
   if exitval == 0
-    game.load(f.string)
+    game.load(compiled_game.string)
     play(game)
   end
 when :compile
-  if !game.compile_to_stdout(ARGV[0])
+  if !game.compile($stdout, ARGV[0])
     $stderr.puts "#$0: compilation failed"
     exitval = 1
   end

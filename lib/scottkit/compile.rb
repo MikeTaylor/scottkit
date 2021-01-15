@@ -5,8 +5,6 @@ require 'pp'
 module ScottKit
   class Game
     class Compiler
-      private
-
       # Creates a new compiler for the specified game, set up ready to
       # compile the game in the specified file.
       #
@@ -25,17 +23,17 @@ module ScottKit
       end
 
       # Compiles the specified game-source file, writing the resulting
-      # object file to stdout, whence it should be redirected into a
+      # object file to an IO stream, whence it should be redirected into a
       # file so that it can be played.  Yes, this API is sucky: it
       # would be better if we had a simple compile method that builds
       # the game in memory in a form that can by played, and which can
       # then also be saved as an object file by some other method --
       # but that would have been more work for little gain.
       #
-      def compile_to_stdout
+      def compile_to(output)
         begin
           tree = parse
-          generate_code(tree)
+          generate_code(tree, output)
           true
         rescue
           return false if String($!) == "syntax error"
@@ -80,6 +78,8 @@ module ScottKit
                   maxload, wordlen, lighttime, lightsource, rooms,
                   items, actions, verbgroups, noungroups)
       end
+
+      private
 
       def parse_room
         match :room
@@ -139,7 +139,7 @@ module ScottKit
         end
 
         conds, instructions, comment = parse_actionbody
-        CAction.new(nil, chance, conds, instructions, comment)        
+        CAction.new(nil, chance, conds, instructions, comment)
       end
 
       def parse_actionbody
@@ -207,7 +207,7 @@ module ScottKit
       def error(str); @lexer.error str; end
 
 
-      def generate_code(tree)
+      def generate_code(tree, output)
         lintOptions = @game.options[:lint] || ''
         @had_errors = false
         rooms = tree.rooms
@@ -267,7 +267,7 @@ module ScottKit
           dead_ends = []
           rooms.each.with_index do |room, index|
             next if index == 0
-            next if 
+            next if
             if room.exits.length == 0
               no_exits.push room.name
             elsif room.exits.length == 1
@@ -439,76 +439,76 @@ module ScottKit
         return if @had_errors
 
         # Write header
-        puts tree.unknown1 || 0
-        puts items.size-1
-        puts actions.size-1
-        puts verbs.size-1
-        puts rooms.size-1
-        puts tree.maxload || -1
-        puts startindex
-        puts items.select { |x| x.desc[0] == "*" }.count
-        puts tree.wordlen
-        puts tree.lighttime || -1
-        puts messages.size-1
-        puts treasuryindex
-        puts # Blank line
+        output.puts tree.unknown1 || 0
+        output.puts items.size-1
+        output.puts actions.size-1
+        output.puts verbs.size-1
+        output.puts rooms.size-1
+        output.puts tree.maxload || -1
+        output.puts startindex
+        output.puts items.select { |x| x.desc[0] == "*" }.count
+        output.puts tree.wordlen
+        output.puts tree.lighttime || -1
+        output.puts messages.size-1
+        output.puts treasuryindex
+        output.puts # Blank line
 
         # Actions
         actions.each do |action|
-          print 150*action.verb + action.noun, " "
+          output.print 150*action.verb + action.noun, " "
 
-          print action.conds.map { |x| String(x[0] + 20 * x[1]) + " " }.join
-          print action.gathered_args.map { |x| String(20*x) + " " }.join
+          output.print action.conds.map { |x| String(x[0] + 20 * x[1]) + " " }.join
+          output.print action.gathered_args.map { |x| String(20*x) + " " }.join
           nconds = action.conds.size + action.gathered_args.size
           raise "condition has #{nconds} conditions" if nconds > 5
-          (5-nconds).times { print "0 " }
+          (5-nconds).times { output.print "0 " }
 
           ins = action.instructions.map { |x| x[0] }
           (4-ins.count).times { ins << 0 }
-          puts "#{150*ins[0] + ins[1]} #{150*ins[2] + ins[3]}\n"
+          output.puts "#{150*ins[0] + ins[1]} #{150*ins[2] + ins[3]}\n"
         end
-        puts # Blank line
+        output.puts # Blank line
 
         # Vocab
         verbs.each.with_index do |verb, i|
-          puts "\"#{verb}\" \"#{nouns[i]}\""
+          output.puts "\"#{verb}\" \"#{nouns[i]}\""
         end
-        puts # Blank line
+        output.puts # Blank line
 
         # Rooms
         rooms.each do |room|
           0.upto(5).each do |i|
             exit = room.exits[@game.dirname(i)]
-            print(exit ? exit : 0, " ")
+            output.print(exit ? exit : 0, " ")
           end
-          print "\"#{room.desc}\"\n"
+          output.print "\"#{room.desc}\"\n"
         end
-        puts # Blank line
+        output.puts # Blank line
 
         # Messages
         messages.each do |message|
-          puts "\"#{message}\"\n"
+          output.puts "\"#{message}\"\n"
         end
-        puts # Blank line
+        output.puts # Blank line
 
         # Items
         items.each do |item|
           desc = item.desc
           desc += "/" + item.called.upcase[0, @wordlen] + "/" if item.called
-          puts "\"#{desc}\" #{item.where}"
+          output.puts "\"#{desc}\" #{item.where}"
         end
-        puts # Blank line
+        output.puts # Blank line
 
         # Action comments
         actions.each do |action|
-          puts "\"#{action.comment || ""}\"\n"
+          output.puts "\"#{action.comment || ""}\"\n"
         end
-        puts # Blank line
+        output.puts # Blank line
 
         # Trailer
-        puts tree.version || 0
-        puts tree.ident || 0
-        puts tree.unknown2 || 0
+        output.puts tree.version || 0
+        output.puts tree.ident || 0
+        output.puts tree.unknown2 || 0
       end
 
       def room_by_name(loc, roommap)
@@ -559,10 +559,6 @@ module ScottKit
         $stderr.puts "warning: #{str}"
         0
       end
-
-      public :compile_to_stdout # Must be visible to Game.compile()
-      public :parse # Used by test_compile.rb
-
 
       CGame = Struct.new(:ident, :version, :unknown1, :unknown2,
                          :start, :treasury, :maxload, :wordlen,

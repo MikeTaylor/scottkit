@@ -2,7 +2,6 @@ require 'test/unit'
 require 'scottkit/game'
 require 'stringio'
 require 'digest/md5'
-require 'scottkit/withio'
 
 class TestPlayAdams < Test::Unit::TestCase #:nodoc:
   def test_play_adams
@@ -15,13 +14,12 @@ class TestPlayAdams < Test::Unit::TestCase #:nodoc:
     gamefile = "games/adams/#{name}.dat"
 
     if(File::readable?(gamefile))
-      game = ScottKit::Game.new({ :read_file =>
-                                  "games/test/adams/#{name}.solution",
-                                  :random_seed => 12368, :no_wait => true })
+      game = ScottKit::Game.new(output: StringIO.new,
+                                read_file: "games/test/adams/#{name}.solution",
+                                random_seed: 12368, no_wait: true )
       game.load(IO.read gamefile)
-      f = StringIO.new
-      withIO(nil, f) { game.play }
-      digest = Digest::MD5.hexdigest(f.string)
+      game.play
+      digest = Digest::MD5.hexdigest(game.output.string)
       expected = File.read("games/test/adams/#{name}.transcript.md5").chomp
       assert_equal(expected, digest)
     else

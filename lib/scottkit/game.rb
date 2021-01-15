@@ -20,11 +20,12 @@ module ScottKit
     attr_reader :flags, :counters, :saved_rooms, :noun #:nodoc:
     attr_accessor :loc, :counter, :saved_room, :lampleft #:nodoc:
 
-    private
+    attr_reader :input, :output
 
     # Creates a new game, with no room, items or actions -- load must
-    # be called to make the game ready for playing, or
-    # compile_to_stdout can be called to generate a new game-file.
+    # be called to make the game ready for playing, or compile can be
+    # called to generate a new game-file.
+    #
     # The options hash affects various aspects of how the game will be
     # loaded, played and compiled.  The following symbols are
     # recognised as keys in the options hash:
@@ -44,9 +45,17 @@ module ScottKit
     #                       file to restore before starting to play.
     #
     # [+read_file+]         If specified, the name of a file of game
-    #                       commands to be run after restoring s saved
+    #                       commands to be run after restoring a saved
     #                       game (if any) and before starting to read
     #                       commands from the user.
+    #
+    # [+output+]            If specified, a writable IO stream for
+    #                       capturing the game's output.  Defaults to
+    #                       <tt>$stdout</tt> if nothing is provided.
+    #
+    # [+input+]             If specified, a readable IO stream for
+    #                       capturing the game's input.  Defaults to
+    #                       <tt>$stdin</tt> if nothing is provided.
     #
     # [+echo_input+]        If true, then game commands are echoed
     #                       before being executed.  This is useful
@@ -106,7 +115,24 @@ module ScottKit
       @options = options
       @rooms, @items, @actions, @nouns, @verbs, @messages =
         [], [], [], [], [], []
+      @input  = options[:input]  || $stdin
+      @output = options[:output] || $stdout
     end
+
+    def puts *args
+      output.puts(*args)
+    end
+
+    def print *args
+      output.print(*args)
+    end
+
+    # Print debugging output
+    def dputs(level, *args) #:nodoc:
+      super.puts args.map { |x| "# #{x}" } if @options[level]
+    end
+
+    private
 
     # Virtual accessor
     def dark_flag #:nodoc:
@@ -261,10 +287,6 @@ module ScottKit
       @items.each { |item| item.loc = f.gets.to_i }
     end
 
-    def dputs(level, *args) #:nodoc:
-      puts args.map { |x| "# #{x}" } if @options[level]
-    end
-
     # Compiles the specified game-source file, writing the resulting
     # object file to stdout, whence it should be redirected into a
     # file so that it can be played.  Yes, this API is sucky: it would
@@ -283,14 +305,12 @@ module ScottKit
     # function is that its behaviour is influenced by the game's
     # options.)
     #
-    def compile_to_stdout(filename, fh = nil)
-      compiler = ScottKit::Game::Compiler.new(self, filename, fh)
-      compiler.compile_to_stdout
+    def compile(out, filename, fh = nil)
+      ScottKit::Game::Compiler.new(self, filename, fh).compile_to(out)
     end
 
-    public :load, :compile_to_stdout # Must be visible to driver program
+    public :load, :compile # Must be visible to driver program
     public :roomname, :itemname # Needed by Condition.render()
-    public :dputs # Needed for contained classes' debugging output
     public :dirname # Needed by compiler
     public :dark_flag= # Invoked from Instruction.execute()
 
