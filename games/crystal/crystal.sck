@@ -19,14 +19,6 @@ verbgroup leave drop
 verbgroup cut chop
 verbgroup batter ram
 
-# ----------------------------------------------------------------------------
-# Infrastructure actions (I don't think any game would ever omit these)
-
-action inventory: inventory
-action take inventory: inventory
-action score: score
-action save game: save_game
-action look: look
 
 # The path is dark; nowhere else is
 occur when "at" path and !flag 15
@@ -48,25 +40,6 @@ occur when !flag 1
 	print "a platinum chain, a gold crown, a silver medallion"
 	print "a bronze sceptre, a zinc goblet and a tin stoat."
 
-
-# ----------------------------------------------------------------------------
-# Use of flags
-#	flag 1: Set forever once welcome message has been printed.
-#	flag 2: True immediately after balsa wood is lit.
-#	flag 3: True immediately after plywood is lit.
-#	flag 4: True immediately after oak is lit.
-#	flag 5: True while under water.
-#	flag 6: Set true forever when first in the treasure clearing.
-#	flag 7: True if all treasures but the stoat have been stored.
-#	flag 8: True once the missing stoat message has been printed.
-#
-# Use of saved locations
-#	location 1: when in vase, contains room player was in before.
-#
-# Use of counters:
-#	counter 1: number of turns remaining to hold breath
-
-# ----------------------------------------------------------------------------
 # Preamble actions (must fire after body actions)
 
 occur when "at" clearing and !flag 6
@@ -165,6 +138,42 @@ occur
 	clear_flag 4
 	comment "Fire-building must happen all in one go"
 
+
+
+
+
+
+
+# ----------------------------------------------------------------------------
+# Infrastructure actions (I don't think any game would ever omit these)
+
+action inventory: inventory
+action take inventory: inventory
+action score: score
+action save game: save_game
+action look: look
+
+
+
+# ----------------------------------------------------------------------------
+# Use of flags
+#	flag 1: Set forever once welcome message has been printed.
+#	flag 2: True immediately after balsa wood is lit.
+#	flag 3: True immediately after plywood is lit.
+#	flag 4: True immediately after oak is lit.
+#	flag 5: True while under water.
+#	flag 6: Set true forever when first in the treasure clearing.
+#	flag 7: True if all treasures but the stoat have been stored.
+#	flag 8: True once the missing stoat message has been printed.
+#
+# Use of saved locations
+#	location 1: when in vase, contains room player was in before.
+#
+# Use of counters:
+#	counter 1: number of turns remaining to hold breath
+
+# ----------------------------------------------------------------------------
+
 action chop when !present axe
 	print "I can't chop anything without an axe."
 
@@ -235,6 +244,10 @@ item honey "Wild honey"
 
 action get honey when here bees
 	print "No!  Bees would sting me!"
+	
+action get honey
+	get honey
+	print "OK"
 
 item bees "Killer bees"
 
@@ -466,6 +479,10 @@ action go vase when here vase
 action leave vase when "at" vase
 	swap_specific_room 1
 	look2
+	
+action leave vase
+	drop vase
+	print "OK"
 
 action get out when "at" vase
 	swap_specific_room 1
